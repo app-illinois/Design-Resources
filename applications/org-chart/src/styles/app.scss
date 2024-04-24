@@ -1,0 +1,11 @@
+@import 'illinois-colors.scss';
+@import 'illinois-bootstrap.scss';
+@import 'bootstrap/scss/bootstrap';
+
+.bg-blue-gradient {
+  background: $il-blue-gradient;
+}
+
+.bg-orange-gradient {
+  background: $il-orange-gradient;
+}

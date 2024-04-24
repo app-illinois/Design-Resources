@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Org Chart</title>
+  </head>
+  <body>
+    <div id="orgchart" data-groups="[]"></div>
+    <script type="module">
+      import { renderOrgChart } from "/src/main.jsx";
+      const rootNode = `
+				<div class="card text-center">
+					<h5 class="card-header bg-orange-gradient text-white">
+						NCSA
+					</h5>
+					<div class="card-body">
+						<p class="text-center">
+							<span class="fw-bold">Director:</span>
+							Bill Gropp
+						</p>
+					</div>
+				</div>
+			`;
+
+      const groupNode = `
+        <div class="card">
+          <h5 class="card-header {bg} text-white">
+            {display_name}
+          </h5>
+          <div class="card-body">
+            <strong>Manager(s):</strong> {managers}
+            <p class="mt-3 text-center">
+              <a class="fw-bold" href="{link}" target="_blank">View Group Details</a>
+            </p>
+          </div>
+        </div>
+      `;
+
+      const headerColor = "alternating";
+
+      renderOrgChart({
+        groups: JSON.parse(document.querySelector('#orgchart').dataset.groups),
+        rootNode,
+        groupNode,
+        headerColor
+      });
+    </script>
+  </body>
+</html>
