@@ -21,20 +21,29 @@ class DataTable extends HTMLElement {
             return;
         }
 
-        let headers = thead.querySelectorAll('th');
-        headers.forEach((h, i) => {
-            h.style.cursor = 'pointer';
-            h.addEventListener('click', e => {
-                this.sortTableByColumn(i)
-            });
-        });
-
         this.thead = thead;
         this.tbody = tbody;
+
+        let isSortable = this.getAttribute('sortable') === "true";
+
+        if(isSortable) {
+            let headers = thead.querySelectorAll('th');
+            headers.forEach((h, i) => {
+                h.style.cursor = 'pointer';
+                h.addEventListener('click', e => {
+                    this.sortTableByColumn(i)
+                });
+            });
+        }
+
+        let defaultSort = this.getAttribute('sort');
+
+        if (defaultSort != null && !isNaN(Number(defaultSort))) {
+            this.sortTableByColumn(defaultSort - 1);
+        }
     }
 
     sortTableByColumn(columnIndex) {
-
         if (this.lastSort === columnIndex) {
             this.sortAsc = !this.sortAsc;
         }
@@ -51,17 +60,15 @@ class DataTable extends HTMLElement {
             let cellA = rowA.children[columnIndex].textContent.trim();
             let cellB = rowB.children[columnIndex].textContent.trim();
 
-            if(rowA.children[columnIndex].dataset.type === "numeric")
-            {
+            if (rowA.children[columnIndex].dataset.type === "numeric") {
                 cellA = cellA.replace(/[$,,]/g, '').replace(/[^0-9.-]/g, '');
             }
 
-            if(rowA.children[columnIndex].dataset.type === "numeric")
-            {
+            if (rowA.children[columnIndex].dataset.type === "numeric") {
                 cellB = cellB.replace(/[$,,]/g, '').replace(/[^0-9.-]/g, '');
             }
 
-            const isNumeric = !isNaN(cellA) && !isNaN(cellB);
+            const isNumeric = !isNaN(Number(cellA)) && !isNaN(Number(cellB));
             return (isNumeric ? (cellA - cellB) : cellA.localeCompare(cellB)) * (this.sortAsc ? 1 : -1);
         });
 
@@ -72,17 +79,15 @@ class DataTable extends HTMLElement {
     updateHead(current) {
         let thCurrent = this.thead.querySelector("th:nth-child(" + (current + 1) + ")");
 
-        if(this.lastSort != null)
-        {
+        if (this.lastSort != null) {
             let thLast = this.thead.querySelector("th:nth-child(" + (this.lastSort + 1) + ")");
 
-            if(thLast.querySelector('span') != null)
-            {
+            if (thLast.querySelector('span') != null) {
                 thLast.removeChild(thLast.querySelector('span'));
             }
         }
 
-        if(this.sortAsc) {
+        if (this.sortAsc) {
             thCurrent.setAttribute("aria-sort", "ascending");
         }
         else {
