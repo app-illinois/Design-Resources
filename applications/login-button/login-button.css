@@ -1,0 +1,56 @@
+main {
+width: 1366px;
+margin: 0 auto;
+}
+
+#search, #no-search {
+position: relative;
+text-align: center;
+margin-top: 30px;
+}
+
+#search img, #no-search img {
+margin: 0 auto;
+}
+
+.login-btn {
+position: absolute;
+top: 20px;
+right: 120px;
+font-family: "Source Sans 3", sans-serif;
+font-optical-sizing: auto;
+font-weight: 700;
+font-style: normal;
+font-size: 20px;
+text-align: center;
+width: 91px;
+height: 26px;
+background: #13294b;
+color: #ffffff;
+border: 2px solid #13294b;
+border-radius: 9px;
+line-height: 24px;
+box-sizing: content-box;
+padding: 0;
+}
+
+.login-btn:hover, .login-btn:focus {
+background: #fff;
+color: #13294b;   
+}
+
+.login-btn:active {
+background: #ff552e;
+color: #ffffff;  
+border: 2px solid #ff552e;
+}
+
+.welcome-message {
+color: black;
+  position: absolute;
+  top: 0px;
+  right: 110px;
+  font-size: 16px;
+  width: 200px;
+  text-align: right;
+}
