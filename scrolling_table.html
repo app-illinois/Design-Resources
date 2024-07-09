@@ -1,0 +1,872 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="https://cdn.toolkit.illinois.edu">
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/2.14/toolkit.css" media="all">
+    <script src="https://cdn.toolkit.illinois.edu/2.14/toolkit.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap" rel="stylesheet">
+    <title>Form Design Samples</title>
+
+</head>
+
+<body>
+
+
+    <ila-datatable class="il-formatted" sortable="true" sort="1">
+ 
+            <h1>Planets data</h1>
+
+            <table>
+              <caption class="il-invisible">Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Mass (10<sup>24</sup>kg)</th>
+                  <th scope="col">Diameter (km)</th>
+                  <th scope="col">Density (kg/m<sup>3</sup>)</th>
+                  <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+                  <th scope="col">Length of day (hours)</th>
+                  <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+                  <th scope="col">Mean temperature (�C)</th>
+                  <th scope="col">Number of moons</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Mercury</th>
+                  <td>Terrestrial</td>
+                  <td>0.330</td>
+                  <td data-type="numeric">4,879</td>
+                  <td>5427</td>
+                  <td>3.7</td>
+                  <td>4222.6</td>
+                  <td>57.9</td>
+                  <td>167</td>
+                  <td>0</td>
+                  <td>Closest to the Sun</td>
+                </tr>
+                <tr>
+                  <th scope="row">Venus</th>
+                  <td>Terrestrial</td>
+                  <td>4.87</td>
+                  <td data-type="numeric">12,104</td>
+                  <td>5243</td>
+                  <td>8.9</td>
+                  <td>2802.0</td>
+                  <td>108.2</td>
+                  <td>464</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Earth</th>
+                  <td>Terrestrial</td>
+                  <td>5.97</td>
+                  <td data-type="numeric">12,756</td>
+                  <td>5514</td>
+                  <td>9.8</td>
+                  <td>24.0</td>
+                  <td>149.6</td>
+                  <td>15</td>
+                  <td>1</td>
+                  <td>Our world</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mars</th>
+                  <td>Terrestrial</td>
+                  <td>0.642</td>
+                  <td data-type="numeric">6,792</td>
+                  <td>3933</td>
+                  <td>3.7</td>
+                  <td>24.7</td>
+                  <td>227.9</td>
+                  <td>-65</td>
+                  <td>2</td>
+                  <td>The red planet</td>
+                </tr>
+                <tr>
+                  <th scope="row">Jupiter</th>
+                  <td>Gas Giant</td>
+                  <td>1898</td>
+                  <td data-type="numeric">142,984</td>
+                  <td>1326</td>
+                  <td>23.1</td>
+                  <td>9.9</td>
+                  <td>778.6</td>
+                  <td>-110</td>
+                  <td>67</td>
+                  <td>The largest planet</td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturn</th>
+                  <td>Gas Giant</td>
+                  <td>568</td>
+                  <td data-type="numeric">120,536</td>
+                  <td>687</td>
+                  <td>9.0</td>
+                  <td>10.7</td>
+                  <td>1433.5</td>
+                  <td>-140</td>
+                  <td>62</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Uranus</th>
+                  <td>Ice Giant</td>
+                  <td>86.8</td>
+                  <td data-type="numeric">51,118</td>
+                  <td>1271</td>
+                  <td>8.7</td>
+                  <td>17.2</td>
+                  <td>2872.5</td>
+                  <td>-195</td>
+                  <td>27</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Neptune</th>
+                  <td>Ice Giant</td>
+                  <td>102</td>
+                  <td data-type="numeric">49,528</td>
+                  <td>1638</td>
+                  <td>11.0</td>
+                  <td>16.1</td>
+                  <td>4495.1</td>
+                  <td>-200</td>
+                  <td>14</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Pluto</th>
+                  <td>Dwarf Planet</td>
+                  <td>0.0146</td>
+                  <td data-type="numeric">2,370</td>
+                  <td>2095</td>
+                  <td>0.7</td>
+                  <td>153.3</td>
+                  <td>5906.4</td>
+                  <td>-225</td>
+                  <td>5</td>
+                  <td>Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Xylophia-IV</td>
+                    <td>Gas Giant</td>
+                    <td>12.456</td>
+                    <td>142,984</td>
+                    <td>1.234</td>
+                    <td>11.23</td>
+                    <td>34.5</td>
+                    <td>834.2</td>
+                    <td>-178</td>
+                    <td>27</td>
+                    <td>A newly discovered planet with a unique ring system</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Krypton</td>
+                    <td>Terrestrial</td>
+                    <td>1.2</td>
+                    <td>10,000</td>
+                    <td>7800</td>
+                    <td>5.4</td>
+                    <td>25.0</td>
+                    <td>300</td>
+                    <td>220</td>
+                    <td>2</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zorvath</td>
+                    <td>Ice Giant</td>
+                    <td>7.654</td>
+                    <td>73,421</td>
+                    <td>0.987</td>
+                    <td>8.92</td>
+                    <td>21.2</td>
+                    <td>1,234.1</td>
+                    <td>-220</td>
+                    <td>14</td>
+                    <td>A distant planet with a highly eccentric orbit</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nexarion</td>
+                    <td>Terrestrial</td>
+                    <td>1.234</td>
+                    <td>9,842</td>
+                    <td>4,321</td>
+                    <td>6.54</td>
+                    <td>23.1</td>
+                    <td>123.4</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td>A planet with a highly reflective surface</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xeridia</td>
+                    <td>Gas Giant</td>
+                    <td>15.678</td>
+                    <td>189,234</td>
+                    <td>1.012</td>
+                    <td>12.11</td>
+                    <td>45.6</td>
+                    <td>901.2</td>
+                    <td>-150</td>
+                    <td>19</td>
+                    <td>A gas giant with a massive storm system</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Valtor-III</td>
+                    <td>Ice Giant</td>
+                    <td>8.912</td>
+                    <td>82,191</td>
+                    <td>0.934</td>
+                    <td>9.01</td>
+                    <td>30.4</td>
+                    <td>1,100.1</td>
+                    <td>-180</td>
+                    <td>11</td>
+                    <td>A distant ice giant with a highly inclined orbit</td>
+                  </tr>
+                  <!-- ... -->
+                  <tr>
+                    <th scope="row">Zephyrine</td>
+                    <td>Terrestrial</td>
+                    <td>2.111</td>
+                    <td>11,234</td>
+                    <td>5,678</td>
+                    <td>7.89</td>
+                    <td>29.2</td>
+                    <td>156.7</td>
+                    <td>200</td>
+                    <td>2</td>
+                    <td>A planet with a thin atmosphere and extreme seasons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xylonia-IX</td>
+                    <td>Gas Giant</td>
+                    <td>18.345</td>
+                    <td>201,912</td>
+                    <td>1.156</td>
+                    <td>13.42</td>
+                    <td>50.1</td>
+                    <td>945.6</td>
+                    <td>-120</td>
+                    <td>25</td>
+                    <td>A gas giant with a complex ring system and many moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nyxborn</td>
+                    <td>Terrestrial</td>
+                    <td>1.901</td>
+                    <td>10,421</td>
+                    <td>4,902</td>
+                    <td>7.21</td>
+                    <td>26.5</td>
+                    <td>143.2</td>
+                    <td>220</td>
+                    <td>1</td>
+                    <td>A planet with a highly magnetized core</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xarxos</td>
+                    <td>Gas Giant</td>
+                    <td>16.789</td>
+                    <td>193,456</td>
+                    <td>1.045</td>
+                    <td>12.56</td>
+                    <td>48.2</td>
+                    <td>921.1</td>
+                    <td>-130</td>
+                    <td>21</td>
+                    <td>A gas giant with a massive moon and a faint ring system</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Valtania</td>
+                    <td>Ice Giant</td>
+                    <td>9.234</td>
+                    <td>85,678</td>
+                    <td>0.961</td>
+                    <td>9.32</td>
+                    <td>32.1</td>
+                    <td>1,050.2</td>
+                    <td>-160</td>
+                    <td>13</td>
+                    <td>A distant ice giant with a highly eccentric orbit</td>
+                  </tr>
+                  <!-- ... -->
+                  <tr>
+                    <th scope="row">Zorvina</td>
+                    <td>Terrestrial</td>
+                    <td>2.345</td>
+                    <td>12,109</td>
+                    <td>5,432</td>
+                    <td>8.01</td>
+                    <td>28.5</td>
+                    <td>167.8</td>
+                    <td>210</td>
+                    <td>3</td>
+                    <td>A planet with a thick atmosphere and extreme greenhouse effect</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Kalxor</td>
+                    <td>Gas Giant</td>
+                    <td>17.234</td>
+                    <td>205,678</td>
+                    <td>1.078</td>
+                    <td>13.12</td>
+                    <td>51.2</td>
+                    <td>962.1</td>
+                    <td>-110</td>
+                    <td>23</td>
+                    <td>A gas giant with a complex ring system and many moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xeridion</td>
+                    <td>Terrestrial</td>
+                    <td>2.567</td>
+                    <td>13,421</td>
+                    <td>5,654</td>
+                    <td>8.45</td>
+                    <td>29.8</td>
+                    <td>182.3</td>
+                    <td>230</td>
+                    <td>2</td>
+                    <td>A planet with a highly inclined axis and extreme seasons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vorthok</td>
+                    <td>Ice Giant</td>
+                    <td>9.876</td>
+                    <td>91,234</td>
+                    <td>0.983</td>
+                    <td>9.56</td>
+                    <td>33.4</td>
+                    <td>1,100.5</td>
+                    <td>-140</td>
+                    <td>15</td>
+                    <td>A distant ice giant with a highly eccentric orbit</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zharkon</td>
+                    <td>Gas Giant</td>
+                    <td>18.901</td>
+                    <td>223,456</td>
+                    <td>1.123</td>
+                    <td>14.01</td>
+                    <td>54.1</td>
+                    <td>942.2</td>
+                    <td>-100</td>
+                    <td>26</td>
+                    <td>A gas giant with a massive moon and a faint ring system</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nexarion-IV</td>
+                    <td>Terrestrial</td>
+                    <td>2.901</td>
+                    <td>14,567</td>
+                    <td>5,789</td>
+                    <td>8.92</td>
+                    <td>31.2</td>
+                    <td>197.4</td>
+                    <td>250</td>
+                    <td>1</td>
+                    <td>A planet with a highly magnetized core and a thin atmosphere</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xylara</td>
+                    <td>Ice Giant</td>
+                    <td>10.234</td>
+                    <td>96,789</td>
+                    <td>0.954</td>
+                    <td>9.78</td>
+                    <td>35.1</td>
+                    <td>1,120.1</td>
+                    <td>-130</td>
+                    <td>17</td>
+                    <td>A distant ice giant with a highly inclined orbit</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vandor</td>
+                    <td>Gas Giant</td>
+                    <td>19.456</td>
+                    <td>241,912</td>
+                    <td>1.156</td>
+                    <td>14.56</td>
+                    <td>56.2</td>
+                    <td>932.1</td>
+                    <td>-90</td>
+                    <td>28</td>
+                    <td>A gas giant with a complex ring system and many moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zorvan</td>
+                    <td>Terrestrial</td>
+                    <td>3.234</td>
+                    <td>15,678</td>
+                    <td>5,923</td>
+                    <td>9.12</td>
+                    <td>32.5</td>
+                    <td>212.1</td>
+                    <td>270</td>
+                    <td>2</td>
+                    <td>A planet with a highly inclined axis and extreme seasons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xylophia-V</td>
+                    <td>Gas Giant</td>
+                    <td>20.123</td>
+                    <td>251,234</td>
+                    <td>1.189</td>
+                    <td>15.01</td>
+                    <td>58.2</td>
+                    <td>922.1</td>
+                    <td>-80</td>
+                    <td>30</td>
+                    <td>Has a unique "double-eye" storm pattern in its atmosphere</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Valtor-VI</td>
+                    <td>Terrestrial</td>
+                    <td>3.456</td>
+                    <td>16,789</td>
+                    <td>6.012</td>
+                    <td>9.45</td>
+                    <td>34.1</td>
+                    <td>227.3</td>
+                    <td>290</td>
+                    <td>1</td>
+                    <td>Has a surface covered in towering crystal formations</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zorvath-III</td>
+                    <td>Ice Giant</td>
+                    <td>11.234</td>
+                    <td>108,912</td>
+                    <td>0.972</td>
+                    <td>10.12</td>
+                    <td>37.2</td>
+                    <td>1,160.1</td>
+                    <td>-120</td>
+                    <td>19</td>
+                    <td>Has a subsurface ocean with unique aquatic lifeforms</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nexarion-V</td>
+                    <td>Gas Giant</td>
+                    <td>21.012</td>
+                    <td>271,456</td>
+                    <td>1.223</td>
+                    <td>15.56</td>
+                    <td>60.1</td>
+                    <td>912.1</td>
+                    <td>-70</td>
+                    <td>32</td>
+                    <td>Has a massive ring system with moonlets and shepherd moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xeridia-II</td>
+                    <td>Terrestrial</td>
+                    <td>3.789</td>
+                    <td>18,234</td>
+                    <td>6.156</td>
+                    <td>9.78</td>
+                    <td>35.5</td>
+                    <td>242.1</td>
+                    <td>310</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, iridescent salt flats</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vorthok-II</td>
+                    <td>Ice Giant</td>
+                    <td>11.678</td>
+                    <td>114,567</td>
+                    <td>0.981</td>
+                    <td>10.34</td>
+                    <td>39.1</td>
+                    <td>1,180.1</td>
+                    <td>-110</td>
+                    <td>21</td>
+                    <td>Has a highly active geology with frequent cryovolcanic eruptions</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zharkon-II</td>
+                    <td>Gas Giant</td>
+                    <td>22.234</td>
+                    <td>291,234</td>
+                    <td>1.256</td>
+                    <td>16.01</td>
+                    <td>62.1</td>
+                    <td>902.1</td>
+                    <td>-60</td>
+                    <td>34</td>
+                    <td>Has a unique "stellar nursery" region with protostars and protoplanets</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Kalxor-II</td>
+                    <td>Terrestrial</td>
+                    <td>4.012</td>
+                    <td>19,789</td>
+                    <td>6.289</td>
+                    <td>10.01</td>
+                    <td>36.5</td>
+                    <td>257.3</td>
+                    <td>330</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, labyrinthine cave systems</td>
+                  </tr><tr>
+                    <th scope="row">Aethonox</td>
+                    <td>Gas Giant</td>
+                    <td>23.456</td>
+                    <td>301,912</td>
+                    <td>1.289</td>
+                    <td>16.56</td>
+                    <td>64.2</td>
+                    <td>892.1</td>
+                    <td>-50</td>
+                    <td>36</td>
+                    <td>Has a massive storm system with lightning-powered aurorae</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Brynhildr</td>
+                    <td>Terrestrial</td>
+                    <td>4.345</td>
+                    <td>20,934</td>
+                    <td>6.378</td>
+                    <td>10.23</td>
+                    <td>37.8</td>
+                    <td>272.1</td>
+                    <td>350</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, mirror-like saltwater lakes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cygnus-X</td>
+                    <td>Ice Giant</td>
+                    <td>12.234</td>
+                    <td>120,678</td>
+                    <td>0.992</td>
+                    <td>10.56</td>
+                    <td>40.5</td>
+                    <td>1,200.1</td>
+                    <td>-100</td>
+                    <td>23</td>
+                    <td>Has a subsurface ocean with unique, bioluminescent marine life</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Daxton-IV</td>
+                    <td>Gas Giant</td>
+                    <td>24.678</td>
+                    <td>312,345</td>
+                    <td>1.312</td>
+                    <td>17.01</td>
+                    <td>66.2</td>
+                    <td>882.1</td>
+                    <td>-40</td>
+                    <td>38</td>
+                    <td>Has a massive ring system with moonlets and shepherd moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Erebus-III</td>
+                    <td>Terrestrial</td>
+                    <td>4.678</td>
+                    <td>21,901</td>
+                    <td>6.456</td>
+                    <td>10.45</td>
+                    <td>39.2</td>
+                    <td>287.3</td>
+                    <td>370</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, towering mountain ranges</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Flarion-II</td>
+                    <td>Ice Giant</td>
+                    <td>12.678</td>
+                    <td>122,901</td>
+                    <td>0.994</td>
+                    <td>10.67</td>
+                    <td>41.5</td>
+                    <td>1,220.1</td>
+                    <td>-90</td>
+                    <td>25</td>
+                    <td>Has a highly active geology with frequent cryovolcanic eruptions</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gwynedd-IV</td>
+                    <td>Gas Giant</td>
+                    <td>25.901</td>
+                    <td>323,456</td>
+                    <td>1.335</td>
+                    <td>17.45</td>
+                    <td>68.2</td>
+                    <td>872.1</td>
+                    <td>-30</td>
+                    <td>40</td>
+                    <td>Has a unique "stellar nursery" region with protostars and protoplanets</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Hypatia-III</td>
+                    <td>Terrestrial</td>
+                    <td>4.901</td>
+                    <td>22,789</td>
+                    <td>6.523</td>
+                    <td>10.67</td>
+                    <td>40.8</td>
+                    <td>302.3</td>
+                    <td>390</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, labyrinthine cave systems</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xylaraea</td>
+                    <td>Gas Giant</td>
+                    <td>30.123</td>
+                    <td>373,456</td>
+                    <td>1.417</td>
+                    <td>19.45</td>
+                    <td>76.2</td>
+                    <td>832.1</td>
+                    <td>10</td>
+                    <td>48</td>
+                    <td>Has a massive storm system with aurora-like displays</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vyctora</td>
+                    <td>Terrestrial</td>
+                    <td>5.689</td>
+                    <td>26,234</td>
+                    <td>6.756</td>
+                    <td>11.23</td>
+                    <td>46.2</td>
+                    <td>362.3</td>
+                    <td>470</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, iridescent salt flats</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xeridian</td>
+                    <td>Ice Giant</td>
+                    <td>14.234</td>
+                    <td>140,678</td>
+                    <td>1.002</td>
+                    <td>11.34</td>
+                    <td>48.5</td>
+                    <td>1,280.1</td>
+                    <td>-60</td>
+                    <td>31</td>
+                    <td>Has a subsurface ocean with unique, bioluminescent marine life</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Orianaea</td>
+                    <td>Gas Giant</td>
+                    <td>31.456</td>
+                    <td>383,912</td>
+                    <td>1.429</td>
+                    <td>20.01</td>
+                    <td>78.2</td>
+                    <td>822.1</td>
+                    <td>20</td>
+                    <td>50</td>
+                    <td>Has a massive ring system with moonlets and shepherd moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vyntria</td>
+                    <td>Terrestrial</td>
+                    <td>5.789</td>
+                    <td>27,091</td>
+                    <td>6.812</td>
+                    <td>11.34</td>
+                    <td>47.3</td>
+                    <td>377.3</td>
+                    <td>490</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, towering mountain ranges</td>
+                  </tr>
+                  <!-- ... -->
+                  <tr>
+                    <th scope="row">Zorvania</td>
+                    <td>Gas Giant</td>
+                    <td>32.678</td>
+                    <td>403,456</td>
+                    <td>1.441</td>
+                    <td>20.56</td>
+                    <td>80.2</td>
+                    <td>812.1</td>
+                    <td>30</td>
+                    <td>52</td>
+                    <td>Has a unique "stellar nursery" region with protostars and protoplanets</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xylophia-IV</td>
+                    <td>Terrestrial</td>
+                    <td>5.901</td>
+                    <td>28,234</td>
+                    <td>6.868</td>
+                    <td>11.45</td>
+                    <td>48.5</td>
+                    <td>392.3</td>
+                    <td>510</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, labyrinthine cave systems</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vorthok-V</td>
+                    <td>Ice Giant</td>
+                    <td>14.678</td>
+                    <td>150,678</td>
+                    <td>1.005</td>
+                    <td>11.56</td>
+                    <td>50.5</td>
+                    <td>1,300.1</td>
+                    <td>-50</td>
+                    <td>33</td>
+                    <td>Has a subsurface ocean with unique, bioluminescent marine life</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Oberyn-IV</td>
+                    <td>Gas Giant</td>
+                    <td>33.901</td>
+                    <td>413,912</td>
+                    <td>1.454</td>
+                    <td>21.01</td>
+                    <td>82.2</td>
+                    <td>802.1</td>
+                    <td>40</td>
+                    <td>54</td>
+                    <td>Has a massive storm system with aurora-like displays</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vynaria</td>
+                    <td>Terrestrial</td>
+                    <td>6.012</td>
+                    <td>29,345</td>
+                    <td>6.923</td>
+                    <td>11.56</td>
+                    <td>49.6</td>
+                    <td>407.3</td>
+                    <td>530</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, iridescent salt flats</td>
+                  </tr>
+                  <!-- ... -->
+                  <tr>
+                    <th scope="row">Xeridion-IV</td>
+                    <td>Gas Giant</td>
+                    <td>35.123</td>
+                    <td>423,456</td>
+                    <td>1.467</td>
+                    <td>21.56</td>
+                    <td>84.2</td>
+                    <td>792.1</td>
+                    <td>50</td>
+                    <td>56</td>
+                    <td>Has a massive ring system with moonlets and shepherd moons</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vyntara</td>
+                    <td>Terrestrial</td>
+                    <td>6.123</td>
+                    <td>30,567</td>
+                    <td>6.978</td>
+                    <td>11.67</td>
+                    <td>50.7</td>
+                    <td>422.3</td>
+                    <td>550</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, towering mountain ranges</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zorvanth</td>
+                    <td>Ice Giant</td>
+                    <td>15.234</td>
+                    <td>160,678</td>
+                    <td>1.012</td>
+                    <td>11.78</td>
+                    <td>52.5</td>
+                    <td>1,320.1</td>
+                    <td>-40</td>
+                    <td>35</td>
+                    <td>Has a subsurface ocean with unique, bioluminescent marine life</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Orixya</td>
+                    <td>Gas Giant</td>
+                    <td>36.456</td>
+                    <td>433,912</td>
+                    <td>1.479</td>
+                    <td>22.01</td>
+                    <td>86.2</td>
+                    <td>782.1</td>
+                    <td>60</td>
+                    <td>58</td>
+                    <td>Has a unique "stellar nursery" region with protostars and protoplanets</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Xyloren</td>
+                    <td>Terrestrial</td>
+                    <td>6.234</td>
+                    <td>31,789</td>
+                    <td>7.033</td>
+                    <td>11.78</td>
+                    <td>51.8</td>
+                    <td>437.3</td>
+                    <td>570</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, labyrinthine cave systems</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vorthex</td>
+                    <td>Ice Giant</td>
+                    <td>15.567</td>
+                    <td>170,678</td>
+                    <td>1.015</td>
+                    <td>11.89</td>
+                    <td>54.5</td>
+                    <td>1,340.1</td>
+                    <td>-30</td>
+                    <td>37</td>
+                    <td>Has a highly active geology with frequent cryovolcanic eruptions</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Oberynn</td>
+                    <td>Gas Giant</td>
+                    <td>37.678</td>
+                    <td>443,912</td>
+                    <td>1.492</td>
+                    <td>22.56</td>
+                    <td>88.2</td>
+                    <td>772.1</td>
+                    <td>70</td>
+                    <td>60</td>
+                    <td>Has a massive storm system with aurora-like displays</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vyntrax</td>
+                    <td>Terrestrial</td>
+                    <td>6.345</td>
+                    <td>32,901</td>
+                    <td>7.088</td>
+                    <td>11.89</td>
+                    <td>52.9</td>
+                    <td>452.3</td>
+                    <td>590</td>
+                    <td>1</td>
+                    <td>Has a surface with vast, iridescent salt flats</td>
+                  </tr>
+                  <!-- ... -->
+                  </tbody>
+              </tbody>
+            </table>
+
+    </ila-datatable>
+
+</body>
+
+
