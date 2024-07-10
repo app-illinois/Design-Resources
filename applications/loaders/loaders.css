@@ -1,0 +1,63 @@
+div#loaders-container {
+display: flex;
+}
+
+#loaders-container .space {
+margin: 40px;
+}
+
+.loader1a {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#ff5f03,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#ff5f05);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+
+.loader1b {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#13294b,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#13294b);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+
+.loader1c {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+  	radial-gradient(farthest-side,#13294b,#0000) top/8px 8px no-repeat, 
+  	conic-gradient(#13294b 30%,#499bcd);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+
+.loader1d {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side,#b74a26,#0000) top/8px 8px no-repeat, conic-gradient(#b74a26 30%,#ff5f05);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
