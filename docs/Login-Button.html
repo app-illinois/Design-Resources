@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Design Resource Component - Login Button</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        .ila-login-btn-welcome-message {
+            color: black;
+            font-size: 16px;
+            text-align: right;
+            padding-right: 10px;
+            min-height: 30px;
+            padding-top: 5px;
+        }
+
+        .ila-login-btn:hover, .ila-login-btn:focus {
+            background: #fff;
+            color: #13294b;
+        }
+
+        .ila-login-btn:active {
+            background: #ff552e;
+            color: #ffffff;
+            border: 2px solid #ff552e;
+        }
+
+        .ila-login-btn {
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 20px;
+            text-align: center;
+            min-width: 91px;
+            min-height: 26px;
+            background: #13294b;
+            color: #ffffff;
+            border: 2px solid #13294b;
+            border-radius: 9px;
+            line-height: 24px;
+            box-sizing: content-box;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+    </header>
+
+    <main>
+
+        <div>
+            <h1>Login button</h1>
+            <p>This page demonstrates the placement and behavior of the login button</p>
+        </div>
+        <br>
+
+        <div>
+            <h2>Placement</h2>
+
+            <h3>Without search</h3>
+
+            <div id="search">
+                <img src="/images/No-Search-LoggedOut.png" alt="brand guidelines header" style="width: 1366px; height: auto;">
+                <img src="/images/No-Search-LoggedIn.png" alt="brand guidelines header" style="width: 1366px; height: auto;">
+            </div>
+
+            <h3>With search</h3>
+            <div id="no-search">
+                <img src="/images/Search-LoggedOut.png" alt="brand guidelines header" style="width: 1366px; height: auto;">
+                <img src="/images/Search-LoggedIn.png" alt="brand guidelines header" style="width: 1366px; height: auto;">
+            </div>
+
+        </div>
+        <br>
+
+        <div>
+            <h2>Button Behavior</h2>
+            <p>
+                The button has a blue background, with a change to white upon hover-over.
+                There is a momentary change to orange when clicked, and the work 'Login' is changed to Logout'
+                A welcoem message is displayed next to the button
+            </p>
+        </div>
+        <br>
+
+        <div>
+            <h2>Accessibility Guidelines </h2>
+            <p>Describe accessibility concerns and requirements with the item, as well as any best practices.</p>
+        </div>
+        <br>
+
+        <div>
+            <h2>Component Example</h2>
+
+            <div style="min-height:100px;border:1px solid black;padding:5px;">
+                <button class="ila-login-btn" style="float:right;">Login</button>
+                <span class="ila-login-btn-welcome-message" style="float:right;">Welcome rdetzner</span>
+            </div>   
+        </div>
+        <br>
+
+        <div>
+            <h2>Link</h2>
+            <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/login-button">Link to this component on GitHub</a></p>
+        </div>
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var loggedIn = false;
+            $(".ila-login-btn-welcome-message").hide();
+
+            $(".ila-login-btn").click(function () {
+                loggedIn = !loggedIn;
+                $(this).text(loggedIn ? "Logout" : "Login");
+                if (!loggedIn) {
+                    $(".ila-login-btn-welcome-message").hide();
+                } else {
+                    $(".ila-login-btn-welcome-message").show();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
