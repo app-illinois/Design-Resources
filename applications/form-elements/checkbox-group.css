@@ -1,0 +1,9 @@
+/* checkbox-group */
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    align-self: stretch;
+}
