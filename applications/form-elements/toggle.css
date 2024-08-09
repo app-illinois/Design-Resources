@@ -1,0 +1,252 @@
+/* toggle */
+
+input [type='checkbox']:default {
+
+    /* Group */
+    display: flex;
+    width: 143px;
+    align-items: center;
+    gap: 11px;
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+    width: 35px;
+    height: 19px;
+    flex-shrink: 0;
+
+    border-radius: 24px;
+    background: var(--il-storm--il-storm-85, #D5D3D3);
+
+    /* Indicator */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    background: #FFF;
+
+}
+
+input [type='checkbox']:hover {
+
+    /* Group */
+    display: flex;
+    width: 141px;
+    align-items: center;
+    gap: 11px;
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+    width: 35px;
+    height: 19px;
+    flex-shrink: 0;
+
+    border-radius: 24px;
+    border: 2px solid #FF5F05;
+    background: var(--il-storm--il-storm-85, #D5D3D3);
+
+    /* Indicator */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    
+    border-radius: 12px;
+    background: #FFF;
+
+}
+
+input [type='checkbox']:focus {
+
+    /* Group */
+    display: flex;
+    width: 143px;
+    align-items: center;
+    gap: 11px;
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+    width: 35px;
+    height: 19px;
+    flex-shrink: 0;
+    
+    border-radius: 24px;
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(--il-arches--il-arches-90, #C7EDF8);
+
+   /* Indicator */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    background: var(--il-blue--il-blue, #13294B);
+
+}
+
+input [type='checkbox']:checked {
+
+    /* Group */
+    display: flex;
+    width: 143px;
+    align-items: center;
+    gap: 11px;
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: #FFF;
+
+    /* Indicator */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: #FFF;
+
+}
+
+input [type='checkbox']:checked:hover {
+
+    /* Group */
+    display: flex;
+    width: 143px;
+    align-items: center;
+    gap: 11px;
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+    width: 35px;
+    height: 19px;
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="39" height="24" viewBox="0 0 39 24" fill="none">
+    <rect x="1" y="1.5" width="37" height="21" rx="10.5" fill="#FF5F05" stroke="#FF5F05" stroke-width="2"/>
+    <rect x="18" y="3.5" width="17" height="17" rx="8.5" fill="white" stroke="#FF5F05" stroke-width="2"/>
+    </svg>
+
+    /* Indicator */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    border: 2px solid var(--il-orange-il-orange, #FF5F05);
+    background: #FFF;
+
+}
+
+input [type='checkbox']:checked:focus {
+   
+    /* Group */
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+
+    /* Indicator */
+
+}
+
+input [type='checkbox']:disabled {
+
+    /* Group */
+    display: flex;
+    width: 143px;
+    align-items: center;
+    gap: 11px;
+
+    /* Label */
+    flex: 1 0 0;
+
+    color: var(--il-storm--il-storm-60, #8E9090);
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Toggle */
+    width: 35px;
+    height: 19px;
+    flex-shrink: 0;
+
+    border-radius: 24px;
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(--il-arches--il-arches-90, #C7EDF8);
+
+    /* Indicator */
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    background: #FFF;
+
+}
+
