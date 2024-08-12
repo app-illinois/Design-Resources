@@ -1,6 +1,6 @@
 /* photo-upload */
 
-input [type='file-selector-button']:default {
+input [type='file']:default {
 
     /* Box */
     display: flex;
@@ -41,7 +41,7 @@ input [type='file-selector-button']:default {
 
 }
 
-input [type='file-selector-button']:hover {
+input [type='file']:hover {
 
     /* Box */
     display: flex;
@@ -82,7 +82,7 @@ input [type='file-selector-button']:hover {
     
 }
 
-input [type='file-selector-button']:focus {
+input [type='file']:focus {
 
     /* Box */
     display: flex;
@@ -122,7 +122,7 @@ input [type='file-selector-button']:focus {
     line-height: 30px; /* 166.667% */
 }
 
-input [type='file-selector-button']:active {
+input [type='file']:active {
 
     /* Box */
     display: flex;
@@ -163,7 +163,7 @@ input [type='file-selector-button']:active {
 
 }
 
-input [type='file-selector-button']:disabled {
+input [type='file']:disabled {
 
     /* Box */
     display: flex;
@@ -204,7 +204,7 @@ input [type='file-selector-button']:disabled {
 
 }
 
-input [type='file-selector-button']:checked:default {
+input [type='file']:checked:default {
 
     /* Box */
     display: inline-flex;
@@ -258,7 +258,7 @@ input [type='file-selector-button']:checked:default {
     
 }
 
-input [type='file-selector-button']:checked:hover {
+input [type='file']:checked:hover {
 
     /* Box */
     display: inline-flex;
@@ -312,7 +312,7 @@ input [type='file-selector-button']:checked:hover {
     
 }
 
-input [type='file-selector-button']:checked:focus {
+input [type='file']:checked:focus {
 
     /* Box */
     display: inline-flex;
@@ -365,7 +365,7 @@ input [type='file-selector-button']:checked:focus {
     line-height: 30px; /* 166.667% */
 }
 
-input [type='file-selector-button']:checked:active {
+input [type='file']:checked:active {
 
     /* Box */
     display: inline-flex;
@@ -419,7 +419,7 @@ input [type='file-selector-button']:checked:active {
     
 }
 
-input [type='file-selector-button']:checked:disabled {
+input [type='file']:checked:disabled {
 
     /* Box */
     display: inline-flex;
