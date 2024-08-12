@@ -1,0 +1,16 @@
+/* select-dropdown */
+
+input [type='select'] {}
+
+    /* Open Dropdown */
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+
+    /* Group of Options */
+    \display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
