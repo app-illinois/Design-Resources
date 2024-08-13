@@ -1,12 +1,41 @@
 /* photo upload component containing label, photo upload, and description */
 
-/* containing div */
-div {
-    display: flex;
-    width: 652px;
-    min-width: 250px;
-    max-width: 652px;
-    flex-direction: column;
+.photo-upload-block {
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
     gap: 6px;
+    max-width: 652px;
+    position: relative;
+    width: 652px;
+}
+
+.photo-upload-block .label-instance {
+    align-self: stretch !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}
+
+.photo-upload-block .design-component-instance-node {
+    flex: 1 !important;
+    flex-grow: 1 !important;
+    width: unset !important;
+}
+
+.photo-upload-block .photo-upload-instance {
+    align-self: stretch !important;
+    margin-left: -1px !important;
+    margin-right: -1px !important;
+    width: 100% !important;
+}
+
+.photo-upload-block .photo-upload-2 {
+    margin-left: unset !important;
+}
+
+.photo-upload-block .description-instance {
+    align-self: stretch !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
 }
