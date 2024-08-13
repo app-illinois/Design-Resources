@@ -1,12 +1,58 @@
 /* input component containing label, text input, and description */
 
-/* containing div */
-div {
-    display: flex;
-    width: 364px;
-    min-width: 290px;
-    max-width: 364px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+.input-block {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 364px;
+  position: relative;
+  width: 364px;
+}
+
+.input-block .frame-wrapper {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.input-block .frame-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.input-block .label-instance {
+  align-self: stretch !important;
+  display: flex !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+.input-block .design-component-instance-node {
+  flex: 1 !important;
+  flex-grow: 1 !important;
+  width: unset !important;
+}
+
+.input-block .input-instance {
+  align-self: stretch !important;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+  width: 100% !important;
+}
+
+.input-block .description-instance {
+  align-self: stretch !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
 }
