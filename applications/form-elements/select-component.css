@@ -1,12 +1,60 @@
-/* dropdown component containing label, dropdown selector, and description */
+/* select dropdown component containing label, dropdown selector, and description */
 
-/* containing div */
-div {
-    display: flex;
-    width: 364px;
-    min-width: 290px;
-    max-width: 364px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+.dropdown-block {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 364px;
+  position: relative;
+  width: 364px;
+}
+
+.dropdown-block .frame-wrapper {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-block .frame-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-block .label-instance {
+  align-self: stretch !important;
+  display: flex !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+.dropdown-block .design-component-instance-node {
+  flex: 1 !important;
+  flex-grow: 1 !important;
+  width: unset !important;
+}
+
+.dropdown-block .dropdown-select-instance {
+  align-self: stretch !important;
+  flex: 0 0 auto !important;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+  width: 100% !important;
+}
+
+.dropdown-block .description-instance {
+  align-self: stretch !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
 }
