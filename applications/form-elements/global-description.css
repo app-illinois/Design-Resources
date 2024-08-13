@@ -1,12 +1,20 @@
 /* description */
 
-input [type='description'] {
-    flex: 1 0 0;
-
-    color: var(--il-storm--il-storm-40, #5C5E5E);
-    font-family: "Source Sans Pro";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px; /* 122.222% */
+.label {
+  height: 22px;
+  width: 290px;
 }
+
+.label .description {
+  color: var(--il-storm-il-storm-40);
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 22px;
+  position: fixed;
+  top: 0;
+  width: 290px;
+}
+
