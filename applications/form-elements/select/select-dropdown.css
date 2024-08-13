@@ -1,16 +1,35 @@
 /* select-dropdown */
 
-input [type='select'] {}
-
-    /* Open Dropdown */
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-
-    /* Group of Options */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
+.select-dropdown {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
 }
+
+.select-dropdown .dropdown-instance {
+  flex: 0 0 auto !important;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+  margin-top: -1px !important;
+}
+
+.select-dropdown .div {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.select-dropdown .select-option-instance {
+  flex: 0 0 auto !important;
+  height: unset !important;
+  padding: 6px 10px !important;
+}
+
+.select-dropdown .design-component-instance-node {
+  white-space: nowrap !important;
+}
+
