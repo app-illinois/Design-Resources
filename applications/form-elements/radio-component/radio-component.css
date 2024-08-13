@@ -1,11 +1,36 @@
 /* radio component containing label, radio, and description */
 
-/* containing div */
-div {
-    display: flex;
-    width: 364px;
-    min-width: 250px;
-    max-width: 364px;
-    flex-direction: column;
+.radio-block {
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    max-width: 364px;
+    position: relative;
+    width: 364px;
+}
+
+.radio-block .frame-5 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    width: 100%;
+}
+
+.radio-block .frame-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12 px;
+    position: relative;
+    width: 100%;
+}
+
+.radio-block .radio-single-select-sinstance {
+    flex: 0 0 auto !important;
 }
