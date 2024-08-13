@@ -1,0 +1,12 @@
+/* toggle component containing label, toggle, and description */
+
+/* containing div */
+div {
+    display: flex;
+    width: 364px;
+    min-width: 250px;
+    max-width: 364px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}

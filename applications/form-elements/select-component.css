@@ -1,0 +1,12 @@
+/* dropdown component containing label, dropdown selector, and description */
+
+/* containing div */
+div {
+    display: flex;
+    width: 364px;
+    min-width: 290px;
+    max-width: 364px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}

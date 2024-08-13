@@ -1,0 +1,12 @@
+/* text area component containing label, text area, and description */
+
+/* containing div */
+div {
+    display: flex;
+    width: 652px;
+    min-width: 250px;
+    max-width: 652px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
