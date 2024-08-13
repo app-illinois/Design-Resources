@@ -1,16 +1,22 @@
 /* label */
 
-input [type='label']:default {
-    display: flex;
-    height: 32px;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1 0 0;
-
-    color: var(--il-blue--il-blue, #13294B);
-    font-family: "Source Sans Pro";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px; /* 130% */
+.label {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 125px;
 }
+
+.label .label-message {
+  color: var(--il-blue-il-blue);
+  flex: 1;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  height: 32px;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin-top: -1px;
+  position: relative;
+}
+
