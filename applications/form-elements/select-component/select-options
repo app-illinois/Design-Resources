@@ -1,4 +1,4 @@
-/* dropdown-options */
+/* select-options */
 
 input [type='option']:default {
 
