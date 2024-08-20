@@ -920,16 +920,15 @@
         <main>
             <div class="page-wrapper">
                 <div>
-                    <h1>Design Component Name</h1>
-                    <p>Describe the design component and usage cases for it</p>
+                    <h1>Slideover</h1>
+                    <p>Used as a way to display additional information.</p>
                 </div>
                 <br />
 
                 <div>
                     <h2>Placement</h2>
                     <p>
-                        Describe rules or best practices concerning the
-                        placement of this component within a website
+                       Place the main slideover component(s) ideally at the root level of the page just inside the body tag.
                     </p>
                 </div>
                 <br />
@@ -937,8 +936,10 @@
                 <div>
                     <h2>Component Behavior</h2>
                     <p>
-                        Describe the behavior of the component when interacting
-                        with it
+                        Opens a slideover component with semi-transparent
+                        overlay to display additional information. Can be
+                        dismissed by clicking the overlay or the close button in
+                        the upper right corner.
                     </p>
                 </div>
                 <br />
@@ -946,8 +947,17 @@
                 <div>
                     <h2>Accessibility Guidelines</h2>
                     <p>
-                        Describe accessibility concerns and requirements with
-                        the item, as well as any best practices.
+                        This component utilizes code from the
+                        <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
+                            >ARIA Authoring Practices Guide</a>.  <br>
+                            Main points:
+                            <ul>
+                                <li>Has role="dialog"</li>
+                                <li>Has aria-model="true"</li>
+                                <li>Slideover header has an ID so it can be used as aria-labelledby for the component</li>
+                                <li>Acts as a focus trap</li>
+                                <li>Escape key closes the slideover</li>
+                            </ul>
                     </p>
                 </div>
                 <br />
