@@ -1,0 +1,474 @@
+/* photo-upload */
+
+input [type='file']:default {
+
+    /* Box */
+    display: flex;
+    width: 650px;
+    height: 137px;
+    padding: 54px 282px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(---white, #FFF);
+
+    /* Button */
+    display: flex;
+    width: 86px;
+    height: 29px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+}
+
+input [type='file']:hover {
+
+    /* Box */
+    display: flex;
+    width: 650px;
+    height: 137px;
+    padding: 54px 282px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(---white, #FFF);
+
+    /* Button */
+    display: flex;
+    width: 86px;
+    height: 29px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px dashed var(--il-blue--il-blue, #13294B);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='file']:focus {
+
+    /* Box */
+    display: flex;
+    width: 650px;
+    height: 137px;
+    padding: 54px 282px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(--il-arches--il-arches-90, #C7EDF8);
+
+    /* Button */
+    display: flex;
+    width: 86px;
+    height: 29px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+}
+
+input [type='file']:active {
+
+    /* Box */
+    display: flex;
+    width: 650px;
+    height: 137px;
+    padding: 54px 282px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 2px solid #FF5F05;
+    background: #FFF;
+
+    /* Button */
+    display: flex;
+    width: 86px;
+    height: 29px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 2px solid #FF5F05;
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+
+}
+
+input [type='file']:disabled {
+
+    /* Box */
+    display: flex;
+    width: 650px;
+    height: 137px;
+    padding: 54px 282px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: #FFF;
+
+    /* Button */
+    display: flex;
+    width: 86px;
+    height: 29px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    color: var(--il-storm--il-storm-80, #C6C7C6);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+}
+
+input [type='file']:checked:default {
+
+    /* Box */
+    display: inline-flex;
+    padding: 54px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(---white, #FFF);
+
+    /* Image */
+    display: flex;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    /* Button */
+    display: flex;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    display: flex;
+    width: 98px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='file']:checked:hover {
+
+    /* Box */
+    display: inline-flex;
+    padding: 54px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(---white, #FFF);
+
+    /* Image */
+    display: flex;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    /* Button */
+    display: flex;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-blue--il-blue, #13294B);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    display: flex;
+    width: 104px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='file']:checked:focus {
+
+    /* Box */
+    display: inline-flex;
+    padding: 54px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(---white, #FFF);
+
+    /* Image */
+    display: flex;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    /* Button */
+    display: flex;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(--il-arches--il-arches-90, #C7EDF8);
+
+    /* Button Text */
+    display: flex;
+    width: 104px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+}
+
+input [type='file']:checked:active {
+
+    /* Box */
+    display: inline-flex;
+    padding: 54px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: 2px solid #FF5F05;
+    background: var(---white, #FFF);
+
+    /* Image */
+    display: flex;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    /* Button */
+    display: flex;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 2px solid #FF5F05;
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+    
+    /* Button Text */
+    display: flex;
+    width: 104px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(---black, #000);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='file']:checked:disabled {
+
+    /* Box */
+    display: inline-flex;
+    padding: 54px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(---white, #FFF);
+
+    /* Image */
+    display: flex;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    /* Button */
+    display: flex;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px dashed var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Button Text */
+    display: flex;
+    width: 98px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(--il-storm--il-storm-80, #C6C7C6);
+    text-align: center;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    
+}

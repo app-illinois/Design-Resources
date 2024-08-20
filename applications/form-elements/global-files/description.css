@@ -1,0 +1,20 @@
+/* description */
+
+.label {
+  height: 22px;
+  width: 290px;
+}
+
+.label .description {
+  color: var(--il-storm-il-storm-40);
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 22px;
+  position: fixed;
+  top: 0;
+  width: 290px;
+}
+

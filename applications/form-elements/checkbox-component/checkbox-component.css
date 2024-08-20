@@ -1,0 +1,107 @@
+/* checkbox component containing label, checkbox, and description */
+
+.checkmark-block {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 364px;
+    position: relative;
+    width: 364px;
+}
+
+.checkmark-block .frame-2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    width: 100%;
+}
+
+.checkmark-block .frame-3 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.checkmark-block .label-instance {
+    align-self: stretch !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}
+
+.checkmark-block .design-component-instance-node {
+    flex: 1 !important;
+    flex-grow: 1 !important;
+    width: unset !important;
+}
+
+.checkmark-block .multi-checkbox-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0px 0px 0px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.checkmark-block .multi-checkbox {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    width: 344px;
+}
+
+.checkmark-block .checkbox-2 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.checkmark-block .img {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.checkmark-block .text-wrapper2 {
+    color: #000;
+    flex: 1;
+    font-fammily: var(--body-regular-font-family);
+    font-size: var(--body-regular-font-size);
+    font-style: var(--body-regular-font-weight);
+    font-weight: var (--body-regular-font-weight);
+    letter-spacing: var(--body-regular-letter-spacing);
+    line-height: var(--body-regular-line-height);
+    margin-top: -1px;
+    position: relative;
+}
+
+.checkmark-block .description-instance {
+    align-self: stretch !important;
+    flex: 0 0 auto !important;
+    justify-content: unset !important;
+    width: 100% !important;
+}
+
+.checkmark-block .description-2 {
+    margin-top: unset !important;
+}

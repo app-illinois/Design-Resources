@@ -1,0 +1,54 @@
+/* error-message */
+
+input [type:'validation-error'] {
+
+/* Group */
+display: flex;
+width: 364px;
+min-width: 250px;
+max-width: 364px;
+flex-direction: column;
+align-items: flex-start;
+
+/* Surrounding Input Box */
+display: flex;
+padding: 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 22px;
+align-self: stretch;
+
+border: 2px solid #D40C0C;
+
+/* Error Red Box */
+display: flex;
+padding: 10px;
+flex-direction: column;
+align-items: flex-start;
+gap: 3px;
+align-self: stretch;
+
+border: 2px solid #D40C0C;
+background: #D40C0C;
+
+/* Error Icon */
+width: 26px;
+height: 23px;
+
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+  <path d="M12.284 0.418182C12.6022 -0.139393 13.3978 -0.139394 13.716 0.418181L25.888 21.7455C26.2062 22.303 25.8084 23 25.172 23H0.828C0.191556 23 -0.206223 22.303 0.111999 21.7455L12.284 0.418182Z" fill="white"/>
+  <path d="M11.8425 8.69818C11.8425 8.05151 12.3607 7.52727 13 7.52727C13.6392 7.52727 14.1574 8.05151 14.1574 8.69818V14.5527C14.1574 15.1994 13.6392 15.7236 13 15.7236C12.3607 15.7236 11.8425 15.1994 11.8425 14.5527V8.69818Z" fill="#D40C0C"/>
+  <path d="M14.1574 17.7309C14.1574 18.3776 13.6392 18.9018 13 18.9018C12.3607 18.9018 11.8425 18.3776 11.8425 17.7309C11.8425 17.0842 12.3607 16.56 13 16.56C13.6392 16.56 14.1574 17.0842 14.1574 17.7309Z" fill="#D40C0C"/>
+</svg>
+
+/* Error Message */
+flex: 1 0 0;
+
+color: var(---white, #FFF);
+font-family: "Source Sans Pro";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}

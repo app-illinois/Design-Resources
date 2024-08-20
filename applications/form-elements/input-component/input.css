@@ -1,0 +1,124 @@
+/* input */
+
+input [type='input']:default {
+
+    /* Box */
+    display: flex;
+    width: 290px;
+    height: 43px;
+    padding: 6px 10px 10px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(---white, #FFF);
+
+    /* Text */
+    flex: 1 0 0;
+
+    color: var(---black, #000);
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+}
+
+input [type='input']:hover {
+
+    /* Box */
+    display: flex;
+    width: 290px;
+    height: 43px;
+    padding: 6px 10px 10px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--il-storm--il-storm-80, #C6C7C6);
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+
+    /* Text */
+    flex: 1 0 0;
+
+    color: var(---black, #000);
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='input']:focus {
+
+    /* Box */
+    display: flex;
+    width: 290px;
+    height: 43px;
+    padding: 6px 10px 10px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 2px solid var(--il-blue--il-blue, #13294B);
+    background: var(--il-arches--il-arches-90, #C7EDF8);
+
+    /* Text */
+    flex: 1 0 0;
+
+    color: var(---black, #000);
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='input']:active {
+
+    /* Box */
+    display: flex;
+    width: 290px;
+    height: 43px;
+    padding: 6px 10px 10px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: 2px solid #FF5F05;
+    background: var(---white, #FFF);
+
+    /* Text */
+    flex: 1 0 0;
+
+    color: var(---black, #000);
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    
+}
+
+input [type='input']:disabled {
+
+    /* Box */
+    display: flex;
+    width: 290px;
+    height: 43px;
+    padding: 6px 10px 10px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    
+    background: var(--il-storm--il-storm-95, #F4F4F4);
+    
+}

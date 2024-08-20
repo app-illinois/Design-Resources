@@ -1,0 +1,22 @@
+/* label */
+
+.label {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 125px;
+}
+
+.label .label-message {
+  color: var(--il-blue-il-blue);
+  flex: 1;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  height: 32px;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin-top: -1px;
+  position: relative;
+}
+

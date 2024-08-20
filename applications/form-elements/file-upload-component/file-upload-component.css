@@ -1,0 +1,64 @@
+/* file upload component containing label, file upload, and description */
+
+.file-upload-block {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 652px;
+    position: relative;
+    width: 652px;
+}
+
+.file-upload-block .frame-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    width: 100%;
+}
+
+.file-upload-block .frame2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.file-upload-block .label-instance {
+    align-self: stretch !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}
+
+.file-upload-block .design-component-instance-node {
+    flex: 1 !important;
+    flex-grow: 1 !important;
+    width: unset !important;
+}
+
+.file-upload-block .file-upload-instance {
+    align-self: stretch !important;
+    flex: 0 0 auto !important;
+    margin-left: -1px !important;
+    margin-right: -1px !important;
+    width: 100% !important;
+}
+
+.file-upload-block .file-upload-2 {
+    margin-left: unset !important;
+}
+
+.file-upload-block .description-instance {
+    align-self: stretch !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}

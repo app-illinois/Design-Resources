@@ -1,0 +1,277 @@
+/* radio-buttons */
+
+input [type='radio']:default {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    fill: var(---white, #FFF);
+    stroke-width: 1px;
+    stroke: var(--il-storm--il-storm, #707372);
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9.5" fill="white" stroke="#707372"/>
+    </svg>
+
+}
+
+input [type='radio']:hover {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    fill: var(---white, #FFF);
+    stroke-width: 2px;
+    stroke: #FF5F05;
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+    <circle cx="11" cy="11" r="10" fill="white" stroke="#FF5F05" stroke-width="2"/>
+    </svg>
+
+}
+
+input [type='radio']:focus {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 14px;
+    height: 14px;
+
+    position: absolute;
+    left: 3px;
+    top: 3px;
+
+    fill: var(--il-arches--il-arches-90, #C7EDF8);
+    stroke-width: 2px;
+    stroke: var(--il-arches--il-arches-90, #C7EDF8);
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <circle cx="9" cy="9" r="8" fill="#C7EDF8" stroke="#C7EDF8" stroke-width="2"/>
+    </svg>
+
+}
+
+input [type='radio']:checked {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    
+    fill: var(---white, #FFF);
+    stroke-width: 1px;
+    stroke: var(--il-storm--il-storm, #707372);
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <circle cx="10" cy="10" r="9.5" fill="white" stroke="#707372"/>
+    </svg>
+
+    /* Indicator */
+    width: 10px;
+    height: 10px;
+
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+    fill: var(--il-storm--il-storm, #707372);
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+    <circle cx="5" cy="5" r="5" fill="#707372"/>
+    </svg>
+
+}
+
+input [type='radio']:checked:hover {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    fill: var(---white, #FFF);
+    stroke-width: 1px;
+    stroke: var(--il-storm--il-storm, #707372);
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="9.5" fill="white" stroke="#707372"/>
+    </svg>
+
+    /* Indicator */
+    width: 12px;
+    height: 12px;
+    
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    
+    fill: #FF5F05;
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <circle cx="6" cy="6" r="6" fill="#FF5F05"/>
+    </svg>
+    
+}
+
+input [type:'radio']:checked:focus {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: #000;
+
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    fill: var(--il-blue--il-blue, #13294B);
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="10" fill="#13294B"/>
+    </svg>
+
+    /* Indicator */
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    left: 4px;
+    top: 4px;
+
+    fill: var(--il-blue--il-blue, #13294B);
+    stroke-width: 3px;
+    stroke: var(--il-arches--il-arches-90, #C7EDF8);
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <circle cx="9" cy="9" r="7.5" fill="#13294B" stroke="#C7EDF8" stroke-width="3"/>
+    </svg>
+
+}
+
+input [type='radio']:disabled {
+
+    /* Group */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Label */
+    width: 95px;
+
+    color: var(--il-storm--il-storm, #707372);
+    
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+
+    /* Radio */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    
+    fill: var(--il-storm--il-storm-60, #8E9090);
+    stroke-width: 1px;
+    stroke: var(--il-storm--il-storm-95, #F4F4F4);
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <circle cx="10" cy="10" r="9.5" fill="#8E9090" stroke="#F4F4F4"/>
+    </svg>
+
+}

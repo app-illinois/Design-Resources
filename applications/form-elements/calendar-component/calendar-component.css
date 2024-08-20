@@ -1,0 +1,52 @@
+/* calendar component containing label, calendar input, and description */
+
+.calendar-block {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 364px;
+    position: relative;
+    width: 364px;
+}
+
+.calendar-block .div-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    width: 100%;
+}
+
+.calendar-block .frame-2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.calendar-block .label-instance {
+    align-self: stretch !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}
+
+.calendar-block .design-component-instance-node {
+    flex: 1 !important;
+    flex-grow:1 !important;
+    width: unset !important;
+}
+
+.calendar-block .design-component-instance-node-1 {
+    align-self: stretch !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}

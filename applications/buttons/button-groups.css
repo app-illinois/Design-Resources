@@ -1,0 +1,9 @@
+/* button-groups */
+
+button-group {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
