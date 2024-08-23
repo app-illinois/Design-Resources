@@ -1,0 +1,91 @@
+/* component styles */
+:root {
+    --ila-slideover-padding-x: 25px;
+    --ila-slideover-padding-y: 5px;
+}
+.ila-body--has-dialog {
+    overflow: hidden;
+}
+.ila-slideover {
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.ila-slideover--closed {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms, visibility 250ms;
+}
+
+.ila-slideover--open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 500ms, visibility 500ms;
+}
+.ila-slideover__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #24242496;
+    cursor: pointer;
+}
+
+.ila-slideover__slideover {
+    position: absolute;
+    box-shadow: 0px 0px 17px 0px black;
+    background: white;
+    overflow-y: auto;
+}
+
+.ila-slideover--right .ila-slideover__slideover {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 70%;
+}
+.ila-slideover--left .ila-slideover__slideover {
+    top: 0;
+    bottom: 0;
+    right: 70%;
+    left: 0;
+}
+
+.ila-slideover__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
+    border-bottom: 4px solid var(--il-orange);
+}
+
+.ila-slideover__label {
+    margin: 0;
+}
+
+.ila-slideover__close-button {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ila-slideover__close-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.ila-slideover__content {
+    padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
+}
+
+/* global styles */
+body {
+    font-family: 'Source Sans Pro';
+}
