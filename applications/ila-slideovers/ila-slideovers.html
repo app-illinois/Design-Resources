@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+        <title>Slideover Example</title>
+        <link
+            rel="stylesheet"
+            href="ila-slideovers.css"
+        />
+    </head>
+
+    <body>
+        <h1>Slideover</h1>
+        <button
+            class="il-button"
+            onclick="openSlideover('ilaSlideoverRight')"
+        >
+            Open Right Slideover
+        </button>
+        <button
+            class="il-button"
+            onclick="openSlideover('ilaSlideoverLeft')"
+        >
+            Open Left Slideover
+        </button>
+        <div
+            id="ilaSlideoverRight"
+            class="ila-slideover ila-slideover--closed ila-slideover--right"
+            role="dialog"
+            aria-labelledby="ilaSlideoverRightLabel"
+            aria-modal="true"
+        >
+            <div
+                class="ila-slideover__overlay"
+                onclick="closeSlideover('ilaSlideoverLeft')"
+            ></div>
+            <div class="ila-slideover__slideover">
+                <div class="ila-slideover__header">
+                    <h2
+                        id="ilaSlideoverRightLabel"
+                        class="ila-slideover__label"
+                    >
+                        Title of Right Slideover
+                    </h2>
+                    <button
+                        aria-label="close slideover"
+                        class="ila-slideover__close-button"
+                        onclick="closeSlideover('ilaSlideoverRight')"
+                    >
+                        <svg
+                            class="ila-slideover__close-icon"
+                            role="presentation"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 352 512"
+                        >
+                            <path
+                                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ila-slideover__content">
+                    <h3>Content in a slideover</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed lectus velit, feugiat in lacinia eget, tristique ut
+                        orci. Phasellus ut egestas tellus. In hac habitasse
+                        platea dictumst. Nullam efficitur finibus facilisis. In
+                        dui ipsum, congue ut ornare vitae, sollicitudin vitae
+                        velit. Proin congue nunc quam, a sagittis purus suscipit
+                        sed. Quisque tincidunt congue erat, ac placerat ex
+                        dapibus in. Duis velit risus, mattis a volutpat et,
+                        gravida nec velit. Proin ut sem tortor. Aliquam
+                        venenatis sollicitudin nulla, venenatis porttitor augue
+                        auctor in. Integer facilisis lectus sed lacus elementum,
+                        ut ultrices turpis molestie. In in viverra nunc. Cras
+                        placerat arcu et rutrum congue. Phasellus scelerisque,
+                        nibh ac egestas viverra, ligula magna tristique dolor, a
+                        porttitor lacus risus placerat tortor. Suspendisse
+                        potenti. Praesent venenatis erat arcu, vitae mollis elit
+                        lobortis quis. Duis et molestie mi, nec porta ipsum.
+                        Etiam condimentum cursus lacus quis maximus. Sed vel
+                        tortor id turpis eleifend facilisis. Integer hendrerit
+                        tellus ut accumsan blandit. In hac habitasse platea
+                        dictumst. Proin pellentesque id lectus a tristique.
+                        Morbi eu lacus convallis, lobortis ex eu, consequat
+                        augue.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div
+            id="ilaSlideoverLeft"
+            class="ila-slideover ila-slideover--closed ila-slideover--left"
+            role="dialog"
+            aria-labelledby="ilaSlideoverLeftLabel"
+            aria-modal="true"
+        >
+            <div
+                class="ila-slideover__overlay"
+                onclick="closeSlideover('ilaSlideoverLeft')"
+            ></div>
+            <div class="ila-slideover__slideover">
+                <div class="ila-slideover__header">
+                    <h2
+                        id="ilaSlideoverLeftLabel"
+                        class="ila-slideover__label"
+                    >
+                        Title of Left Slideover
+                    </h2>
+                    <button
+                        aria-label="close slideover"
+                        class="ila-slideover__close-button"
+                        onclick="closeSlideover('ilaSlideoverLeft')"
+                    >
+                        <svg
+                            class="ila-slideover__close-icon"
+                            role="presentation"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 352 512"
+                        >
+                            <path
+                                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ila-slideover__content">
+                    <h3>Content in a slideover</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed lectus velit, feugiat in lacinia eget, tristique ut
+                        orci. Phasellus ut egestas tellus. In hac habitasse
+                        platea dictumst. Nullam efficitur finibus facilisis. In
+                        dui ipsum, congue ut ornare vitae, sollicitudin vitae
+                        velit. Proin congue nunc quam, a sagittis purus suscipit
+                        sed. Quisque tincidunt congue erat, ac placerat ex
+                        dapibus in. Duis velit risus, mattis a volutpat et,
+                        gravida nec velit. Proin ut sem tortor. Aliquam
+                        venenatis sollicitudin nulla, venenatis porttitor augue
+                        auctor in. Integer facilisis lectus sed lacus elementum,
+                        ut ultrices turpis molestie. In in viverra nunc. Cras
+                        placerat arcu et rutrum congue. Phasellus scelerisque,
+                        nibh ac egestas viverra, ligula magna tristique dolor, a
+                        porttitor lacus risus placerat tortor. Suspendisse
+                        potenti. Praesent venenatis erat arcu, vitae mollis elit
+                        lobortis quis. Duis et molestie mi, nec porta ipsum.
+                        Etiam condimentum cursus lacus quis maximus. Sed vel
+                        tortor id turpis eleifend facilisis. Integer hendrerit
+                        tellus ut accumsan blandit. In hac habitasse platea
+                        dictumst. Proin pellentesque id lectus a tristique.
+                        Morbi eu lacus convallis, lobortis ex eu, consequat
+                        augue.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="ila-slideovers.js"></script>
+    </body>
+</html>
