@@ -1,2 +1,2 @@
 cp ./applications/buttons/*.css ./docs/css 
-cp ./applications/buttons/*.js ./docs/js
+#cp ./applications/buttons/*.js ./docs/js
