@@ -18,7 +18,5 @@ Steps to set up a page for a component:
 - CSS classes should have the ‘ila-‘ prefix as we discussed.
 - Use the component template HTML page as a rough guide to create an HTML page demonstrating your component.
 - Use JS to mock up interactions that you need to demonstrate the component.
-- Copy your component’s files into folders in the /docs directory; you cannot link back from the /docs directory to something in /applications. The /CSS and /image folders have already been created, but add others if required.
+- Copy the HTML file into the /docs directory; a GitHub action is running with will move the .CSS and .JS files from the /applications/ directories into the css and js directories under /docs for these smaple pages, you no longer need to do this manually.
 - Link to your new component's page from the index page.
-
-Unfortunately, this means the resources for your component will need to live in both the /doc/css (or equivalent) and the /application/[component name] folders. I hope to set up a hook that will run after code is submitted which will automatically take care of this in the coming days once I figure it out.
