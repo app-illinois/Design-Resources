@@ -435,7 +435,6 @@
     <link rel="pingback" href="https://webtheme.illinois.edu/xmlrpc.php">
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
 
-
     <style>
         body .tile-list .tile.w66 {
             flex: 0 0 calc(40% - 1.2rem);
@@ -530,62 +529,72 @@
             </div>
         </div>
     </header><!-- #masthead -->
+
+
     <main>
         <div class="page-wrapper" style="margin-bottom: 30px;">
             <div>
-                <h1>Design Standard Name</h1>
-                <p>Describe the design standard and usage cases for it</p>
+                <h1>Button</h1>
+                <p>There are 6 provided styles for buttons, with a variety of color options</p>
             </div>
             <br>
 
             <div>
                 <h2>Placement</h2>
-                <p>Describe rules or best practices concerning the placement of this design standard within a website</p>
+                <p>There are no set standards for button placement, as it will vary based upon the needs of your site/forms.</p>
             </div>
             <br>
 
             <div>
                 <h2>Behavior</h2>
-                <p>Describe the behavior of the design standard when interacting with it</p>
+                <p>There are no set standards for button behavior, as it is specific to your application</p>
             </div>
             <br>
 
             <div>
                 <h2>Accessibility Guidelines </h2>
-                <p>Describe accessibility concerns and requirements with the item, as well as any best practices.</p>
+                <p>Colors and behavior of the button styles have been chosen in-line with brand and accessibility guidelines</p>
             </div>
             <br>
 
             <div>
-                <h2>Example</h2>
+                <h2>Examples and usage guidelines</h2>
+
                 <p>
-                    Provide an example of the design standard on the page here, possibily using javascript to mock-up some basic interactions with it if needed.
-                    The intent is to allow people to see exactly what they are getting with the provided design standard.
+                    Groups of buttons should be wrapped in a DIV element with the class 'button-group' to ensure proper spacing
+                </p>
+
+                <p>
+                    To apply the appropriate style to a button you'll need to apply 2 classes, 'ila-button' and then the class specific to the style you would like.
+                    These 6 styles are demonstrated below.
                 </p>
                 <p>
                     You may include a span before or after your button text (or as a replacement for) to display a + icon. The markup would be:<br />
-
                     &lt;span class=&quot;ila-button&quot;&gt;&lt;/span&gt;
                 </p>
             </div>
 
             <div class="button-group">
-                <button type="button" class="ila-button ila-pri-button-blue" style="width:200px;">Primary Blue</button>
-                <button type="button" class="ila-button ila-pri-button-orange" style="width:200px;"> Primary Orange</button>
-                <button type="button" class="ila-button ila-sec-button-blue" style="width:200px;"> Secondary Blue</button>        
-                <button type="button" class="ila-button ila-sec-button-orange" style="width:200px;"> Secondary Orange</button>
-                <button type="button" class="ila-button ila-button-tert-blue" style="width:200px;"> Tertiary Blue</button>
-                <button type="button" class="ila-button ila-tert-button-orange" style="width:200px;"> Tertiary Orange</button>
+
+                <button type="button" class="ila-button ila-pri-button-blue" style="width:250px;">ila-pri-button-blue</button>
+                <button type="button" class="ila-button ila-pri-button-orange" style="width:250px;">ila-pri-button-orange</button>
+                <button type="button" class="ila-button ila-sec-button-blue" style="width:250px;">ila-sec-button-blue</button>
+                <button type="button" class="ila-button ila-sec-button-orange" style="width:250px;">ila-sec-button-orange</button>
+                <button type="button" class="ila-button ila-button-tert-blue" style="width:250px;">ila-button-tert-blue</button>
+                <button type="button" class="ila-button ila-tert-button-orange" style="width:250px;">ila-tert-button-orange</button>
             </div>
 
 
             <div>
                 <h2>Link</h2>
-                <p>Provide a link to this design standard in the GitHub repository</p>
+                <p>
+                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/buttons">Link ot this standard in Github</a>
+                </p>
             </div>
 
         </div><!-- closes page wrapper -->
     </main>
+
 
     <footer id="colophon" class="site-footer">
         <il-footer>
