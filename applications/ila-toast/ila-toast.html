@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html
+    lang="en"
+    class="il-toolkit"
+>
+    <head>
+        <meta charset="utf-8" />
+        <title>ILA Toast</title>
+
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="dns-prefetch"
+            href="https://cdn.toolkit.illinois.edu"
+        />
+        <link
+            rel="icon"
+            href="https://cdn.brand.illinois.edu/favicon.ico"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+        <title>Toast Example</title>
+        <link
+            rel="stylesheet"
+            href="ila-toast.css"
+        />
+        <style>
+            body {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.6666666667em;
+                font-family: var(--il-font-sans);
+                color: var(--il-text-color);
+            }
+
+            a {
+                transition: color 0.3s;
+                color: var(--il-link-color);
+                text-decoration: underline;
+            }
+
+            a:focus,
+            a:hover {
+                outline-style: none;
+                color: var(--il-focused-link-color);
+            }
+            .button-holder {
+                display: flex;
+            }
+            .button-holder button {
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <il-page>
+            <div class="button-holder">
+                <button onclick="openToast('ilaToastOne')">Open Toast 1</button>
+                <button onclick="openToast('ilaToastTwo')">Open Toast 2</button>
+                <button onclick="openToast('ilaToastThree')">
+                    Open Toast 3
+                </button>
+            </div>
+            <div
+                id="ilaToastOne"
+                class="ila-toast ila-toast--closed"
+            >
+                <div class="ila-toast__toast">
+                    <button
+                        type="button"
+                        class="ila-toast__close-button"
+                        aria-label="close toast"
+                        onclick="closeToast('ilaToastOne')"
+                    >
+                        <div class="ila-toast__close-icon il-icon">cancel</div>
+                    </button>
+                    <div class="ila-toast__heading">
+                        <h3>Toast with heading and a button</h3>
+                    </div>
+                    <div class="ila-toast__content">
+                        <p>
+                            Description with some additional information. Can be
+                            multiple lines. Could include a
+                            <a href="#">descriptive link</a>.
+                        </p>
+                    </div>
+                    <div class="ila-toast__actions">
+                        <button class="il-button">Action</button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="ilaToastTwo"
+                class="ila-toast ila-toast--closed"
+            >
+                <div class="ila-toast__toast">
+                    <button
+                        type="button"
+                        class="ila-toast__close-button"
+                        aria-label="close toast"
+                        onclick="closeToast('ilaToastTwo')"
+                    >
+                        <div class="ila-toast__close-icon il-icon">cancel</div>
+                    </button>
+                    <div class="ila-toast__heading">
+                        <h3>Toast with heading</h3>
+                    </div>
+                    <div class="ila-toast__content">
+                        <p>
+                            Description with some additional information. Can be
+                            multiple lines. Could include a
+                            <a href="#">descriptive link</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="ilaToastThree"
+                class="ila-toast ila-toast--closed ila-toast--single-line"
+            >
+                <div class="ila-toast__toast">
+                    <button
+                        type="button"
+                        class="ila-toast__close-button"
+                        aria-label="close toast"
+                        onclick="closeToast('ilaToastThree')"
+                    >
+                        <div class="ila-toast__close-icon il-icon">cancel</div>
+                    </button>
+                    <div class="ila-toast__content">
+                        <p>Single line toast</p>
+                    </div>
+                </div>
+            </div>
+        </il-page>
+        <script src="ila-toast.js"></script>
+    </body>
+</html>
