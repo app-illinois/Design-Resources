@@ -62,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
-    border-bottom: 2px solid var(--il-blue);
+    border-bottom: 2px solid var(--il-orange);
 }
 
 .ila-slideover__label {
