@@ -1,7 +1,7 @@
 :root {
     --ila-toast-margin: 1rem;
     --ila-toast-padding-x: 25px;
-    --ila-toast-padding-y: 20px;
+    --ila-toast-padding-y: 15px;
 }
 
 .ila-toast {
@@ -20,21 +20,6 @@
     width: 450px;
 }
 
-.ila-toast--single-line .ila-toast__toast {
-    display: flex;
-    justify-content: space-between;
-}
-
-.ila-toast--single-line .ila-toast__content {
-    flex-grow: 1;
-}
-
-.ila-toast--single-line .ila-toast__close-button {
-    position: relative;
-    margin: auto;
-    order: 2;
-}
-
 .ila-toast.ila-toast--open {
     transition: all 0.5s ease-in-out;
     opacity: 1;
@@ -50,6 +35,17 @@
 .ila-toast__heading {
     margin: 0;
     margin-bottom: 10px;
+}
+
+/* the only thing that should be in the content area is text. 
+   margin should come from the ila-toast__content class. */
+.ila-toast__content p {
+    margin: 0;
+    padding: 0;
+}
+
+.ila-toast__content {
+    margin: 10px 0;
 }
 
 .ila-toast__actions {
@@ -77,8 +73,19 @@
 }
 
 .ila-toast__close-icon {
-    content: attr(cancel);
-    text-indent: 0;
-    text-align: center;
-    font: 2em/1.2 var(--il-icons-solid);
+    font-size: 35px;
+}
+
+.ila-toast--single-line .ila-toast__toast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ila-toast--single-line .ila-toast__content {
+    flex-grow: 1;
+}
+.ila-toast--single-line .ila-toast__close-button {
+    position: relative;
+    margin: auto;
+    order: 2;
 }
