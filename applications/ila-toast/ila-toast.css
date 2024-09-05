@@ -4,11 +4,24 @@
     --ila-toast-padding-y: 15px;
 }
 
-.ila-toast {
+/* toast area; allows for multiple toasts to stack on top of each other. */
+.toast-holder {
     position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    bottom: 0;
+}
+.toast-holder-inner {
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.ila-toast {
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0; */
 }
 
 .ila-toast__toast {
@@ -20,16 +33,23 @@
     width: 450px;
 }
 
+/* toasts will stack in order of appearance due to the order property */
 .ila-toast.ila-toast--open {
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s, order 0.1s;
     opacity: 1;
     visibility: visible;
+    order: 0;
 }
 
 .ila-toast.ila-toast--closed {
-    transition: all 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
     visibility: hidden;
     opacity: 0;
+    order: 1;
+}
+
+.ila-toast.ila-toast--open.ila-toast--first {
+    order: -1;
 }
 
 .ila-toast__heading {
