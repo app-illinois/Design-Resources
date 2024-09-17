@@ -34,6 +34,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - run: bash ./setuppages.sh
+      - run: npm install
+      - run: npm rebuild
+      - name: Run Gulp script to copy minified CSS to /docs/css/app-toolkit.css
+        run: npm run-script build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:       

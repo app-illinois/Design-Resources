@@ -1,0 +1,27 @@
+{
+  "name": "design-resources",
+  "version": "1.0.0",
+  "description": "Design Resources for University of Illinois",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/app-illinois/Design-Resources.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/app-illinois/Design-Resources/issues"
+  },
+  "homepage": "https://github.com/app-illinois/Design-Resources#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat-css": "^3.1.0"
+  }
+}
