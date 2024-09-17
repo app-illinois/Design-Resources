@@ -985,11 +985,11 @@
                 <div>
                     <h1>Toasts</h1>
                     <p>
-                        Alert the user to status changes and potentially provide
-                        actions to take as a response to status changes. Ie, a
-                        toast that notified the user that an asset was missing
-                        from a previous action might have a button to show those
-                        missing assets.
+                        Alert the user to non-urgent status changes and
+                        optionally provide actions to take as a response to
+                        status changes. Ie, a toast that notifies the user that
+                        there are new changes to view with a button to view
+                        changes.
                     </p>
                 </div>
                 <br />
@@ -1018,7 +1018,17 @@
 
                 <div>
                     <h2>Accessibility Guidelines</h2>
-                    <p></p>
+                    <p>
+                        A toast should be used for non-essential information. As
+                        such, a toast has role="status" and focus does not shift
+                        to it upon appearance. Note that for the screen reader
+                        to announce changes, role="status" must be on a
+                        container that exists from pageload where the elements
+                        inside are changing; in this case, role="status" would
+                        go on the div which is holding all the toasts
+                        (.toast-holder) so it can observe them opening and
+                        closing.
+                    </p>
                 </div>
                 <br />
 
@@ -1055,7 +1065,10 @@
             </div>
             <!-- closes page wrapper -->
         </main>
-        <div class="toast-holder">
+        <div
+            class="toast-holder"
+            role="status"
+        >
             <div class="toast-holder-inner">
                 <div
                     id="ilaToastOne"
@@ -1068,7 +1081,10 @@
                             aria-label="close toast"
                             onclick="closeToast('ilaToastOne')"
                         >
-                            <div class="ila-toast__close-icon il-icon">
+                            <div
+                                class="ila-toast__close-icon il-icon"
+                                role="presentation"
+                            >
                                 cancel
                             </div>
                         </button>
@@ -1098,7 +1114,10 @@
                             aria-label="close toast"
                             onclick="closeToast('ilaToastTwo')"
                         >
-                            <div class="ila-toast__close-icon il-icon">
+                            <div
+                                class="ila-toast__close-icon il-icon"
+                                role="presentation"
+                            >
                                 cancel
                             </div>
                         </button>
@@ -1125,7 +1144,10 @@
                             aria-label="close toast"
                             onclick="closeToast('ilaToastThree')"
                         >
-                            <div class="ila-toast__close-icon il-icon">
+                            <div
+                                class="ila-toast__close-icon il-icon"
+                                role="presentation"
+                            >
                                 cancel
                             </div>
                         </button>
