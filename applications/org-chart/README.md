@@ -8,7 +8,7 @@ A University of Illinois styled Organization Chart. Displays groups in a hierarc
 <!-- ... -->
 
 <script type="module">
-  import { renderOrgChart } from "/path/to/orgchart/main.js";
+  import { renderOrgChart } from "/path/to/orgchart/main.jsx";
   const headerColor = "alternating";
 
   const rootNode = `
