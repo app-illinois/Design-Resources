@@ -433,7 +433,6 @@
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml" />
     <link rel="pingback" href="https://webtheme.illinois.edu/xmlrpc.php">
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-    <link rel="stylesheet" href="./css/ila-scrolling-table.css">
 
     <style>
         body .tile-list .tile.w66 {
@@ -509,94 +508,9 @@
         }
     </style>
 
-
-    <style type="text/css">
-        .il-formatted table th {
-            color: white !important;
-        }
-
-        .il-formatted table th button {
-            position: relative;
-            color: currentcolor;
-        }
-
-        .sr-only {
-            position: absolute;
-            top: -30em;
-        }
-
-        table.sortable th {
-            color: initial;
-            position: relative;
-        }
-
-        table.sortable th button {
-            border-width: 2px !important;
-            border-color: transparent !important;
-            border-style: solid !important;
-            padding: 4px;
-            margin: 1px;
-            font-size: 100%;
-            font-weight: bold;
-            background: transparent;
-            border: none;
-            display: inline;
-            right: 0;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            text-align: left;
-            outline: none;
-            cursor: pointer;
-        }
-
-        table.sortable th button span {
-            position: absolute;
-            right: 4px;
-        }
-
-        table.sortable th[aria-sort="descending"] span::after {
-            content: "▼";
-            color: currentcolor;
-            font-size: 100%;
-            top: 0;
-        }
-
-        table.sortable th[aria-sort="ascending"] span::after {
-            content: "▲";
-            color: currentcolor;
-            font-size: 100%;
-            top: 0;
-        }
-
-        table.show-unsorted-icon th:not([aria-sort]) button span::after {
-            content: "♢";
-            color: currentcolor;
-            font-size: 100%;
-            position: relative;
-            top: -3px;
-            left: -4px;
-        }
-
-        /* Focus and hover styling */
-
-        table.sortable th button:focus,
-        table.sortable th button:hover {
-            /* padding: 2px; */
-            border-color: currentcolor !important;
-            /* background-color: #e5f4ff; */
-        }
-
-        table.sortable th:not([aria-sort]) button:focus span::after,
-        table.sortable th:not([aria-sort]) button:hover span::after {
-            content: "▼";
-            color: currentcolor;
-            font-size: 100%;
-            top: 0;
-        } */
-
-    </style>
+    <link rel="stylesheet" href="../applications/tables/sortable-table/ila-sortable-table.css"></style>
+    <!-- Script used for example only -->
+    <script src="https://www.w3.org/WAI/content-assets/wai-aria-practices/patterns/table/examples/js/sortable-table.js"></script>
 </head>
 
 <body>
@@ -606,7 +520,6 @@
                 <il-header>
                     <div slot="wordmark">
                         <il-unit-wordmark>
-
                             <h1 class="il-secondary-unit"><a href="https://webtheme.illinois.edu/application-development/">Application Development UX Standards</a></h1>
                         </il-unit-wordmark>
                     </div>
@@ -619,22 +532,37 @@
         </div>
     </header><!-- #masthead -->
     <main>
-        <div class="page-wrapper">
+        <div class="page-wrapper" style="margin-bottom: 30px;">
             <div>
                 <h1>Sortable Table</h1>
                 <!-- <p>This CCS and JS can be applied to a table to allow the header and first column to freeze when scrolling, allowing for a better expereicne on smaller screens.</p> -->
             </div>
+
             <br>
 
             <div>
                 <h2>Component Behavior</h2>
-                <!-- <p>Scrolling both vertically and horizontally will freeze the headers, and it will snap between cells.</p> -->
+
+                <p>This example is adapted from <a href="https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/">W3C's Sortable Table documentation</a>.</p>
+
+                <p>The ARIA sortable table component allows users to sort table data by clicking column headers. When a header is clicked, the table's content reorders according to the column's data, either ascending or descending. The sorting state is communicated visually and via ARIA attributes (aria-sort) to ensure accessibility for assistive technologies. Keyboard navigation and screen reader support are provided to enhance usability for all users.</p>
             </div>
+
             <br>
 
             <div>
-                <h2>Accessibility Guidelines </h2>
-                <p>Describe accessibility concerns and requirements with the item, as well as any best practices.</p>
+                <h2>Accessibility Guidelines</h2>
+
+                <p>The table is made accessible to ensure that users with disabilities can interact with the table effectively. Key accessibility guidelines include:</p>
+
+                <ul style="margin-bottom: 1rem;">
+                    <li><b>ARIA Attributes:</b> Use aria-sort on column headers to indicate the current sort direction (ascending, descending, or none). This helps screen readers announce the sort order clearly.</li>
+                    <li><b>Keyboard Navigation:</b> Ensure that users can navigate the table using the keyboard, with focusable column headers that allow sorting via keypresses (e.g., Enter or Spacebar). Tab order should be logical, allowing easy movement between headers and table rows.</li>
+                    <li><b>Focus Management:</b> Maintain visible focus indicators for interactive elements like column headers to assist keyboard users in understanding where they are on the page.</li>
+                    <li><b>Screen Reader Compatibility:</b> Use semantic HTML and ARIA roles to ensure that assistive technologies accurately interpret the table's structure and sorting behavior. Use proper role assignments (role="columnheader", aria-sort).</li>
+                    <li><b>Visual Cues:</b> Provide visual indicators of sorting direction, such as up/down arrows, for users who rely on visual cues.</li>
+                </ul>
+                <!-- <p>It uses HTML table markup for all elements of the table structure, e.g., cells, rows, column headers, and caption. The aria-sort attribute is set on the column header of the currently sorted column, and the header text of sortable columns is wrapped in a button element. One column, the Address column is not sortable.</p> -->
             </div>
             <br>
 
@@ -643,7 +571,7 @@
 
                 <div class="table-container il-formatted">
                     <div class="table-wrap">
-                        <table class="sortable il-table">
+                        <table class="sortable ila-table" style="margin-bottom:0;">
                             <caption>
                             Students currently enrolled in WAI-ARIA 101
                             <span class="sr-only">, column headers with buttons are sortable.</span>
@@ -710,7 +638,6 @@
                       </table>
                     </div>
                 </div> <!-- closes container -->
-
             </div>
 
             <br>
@@ -718,10 +645,9 @@
             <div>
                 <h2>Link</h2>
                 <p>
-                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/tables/sortable-table.css">Link to this component on GitHub</a>
+                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/tables/sortable-table/sortable-table.css">Link to this component on GitHub</a>
                 </p>
             </div>
-
         </div><!-- closes page wrapper -->
     </main>
 
@@ -744,175 +670,5 @@
         </il-footer>
     </footer><!-- #colophon -->
 
-    <script>
-        /*
-        *   This content is licensed according to the W3C Software License at
-        *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
-        *
-        *   File:   sortable-table.js
-        *
-        *   Desc:   Adds sorting to a HTML data table that implements ARIA Authoring Practices
-        */
-
-        'use strict';
-
-        class SortableTable {
-        constructor(tableNode) {
-            this.tableNode = tableNode;
-
-            this.columnHeaders = tableNode.querySelectorAll('thead th');
-
-            this.sortColumns = [];
-
-            for (var i = 0; i < this.columnHeaders.length; i++) {
-            var ch = this.columnHeaders[i];
-            var buttonNode = ch.querySelector('button');
-            if (buttonNode) {
-                this.sortColumns.push(i);
-                buttonNode.setAttribute('data-column-index', i);
-                buttonNode.addEventListener('click', this.handleClick.bind(this));
-            }
-            }
-
-            this.optionCheckbox = document.querySelector(
-            'input[type="checkbox"][value="show-unsorted-icon"]'
-            );
-
-            if (this.optionCheckbox) {
-            this.optionCheckbox.addEventListener(
-                'change',
-                this.handleOptionChange.bind(this)
-            );
-            if (this.optionCheckbox.checked) {
-                this.tableNode.classList.add('show-unsorted-icon');
-            }
-            }
-        }
-
-        setColumnHeaderSort(columnIndex) {
-            if (typeof columnIndex === 'string') {
-            columnIndex = parseInt(columnIndex);
-            }
-
-            for (var i = 0; i < this.columnHeaders.length; i++) {
-            var ch = this.columnHeaders[i];
-            var buttonNode = ch.querySelector('button');
-            if (i === columnIndex) {
-                var value = ch.getAttribute('aria-sort');
-                if (value === 'descending') {
-                ch.setAttribute('aria-sort', 'ascending');
-                this.sortColumn(
-                    columnIndex,
-                    'ascending',
-                    ch.classList.contains('num')
-                );
-                } else {
-                ch.setAttribute('aria-sort', 'descending');
-                this.sortColumn(
-                    columnIndex,
-                    'descending',
-                    ch.classList.contains('num')
-                );
-                }
-            } else {
-                if (ch.hasAttribute('aria-sort') && buttonNode) {
-                ch.removeAttribute('aria-sort');
-                }
-            }
-            }
-        }
-
-        sortColumn(columnIndex, sortValue, isNumber) {
-            function compareValues(a, b) {
-            if (sortValue === 'ascending') {
-                if (a.value === b.value) {
-                return 0;
-                } else {
-                if (isNumber) {
-                    return a.value - b.value;
-                } else {
-                    return a.value < b.value ? -1 : 1;
-                }
-                }
-            } else {
-                if (a.value === b.value) {
-                return 0;
-                } else {
-                if (isNumber) {
-                    return b.value - a.value;
-                } else {
-                    return a.value > b.value ? -1 : 1;
-                }
-                }
-            }
-            }
-
-            if (typeof isNumber !== 'boolean') {
-            isNumber = false;
-            }
-
-            var tbodyNode = this.tableNode.querySelector('tbody');
-            var rowNodes = [];
-            var dataCells = [];
-
-            var rowNode = tbodyNode.firstElementChild;
-
-            var index = 0;
-            while (rowNode) {
-            rowNodes.push(rowNode);
-            var rowCells = rowNode.querySelectorAll('th, td');
-            var dataCell = rowCells[columnIndex];
-
-            var data = {};
-            data.index = index;
-            data.value = dataCell.textContent.toLowerCase().trim();
-            if (isNumber) {
-                data.value = parseFloat(data.value);
-            }
-            dataCells.push(data);
-            rowNode = rowNode.nextElementSibling;
-            index += 1;
-            }
-
-            dataCells.sort(compareValues);
-
-            // remove rows
-            while (tbodyNode.firstChild) {
-            tbodyNode.removeChild(tbodyNode.lastChild);
-            }
-
-            // add sorted rows
-            for (var i = 0; i < dataCells.length; i += 1) {
-            tbodyNode.appendChild(rowNodes[dataCells[i].index]);
-            }
-        }
-
-        /* EVENT HANDLERS */
-
-        handleClick(event) {
-            var tgt = event.currentTarget;
-            this.setColumnHeaderSort(tgt.getAttribute('data-column-index'));
-        }
-
-        handleOptionChange(event) {
-            var tgt = event.currentTarget;
-
-            if (tgt.checked) {
-            this.tableNode.classList.add('show-unsorted-icon');
-            } else {
-            this.tableNode.classList.remove('show-unsorted-icon');
-            }
-        }
-        }
-
-        // Initialize sortable table buttons
-        window.addEventListener('load', function () {
-        var sortableTables = document.querySelectorAll('table.sortable');
-        for (var i = 0; i < sortableTables.length; i++) {
-            new SortableTable(sortableTables[i]);
-        }
-        });
-
-    </script>
 </body>
 </html>

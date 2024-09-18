@@ -65,9 +65,7 @@
 
 .ila-table.sortable th button:focus,
 .ila-table.sortable th button:hover {
-    /* padding: 2px; */
     border-color: currentcolor !important;
-    /* background-color: #e5f4ff; */
 }
 
 .ila-table.sortable th:not([aria-sort]) button:focus span::after,
