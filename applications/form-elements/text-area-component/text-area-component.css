@@ -35,7 +35,7 @@
 .text-area-block .label-instance {
     align-self: stretch !important;
     display: flex !important;
-    flex: 0 0 auto; !important;
+    flex: 0 0 auto !important;
     width: 100% !important;
 }
 
