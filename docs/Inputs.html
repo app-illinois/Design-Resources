@@ -7,9 +7,9 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
-    <!--<script>
-    function OptanonWrapper() { }
-    </script>-->
+    <script>
+        function OptanonWrapper() { }
+    </script>
     <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
 
     <title>Application Development UX Standards</title>
@@ -45,6 +45,8 @@
     <link rel='stylesheet' id='wp-block-library-css' href='https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6' media='all' />
     <link rel='stylesheet' id='block-styles-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6' media='all' />
     <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6' media='all' />
+    <link rel="stylesheet" href="./ila-inputs.css">
+
     <style id='classic-theme-styles-inline-css'>
         /*! This file is auto-generated */
         .wp-block-button__link {
@@ -434,14 +436,6 @@
     <link rel="pingback" href="https://webtheme.illinois.edu/xmlrpc.php">
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
 
-
-
-
-
-
-
-
-
     <style>
         body .tile-list .tile.w66 {
             flex: 0 0 calc(40% - 1.2rem);
@@ -510,127 +504,104 @@
         }
 
         .page-wrapper {
-            widyh: 100%;
+            width: 100%;
             max-width: 1140px;
-            margin: 0 auto;
+            margin: 40px auto 0 auto;
         }
     </style>
 </head>
 
 <body>
-
-    <!--Needed by the cards, I am replacing the headers later and I do not want this it get nuked when I do so its in an odd place for now-->
-    <style type="text/css">
-        .uofi-card-deck {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .uofi-card-deck .uofi-card {
-            width: 350px !important;
-        }
-    </style>
-
     <header id="masthead" class="site-header">
         <div class="masthead_inner d-flex justify-content-between align-items-stretch">
             <div class="il-header-wrapper flex-grow-1">
                 <il-header>
                     <div slot="wordmark">
                         <il-unit-wordmark>
+
                             <h1 class="il-secondary-unit"><a href="https://webtheme.illinois.edu/application-development/">Application Development UX Standards</a></h1>
                         </il-unit-wordmark>
                     </div>
+
+                    <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
+
                 </il-header>
+
             </div>
         </div>
     </header><!-- #masthead -->
     <main>
-        <div class="page-wrapper">
+        <div class="page-wrapper" style="margin-bottom: 30px;">
             <div>
-                <h1>Welcome</h1>
-                <p>Here you can view and explore various standards.
-                   The links below lead to each design standard.
-                   When adding a new standard, <a href="/item-template.html">please use the provided template available</a>.
-                </p>
-                <p><a href="./css/app-toolkit.css">Full minified file</a></p>
+                <h1>Design Standard Name</h1>
+                <p>Describe the design standard and usage cases for it</p>
+            </div>
             <br>
 
+            <div>
+                <h2>Placement</h2>
+                <p>Describe rules or best practices concerning the placement of this design standard within a website</p>
+            </div>
+            <br>
 
-            <div class="uofi uofi-card-deck">
+            <div>
+                <h2>Behavior</h2>
+                <p>Describe the behavior of the design standard when interacting with it</p>
+            </div>
+            <br>
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Login-Button.html">
-                            <img decoding="async" src="./images/login-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Login Button</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
+            <div>
+                <h2>Accessibility Guidelines </h2>
+                <p>Describe accessibility concerns and requirements with the item, as well as any best practices.</p>
+            </div>
+            <br>
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Loaders.html">
-                            <img decoding="async" src="./images/loaders-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Loaders</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
+            <div>
+                <h2>Component Example</h2>
+                <p>
+                    Provide an example of the component on the page here, possibily using javascript to mock-up some basic interactions with it if needed.
+                    The intent is to allow people to see exactly what that are getting with the provided compontentt
+                </p>
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Scrolling-Tables.html">
-                            <img decoding="async" src="./images/scrolling-table-180.jpg" alt="" slot="image">
-                            <h3 slot="header">Scrolling Tables</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Sortable-Table.html">
-                            <img decoding="async" src="./images/sortable-table-320.png" alt="" slot="image" style="border-bottom: 1px solid #ddd;">
-                            <h3 slot="header">Sortable Table</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
+                <p>Radio Buttons:</p>
+                <input type="radio" id="html" name="fav_language" value="HTML"><label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS"><label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript"><label for="javascript">JavaScript</label>
+                <br />
+                <p>Checkboxes:</p>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label><br>
+                <br />
+                <!--<p>Toggle</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                    <span class="switch-label">Button-label</span>
+                </label>
+                <br />
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Buttons.html">
-                            <img decoding="async" src="./images/login-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Buttons</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Slideovers.html">
-                            <img decoding="async" src="./images/slideover-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Slideovers</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
+                <p>Input:</p>
+                <p>Dropdown:</p>
+                <p>Calendar Select:</p>
+                <p>Search Select:</p>
+                <p>Select Dropdown:</p>
+                <p>Search Dropdown:</p>-->
 
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Inputs.html">
-                            <img decoding="async" src="./images/slideover-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Inputs</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
+            </div>
+            <br>
+
+            <div>
+                <h2>Link</h2>
+                <p>Provide a link to this design standard in the GitHub repository</p>
             </div>
 
-            <br>
-        </div>
+        </div><!-- closes page wrapper -->
     </main>
 
     <footer id="colophon" class="site-footer">
@@ -643,7 +614,7 @@
 
             <nav slot="links" class="il-footer-links" aria-label="Legal notices">
                 <ul>
-                    <!--<li><button data-il="cookies"></button></li> This is a static html site with no cookies-->
+                    <li><button data-il="cookies"></button></li>
                     <li><a data-il="privacy"></a></li>
                     <li><a data-il="copyright"></a></li>
                     <li><a data-il="accessibility"></a></li>
