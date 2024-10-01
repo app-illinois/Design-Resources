@@ -5,11 +5,11 @@ var aria = aria || {};
 
 aria.Utils = aria.Utils || {};
 
-window.openSlideover = function (dialogId) {
+window.openAlert = function (dialogId) {
     new aria.Dialog(dialogId);
 };
 
-window.closeSlideover = function () {
+window.closeAlert = function () {
     aria.openedDialog.close();
 }; // end closeDialog
 
@@ -118,8 +118,8 @@ aria.Dialog = function (dialogId) {
 
     this.addListeners();
     aria.openedDialog = this;
-    this.dialogNode.classList.add('ila-slideover--open'); // make visible
-    this.dialogNode.classList.remove('ila-slideover--closed');
+    this.dialogNode.classList.add('ila-alert--open'); // make visible
+    this.dialogNode.classList.remove('ila-alert--closed');
     this.lastFocus = document.activeElement;
 }; // end Dialog constructor
 
@@ -134,8 +134,8 @@ aria.Dialog.prototype.close = function () {
     this.removeListeners();
     aria.Utils.remove(this.preNode);
     aria.Utils.remove(this.postNode);
-    this.dialogNode.classList.add('ila-slideover--closed');
-    this.dialogNode.classList.remove('ila-slideover--open');
+    this.dialogNode.classList.add('ila-alert--closed');
+    this.dialogNode.classList.remove('ila-alert--open');
 
     document.body.classList.remove(aria.Utils.dialogOpenClass);
 }; // end close

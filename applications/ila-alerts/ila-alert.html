@@ -12,61 +12,56 @@
             href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
         />
         <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
-        <title>Slideover Example</title>
+        <title>Alert Example</title>
         <link
             rel="stylesheet"
-            href="ila-slideover.css"
+            href="ila-alert.css"
         />
     </head>
 
     <body>
-        <h1>Slideover</h1>
+        <h1>Alert</h1>
         <button
             class="il-button"
-            onclick="openSlideover('ilaSlideoverRight')"
+            onclick="openAlert('ilaAlert')"
         >
-            Open Right Slideover
-        </button>
-        <button
-            class="il-button"
-            onclick="openSlideover('ilaSlideoverLeft')"
-        >
-            Open Left Slideover
+            Open Alert
         </button>
         <div
-            id="ilaSlideoverRight"
-            class="ila-slideover ila-slideover--closed ila-slideover--right"
-            role="dialog"
-            aria-labelledby="ilaSlideoverRightLabel"
+            id="ilaAlert"
+            class="ila-alert ila-alert--closed"
+            role="alertdialog"
+            aria-labelledby="ilaAlertLabel"
+            aria-describedby="ilaAlertContent"
             aria-modal="true"
         >
-            <div
-                class="ila-slideover__overlay"
-                onclick="closeSlideover('ilaSlideoverLeft')"
-            ></div>
-            <div class="ila-slideover__slideover">
-                <div class="ila-slideover__header">
+            <div class="ila-alert__overlay"></div>
+            <div class="ila-alert__alert">
+                <div class="ila-alert__header">
                     <h2
-                        id="ilaSlideoverRightLabel"
-                        class="ila-slideover__label"
+                        id="ilaAlertLabel"
+                        class="ila-alert__heading"
                     >
-                        Title of Right Slideover
+                        Title of Alert
                     </h2>
                     <button
-                        aria-label="close slideover"
-                        class="ila-slideover__close-button"
-                        onclick="closeSlideover('ilaSlideoverRight')"
+                        aria-label="close alert"
+                        class="ila-alert__close-button"
+                        onclick="closeAlert('ilaAlert')"
                     >
                         <div
-                            class="ila-slideover__close-icon il-icon"
+                            class="ila-alert__close-icon il-icon"
                             role="presentation"
                         >
                             cancel
                         </div>
                     </button>
                 </div>
-                <div class="ila-slideover__content">
-                    <h3>Content in a slideover</h3>
+                <div
+                    id="ilaAlertContent"
+                    class="ila-alert__content"
+                >
+                    <h3>Content in an alert</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed lectus velit, feugiat in lacinia eget, tristique ut
@@ -76,87 +71,24 @@
                         velit. Proin congue nunc quam, a sagittis purus suscipit
                         sed. Quisque tincidunt congue erat, ac placerat ex
                         dapibus in. Duis velit risus, mattis a volutpat et,
-                        gravida nec velit. Proin ut sem tortor. Aliquam
-                        venenatis sollicitudin nulla, venenatis porttitor augue
-                        auctor in. Integer facilisis lectus sed lacus elementum,
-                        ut ultrices turpis molestie. In in viverra nunc. Cras
-                        placerat arcu et rutrum congue. Phasellus scelerisque,
-                        nibh ac egestas viverra, ligula magna tristique dolor, a
-                        porttitor lacus risus placerat tortor. Suspendisse
-                        potenti. Praesent venenatis erat arcu, vitae mollis elit
-                        lobortis quis. Duis et molestie mi, nec porta ipsum.
-                        Etiam condimentum cursus lacus quis maximus. Sed vel
-                        tortor id turpis eleifend facilisis. Integer hendrerit
-                        tellus ut accumsan blandit. In hac habitasse platea
-                        dictumst. Proin pellentesque id lectus a tristique.
-                        Morbi eu lacus convallis, lobortis ex eu, consequat
-                        augue.
                     </p>
                 </div>
-            </div>
-        </div>
-        <div
-            id="ilaSlideoverLeft"
-            class="ila-slideover ila-slideover--closed ila-slideover--left"
-            role="dialog"
-            aria-labelledby="ilaSlideoverLeftLabel"
-            aria-modal="true"
-        >
-            <div
-                class="ila-slideover__overlay"
-                onclick="closeSlideover('ilaSlideoverLeft')"
-            ></div>
-            <div class="ila-slideover__slideover">
-                <div class="ila-slideover__header">
-                    <h2
-                        id="ilaSlideoverLeftLabel"
-                        class="ila-slideover__label"
-                    >
-                        Title of Left Slideover
-                    </h2>
+                <div class="ila-alert__footer">
                     <button
-                        aria-label="close slideover"
-                        class="ila-slideover__close-button"
-                        onclick="closeSlideover('ilaSlideoverLeft')"
+                        class="il-button ila-alert__action-button"
+                        onclick="closeAlert('ilaAlert')"
                     >
-                        <div
-                            class="ila-slideover__close-icon il-icon"
-                            role="presentation"
-                        >
-                            cancel
-                        </div>
+                        No
+                    </button>
+                    <button
+                        class="il-button ila-alert__action-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        Yes
                     </button>
                 </div>
-                <div class="ila-slideover__content">
-                    <h3>Content in a slideover</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed lectus velit, feugiat in lacinia eget, tristique ut
-                        orci. Phasellus ut egestas tellus. In hac habitasse
-                        platea dictumst. Nullam efficitur finibus facilisis. In
-                        dui ipsum, congue ut ornare vitae, sollicitudin vitae
-                        velit. Proin congue nunc quam, a sagittis purus suscipit
-                        sed. Quisque tincidunt congue erat, ac placerat ex
-                        dapibus in. Duis velit risus, mattis a volutpat et,
-                        gravida nec velit. Proin ut sem tortor. Aliquam
-                        venenatis sollicitudin nulla, venenatis porttitor augue
-                        auctor in. Integer facilisis lectus sed lacus elementum,
-                        ut ultrices turpis molestie. In in viverra nunc. Cras
-                        placerat arcu et rutrum congue. Phasellus scelerisque,
-                        nibh ac egestas viverra, ligula magna tristique dolor, a
-                        porttitor lacus risus placerat tortor. Suspendisse
-                        potenti. Praesent venenatis erat arcu, vitae mollis elit
-                        lobortis quis. Duis et molestie mi, nec porta ipsum.
-                        Etiam condimentum cursus lacus quis maximus. Sed vel
-                        tortor id turpis eleifend facilisis. Integer hendrerit
-                        tellus ut accumsan blandit. In hac habitasse platea
-                        dictumst. Proin pellentesque id lectus a tristique.
-                        Morbi eu lacus convallis, lobortis ex eu, consequat
-                        augue.
-                    </p>
-                </div>
             </div>
         </div>
-        <script src="ila-slideover.js"></script>
+        <script src="ila-alert.js"></script>
     </body>
 </html>
