@@ -24,6 +24,39 @@
     bottom: 0; */
 }
 
+.ila-toast--single-line .ila-toast__toast {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.ila-toast--single-line .ila-toast__heading {
+    margin: 10px 10px 10px 0;
+}
+.ila-toast--single-line .ila-toast__heading h3 {
+    margin: 0;
+}
+.ila-toast--single-line .ila-toast__content {
+    flex-grow: 1;
+}
+.ila-toast--single-line .ila-toast__close-button {
+    position: relative;
+    margin: auto;
+    order: 2;
+}
+
+.ila-toast--success .ila-toast__toast {
+    background-color: #7de49b;
+}
+.ila-toast--info .ila-toast__toast {
+    background-color: #98e9f2;
+}
+.ila-toast--warning .ila-toast__toast {
+    background-color: #fed976;
+}
+.ila-toast--error .ila-toast__toast {
+    background-color: #ffaea9;
+}
+
 .ila-toast__toast {
     border: 1px solid var(--il-gray-2);
     margin: var(--ila-toast-margin);
@@ -94,18 +127,4 @@
 
 .ila-toast__close-icon {
     font-size: 35px;
-}
-
-.ila-toast--single-line .ila-toast__toast {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.ila-toast--single-line .ila-toast__content {
-    flex-grow: 1;
-}
-.ila-toast--single-line .ila-toast__close-button {
-    position: relative;
-    margin: auto;
-    order: 2;
 }
