@@ -1,0 +1,51 @@
+.ila-progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: var(--il-cloud-3);
+    border-radius: .375rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.ila-progress-bar {
+    background-color: var(--il-industrial-blue);
+    color: white !important;
+    text-align: center;
+    font-weight: 600;
+    transition: width 0.5s ease;
+}
+
+.ila-progress-bar-red {
+    background-color: rgb(var(--ila-red-rgb));
+}
+
+/* PROGRESS tag */
+progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    border-radius: .375rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--il-cloud-3);
+    color: white !important;
+}
+
+progress::-moz-progress-bar  {
+    background-color: var(--il-cloud-3);
+    color: white !important;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--il-industrial-blue);
+}
+
+progress.ila-progress-bar-red::-webkit-progress-value {
+    background-color: rgb(var(--ila-red-rgb));
+}
