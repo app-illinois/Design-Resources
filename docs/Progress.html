@@ -562,27 +562,26 @@
                 <h1>Progress Indicators</h1>
             </div>
 
-            <br>
-
             <div>
                 <h2>Component Behavior</h2>
-
+                <p>Use this component to visually represents the completion of a task.</p>
+                <p>As the progress changes (e.g., during a file upload or task completion), the progress bar's visual width adjusts according to the percentage of the task completed. This is typically done by updating the value or width of the progress bar element.</p>
+                <p>Optionally, a percentage or text indicating the progress (e.g., "50% complete") can be displayed inside or alongside the progress bar. This provides a clear, visible indication of how far the task has progressed.</p>
             </div>
-
-            <br>
 
             <div>
                 <h2>Accessibility Guidelines</h2>
-                <p>Utilizing ARIA roles and properties correctly is essential for making progress bars accessible to all users, particularly those who depend on assistive technologies.</p>
-                <p>Use ARIA Roles and Properties:</p>
-                <ol>
+
+                <p>The <code>&lt;progress&gt;</code> element and <code>.ila-progress-bar</code> use <code>role="progressbar"</code> to identify as a progress indicator. ARIA attributes are also used to communicate progress to screen readers and assistive technologies:</p>
+
+                <ul style="margin-bottom:1rem;">
                     <li><code>aria-valuenow</code>: Indicates the current value of the progress. This should reflect the value of the <code>value</code> attribute of the <code>&lt;progress&gt;</code> element.</li>
                     <li><code>aria-valuemin</code>: Specifies the minimum value, which typically matches the <code>min</code> attribute of the element. If not defined, it defaults to 0.</li>
                     <li><code>aria-valuemax</code>: Specifies the maximum value, usually equal to the <code>max</code> attribute. If not defined, it defaults to 1.</li>
-                    <li><code>role="progressbar"</code>: The <code>role</code> attribute should be set to <code>progressbar</code> to ensure screen readers interpret the <code>&lt;progress&gt;</code> element correctly.</li>
-                </ol>
+                </ul>
+
+                <p>If the progress bar represents something that updates in real time, like file uploads or task progress, the component should regularly update <code>aria-valuenow</code> and <code>style="width"</code> attributes. Optional text or percentage within the <code>.ila-progress-bar</code> should also be kept updated for sighted users.</p>
             </div>
-            <br>
 
             <div>
                 <h2>Component Example</h2>
@@ -635,15 +634,8 @@
                     </div>
                 </div>
 
-                <p>The following ARIA attributes should be used on the .progress-bar:</p>
-                <ul style="margin-bottom: 1rem;">
-                    <li><strong>role="progressbar":</strong> This helps screen readers identify the element as a progress indicator.</li>
-                    <li><strong>aria-valuenow:</strong> Set this to the current progress value.</li>
-                    <li><strong>aria-valuemin:</strong> Set this to the minimum value (typically 0).</li>
-                    <li><strong>aria-valuemax:</strong> Set this to the maximum value (e.g., 100).</li>
-                </ul>
+                <h3>Using the <code>&lt;progress&gt;</code> element</h3>
 
-                <h3>Using the &lt;progress&gt; tag</h3>
                 <div class="ila-doc-example-snippet">
                     <div class="ila-doc-example">
                         <progress role="progressbar" tabindex="0" aria-label="File upload" value="20" aria-valuemin="0" aria-valuenow="20" aria-valuemax="100" max="100"></progress>
@@ -662,8 +654,6 @@
                     </div>
                 </div>
             </div>
-
-            <br>
 
             <div>
                 <h2>Link</h2>
