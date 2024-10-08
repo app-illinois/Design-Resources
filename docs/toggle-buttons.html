@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Application Development UX Standards</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
+<link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
+<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//onetrust.techservices.illinois.edu' />
+<link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed" href="https://webtheme.illinois.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed" href="https://webtheme.illinois.edu/comments/feed/" />
+<link rel='stylesheet' href="./css/ila-toggle.css" />
+<link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2' media='all' />
+
+<link rel='stylesheet' id='main-css-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
+<script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6.2" id="toolkit-js"></script>
+<script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525" id="main_js-js"></script>
+<script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js" id="skiptoconf-js"></script>
+<script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
+
+
+<script src="./js/ila-toggle.js"></script>
+<link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+	
+<style>
+		body .tile-list .tile.w66 {
+		flex: 0 0 calc(40% - 1.2rem);
+		max-width: calc(40% - 1.2rem);
+		min-width: calc(40% - 1.2rem);
+		}
+
+		#primary, #primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > * {
+		max-width: 1140px !important;
+		margin: 0 auto;
+		}
+		
+		blockquote {
+  		margin: 0 3.5em 2em;
+  		width: 66%;
+  		background: #ededed;
+  		padding: 20px;
+		}
+			
+		@media (max-width: 1200px) {
+			#primary {
+			padding: 0 30px;
+			}
+		}
+		
+		h1, h2 {
+		margin-bottom: 0;
+		}
+		
+		p {
+  		margin-bottom: 1rem;
+  		margin-top: 0;
+		}
+
+		@media (max-width: 768px) {
+			#primary, #primary_secondary_wrapper #secondary {
+			max-width: 100% !important;
+			}			
+		}			
+
+		#primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > *, .search #primary_secondary_wrapper article {
+		margin-left: auto;
+		margin-right: auto;
+		}
+				
+		#primary_secondary_wrapper #secondary {
+		max-width: 300px !important;
+		}
+			
+		.search #primary_secondary_wrapper article .entry-summary {
+		margin-top: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		}
+			
+		.search #primary_secondary_wrapper article .post-thumbnail {
+		max-width: 33%;
+		margin: 0 1rem 0.25rem 1rem;
+		float: right;
+		}
+			
+		@media (max-width: 768px) {
+			.search #primary_secondary_wrapper article .post-thumbnail {
+			max-width: 50%;
+			}		
+		}
+
+		@media (max-width: 400px) {
+			.search #primary_secondary_wrapper article .post-thumbnail {
+			max-width: 100%;
+			width: 100%;
+			float: none;
+			display: block;
+			padding: 0;
+			margin: 0 0 0.5rem 0;
+			}		
+		}
+
+		.archive #primary_secondary_wrapper #primary {
+		max-width: 1140px;
+		}
+				
+		.has-sidebar .archive #primary_secondary_wrapper #primary {
+		max-width: 870px;
+		}
+			
+		.has-sidebar #primary_secondary_wrapper main article .alignfull {
+		max-width: 870px !important;	
+		}
+		
+		/* styles for toggles */
+		
+		body {
+    color: #000;
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+}
+
+form {
+  background-color: #fff;
+  padding: 1em 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+fieldset {
+  margin: 1em;
+  flex: 1 0 10em;
+}
+
+fieldset.ila-toggles div {
+  box-sizing: border-box;
+  position: relative;
+}
+
+fieldset.ila-toggles > div {
+  margin: 1.5em 0;
+}
+
+fieldset.ila-toggles > div:first-of-type {
+  margin-top: 1em;
+}
+
+fieldset.ila-toggles > div:last-of-type {
+  margin-bottom: 1em;
+}
+
+fieldset.ila-toggles {
+  border: 0.15em solid rgba(0, 0, 0, 0.25);
+}
+			
+	</style>
+	
+
+</head>
+<body class="page-template-default page page-id-1106 no-sidebar">
+	<header id="masthead" class="site-header">
+			<div class="masthead_inner d-flex justify-content-between align-items-stretch">
+				<div class="il-header-wrapper flex-grow-1">
+					<il-header>
+						<div slot="wordmark">
+							<il-unit-wordmark>
+								<h1 class="il-secondary-unit"><a href="https://webtheme.illinois.edu">Application Development UX Standards</a></h1>
+							</il-unit-wordmark>
+						</div>
+					</il-header>
+				</div>
+			</div>
+	</header><!-- #masthead -->
+
+	<main id="primary" class="site-main flex-grow-1">
+        <div class="page-wrapper" style="margin-bottom: 30px;">
+            <div>
+                <h1>Toggle Button</h1>
+                <p>Meant to activate a setting that has two states: on or off. Also to be used when flipping the toggle immediately performs an action on the page. Requires javascript to act on click.</p>
+            </div>
+            
+            <div>
+                <h2>Placement</h2>
+                <p>Can be placed anywhere on a page. If you are going to have a group with two opr more toggles, place them in a fieldset.</p>
+            </div>
+
+            <div>
+                <h2>Behavior</h2>
+                <p>Clicking on the toggle changes its state from on to off, or vice-versa.</p>
+            </div>
+
+            <div>
+                <h2>Accessibility Guidelines </h2>
+                <p>This gets into UX as well as accessibility. There are two common ways to create a toggle: one using an input field of type checkbox with 'role=switch', and one using the button element with 'aria-pressed' attribute. There are varying opinions, but the general consensus leans toward using the button element for a toggle switch. DeQue recommends buttons, and <a href="https://adrianroselli.com/2021/10/switch-role-support.html">Adrian Roselli</a> explains it this way:</p>
+              <blockquote cite="https://adrianroselli.com/2021/10/switch-role-support.html" style="text-align: left;">
+               <p><b>Use &lt;button&gt; if:</b></p>
+               <ul style="margin-bottom: 30px;">
+					<li>you can count on JavaScript being available, and</li>
+					<li>flipping the switch has an immediate effect.</li>
+				</ul>
+
+				<p><b>Use &lt;input type="checkbox"&gt; if:</b></p>
+               <ul style="margin-bottom: 30px;">
+					<li>you want to progressively enhance the control, and</li>
+					<li>flipping the switch will only take effect when the user submits it.</li>
+				</ul>
+
+<p>Generally I recommend against a control with a switch role. Scott O’Hara has tracked a bunch of issues with screen readers, so you can see that the experience is sub-par overall.</p>
+ 				</blockquote>               
+                <p>The accompanying CSS includes styles for 6 states, plus disabled:</p>
+                	<ul>
+                		<li>default/unselected/off</li>
+                		<li>hover on unselected toggle</li>  
+                		<li>focus on unselected toggle</li>
+                		<li>selected toggle</li>
+                		<li>hover on selected toggle</li>
+                		<li>focus on selecetd toggle</li>
+                		<li>disabled</li>              		
+                	</ul>
+            </div>
+
+            <div>
+                <h2>Example</h2>
+                <p>The two samples below show two toggles, one which is active and one which is disabled. Note the changes in styles when you hover or tab to the toggle in its unselected state as well as its selected state.
+                </p>
+                <form>
+  					<fieldset class="ila-toggles">
+    					<legend>Toggles</legend>
+    					<div>
+      						<button type="button" id="default" aria-pressed="false" onclick="toggle(this.id);">Default</button>
+    					</div>
+ 						<div>
+     						 <button type="button" id="disabled" aria-pressed="true" onclick="toggle(this.id);" disabled>Disabled</button>
+    					</div>
+					</fieldset> 
+				</form>
+            </div>
+            <div>
+                <h2>Link</h2>
+                <p>Provide a link to this design standard in the GitHub repository</p>
+            </div>
+
+        </div><!-- closes page wrapper -->
+    </main>
+
+    <footer id="colophon" class="site-footer">
+        <il-footer>
+
+            <div slot="contact" class="il-footer-contact uofi_address">
+                <p><a href="https://vigilant-fishstick-2k4pppq.pages.github.io/">Application Development UX Standards</a></p>
+            </div>
+
+            <nav slot="links" class="il-footer-links" aria-label="Legal notices">
+                <ul>
+                    <li><button data-il="cookies"></button></li>
+                    <li><a data-il="privacy"></a></li>
+                    <li><a data-il="copyright"></a></li>
+                    <li><a data-il="accessibility"></a></li>
+                </ul>
+            </nav>
+        </il-footer>
+    </footer><!-- #colophon -->
+
+<div id="gototop" class="hidden">
+	<a href="#"><i class="fa fa-chevron-up"></i><span class="sr-only">Go to top</span></a>
+</div>
+</body>
+</html>

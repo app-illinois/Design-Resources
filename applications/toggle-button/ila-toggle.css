@@ -1,0 +1,142 @@
+/* applies to all toggle buttons with 'aria-pressed' attribute, whether true or false */
+.ila-toggles [aria-pressed] {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  color: inherit;
+  background: none;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  padding: .4em 0 .4em 4em;
+  position: relative; 
+  outline: none;
+}
+
+/* html for disabled button has blank 'disabled' attribute */
+.ila-toggles [aria-pressed][disabled],
+.ila-toggles [aria-pressed][disabled]:hover {
+  color: var(--il-storm--il-storm-60, #8E9090);
+}
+
+/* the 'before' section is the pill container, this determines height of button. */
+.ila-toggles [aria-pressed]::before,
+.ila-toggles [aria-pressed]::after {
+  content: "";
+  position: absolute;
+  height: 1.8em;
+  transition: all 0.25s ease;
+}
+
+.ila-toggles [aria-pressed]::before {
+  left: 0;
+  top: 0.2em;
+  width: 3em;
+  border: 0em solid var(--il-storm--il-storm-85, #929191);
+  background: var(--il-storm--il-storm-85, #929191);
+  border-radius: 1.1em;
+}
+
+/* the 'after' section is the pill that slides laft and right */
+.ila-toggles [aria-pressed]::after {
+  left: 0;
+  top: 0.25em;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.25em solid var(--il-storm--il-storm-85, #929191);
+}
+
+/* whether aria pressed is true or false */
+.ila-toggles [aria-pressed]:hover::before {
+  outline: 3px solid var(--il-orange-il-orange, #FF5F05);
+}
+
+/* whether aria pressed is true or false */
+.ila-toggles [aria-pressed]:focus::before {
+  outline: 3px solid #13294b;
+  background: var(--il-arches--il-arches-90, #C7EDF8);
+}
+
+/* border of pill turns arches blue to match bgd color of before */
+.ila-toggles [aria-pressed]:focus::after {
+background-color: #13294b;
+border: 0.25em solid var(--il-arches--il-arches-90, #C7EDF8);
+}
+
+/* pill moves from left:0 to left: 1.25em when pressed = true, border color changes to match bgd color of before */
+.ila-toggles [aria-pressed=true]::after {
+  left: 1.25em;
+  border-color: #13294b;
+}
+
+.ila-toggles [aria-pressed=true]::before {
+  background-color: #13294b;
+}
+
+.ila-toggles [aria-pressed=true]:hover::before {
+background-color: var(--il-orange-il-orange, #FF5F05); 
+outline: none;
+}
+
+.ila-toggles [aria-pressed=true]:hover::after {
+border-color: var(--il-orange-il-orange, #FF5F05); 
+}
+
+.ila-toggles [aria-pressed=true]:focus::before {
+background-color: var(--il-arches--il-arches-90, #C7EDF8);
+outline: 3px solid #13294b;
+}
+
+.ila-toggles [aria-pressed=true]:focus::after {
+border-color:  var(--il-arches--il-arches-90, #C7EDF8); 
+}
+
+.ila-toggles [aria-pressed][disabled]::before {
+  background-color: var(--il-storm--il-storm-60, #8E9090);
+  border-color: #ddd;
+}
+
+.ila-toggles [aria-pressed][disabled]::after {
+  border-color: var(--il-storm--il-storm-60, #8E9090);
+  left: 0
+}
+
+.ila-toggles [aria-pressed][disabled]:hover::before {outline: 3px solid var(--il-orange-il-orange, #FF5F05);
+}
+
+/* Windows High Contrast Mode Support */
+@media screen and (-ms-high-contrast: active) {
+  .ila-toggles [aria-pressed]:focus::before,
+  .ila-toggles [aria-pressed]:hover::before {
+    outline: 1px dotted windowText;
+    outline-offset: 0.25em;
+  }
+  .ila-toggles [aria-pressed]::after {
+    background-color: windowText;
+  }
+  .ila-toggles [aria-pressed][disabled]::after {
+    background-color: transparent;
+  }
+}
+
+/* Reduced motion */
+@media screen and (prefers-reduced-motion: reduce) {
+  .ila-toggles [aria-pressed]::before,
+  .ila-toggles [aria-pressed]::after {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .ila-toggles [aria-pressed]::before,
+  .ila-toggles [aria-pressed]::after,
+  .ila-toggles [aria-pressed][disabled] {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+		
