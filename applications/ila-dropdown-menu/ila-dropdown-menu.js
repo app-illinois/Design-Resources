@@ -348,10 +348,10 @@ window.addEventListener('load', function () {
     //         node.textContent.trim();
     // }
     function performMenuAction(node) {}
-    var menuButtons = document.querySelectorAll('.ila-dropdown-menu');
-    for (var i = 0; i < menuButtons.length; i++) {
+    var ilaDropdownMenus = document.querySelectorAll('.ila-dropdown-menu');
+    for (var i = 0; i < ilaDropdownMenus.length; i++) {
         new MenuButtonActionsActiveDescendant(
-            menuButtons[i],
+            ilaDropdownMenus[i],
             performMenuAction
         );
     }
