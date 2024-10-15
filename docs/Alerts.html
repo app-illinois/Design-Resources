@@ -28,20 +28,7 @@
         /*! This file is auto-generated */
         !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
     </script>
-    <style id='wp-emoji-styles-inline-css'>
 
-        img.wp-smiley, img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 0.07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
     <link rel='stylesheet' id='wp-block-library-css' href='https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6' media='all' />
     <link rel='stylesheet' id='block-styles-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6' media='all' />
     <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6' media='all' />
@@ -166,15 +153,15 @@
     <main>
         <div class="page-wrapper">
             <div>
-                <h1>Slideover</h1>
-                <p>Used as a way to display additional information.</p>
+                <h1>Alerts</h1>
+                <p>Used to confirm actions.</p>
             </div>
             <br />
 
             <div>
                 <h2>Placement</h2>
                 <p>
-                    Place the main slideover component(s) ideally at the root level of the page just inside the body tag.
+                    Place the main alert component(s) ideally at the root level of the page just inside the body tag.
                 </p>
             </div>
             <br />
@@ -182,8 +169,9 @@
             <div>
                 <h2>Component Behavior</h2>
                 <p>
-                    Opens a slideover component with semi-transparent
-                    overlay to display additional information. Can be
+                    Opens an alert component with semi-transparent
+                    overlay to display information about an action being taken and options 
+                    for what to do regarding that action. Can be
                     dismissed by clicking the overlay or the close button in
                     the upper right corner.
                 </p>
@@ -197,11 +185,13 @@
                     <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA Authoring Practices Guide</a>.  <br>
                     Main points:
                     <ul>
-                        <li>Has role="dialog"</li>
+                        <li>Has role="alertdialog"</li>
                         <li>Has aria-modal="true"</li>
-                        <li>Slideover header has an ID so it can be used as aria-labelledby for the component</li>
+                        <li>Gets focus when it opens</li>
+                        <li>Alert header has an ID so it can be used as aria-labelledby for the component</li>
+                        <li>Alert content has an ID so it can be used as aria-describedby for the component</li>
                         <li>Acts as a focus trap</li>
-                        <li>Escape key closes the slideover</li>
+                        <li>Escape key closes the alert</li>
                     </ul>
                 </p>
             </div>
@@ -209,14 +199,12 @@
 
             <div>
                 <h2>Component Example</h2>
-                <button class="il-button"
-                        onclick="openSlideover('ilaSlideoverRight')">
-                    Open Right Slideover
-                </button>
-                <button class="il-button"
-                        onclick="openSlideover('ilaSlideoverLeft')">
-                    Open Left Slideover
-                </button>
+                <button
+                class="il-button"
+                onclick="openAlert('ilaAlert')"
+            >
+                Open Alert
+            </button>
             </div>
             <br />
 
@@ -230,114 +218,7 @@
         </div>
         <!-- closes page wrapper -->
     </main>
-    <div id="ilaSlideoverRight"
-         class="ila-slideover ila-slideover--closed ila-slideover--right"
-         role="dialog"
-         aria-labelledby="ilaSlideoverRightLabel"
-         aria-modal="true">
-        <div class="ila-slideover__overlay"
-             onclick="closeSlideover('ilaSlideoverLeft')"></div>
-        <div class="ila-slideover__slideover">
-            <div class="ila-slideover__header">
-                <h2 id="ilaSlideoverRightLabel"
-                    class="ila-slideover__label">
-                    Title of Right Slideover
-                </h2>
-                <button aria-label="close slideover"
-                        class="ila-slideover__close-button"
-                        onclick="closeSlideover('ilaSlideoverRight')">
-                    <svg class="ila-slideover__close-icon"
-                         role="presentation"
-                         xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 352 512">
-                        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="ila-slideover__content">
-                <h3>Content in a slideover</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed lectus velit, feugiat in lacinia eget, tristique ut
-                    orci. Phasellus ut egestas tellus. In hac habitasse
-                    platea dictumst. Nullam efficitur finibus facilisis. In
-                    dui ipsum, congue ut ornare vitae, sollicitudin vitae
-                    velit. Proin congue nunc quam, a sagittis purus suscipit
-                    sed. Quisque tincidunt congue erat, ac placerat ex
-                    dapibus in. Duis velit risus, mattis a volutpat et,
-                    gravida nec velit. Proin ut sem tortor. Aliquam
-                    venenatis sollicitudin nulla, venenatis porttitor augue
-                    auctor in. Integer facilisis lectus sed lacus elementum,
-                    ut ultrices turpis molestie. In in viverra nunc. Cras
-                    placerat arcu et rutrum congue. Phasellus scelerisque,
-                    nibh ac egestas viverra, ligula magna tristique dolor, a
-                    porttitor lacus risus placerat tortor. Suspendisse
-                    potenti. Praesent venenatis erat arcu, vitae mollis elit
-                    lobortis quis. Duis et molestie mi, nec porta ipsum.
-                    Etiam condimentum cursus lacus quis maximus. Sed vel
-                    tortor id turpis eleifend facilisis. Integer hendrerit
-                    tellus ut accumsan blandit. In hac habitasse platea
-                    dictumst. Proin pellentesque id lectus a tristique.
-                    Morbi eu lacus convallis, lobortis ex eu, consequat
-                    augue.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="ilaSlideoverLeft"
-         class="ila-slideover ila-slideover--closed ila-slideover--left"
-         role="dialog"
-         aria-labelledby="ilaSlideoverLeftLabel"
-         aria-modal="true">
-        <div class="ila-slideover__overlay"
-             onclick="closeSlideover('ilaSlideoverLeft')"></div>
-        <div class="ila-slideover__slideover">
-            <div class="ila-slideover__header">
-                <h2 id="ilaSlideoverLeftLabel"
-                    class="ila-slideover__label">
-                    Title of Left Slideover
-                </h2>
-                <button aria-label="close slideover"
-                        class="ila-slideover__close-button"
-                        onclick="closeSlideover('ilaSlideoverLeft')">
-                    <svg class="ila-slideover__close-icon"
-                         role="presentation"
-                         xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 352 512">
-                        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="ila-slideover__content">
-                <h3>Content in a slideover</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed lectus velit, feugiat in lacinia eget, tristique ut
-                    orci. Phasellus ut egestas tellus. In hac habitasse
-                    platea dictumst. Nullam efficitur finibus facilisis. In
-                    dui ipsum, congue ut ornare vitae, sollicitudin vitae
-                    velit. Proin congue nunc quam, a sagittis purus suscipit
-                    sed. Quisque tincidunt congue erat, ac placerat ex
-                    dapibus in. Duis velit risus, mattis a volutpat et,
-                    gravida nec velit. Proin ut sem tortor. Aliquam
-                    venenatis sollicitudin nulla, venenatis porttitor augue
-                    auctor in. Integer facilisis lectus sed lacus elementum,
-                    ut ultrices turpis molestie. In in viverra nunc. Cras
-                    placerat arcu et rutrum congue. Phasellus scelerisque,
-                    nibh ac egestas viverra, ligula magna tristique dolor, a
-                    porttitor lacus risus placerat tortor. Suspendisse
-                    potenti. Praesent venenatis erat arcu, vitae mollis elit
-                    lobortis quis. Duis et molestie mi, nec porta ipsum.
-                    Etiam condimentum cursus lacus quis maximus. Sed vel
-                    tortor id turpis eleifend facilisis. Integer hendrerit
-                    tellus ut accumsan blandit. In hac habitasse platea
-                    dictumst. Proin pellentesque id lectus a tristique.
-                    Morbi eu lacus convallis, lobortis ex eu, consequat
-                    augue.
-                </p>
-            </div>
-        </div>
-    </div>
+
     <footer id="colophon" class="site-footer">
         <il-footer>
 
@@ -355,6 +236,68 @@
             </nav>
         </il-footer>
     </footer><!-- #colophon -->
+    <div
+            id="ilaAlert"
+            class="ila-alert ila-alert--closed"
+            role="alertdialog"
+            aria-labelledby="ilaAlertLabel"
+            aria-describedby="ilaAlertContent"
+            aria-modal="true"
+        >
+            <div class="ila-alert__overlay"></div>
+            <div class="ila-alert__alert">
+                <div class="ila-alert__header">
+                    <h2
+                        id="ilaAlertLabel"
+                        class="ila-alert__heading"
+                    >
+                        Title of Alert
+                    </h2>
+                    <button
+                        aria-label="close alert"
+                        class="ila-alert__close-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        <div
+                            class="ila-alert__close-icon il-icon"
+                            role="presentation"
+                        >
+                            cancel
+                        </div>
+                    </button>
+                </div>
+                <div
+                    id="ilaAlertContent"
+                    class="ila-alert__content"
+                >
+                    <h3>Content in an alert</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed lectus velit, feugiat in lacinia eget, tristique ut
+                        orci. Phasellus ut egestas tellus. In hac habitasse
+                        platea dictumst. Nullam efficitur finibus facilisis. In
+                        dui ipsum, congue ut ornare vitae, sollicitudin vitae
+                        velit. Proin congue nunc quam, a sagittis purus suscipit
+                        sed. Quisque tincidunt congue erat, ac placerat ex
+                        dapibus in. Duis velit risus, mattis a volutpat et,
+                    </p>
+                </div>
+                <div class="ila-alert__footer">
+                    <button
+                        class="il-button ila-alert__action-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        No
+                    </button>
+                    <button
+                        class="il-button ila-alert__action-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        Yes
+                    </button>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
 
