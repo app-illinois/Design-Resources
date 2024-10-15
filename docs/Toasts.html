@@ -1019,13 +1019,11 @@
                 <div>
                     <h2>Accessibility Guidelines</h2>
                     <p>
-                        A toast should be used for non-essential information. As
-                        such, a toast has role="status" and focus does not shift
-                        to it upon appearance. Note that for the screen reader
-                        to announce changes, role="status" must be on a
-                        container that exists from pageload where the elements
-                        inside are changing; in this case, role="status" would
-                        go on the div which is holding all the toasts
+                        A toast should have role="alert". Note that for the
+                        screen reader to announce changes, role="alert" must be
+                        on a container that exists from pageload where the
+                        elements inside are changing; in this case, role="alert"
+                        would go on the div which is holding all the toasts
                         (.toast-holder) so it can observe them opening and
                         closing.
                     </p>
