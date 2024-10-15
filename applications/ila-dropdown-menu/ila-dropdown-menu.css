@@ -10,9 +10,10 @@
     background-color: white;
     border: 1px solid var(--il-storm);
     min-width: 200px;
+    max-width: 500px;
 }
 
-.ila-dropdown-menu__menu.ila-dropdown-menu__menu--open {
+.ila-dropdown-menu--open .ila-dropdown-menu__menu {
     display: block;
 }
 

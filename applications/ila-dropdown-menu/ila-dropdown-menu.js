@@ -165,7 +165,7 @@ class MenuButtonActionsActiveDescendant {
     // Popup menu methods
 
     openPopup() {
-        this.menuNode.classList.add('ila-dropdown-menu__menu--open');
+        this.domNode.classList.add('ila-dropdown-menu--open');
         this.buttonNode.setAttribute('aria-expanded', 'true');
         this.menuNode.focus();
         this.setFocusToFirstMenuitem();
@@ -180,7 +180,7 @@ class MenuButtonActionsActiveDescendant {
                     'ila-dropdown-menu__menu-item--focused'
                 );
             }
-            this.menuNode.classList.remove('ila-dropdown-menu__menu--open');
+            this.domNode.classList.remove('ila-dropdown-menu--open');
             this.buttonNode.focus();
         }
     }
