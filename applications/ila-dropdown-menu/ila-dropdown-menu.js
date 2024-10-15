@@ -190,7 +190,13 @@ class MenuButtonActionsActiveDescendant {
     }
 
     // Menu event handlers
+    onFocusin() {
+        this.domNode.classList.add('ila-dropdown-menu--focused');
+    }
 
+    onFocusout() {
+        this.domNode.classList.remove('ila-dropdown-menu--focused');
+    }
     onButtonKeydown(event) {
         var key = event.key,
             flag = false;
