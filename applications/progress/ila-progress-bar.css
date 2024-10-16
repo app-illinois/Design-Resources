@@ -1,8 +1,7 @@
 .ila-progress {
     display: flex;
-    height: 1rem;
+    height: 1.1875rem;
     overflow: hidden;
-    font-size: .75rem;
     background-color: var(--il-cloud-3);
     border-radius: .375rem;
     margin-bottom: 1rem;
@@ -10,11 +9,21 @@
 }
 
 .ila-progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
     background-color: var(--il-industrial-blue);
     color: white !important;
     text-align: center;
+    font-size: .875rem;
     font-weight: 600;
     transition: width 0.5s ease;
+}
+
+.ila-progress-sm .ila-progress-bar {
+    line-height: .875rem;
+    font-size: .875rem;
 }
 
 .ila-progress-bar-red {
@@ -24,9 +33,9 @@
 /* PROGRESS tag */
 progress {
     display: flex;
-    height: 1rem;
+    height: 1.25rem;
     overflow: hidden;
-    font-size: .75rem;
+    font-size: 1rem;
     border-radius: .375rem;
     margin-bottom: 1rem;
     width: 100%;
