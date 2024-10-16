@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html
+    lang="en"
+    class="il-toolkit"
+>
+    <head>
+        <meta charset="utf-8" />
+        <title>ILA Dropdown Menu</title>
+
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="dns-prefetch"
+            href="https://cdn.toolkit.illinois.edu"
+        />
+        <link
+            rel="icon"
+            href="https://cdn.brand.illinois.edu/favicon.ico"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+
+        <link
+            rel="stylesheet"
+            href="ila-dropdown-menu.css"
+        />
+        <style>
+            body {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.6666666667em;
+                font-family: var(--il-font-sans);
+                color: var(--il-text-color);
+            }
+
+            a {
+                transition: color 0.3s;
+                color: var(--il-link-color);
+                text-decoration: underline;
+            }
+
+            a:focus,
+            a:hover {
+                outline-style: none;
+                color: var(--il-focused-link-color);
+            }
+        </style>
+    </head>
+    <body>
+        <il-page>
+            <div class="ila-dropdown-menu">
+                <button
+                    class="il-button ila-dropdown-menu__button"
+                    type="button"
+                    id="ilaMenuButton"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="ilaDropdownMenu"
+                >
+                    Menu
+                    <svg
+                        class="ila-dropdown-menu__button-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <title>chevron-down</title>
+                        <path
+                            d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                        />
+                    </svg>
+                </button>
+                <ul
+                    id="ilaDropdownMenu"
+                    class="ila-dropdown-menu__menu"
+                    role="menu"
+                    tabindex="-1"
+                    aria-labelledby="ilaMenuButton"
+                    aria-activedescendant="ilaMenuItem1"
+                >
+                    <li
+                        id="ilaMenuItem1"
+                        class="ila-dropdown-menu__menu-item"
+                        role="menuitem"
+                    >
+                        Action 1
+                    </li>
+                    <li
+                        id="ilaMenuItem2"
+                        class="ila-dropdown-menu__menu-item"
+                        role="menuitem"
+                    >
+                        Action 2
+                    </li>
+                    <li
+                        id="ilaMenuItem3"
+                        class="ila-dropdown-menu__menu-item"
+                        role="menuitem"
+                    >
+                        Action 3
+                    </li>
+                    <li
+                        id="ilaMenuItem4"
+                        class="ila-dropdown-menu__menu-item"
+                        role="menuitem"
+                    >
+                        Action 4
+                    </li>
+                </ul>
+            </div>
+        </il-page>
+        <script src="ila-dropdown-menu.js"></script>
+    </body>
+</html>

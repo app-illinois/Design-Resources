@@ -486,18 +486,70 @@
                     </il-header>
                 </div>
             </div>
+            <style>
+                .x {
+                    width: 60px;
+                    background: var(--il-blue-lighter-4);
+                    border: solid 1px var(--il-blue-lighter-4);
+                }
+
+                .x:hover {
+                    background: var(--il-storm-lighter-4);
+                }
+                .x_2 {
+                    height: 60px;
+                }
+
+                .x_2:hover {
+                    content: url('https://cdn.brand.illinois.edu/icons/line/blue/x.svg');
+                    height: 60px;
+                }
+
+                .x_3 {
+                    background-image: url('https://cdn.brand.illinois.edu/icons/line/blue/x.png');
+                    height: 70px;
+                    width: 70px;
+                    background-repeat: no-repeat;
+                }
+
+                .x_3:hover {
+                    background-image: url('https://cdn.brand.illinois.edu/icons/solid/blue/x.png');
+                }
+
+                .x__4-5 {
+                    background-image: url('https://cdn.brand.illinois.edu/icons/solid/orange/x.png');
+                    height: 70px;
+                    width: 70px;
+                    background-repeat: no-repeat;
+                }
+
+                .x__4-5:hover {
+                    background-image: url('https://cdn.brand.illinois.edu/icons/solid/blue/x.png');
+                }
+
+                .x_6 {
+                    background-image: url('https://cdn.brand.illinois.edu/icons/solid/blue/x.png');
+                    height: 70px;
+                    width: 70px;
+                    background-repeat: no-repeat;
+                }
+
+                .x_6:hover {
+                    background-image: url('https://cdn.brand.illinois.edu/icons/solid/orange/x.png');
+                }
+                .badge-icon-holder {
+                    display: flex;
+                }
+            </style>
         </header>
         <!-- #masthead -->
         <main>
             <div class="page-wrapper">
                 <div>
-                    <h1>Toasts</h1>
+                    <h1>Badges</h1>
                     <p>
-                        Alert the user to non-urgent status changes and
-                        optionally provide actions to take as a response to
-                        status changes. Ie, a toast that notifies the user that
-                        there are new changes to view with a button to view
-                        changes.
+                        Shows the user notifications, counts, or status
+                        information on navigation items and icons.
                     </p>
                 </div>
                 <br />
@@ -505,8 +557,10 @@
                 <div>
                     <h2>Placement</h2>
                     <p>
-                        Place the toast holder with component(s) ideally at the
-                        root level of the page just inside the body tag.
+                        Placement will vary based on what the badge is being
+                        added to. In the example, the badge is placed inside a
+                        div with a fixed height which then has a link to the
+                        website and background-image of the website's logo.
                     </p>
                 </div>
                 <br />
@@ -514,12 +568,8 @@
                 <div>
                     <h2>Component Behavior</h2>
                     <p>
-                        Opens small, dismissable dialogs typically on the bottom
-                        of the screen, though other locations are common. It is
-                        common practice for toasts to disappear after a set
-                        amount of time. If multiple toasts are activated, they
-                        stack one on top of the other with the newest toast on
-                        the bottom of the screen (or beginning of the order).
+                        Badges appear in the upper right hand corner of a
+                        navigation item or icon.
                     </p>
                 </div>
                 <br />
@@ -527,37 +577,82 @@
                 <div>
                     <h2>Accessibility Guidelines</h2>
                     <p>
-                        A toast should have role="alert". Note that for the
-                        screen reader to announce changes, role="alert" must be
-                        on a container that exists from pageload where the
-                        elements inside are changing; in this case, role="alert"
-                        would go on the div which is holding all the toasts
-                        (.toast-holder) so it can observe them opening and
-                        closing.
+                        Badges do not need any additional accessibility
+                        functionality if their meaning can be inferred from
+                        context (ie, the badge is read by the screen reader
+                        after or before the item it is badging).
                     </p>
                 </div>
                 <br />
 
                 <div>
                     <h2>Component Example</h2>
-                    <button
-                        class="il-button"
-                        onclick="openToast('ilaToastOne')"
-                    >
-                        Open Toast 1
-                    </button>
-                    <button
-                        class="il-button"
-                        onclick="openToast('ilaToastTwo')"
-                    >
-                        Open Toast 2
-                    </button>
-                    <button
-                        class="il-button"
-                        onclick="openToast('ilaToastThree')"
-                    >
-                        Open Toast 3
-                    </button>
+                    <div class="badge-icon-holder">
+                        <div class="icon">
+                            <a
+                                role="img"
+                                href="https://x.com/"
+                            >
+                                <img
+                                    class="x"
+                                    src="https://cdn.brand.illinois.edu/icons/line/blue/x.svg"
+                                    alt="X social media icon"
+                                />
+                            </a>
+                            <span class="ila-badge">1</span>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://x.com/">
+                                <img
+                                    src="https://cdn.brand.illinois.edu/icons/line/orange/x.svg"
+                                    alt="x social media icon"
+                                    class="x_2"
+                                />
+                            </a>
+                            <span class="ila-badge">89</span>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://x.com/"
+                                ><div
+                                    class="x_3"
+                                    role="img"
+                                ></div
+                            ></a>
+                            <span class="ila-badge">302</span>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://x.com/"
+                                ><div
+                                    class="x__4-5"
+                                    role="img"
+                                ></div
+                            ></a>
+                            <span class="ila-badge">4</span>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://x.com/"
+                                ><div
+                                    class="x__4-5"
+                                    role="img"
+                                ></div
+                            ></a>
+                            <span class="ila-badge">55,000</span>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://x.com/"
+                                ><div
+                                    class="x_6"
+                                    role="img"
+                                ></div
+                            ></a>
+                            <span class="ila-badge">679,101</span>
+                        </div>
+                    </div>
                 </div>
                 <br />
 
@@ -571,99 +666,7 @@
             </div>
             <!-- closes page wrapper -->
         </main>
-        <div
-            class="toast-holder"
-            role="status"
-        >
-            <div class="toast-holder-inner">
-                <div
-                    id="ilaToastOne"
-                    class="ila-toast ila-toast--closed"
-                >
-                    <div class="ila-toast__toast">
-                        <button
-                            type="button"
-                            class="ila-toast__close-button"
-                            aria-label="close toast"
-                            onclick="closeToast('ilaToastOne')"
-                        >
-                            <div
-                                class="ila-toast__close-icon il-icon"
-                                role="presentation"
-                            >
-                                cancel
-                            </div>
-                        </button>
-                        <div class="ila-toast__heading">
-                            <h3>Toast with heading and a button</h3>
-                        </div>
-                        <div class="ila-toast__content">
-                            <p>
-                                Description with some additional information.
-                                Can be multiple lines. Could include a
-                                <a href="#">descriptive link</a>.
-                            </p>
-                        </div>
-                        <div class="ila-toast__actions">
-                            <button class="il-button">Action</button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    id="ilaToastTwo"
-                    class="ila-toast ila-toast--closed"
-                >
-                    <div class="ila-toast__toast">
-                        <button
-                            type="button"
-                            class="ila-toast__close-button"
-                            aria-label="close toast"
-                            onclick="closeToast('ilaToastTwo')"
-                        >
-                            <div
-                                class="ila-toast__close-icon il-icon"
-                                role="presentation"
-                            >
-                                cancel
-                            </div>
-                        </button>
-                        <div class="ila-toast__heading">
-                            <h3>Toast with heading</h3>
-                        </div>
-                        <div class="ila-toast__content">
-                            <p>
-                                Description with some additional information.
-                                Can be multiple lines. Could include a
-                                <a href="#">descriptive link</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    id="ilaToastThree"
-                    class="ila-toast ila-toast--closed ila-toast--single-line"
-                >
-                    <div class="ila-toast__toast">
-                        <button
-                            type="button"
-                            class="ila-toast__close-button"
-                            aria-label="close toast"
-                            onclick="closeToast('ilaToastThree')"
-                        >
-                            <div
-                                class="ila-toast__close-icon il-icon"
-                                role="presentation"
-                            >
-                                cancel
-                            </div>
-                        </button>
-                        <div class="ila-toast__content">
-                            <p>Single line toast</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <footer
             id="colophon"
             class="site-footer"

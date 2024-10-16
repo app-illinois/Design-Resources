@@ -1,0 +1,51 @@
+.ila-dropdown-menu__button {
+    display: flex;
+    align-items: center;
+}
+
+.ila-dropdown-menu__menu {
+    margin-top: -6px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid var(--il-storm);
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.ila-dropdown-menu--open .ila-dropdown-menu__menu {
+    display: block;
+}
+
+/* override ul styles */
+ul.ila-dropdown-menu__menu {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.ila-dropdown-menu__menu-item {
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+}
+
+.ila-dropdown-menu__menu-item:hover {
+    background-color: var(--il-storm-lighter-4);
+    color: var(--il-altgeld);
+}
+.ila-dropdown-menu__menu-item:focus,
+.ila-dropdown-menu__menu-item:focus-within,
+.ila-dropdown-menu__menu-item--focused {
+    background-color: var(--il-arches-blue-lighter-4);
+}
+
+.ila-dropdown-menu__button .ila-dropdown-menu__button-icon {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+.ila-dropdown-menu__button[aria-expanded='true']
+    .ila-dropdown-menu__button-icon {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html
+    lang="en"
+    class="il-toolkit"
+>
+    <head>
+        <meta charset="utf-8" />
+
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="dns-prefetch"
+            href="https://cdn.toolkit.illinois.edu"
+        />
+        <link
+            rel="icon"
+            href="https://cdn.brand.illinois.edu/favicon.ico"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.brand.illinois.edu/illinois.css"
+        />
+        <title>Badge Example</title>
+        <link
+            rel="stylesheet"
+            href="ila-badge.css"
+        />
+        <style>
+            body {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.6666666667em;
+                font-family: var(--il-font-sans);
+                color: var(--il-text-color);
+            }
+
+            a {
+                transition: color 0.3s;
+                color: var(--il-link-color);
+                text-decoration: underline;
+            }
+
+            a:focus,
+            a:hover {
+                outline-style: none;
+                color: var(--il-focused-link-color);
+            }
+            .x {
+                width: 60px;
+                background: var(--il-blue-lighter-4);
+                border: solid 1px var(--il-blue-lighter-4);
+            }
+
+            .x:hover {
+                background: var(--il-storm-lighter-4);
+            }
+            .x_2 {
+                height: 60px;
+            }
+
+            .x_2:hover {
+                content: url('https://cdn.brand.illinois.edu/icons/line/blue/x.svg');
+                height: 60px;
+            }
+
+            .x_3 {
+                background-image: url('https://cdn.brand.illinois.edu/icons/line/blue/x.png');
+                height: 70px;
+                width: 70px;
+                background-repeat: no-repeat;
+            }
+
+            .x_3:hover {
+                background-image: url('https://cdn.brand.illinois.edu/icons/solid/blue/x.png');
+            }
+
+            .x__4-5 {
+                background-image: url('https://cdn.brand.illinois.edu/icons/solid/orange/x.png');
+                height: 70px;
+                width: 70px;
+                background-repeat: no-repeat;
+            }
+
+            .x__4-5:hover {
+                background-image: url('https://cdn.brand.illinois.edu/icons/solid/blue/x.png');
+            }
+
+            .x_6 {
+                background-image: url('https://cdn.brand.illinois.edu/icons/solid/blue/x.png');
+                height: 70px;
+                width: 70px;
+                background-repeat: no-repeat;
+            }
+
+            .x_6:hover {
+                background-image: url('https://cdn.brand.illinois.edu/icons/solid/orange/x.png');
+            }
+        </style>
+    </head>
+
+    <div class="icon">
+        <a
+            role="img"
+            href="https://x.com/"
+        >
+            <img
+                class="x"
+                src="https://cdn.brand.illinois.edu/icons/line/blue/x.svg"
+                alt="X social media icon"
+            />
+        </a>
+        <span class="ila-badge">1</span>
+    </div>
+
+    <div class="icon">
+        <a href="https://x.com/">
+            <img
+                src="https://cdn.brand.illinois.edu/icons/line/orange/x.svg"
+                alt="x social media icon"
+                class="x_2"
+            />
+        </a>
+        <span class="ila-badge">89</span>
+    </div>
+
+    <div class="icon">
+        <a href="https://x.com/"
+            ><div
+                class="x_3"
+                role="img"
+            ></div
+        ></a>
+        <span class="ila-badge">302</span>
+    </div>
+
+    <div class="icon">
+        <a href="https://x.com/"
+            ><div
+                class="x__4-5"
+                role="img"
+            ></div
+        ></a>
+        <span class="ila-badge">4</span>
+    </div>
+
+    <div class="icon">
+        <a href="https://x.com/"
+            ><div
+                class="x__4-5"
+                role="img"
+            ></div
+        ></a>
+        <span class="ila-badge">55,000</span>
+    </div>
+
+    <div class="icon">
+        <a href="https://x.com/"
+            ><div
+                class="x_6"
+                role="img"
+            ></div
+        ></a>
+        <span class="ila-badge">679,101</span>
+    </div>
+</html>

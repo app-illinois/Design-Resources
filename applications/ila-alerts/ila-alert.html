@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+        <title>Alert Example</title>
+        <link
+            rel="stylesheet"
+            href="ila-alert.css"
+        />
+    </head>
+
+    <body>
+        <h1>Alert</h1>
+        <button
+            class="il-button"
+            onclick="openAlert('ilaAlert')"
+        >
+            Open Alert
+        </button>
+        <div
+            id="ilaAlert"
+            class="ila-alert ila-alert--closed"
+            role="alertdialog"
+            aria-labelledby="ilaAlertLabel"
+            aria-describedby="ilaAlertContent"
+            aria-modal="true"
+        >
+            <div class="ila-alert__overlay"></div>
+            <div class="ila-alert__alert">
+                <div class="ila-alert__header">
+                    <h2
+                        id="ilaAlertLabel"
+                        class="ila-alert__heading"
+                    >
+                        Title of Alert
+                    </h2>
+                    <button
+                        aria-label="close alert"
+                        class="ila-alert__close-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        <div
+                            class="ila-alert__close-icon il-icon"
+                            role="presentation"
+                        >
+                            cancel
+                        </div>
+                    </button>
+                </div>
+                <div
+                    id="ilaAlertContent"
+                    class="ila-alert__content"
+                >
+                    <h3>Content in an alert</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed lectus velit, feugiat in lacinia eget, tristique ut
+                        orci. Phasellus ut egestas tellus. In hac habitasse
+                        platea dictumst. Nullam efficitur finibus facilisis. In
+                        dui ipsum, congue ut ornare vitae, sollicitudin vitae
+                        velit. Proin congue nunc quam, a sagittis purus suscipit
+                        sed. Quisque tincidunt congue erat, ac placerat ex
+                        dapibus in. Duis velit risus, mattis a volutpat et,
+                    </p>
+                </div>
+                <div class="ila-alert__footer">
+                    <button
+                        class="il-button ila-alert__action-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        No
+                    </button>
+                    <button
+                        class="il-button ila-alert__action-button"
+                        onclick="closeAlert('ilaAlert')"
+                    >
+                        Yes
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="ila-alert.js"></script>
+    </body>
+</html>
