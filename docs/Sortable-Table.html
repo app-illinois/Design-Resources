@@ -7,9 +7,9 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
-    <!--<script>
-    function OptanonWrapper() { }
-    </script>-->
+    <script>
+        function OptanonWrapper() { }
+    </script>
     <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
 
     <title>Application Development UX Standards</title>
@@ -434,14 +434,6 @@
     <link rel="pingback" href="https://webtheme.illinois.edu/xmlrpc.php">
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
 
-
-
-
-
-
-
-
-
     <style>
         body .tile-list .tile.w66 {
             flex: 0 0 calc(40% - 1.2rem);
@@ -510,27 +502,18 @@
         }
 
         .page-wrapper {
-            widyh: 100%;
+            width: 100%;
             max-width: 1140px;
-            margin: 0 auto;
+            margin: 40px auto 0 auto;
         }
     </style>
+
+    <link rel="stylesheet" href="../css/ila-sortable-table.css"></style>
+    <!-- Script used for example only -->
+    <script src="https://www.w3.org/WAI/content-assets/wai-aria-practices/patterns/table/examples/js/sortable-table.js"></script>
 </head>
 
 <body>
-
-    <!--Needed by the cards, I am replacing the headers later and I do not want this it get nuked when I do so its in an odd place for now-->
-    <style type="text/css">
-        .uofi-card-deck {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .uofi-card-deck .uofi-card {
-            width: 350px !important;
-        }
-    </style>
-
     <header id="masthead" class="site-header">
         <div class="masthead_inner d-flex justify-content-between align-items-stretch">
             <div class="il-header-wrapper flex-grow-1">
@@ -540,97 +523,132 @@
                             <h1 class="il-secondary-unit"><a href="https://webtheme.illinois.edu/application-development/">Application Development UX Standards</a></h1>
                         </il-unit-wordmark>
                     </div>
+
+                    <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
+
                 </il-header>
+
             </div>
         </div>
     </header><!-- #masthead -->
     <main>
-        <div class="page-wrapper">
+        <div class="page-wrapper" style="margin-bottom: 30px;">
             <div>
-                <h1>Welcome</h1>
-                <p>Here you can view and explore various standards.
-                   The links below lead to each design standard.
-                   When adding a new standard, <a href="/item-template.html">please use the provided template available</a>.
-                </p>
-                <p><a href="./css/app-toolkit.css">Full minified file</a></p>
-            <br>
-
-
-            <div class="uofi uofi-card-deck">
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Login-Button.html">
-                            <img decoding="async" src="./images/login-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Login Button</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Loaders.html">
-                            <img decoding="async" src="./images/loaders-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Loaders</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Scrolling-Tables.html">
-                            <img decoding="async" src="./images/scrolling-table-180.jpg" alt="" slot="image">
-                            <h3 slot="header">Scrolling Tables</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Sortable-Table.html">
-                            <img decoding="async" src="./images/sortable-table-320.png" alt="" slot="image" style="border-bottom: 1px solid #ddd;">
-                            <h3 slot="header">Sortable Table</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Buttons.html">
-                            <img decoding="async" src="./images/login-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Buttons</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Slideovers.html">
-                            <img decoding="async" src="./images/slideover-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Slideovers</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
-
-                <div class="uofi-default-block il-formatted">
-                    <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
-                        <il-clickable-card href="/Inputs.html">
-                            <img decoding="async" src="./images/slideover-320.jpg" alt="" slot="image">
-                            <h3 slot="header">Inputs</h3>
-                            <p></p>
-                        </il-clickable-card>
-                    </div>
-                </div>
+                <h1>Sortable Table</h1>
+                <!-- <p>This CCS and JS can be applied to a table to allow the header and first column to freeze when scrolling, allowing for a better expereicne on smaller screens.</p> -->
             </div>
 
             <br>
-        </div>
+
+            <div>
+                <h2>Component Behavior</h2>
+
+                <p>This example is adapted from <a href="https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/">W3C's Sortable Table documentation</a>.</p>
+
+                <p>The ARIA sortable table component allows users to sort table data by clicking column headers. When a header is clicked, the table's content reorders according to the column's data, either ascending or descending. The sorting state is communicated visually and via ARIA attributes (aria-sort) to ensure accessibility for assistive technologies. Keyboard navigation and screen reader support are provided to enhance usability for all users.</p>
+            </div>
+
+            <br>
+
+            <div>
+                <h2>Accessibility Guidelines</h2>
+
+                <p>The table is made accessible to ensure that users with disabilities can interact with the table effectively. Key accessibility guidelines include:</p>
+
+                <ul style="margin-bottom: 1rem;">
+                    <li><b>ARIA Attributes:</b> Use aria-sort on column headers to indicate the current sort direction (ascending, descending, or none). This helps screen readers announce the sort order clearly.</li>
+                    <li><b>Keyboard Navigation:</b> Ensure that users can navigate the table using the keyboard, with focusable column headers that allow sorting via keypresses (e.g., Enter or Spacebar). Tab order should be logical, allowing easy movement between headers and table rows.</li>
+                    <li><b>Focus Management:</b> Maintain visible focus indicators for interactive elements like column headers to assist keyboard users in understanding where they are on the page.</li>
+                    <li><b>Screen Reader Compatibility:</b> Use semantic HTML and ARIA roles to ensure that assistive technologies accurately interpret the table's structure and sorting behavior. Use proper role assignments (role="columnheader", aria-sort).</li>
+                    <li><b>Visual Cues:</b> Provide visual indicators of sorting direction, such as up/down arrows, for users who rely on visual cues.</li>
+                </ul>
+                <!-- <p>It uses HTML table markup for all elements of the table structure, e.g., cells, rows, column headers, and caption. The aria-sort attribute is set on the column header of the currently sorted column, and the header text of sortable columns is wrapped in a button element. One column, the Address column is not sortable.</p> -->
+            </div>
+            <br>
+
+            <div>
+                <h2>Component Example</h2>
+
+                <div class="table-container il-formatted">
+                    <div class="table-wrap">
+                        <table class="sortable ila-table" style="margin-bottom:0;">
+                            <caption>
+                            Students currently enrolled in WAI-ARIA 101
+                            <span class="sr-only">, column headers with buttons are sortable.</span>
+                            </caption>
+                            <thead>
+                            <tr>
+                                <th>
+                                <button>
+                                    First Name
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                </th>
+                                <th aria-sort="ascending">
+                                <button>
+                                    Last Name
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                </th>
+                                <th>
+                                <button>
+                                    Company
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                </th>
+                                <th class="no-sort">Address</th>
+                                <th class="num">
+                                <button>
+                                    Favorite Number
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Fred</td>
+                                <td>Jackson</td>
+                                <td>Canary, Inc.</td>
+                                <td>123 Broad St.</td>
+                                <td class="num">56</td>
+                            </tr>
+                            <tr>
+                                <td>Sara</td>
+                                <td>James</td>
+                                <td>Cardinal, Inc.</td>
+                                <td>457 First St.</td>
+                                <td class="num">7</td>
+                            </tr>
+                            <tr>
+                                <td>Ralph</td>
+                                <td>Jefferson</td>
+                                <td>Robin, Inc.</td>
+                                <td>456 Main St.</td>
+                                <td class="num">513</td>
+                            </tr>
+                            <tr>
+                                <td>Nancy</td>
+                                <td>Jensen</td>
+                                <td>Eagle, Inc.</td>
+                                <td>2203 Logan Dr.</td>
+                                <td class="num">3.5</td>
+                            </tr>
+                            </tbody>
+                      </table>
+                    </div>
+                </div> <!-- closes container -->
+            </div>
+
+            <br>
+
+            <div>
+                <h2>Link</h2>
+                <p>
+                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/tables/sortable-table/sortable-table.css">Link to this component on GitHub</a>
+                </p>
+            </div>
+        </div><!-- closes page wrapper -->
     </main>
 
     <footer id="colophon" class="site-footer">
@@ -643,7 +661,7 @@
 
             <nav slot="links" class="il-footer-links" aria-label="Legal notices">
                 <ul>
-                    <!--<li><button data-il="cookies"></button></li> This is a static html site with no cookies-->
+                    <li><button data-il="cookies"></button></li>
                     <li><a data-il="privacy"></a></li>
                     <li><a data-il="copyright"></a></li>
                     <li><a data-il="accessibility"></a></li>

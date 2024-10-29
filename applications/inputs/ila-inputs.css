@@ -1,0 +1,243 @@
+:root {
+    --ilaLightBlue: #C4E9F5;
+    --ilaOrange: #ff5f05;
+    --ilaBlue: #13294b;
+    --ilaLightGrey: #f4f4f4;
+    --ilaGrey: #707372;
+}
+
+
+
+/* RADION BUTTONS */
+
+/* NORMAL HOVER */
+input[type='radio']:hover {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 0 2px var(--ilaOrange);
+}
+
+/* NORMAL FOCUS */
+input[type='radio']:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: var(--ilaLightBlue);
+    border: 3px solid var(--ilaLightBlue);
+    box-shadow: 0 0 0 1px var(--ilaBlue);
+}
+
+/* NORMAL */
+input[type='radio'] {
+    width: 20px;
+    height: 20px;
+}
+
+    /* SELECTED */
+    input[type='radio']:checked {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: var(--ilaGrey);
+        border: 3px solid #FFF;
+        box-shadow: 0 0 0 1px var(--ilaGrey);
+    }
+
+    /* SELECTED HOVER   */
+    input[type='radio']:hover:checked {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: var(--ilaOrange);
+        border: 3px solid #FFF;
+        box-shadow: 0 0 0 1px var(--ilaOrange);
+    }
+
+    /* SELECTED */
+    input[type='radio']:checked:focus {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: var(--ilaBlue);
+        border: 3px solid var(--ilaLightBlue);
+        box-shadow: 0 0 0 1px var(--ilaBlue);
+    }
+
+
+
+
+/* CHECKBOXES */
+
+/* NORMAL HOVER */
+input[type='checkbox']:hover {
+    appearance: none;
+    -webkit-appearance: none;
+    /* The border will be the spacing between the dot and the outer circle */
+    border: 3px solid #FFF;
+    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+    box-shadow: 0 0 0 2px var(--ilaOrange);
+}
+
+/* NORMAL FOCUS */
+input[type='checkbox']:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    /* The background will be the radio dot's color. */
+    background: var(--ilaLightBlue);
+    /* The border will be the spacing between the dot and the outer circle */
+    border: 3px solid var(--ilaLightBlue);
+    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+    box-shadow: 0 0 0 1px var(--ilaBlue);
+}
+
+/* NORMAL */
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
+    /* SELECTED */
+    input[type='checkbox']:checked {
+        appearance: none;
+        -webkit-appearance: none;
+        /* The background will be the radio dot's color. */
+        background: var(--ilaGrey);
+        /* The border will be the spacing between the dot and the outer circle */
+        border: 3px solid #FFF;
+        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+        box-shadow: 0 0 0 1px var(--ilaGrey);
+    }
+
+    /* SELECTED HOVER   */
+    input[type='checkbox']:hover:checked {
+        appearance: none;
+        -webkit-appearance: none;
+        /* The background will be the radio dot's color. */
+        background: var(--ilaOrange);
+        /* The border will be the spacing between the dot and the outer circle */
+        border: 3px solid #FFF;
+        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+        box-shadow: 0 0 0 1px var(--ilaOrange);
+    }
+
+    /* SELECTED */
+    input[type='checkbox']:checked:focus {
+        appearance: none;
+        -webkit-appearance: none;
+        /* The background will be the radio dot's color. */
+        background: var(--ilaBlue);
+        /* The border will be the spacing between the dot and the outer circle */
+        border: 3px solid var(--ilaLightBlue);
+        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+        box-shadow: 0 0 0 1px var(--ilaBlue);
+    }
+
+
+    /*SLIDER*/
+/* Sliders */
+/*.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 1px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #13294b;
+    border: 3px #13294b solid;
+}
+
+input:checked:hover + .slider {
+    background-color: #ff5f05;
+    border: 3px #ff5f05 solid;
+}
+
+input:checked:focus + .slider:before {
+    background-color: #13294b;
+}
+
+input:checked:focus:hover + .slider:before {
+    background-color: white;
+}
+
+input:checked:focus + .slider:before {
+    background-color: #13294b;*/ /* xxxxxx */
+/*}
+
+
+input:focus:hover {
+    background-color: #d5d3d3;
+}
+
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    background-color: #c7edf8;
+    border: 3px #13294b solid;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}*/
+
+/* Rounded sliders */
+/*.slider.round {
+    border: 3px #d5d3d3 solid;
+    border-radius: 34px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+.switch-label {
+    margin: 6px 12px;
+    font-family: Sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+}
+
+.slider.round:hover {
+    border: 3px #ff5f05 solid;
+}*/
+
+
+

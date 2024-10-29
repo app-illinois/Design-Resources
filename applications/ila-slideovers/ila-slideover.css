@@ -62,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
-    border-bottom: 2px solid var(--il-blue);
+    border-bottom: 2px solid var(--il-orange);
 }
 
 .ila-slideover__label {
@@ -72,13 +72,17 @@
 .ila-slideover__close-button {
     border: none;
     background: transparent;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
 }
-
 .ila-slideover__close-icon {
-    height: 25px;
-    width: 25px;
+    font-size: 35px;
+}
+.ila-slideover__close-button:hover,
+.ila-slideover__close-button:focus {
+    transition: background-color 0.3s;
+    background-color: var(--il-blue);
+    color: white;
 }
 
 .ila-slideover__content {

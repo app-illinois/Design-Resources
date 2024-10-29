@@ -50,8 +50,7 @@ thead {
 }
 
     .il-formatted thead th, thead tr > th:first-child {
-        background-color: var(--il-industrial-blue);
-        !important;
+        background-color: var(--il-industrial-blue)!important;
         color: #fff;
         position: relative;
         border-right: 2px solid #fff !important;

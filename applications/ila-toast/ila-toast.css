@@ -1,0 +1,111 @@
+:root {
+    --ila-toast-margin: 1rem;
+    --ila-toast-padding-x: 25px;
+    --ila-toast-padding-y: 15px;
+}
+
+/* toast area; allows for multiple toasts to stack on top of each other. */
+.toast-holder {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.toast-holder-inner {
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.ila-toast {
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0; */
+}
+
+.ila-toast__toast {
+    border: 1px solid var(--il-gray-2);
+    margin: var(--ila-toast-margin);
+    padding: var(--ila-toast-padding-y) var(--ila-toast-padding-x);
+    background-color: white;
+    position: relative;
+    width: 450px;
+}
+
+/* toasts will stack in order of appearance due to the order property */
+.ila-toast.ila-toast--open {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s, order 0.1s;
+    opacity: 1;
+    visibility: visible;
+    order: 0;
+}
+
+.ila-toast.ila-toast--closed {
+    transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+.ila-toast.ila-toast--open.ila-toast--first {
+    order: -1;
+}
+
+.ila-toast__heading {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* the only thing that should be in the content area is text. 
+   margin should come from the ila-toast__content class. */
+.ila-toast__content p {
+    margin: 0;
+    padding: 0;
+}
+
+.ila-toast__content {
+    margin: 10px 0;
+}
+
+.ila-toast__actions {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.ila-toast__close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: calc(var(--ila-toast-padding-y) - 5px);
+    margin-right: calc(var(--ila-toast-padding-x) - 5px);
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.ila-toast__close-button:hover,
+.ila-toast__close-button:focus {
+    transition: background-color 0.3s;
+    background-color: var(--il-blue);
+    color: white;
+}
+
+.ila-toast__close-icon {
+    font-size: 35px;
+}
+
+.ila-toast--single-line .ila-toast__toast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ila-toast--single-line .ila-toast__content {
+    flex-grow: 1;
+}
+.ila-toast--single-line .ila-toast__close-button {
+    position: relative;
+    margin: auto;
+    order: 2;
+}

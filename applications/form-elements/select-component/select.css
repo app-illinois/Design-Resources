@@ -25,17 +25,6 @@ input [type='dropdown']:default {
     height: 13px;
     transform: rotate(-90deg);
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-    <g clip-path="url(#clip0_3163_8471)">
-        <path d="M6.98785 8.77818C6.76884 9.07492 6.22752 9.07492 6.00851 8.77818L3.04157 4.72166L0.0787562 0.668396C-0.140252 0.371656 0.132475 -8.29697e-05 0.56636 -8.29697e-05H12.4341C12.868 -8.29697e-05 13.1407 0.371656 12.9217 0.668396L9.95479 4.72492L6.98785 8.77818Z" fill="#FF5F05"/>
-    </g>
-    <defs>
-        <clipPath id="clip0_3163_8471">
-        <rect width="9" height="13" fill="white" transform="matrix(0 -1 1 0 0 9)"/>
-        </clipPath>
-    </defs>
-    </svg>
-
     /* Text */
     flex: 1 0 0;
 
@@ -73,16 +62,6 @@ input [input='dropdown']:hover {
     height: 13px;
     transform: rotate(-90deg);
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-    <g clip-path="url(#clip0_3163_8475)">
-        <path d="M6.98785 8.77818C6.76884 9.07492 6.22752 9.07492 6.00851 8.77818L3.04157 4.72166L0.0787562 0.668396C-0.140252 0.371656 0.132475 -8.29697e-05 0.56636 -8.29697e-05H12.4341C12.868 -8.29697e-05 13.1407 0.371656 12.9217 0.668396L9.95479 4.72492L6.98785 8.77818Z" fill="#FF5F05"/>
-    </g>
-    <defs>
-        <clipPath id="clip0_3163_8475">
-        <rect width="9" height="13" fill="white" transform="matrix(0 -1 1 0 0 9)"/>
-        </clipPath>
-    </defs>
-    </svg>
 
     /* Text */
     flex: 1 0 0;
@@ -122,16 +101,6 @@ input [input='dropdown']:focus {
     height: 13px;
     transform: rotate(-90deg);
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-    <g clip-path="url(#clip0_3163_8479)">
-        <path d="M6.98785 8.77818C6.76884 9.07492 6.22752 9.07492 6.00851 8.77818L3.04157 4.72166L0.0787562 0.668396C-0.140252 0.371656 0.132475 -8.29697e-05 0.56636 -8.29697e-05H12.4341C12.868 -8.29697e-05 13.1407 0.371656 12.9217 0.668396L9.95479 4.72492L6.98785 8.77818Z" fill="#13294B"/>
-    </g>
-    <defs>
-        <clipPath id="clip0_3163_8479">
-        <rect width="9" height="13" fill="white" transform="matrix(0 -1 1 0 0 9)"/>
-        </clipPath>
-    </defs>
-    </svg>
 
     /* Text */
     flex: 1 0 0;
@@ -170,18 +139,6 @@ input [input='dropdown']:active {
     width: 9px;
     height: 13px;
     transform: rotate(-90deg);
-
-    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-    <g clip-path="url(#clip0_3163_8483)">
-        <path d="M6.98785 8.77842C6.76884 9.07516 6.22752 9.07516 6.00851 8.77842L3.04157 4.7219L0.0787562 0.66864C-0.140252 0.371901 0.132475 0.000161171 0.56636 0.000161171H12.4341C12.868 0.000161171 13.1407 0.371901 12.9217 0.66864L9.95479 4.72516L6.98785 8.77842Z" fill="#FF5F05"/>
-    </g>
-    <defs>
-        <clipPath id="clip0_3163_8483">
-        <rect width="9" height="13" fill="white" transform="matrix(0 -1 1 0 0 9)"/>
-        </clipPath>
-    </defs>
-    </svg>
-
     /* Text */
     flex: 1 0 0;
 
@@ -219,15 +176,4 @@ input [input='dropdown']:disabled {
     height: 13px;
     transform: rotate(-90deg);
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-    <g clip-path="url(#clip0_3163_8486)">
-        <path d="M6.98785 8.77842C6.76884 9.07516 6.22752 9.07516 6.00851 8.77842L3.04157 4.7219L0.0787562 0.66864C-0.140252 0.371901 0.132475 0.000161171 0.56636 0.000161171H12.4341C12.868 0.000161171 13.1407 0.371901 12.9217 0.66864L9.95479 4.72516L6.98785 8.77842Z" fill="#C6C7C6"/>
-    </g>
-    <defs>
-        <clipPath id="clip0_3163_8486">
-        <rect width="9" height="13" fill="white" transform="matrix(0 -1 1 0 0 9)"/>
-        </clipPath>
-    </defs>
-    </svg>
-    
 }
