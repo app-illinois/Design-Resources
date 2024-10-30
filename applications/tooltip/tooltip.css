@@ -1,0 +1,1017 @@
+/* tooltips */
+
+/* Tooltip - Arrow bottom left (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+
+/* Tooltip - Arrow bottom left (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+
+/* Tooltip - Arrow bottom right (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow bottom right (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow bottom center (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow bottom center (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow top left (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow top left (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow top right (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow top right (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow top center (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow top center (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow left top (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(-90deg);
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow left top (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(-90deg);
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow left bottom (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(-90deg);
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow left bottom (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(-90deg);
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow left center (white) */
+.tooltip {
+    display: inline-flex;
+    max-width: 300px;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    transform: rotate(-90deg);
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow left center (blue) */
+.tooltip {
+    display: inline-flex;
+    max-width: 300px;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    transform: rotate(-90deg);
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow right top (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(90deg);
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow right top (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(90deg);
+    padding-left: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow right bottom (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(90deg);
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow right bottom (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow-padding {
+    display: flex;
+    transform: rotate(90deg);
+    padding-right: 10px;
+    align-items: center;
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
+
+/* Tooltip - Arrow right center (white) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(---white, #FFF);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+}
+
+/* Tooltip - Arrow right center (blue) */
+.tooltip {
+    display: flex;
+    width: 300px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: -4px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip .tooltip-arrow {
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-background {
+    display: flex;
+    max-width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--il-blue--il-blue, #13294B);
+}
+
+.tooltip .tooltip-text {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFF;
+}
