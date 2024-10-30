@@ -54,6 +54,8 @@
             }
             .button-holder {
                 display: flex;
+                position: relative;
+                z-index: 10;
             }
             .button-holder button {
                 margin-right: 5px;
@@ -81,10 +83,34 @@
                 >
                     Open Toast 3
                 </button>
+                <button
+                    class="il-button"
+                    onclick="openToast('ilaToastInfo')"
+                >
+                    Open Info Toast
+                </button>
+                <button
+                    class="il-button"
+                    onclick="openToast('ilaToastSuccess')"
+                >
+                    Open Success Toast
+                </button>
+                <button
+                    class="il-button"
+                    onclick="openToast('ilaToastWarning')"
+                >
+                    Open Warning Toast
+                </button>
+                <button
+                    class="il-button"
+                    onclick="openToast('ilaToastError')"
+                >
+                    Open Error Toast
+                </button>
             </div>
             <div
                 class="toast-holder"
-                role="status"
+                role="alert"
             >
                 <div class="toast-holder-inner">
                     <div
@@ -172,6 +198,136 @@
                             </button>
                             <div class="ila-toast__content">
                                 <p>Single line toast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="ilaToastInfo"
+                        class="ila-toast ila-toast--closed ila-toast--single-line ila-toast--info"
+                    >
+                        <div class="ila-toast__toast">
+                            <button
+                                type="button"
+                                class="ila-toast__close-button"
+                                aria-label="close toast"
+                                onclick="closeToast('ilaToastInfo')"
+                            >
+                                <div
+                                    class="ila-toast__close-icon il-icon"
+                                    role="presentation"
+                                >
+                                    cancel
+                                </div>
+                            </button>
+                            <div class="ila-toast__heading">
+                                <h3>Information</h3>
+                            </div>
+                            <div class="ila-toast__content">
+                                <p>About the action</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="ilaToastInfo"
+                        class="ila-toast ila-toast--closed ila-toast--single-line ila-toast--info"
+                    >
+                        <div class="ila-toast__toast">
+                            <button
+                                type="button"
+                                class="ila-toast__close-button"
+                                aria-label="close toast"
+                                onclick="closeToast('ilaToastInfo')"
+                            >
+                                <div
+                                    class="ila-toast__close-icon il-icon"
+                                    role="presentation"
+                                >
+                                    cancel
+                                </div>
+                            </button>
+                            <div class="ila-toast__heading">
+                                <h3>Information</h3>
+                            </div>
+                            <div class="ila-toast__content">
+                                <p>About the action</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="ilaToastSuccess"
+                        class="ila-toast ila-toast--closed ila-toast--single-line ila-toast--success"
+                    >
+                        <div class="ila-toast__toast">
+                            <button
+                                type="button"
+                                class="ila-toast__close-button"
+                                aria-label="close toast"
+                                onclick="closeToast('ilaToastSuccess')"
+                            >
+                                <div
+                                    class="ila-toast__close-icon il-icon"
+                                    role="presentation"
+                                >
+                                    cancel
+                                </div>
+                            </button>
+                            <div class="ila-toast__heading">
+                                <h3>Success</h3>
+                            </div>
+                            <div class="ila-toast__content">
+                                <p>Action was successful</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="ilaToastWarning"
+                        class="ila-toast ila-toast--closed ila-toast--single-line ila-toast--warning"
+                    >
+                        <div class="ila-toast__toast">
+                            <button
+                                type="button"
+                                class="ila-toast__close-button"
+                                aria-label="close toast"
+                                onclick="closeToast('ilaToastWarning')"
+                            >
+                                <div
+                                    class="ila-toast__close-icon il-icon"
+                                    role="presentation"
+                                >
+                                    cancel
+                                </div>
+                            </button>
+                            <div class="ila-toast__heading">
+                                <h3>Warning</h3>
+                            </div>
+                            <div class="ila-toast__content">
+                                <p>Take caution with action</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="ilaToastError"
+                        class="ila-toast ila-toast--closed ila-toast--single-line ila-toast--error"
+                    >
+                        <div class="ila-toast__toast">
+                            <button
+                                type="button"
+                                class="ila-toast__close-button"
+                                aria-label="close toast"
+                                onclick="closeToast('ilaToastError')"
+                            >
+                                <div
+                                    class="ila-toast__close-icon il-icon"
+                                    role="presentation"
+                                >
+                                    cancel
+                                </div>
+                            </button>
+                            <div class="ila-toast__heading">
+                                <h3>Error</h3>
+                            </div>
+                            <div class="ila-toast__content">
+                                <p>Action was not successful</p>
                             </div>
                         </div>
                     </div>
