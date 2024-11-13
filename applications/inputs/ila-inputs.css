@@ -6,28 +6,27 @@
     --ilaGrey: #707372;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
 
+    .input-group span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        align-self: stretch;
+    }
+
+    .input-group label {
+        margin-bottom: 0px;
+    }
 
 /* RADION BUTTONS */
-
-/* NORMAL HOVER */
-input[type='radio']:hover {
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 50%;
-    border: 3px solid #FFF;
-    box-shadow: 0 0 0 2px var(--ilaOrange);
-}
-
-/* NORMAL FOCUS */
-input[type='radio']:focus {
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 50%;
-    background: var(--ilaLightBlue);
-    border: 3px solid var(--ilaLightBlue);
-    box-shadow: 0 0 0 1px var(--ilaBlue);
-}
 
 /* NORMAL */
 input[type='radio'] {
@@ -35,14 +34,33 @@ input[type='radio'] {
     height: 20px;
 }
 
+    /* NORMAL HOVER */
+    input[type='radio']:hover {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        border: 3px solid #FFF;
+        box-shadow: 0 0 0 2px var(--ilaOrange);
+    }
+
+    /* NORMAL FOCUS */
+    input[type='radio']:focus {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: var(--ilaOrange);
+        border: 3px solid #FFF;
+        box-shadow: 0 0 0 1px var(--ilaBlue);
+    }
+
     /* SELECTED */
     input[type='radio']:checked {
         appearance: none;
         -webkit-appearance: none;
         border-radius: 50%;
-        background: var(--ilaGrey);
+        background: var(--ilaBlue);
         border: 3px solid #FFF;
-        box-shadow: 0 0 0 1px var(--ilaGrey);
+        box-shadow: 0 0 0 1px var(--ilaBlue);
     }
 
     /* SELECTED HOVER   */
@@ -52,7 +70,7 @@ input[type='radio'] {
         border-radius: 50%;
         background: var(--ilaOrange);
         border: 3px solid #FFF;
-        box-shadow: 0 0 0 1px var(--ilaOrange);
+        box-shadow: 0 0 0 1px var(--ilaBlue);
     }
 
     /* SELECTED */
@@ -66,178 +84,299 @@ input[type='radio'] {
     }
 
 
-
-
-/* CHECKBOXES */
-
-/* NORMAL HOVER */
-input[type='checkbox']:hover {
-    appearance: none;
-    -webkit-appearance: none;
-    /* The border will be the spacing between the dot and the outer circle */
-    border: 3px solid #FFF;
-    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-    box-shadow: 0 0 0 2px var(--ilaOrange);
-}
-
-/* NORMAL FOCUS */
-input[type='checkbox']:focus {
-    appearance: none;
-    -webkit-appearance: none;
-    /* The background will be the radio dot's color. */
-    background: var(--ilaLightBlue);
-    /* The border will be the spacing between the dot and the outer circle */
-    border: 3px solid var(--ilaLightBlue);
-    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-    box-shadow: 0 0 0 1px var(--ilaBlue);
-}
-
-/* NORMAL */
+/* Base Checkbox Style */
 input[type='checkbox'] {
     width: 20px;
     height: 20px;
-}
-
-    /* SELECTED */
-    input[type='checkbox']:checked {
-        appearance: none;
-        -webkit-appearance: none;
-        /* The background will be the radio dot's color. */
-        background: var(--ilaGrey);
-        /* The border will be the spacing between the dot and the outer circle */
-        border: 3px solid #FFF;
-        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-        box-shadow: 0 0 0 1px var(--ilaGrey);
-    }
-
-    /* SELECTED HOVER   */
-    input[type='checkbox']:hover:checked {
-        appearance: none;
-        -webkit-appearance: none;
-        /* The background will be the radio dot's color. */
-        background: var(--ilaOrange);
-        /* The border will be the spacing between the dot and the outer circle */
-        border: 3px solid #FFF;
-        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-        box-shadow: 0 0 0 1px var(--ilaOrange);
-    }
-
-    /* SELECTED */
-    input[type='checkbox']:checked:focus {
-        appearance: none;
-        -webkit-appearance: none;
-        /* The background will be the radio dot's color. */
-        background: var(--ilaBlue);
-        /* The border will be the spacing between the dot and the outer circle */
-        border: 3px solid var(--ilaLightBlue);
-        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-        box-shadow: 0 0 0 1px var(--ilaBlue);
-    }
-
-
-    /*SLIDER*/
-/* Sliders */
-/*.switch {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 2px solid #ccc; /* Light gray border */
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-.slider {
-    position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
 }
 
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 1px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
+    /* Normal Hover */
+    input[type='checkbox']:hover:not(:checked) {
+        border: 2px solid var(--ilaOrange); /* Orange border */
     }
 
-input:checked + .slider {
-    background-color: #13294b;
-    border: 3px #13294b solid;
+    /* Normal Focus */
+    input[type='checkbox']:focus:not(:checked) {
+        border: 2px solid var(--ilaOrange); /* Orange border */
+        background-color: white;
+        outline: none;
+    }
+
+    /* Selected (Checked) */
+    input[type='checkbox']:checked {
+        background: white; /* White background */
+        border: 2px solid var(--ilaBlue); /* Dark blue border */
+    }
+
+        input[type='checkbox']:checked::before {
+            content: "";
+            position: absolute;
+            top: 3px; /* Adjusted for centering */
+            left: 5px; /* Adjusted for centering */
+            width: 6px;
+            height: 8px;
+            border: solid var(--ilaBlue);
+            border-width: 0 2px 2px 0; /* Checkmark thickness */
+            transform: rotate(45deg); /* Checkmark shape */
+        }
+
+    /* Selected Hover */
+    input[type='checkbox']:hover:checked {
+        background: white;
+        border: 2px solid var(--ilaBlue);
+    }
+
+        input[type='checkbox']:hover:checked::before {
+            border-color: var(--ilaOrange); /* Orange checkmark on hover */
+        }
+
+    /* Selected Focus */
+    input[type='checkbox']:checked:focus {
+        background: var(--ilaBlue); /* Blue background */
+        border: 2px solid var(--ilaLightBlue); /* Light blue border */
+    }
+
+        input[type='checkbox']:checked:focus::before {
+            border-color: white; /* White checkmark for focused checked state */
+        }
+
+    /* Disabled */
+    input[type='checkbox']:disabled {
+        background: #e0e0e0; /* Gray background */
+        border: 2px solid #aaa; /* Dark gray border */
+        cursor: not-allowed;
+    }
+
+        input[type='checkbox']:disabled::before {
+            border-color: #aaa; /* Gray checkmark for disabled state */
+        }
+
+        input[type='checkbox']:disabled + label {
+            color: #aaa; /* Grayed-out label text */
+        }
+
+
+/* Base Style for Text Input (applies to other inputs as well) */
+input[type='text'], input[type='search'], input[type='date'], select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
-input:checked:hover + .slider {
-    background-color: #ff5f05;
-    border: 3px #ff5f05 solid;
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+
+    /* Placeholder Text */
+    input::placeholder, select::placeholder {
+        color: #bbb;
+    }
+
+    /* Normal Hover */
+    input[type='text']:hover, input[type='search']:hover, input[type='date']:hover, select:hover {
+        background-color: #eee;
+        border-color: #ccc;
+    }
+
+    /* Focus */
+    input[type='text']:focus, input[type='search']:focus, input[type='date']:focus, select:focus {
+        border: 2px solid var(--ilaBlue);
+        background-color: var(--ilaLightBlue);
+        outline: none;
+    }
+
+    /* Focus-Visible (keyboard navigation or special focus indicator) */
+    input[type='text']:focus-visible, input[type='search']:focus-visible, input[type='date']:focus-visible, select:focus-visible {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+        outline: none;
+    }
+
+    /* Active */
+    input[type='text']:active, input[type='search']:active, input[type='date']:active, select:active {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+    }
+
+    /* Disabled */
+    input[type='text']:disabled, input[type='search']:disabled, input[type='date']:disabled, select:disabled {
+        background-color: #e0e0e0;
+        border-color: #aaa;
+        color: #aaa;
+        cursor: not-allowed;
+    }
+
+/* Custom Dropdown Icon */
+select {
+    background-image: url('/images/DownArrow.svg'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Adjust to make space for the icon */
 }
 
-input:checked:focus + .slider:before {
-    background-color: #13294b;
+/* Custom Calendar Icon for Date Input */
+input[type='date'] {
+    background-image: url('/images/calendar.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Adjust to make space for the icon */
 }
 
-input:checked:focus:hover + .slider:before {
+/* Custom Search Icon for Search Input */
+input[type='search'] {
+    background-image: url('/images/SEARCH.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Adjust to make space for the icon */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base Style for Textarea */
+textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    resize: vertical; /* Allows vertical resizing only */
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+    /* Placeholder Text */
+    textarea::placeholder {
+        color: #bbb;
+    }
+
+    /* Normal Hover */
+    textarea:hover {
+        background-color: #eee;
+        border-color: #ccc;
+    }
+
+    /* Focus */
+    textarea:focus {
+        border: 2px solid var(--ilaBlue);
+        background-color: var(--ilaLightBlue);
+        outline: none;
+    }
+
+    /* Focus-Visible (keyboard navigation or special focus indicator) */
+    textarea:focus-visible {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+        outline: none;
+    }
+
+    /* Active */
+    textarea:active {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+    }
+
+    /* Disabled */
+    textarea:disabled {
+        background-color: #e0e0e0;
+        border-color: #aaa;
+        color: #aaa;
+        cursor: not-allowed;
+    }
+
+
+
+
+/* Base Style for File Upload Container */
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+    /* Base Style for File Upload Button */
+    .file-upload-container input[type="file"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        opacity: 0; /* Hide the default file input */
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+.file-upload-label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #333;
+    color: #333;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+/* Placeholder Text Styling */
+.file-upload-placeholder {
+    color: #bbb;
+}
+
+/* Normal Hover */
+.file-upload-container:hover {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+/* Focus */
+.file-upload-container:focus-within {
+    border: 2px solid var(--ilaBlue);
+    background-color: var(--ilaLightBlue);
+    outline: none;
+}
+
+/* Focus-Visible (keyboard navigation or special focus indicator) */
+.file-upload-container:focus-visible {
+    border: 2px solid var(--ilaOrange);
+    background-color: white;
+    outline: none;
+}
+
+/* Active */
+.file-upload-container:active {
+    border: 2px solid var(--ilaOrange);
     background-color: white;
 }
 
-input:checked:focus + .slider:before {
-    background-color: #13294b;*/ /* xxxxxx */
-/*}
-
-
-input:focus:hover {
-    background-color: #d5d3d3;
+/* Disabled */
+.file-upload-container.disabled {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+    color: #aaa;
+    cursor: not-allowed;
 }
-
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-    background-color: #c7edf8;
-    border: 3px #13294b solid;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
-}*/
-
-/* Rounded sliders */
-/*.slider.round {
-    border: 3px #d5d3d3 solid;
-    border-radius: 34px;
-}
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
-
-.switch-label {
-    margin: 6px 12px;
-    font-family: Sans-serif;
-    font-size: 1.2em;
-    position: absolute;
-}
-
-.slider.round:hover {
-    border: 3px #ff5f05 solid;
-}*/
-
-
-
