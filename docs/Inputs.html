@@ -45,7 +45,8 @@
     <link rel='stylesheet' id='wp-block-library-css' href='https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6' media='all' />
     <link rel='stylesheet' id='block-styles-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6' media='all' />
     <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6' media='all' />
-    <link rel="stylesheet" href="./css/ila-inputs.css">
+    <!--<link rel="stylesheet" href="./css/ila-inputs.css">-->
+    <link rel="stylesheet" href="./ila-inputs.css">
 
     <style id='classic-theme-styles-inline-css'>
         /*! This file is auto-generated */
@@ -532,76 +533,125 @@
     </header><!-- #masthead -->
     <main>
         <div class="page-wrapper" style="margin-bottom: 30px;">
+
             <div>
-                <h1>Design Standard Name</h1>
-                <p>Describe the design standard and usage cases for it</p>
+                <h1>Input Styling</h1>
+                <p>These design standards are in place to ensure the inputs used in forms within your app are consistent with brand guidelines and accessibility standards</p>
             </div>
             <br>
 
             <div>
                 <h2>Placement</h2>
-                <p>Describe rules or best practices concerning the placement of this design standard within a website</p>
+                <p>There are no hard rules for the placement of inputs; you will often use them to construct forms that need to be filled out and submitted</p>
             </div>
             <br>
 
             <div>
                 <h2>Behavior</h2>
-                <p>Describe the behavior of the design standard when interacting with it</p>
+                <p>The behvaior of each input and its changes between states can be seen in the examples below</p>
             </div>
             <br>
-
+                       
             <div>
-                <h2>Accessibility Guidelines </h2>
-                <p>Describe accessibility concerns and requirements with the item, as well as any best practices.</p>
-            </div>
-            <br>
+                <h2> Example</h2>
+                
+                <h3>Radio Buttons:</h3>
+                <div class="input-group">
+                    <span>
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+                    </span>
+                </div>
+                <br>
+                <h3>Checkboxes:</h3>
+                <div class="input-group">
+                    <span>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I have a bike</label>
+                    </span>
 
-            <div>
-                <h2>Component Example</h2>
-                <p>
-                    Provide an example of the component on the page here, possibily using javascript to mock-up some basic interactions with it if needed.
-                    The intent is to allow people to see exactly what that are getting with the provided compontentt
-                </p>
+                    <span>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> I have a car</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> I have a boat</label>
+                    </span>
+                </div>
+
+                <br><br>
+
+                <h3>Input:</h3>
+                <div class="input-group">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+
+                <br>  <br>
+                <h3>Calendar Select:</h3>
+                <div class="input-group">
+                    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+                </div>
+
+                <br>  <br>
+                <h3>Search Select:</h3>
+                <div class="input-group">
+                    <search>
+                        <form>
+                            <input type="search" name="fsrch" id="fsrch" placeholder="Search">
+                        </form>
+                    </search>
+                </div>
+
+                <br>  <br>
+                <h3>Select Dropdown:</h3> <br>
+                <div class="input-group">
+                    <label for="cars">Choose a car:</label>
+
+                    <select name="cars" id="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
+                <br>  <br>
+                <h3>Text Area:</h3>
+                <label for="w3review">Label for textarea:</label>
+
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+
+                <br>  <br>
+
+                <!--<div class="file-upload-container">-->
+                    <!-- Label that acts as the browse button -->
+                    <!--<label for="file-upload" class="file-upload-label">Browse</label>-->
+
+                    <!-- Placeholder to display the file name -->
+                    <!--<span class="file-upload-placeholder">Select a file...</span>-->
+
+                    <!-- Hidden file input -->
+                    <!--<input type="file" id="file-upload" onchange="updateFileName()" />
+                </div>-->
 
 
-                <p>Radio Buttons:</p>
-                <input type="radio" id="html" name="fav_language" value="HTML"><label for="html">HTML</label><br>
-                <input type="radio" id="css" name="fav_language" value="CSS"><label for="css">CSS</label><br>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript"><label for="javascript">JavaScript</label>
-                <br />
-                <p>Checkboxes:</p>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1"> I have a bike</label><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2"> I have a car</label><br>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3"> I have a boat</label><br>
-                <br />
-                <!--<p>Toggle</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                    <span class="switch-label">Button-label</span>
-                </label>
-                <br />
+                <div>
+                    <h2>Link</h2>
+                    <p>Provide a link to this design standard in the GitHub repository</p>
+                </div>
 
-
-                <p>Input:</p>
-                <p>Dropdown:</p>
-                <p>Calendar Select:</p>
-                <p>Search Select:</p>
-                <p>Select Dropdown:</p>
-                <p>Search Dropdown:</p>-->
-
-            </div>
-            <br>
-
-            <div>
-                <h2>Link</h2>
-                <p>Provide a link to this design standard in the GitHub repository</p>
-            </div>
-
-        </div><!-- closes page wrapper -->
+            </div><!-- closes page wrapper -->
+        </div>
     </main>
 
     <footer id="colophon" class="site-footer">
