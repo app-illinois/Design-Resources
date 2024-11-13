@@ -80,7 +80,7 @@ tbody tr th, tbody tr td {
     overflow-x: scroll;
     overflow-y: scroll;
     scroll-snap-type: both mandatory;
-    scroll-padding-left: 154px; /* this amount will change depending on the min height and width of the container */
+    scroll-padding-left: 121px; /* this amount will change depending on the min height and width of the container */
     scroll-padding-top: 145px; /* this amount will change depending on the min height and width of the container */
 }
 
