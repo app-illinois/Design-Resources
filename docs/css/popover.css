@@ -42,11 +42,11 @@
 }
 
 .popover-dark .popover-close-unhovered i {
-    color: #f0f; /* todo uiuc color */
+    color: #FFF;
 }
 
 .popover-dark .popover-close-hovered i {
-    color: #ff0; /* todo uiuc color */
+    color: var(--il-orange-il-orange, #FF5F05);
 }
 
 /* Light theme */
