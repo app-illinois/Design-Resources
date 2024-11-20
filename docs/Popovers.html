@@ -508,6 +508,8 @@
             margin: 40px auto 0 auto;
         }
     </style>
+    <script type="module" crossorigin src="js/popover.js"></script>
+    <link rel="stylesheet" crossorigin href="css/popover.css">
 </head>
 
 <body>
@@ -569,20 +571,20 @@
 
             <div>
                 <h2>Instructions</h2>
-                <p>Add ""</p>
+                <p>import logic, define data in div</p>
             </div>
 
             <div>
                 <h2>Component Example</h2>
-                <div style="display: flex; margin: 40px; ">
-
+                <div data-popover-title="This is Lorem" data-popover-light=false data-popover-pos="bottom-left" data-popover-html="Hi!<br>Hello!">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur
                 </div>
             </div>
             <br>
 
             <div>
                 <h2>Link</h2>
-                <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/loaders">Link to this component on GitHub</a></p>
+                <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/popovers">Link to this component on GitHub</a></p>
             </div>
         </div>
 
