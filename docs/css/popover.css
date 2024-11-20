@@ -54,16 +54,17 @@
     right: -10px;
     top: 50%;
     transform: translateY(-50%);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #13294B transparent transparent;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #13294B;
 }
 
 .popover[data-position^="right"] .popover-arrow {
     left: -10px;
     top: 50%;
     transform: translateY(-50%);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #13294B;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #13294B transparent transparent;
+
 }
 
 /* Dark theme */
