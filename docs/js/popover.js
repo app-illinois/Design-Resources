@@ -6,7 +6,7 @@ function getPopoverHtml(title, content, isLight, position) {
         <div class="popover-arrow"></div>
         <div class="popover-header">
           <span class="popover-title">${title}</span>
-          <span class="popover-close"><i class="fa fa-solid fa-xmark"></i></span>
+          <span class="popover-close popover-close-unhovered"><i class="fa fa-solid fa-xmark"></i></span>
         </div>
         <div class="popover-body">${content}</div>
       </div>
@@ -119,11 +119,28 @@ function attachPopovers() {
     });
 }
 
-
+// Initialize popovers
 document.addEventListener('DOMContentLoaded', () => {
     // Dismiss popovers on outside click
     document.body.addEventListener('click', dismissAllPopovers);
 
     // Attach popovers to elements
     attachPopovers();
+});
+
+// Close button hover effects
+document.addEventListener('mouseover', (event) => {
+    const closeButton = event.target.closest('.popover-close');
+    if (closeButton) {
+        closeButton.classList.remove('popover-close-unhovered');
+        closeButton.classList.add('popover-close-hovered');
+    }
+});
+
+document.addEventListener('mouseout', (event) => {
+    const closeButton = event.target.closest('.popover-close');
+    if (closeButton) {
+        closeButton.classList.remove('popover-close-hovered');
+        closeButton.classList.add('popover-close-unhovered');
+    }
 });

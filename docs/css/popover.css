@@ -11,11 +11,17 @@
 }
 
 .popover .popover-close {
-    font-size: 20px;
+    font-size: 25px;
+    float: right;
 }
 
 .popover .popover-header {
     font-weight: 600;
+}
+
+.popover .popover-close-unhovered i,
+.popover .popover-close-hovered i {
+    transition: color 0.3s ease;
 }
 
 /* Dark theme */
@@ -32,9 +38,12 @@
     color: #FFF;
 }
 
-.popover-dark .popover-close {
-    color: #FFF;
-    float: right;
+.popover-dark .popover-close-unhovered i {
+    color: #f0f; /* todo uiuc color */
+}
+
+.popover-dark .popover-close-hovered i {
+    color: #ff0; /* todo uiuc color */
 }
 
 /* Light theme */
