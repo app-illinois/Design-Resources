@@ -60,19 +60,19 @@ function attachPopovers() {
             const isLight = trigger.dataset.popoverLight === 'true';
             const position = trigger.dataset.popoverPos;
 
-            //
-            // // Create popover HTML
-            // const popoverHtml = getPopoverHtml(title, content, isLight, position);
-            //
-            // // Insert and position popover
-            // const popover = document.createElement('div');
-            // popover.innerHTML = popoverHtml.trim();
-            // document.body.appendChild(popover.firstChild);
-            // const createdPopover = document.querySelector('.popover');
-            // positionPopover(createdPopover, trigger, position);
-            //
-            // // Close button
-            // createdPopover.querySelector('.popover-close').addEventListener('click', dismissAllPopovers);
+
+            // Create popover HTML
+            const popoverHtml = getPopoverHtml(title, content, isLight, position);
+
+            // Insert and position popover
+            const popover = document.createElement('div');
+            popover.innerHTML = popoverHtml.trim();
+            document.body.appendChild(popover.firstChild);
+            const createdPopover = document.querySelector('.popover');
+            positionPopover(createdPopover, trigger, position);
+
+            // Close button
+            createdPopover.querySelector('.popover-close').addEventListener('click', dismissAllPopovers);
         });
     });
 }
