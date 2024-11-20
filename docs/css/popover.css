@@ -32,6 +32,8 @@
     width: 0;
     height: 0;
     border-style: solid;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.50));
+    z-index: -1;
 }
 
 .popover[data-position^="bottom"] .popover-arrow {
@@ -39,7 +41,6 @@
     left: 50%;
     transform: translateX(-50%);
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #13294B transparent;
 }
 
 .popover[data-position^="top"] .popover-arrow {
@@ -89,9 +90,9 @@
     color: var(--il-orange-il-orange, #FF5F05);
 }
 
-/*.popover-dark[data-position^="bottom"] .popover-arrow {*/
-/*    border-color: transparent transparent #13294B transparent;*/
-/*}*/
+.popover-dark[data-position^="bottom"] .popover-arrow {
+    border-color: transparent transparent #13294B transparent;
+}
 
 /* Light theme */
 .popover-light {
