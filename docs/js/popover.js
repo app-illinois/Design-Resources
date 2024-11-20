@@ -19,24 +19,95 @@ function positionPopover(popover, trigger, position) {
     const popoverRect = popover.getBoundingClientRect();
     const padding = 10;
 
-    switch (position) {
-        case 'bottom-left':
-            popover.style.top = `${rect.bottom + window.scrollY + padding}px`;
-            popover.style.left = `${rect.left + window.scrollX}px`;
+    // Split position into main position and alignment
+    const [mainPosition, alignment] = position.split('-');
+
+    // Calculate positions based on mainPosition
+    let top = 0, left = 0;
+
+    switch (mainPosition) {
+        case 'bottom':
+            top = rect.bottom + window.scrollY + padding;
+            switch (alignment) {
+                case 'left':
+                    left = rect.left + window.scrollX;
+                    break;
+                case 'middle':
+                    left = rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
+                    break;
+                case 'right':
+                    left = rect.right + window.scrollX - popoverRect.width;
+                    break;
+                default:
+                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
+                    return;
+            }
             break;
-        case 'bottom-right':
-            popover.style.top = `${rect.bottom + window.scrollY + padding}px`;
-            popover.style.left = `${rect.right + window.scrollX - popoverRect.width}px`;
+
+        case 'top':
+            top = rect.top + window.scrollY - popoverRect.height - padding;
+            switch (alignment) {
+                case 'left':
+                    left = rect.left + window.scrollX;
+                    break;
+                case 'middle':
+                    left = rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
+                    break;
+                case 'right':
+                    left = rect.right + window.scrollX - popoverRect.width;
+                    break;
+                default:
+                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
+                    return;
+            }
             break;
-        case 'top-left':
-            popover.style.top = `${rect.top + window.scrollY - popoverRect.height - padding}px`;
-            popover.style.left = `${rect.left + window.scrollX}px`;
+
+        case 'left':
+            left = rect.left + window.scrollX - popoverRect.width - padding;
+            switch (alignment) {
+                case 'up':
+                    top = rect.top + window.scrollY;
+                    break;
+                case 'middle':
+                    top = rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
+                    break;
+                case 'down':
+                    top = rect.bottom + window.scrollY - popoverRect.height;
+                    break;
+                default:
+                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
+                    return;
+            }
             break;
-        // Add other positions as needed
+
+        case 'right':
+            left = rect.right + window.scrollX + padding;
+            switch (alignment) {
+                case 'up':
+                    top = rect.top + window.scrollY;
+                    break;
+                case 'middle':
+                    top = rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
+                    break;
+                case 'down':
+                    top = rect.bottom + window.scrollY - popoverRect.height;
+                    break;
+                default:
+                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
+                    return;
+            }
+            break;
+
         default:
-            break;
+            console.error(`Unexpected main position: '${mainPosition}'`);
+            return;
     }
+
+    // Apply calculated positions
+    popover.style.top = `${top}px`;
+    popover.style.left = `${left}px`;
 }
+
 
 // Function to dismiss all popovers
 function dismissAllPopovers() {
