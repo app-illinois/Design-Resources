@@ -89,6 +89,10 @@
     color: var(--il-orange-il-orange, #FF5F05);
 }
 
+/*.popover-dark[data-position^="bottom"] .popover-arrow {*/
+/*    border-color: transparent transparent #13294B transparent;*/
+/*}*/
+
 /* Light theme */
 .popover-light {
     background: #FFF;
@@ -109,4 +113,8 @@
 
 .popover-light .popover-close-hovered i {
     color: var(--il-blue--il-blue, #13294B);
+}
+
+.popover-light[data-position^="bottom"] .popover-arrow {
+    border-color: transparent transparent #FFFFFF transparent;
 }
