@@ -29,57 +29,23 @@ function positionPopover(popover, trigger, position) {
     switch (mainPosition) {
         case 'bottom':
             top = rect.bottom + window.scrollY + padding;
+            left = calculatePopoverX(rect, popoverRect, alignment);
             break;
         case 'top':
             top = rect.top + window.scrollY - popoverRect.height - padding;
+            left = calculatePopoverX(rect, popoverRect, alignment);
             break;
         case 'left':
             left = rect.left + window.scrollX - popoverRect.width - padding;
+            top = calculatePopoverY(rect, popoverRect, alignment);
             break;
         case 'right':
             left = rect.right + window.scrollX + padding;
+            top = calculatePopoverY(rect, popoverRect, alignment);
             break;
         default:
             console.error(`Unexpected main position: '${mainPosition}'`);
             return;
-    }
-
-    // then, go back to main position and calculate alignment
-    switch (mainPosition) {
-        case 'bottom':
-        case 'top':
-            switch (alignment) {
-                case 'left':
-                    left = rect.left + window.scrollX;
-                    break;
-                case 'middle':
-                    left = rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
-                    break;
-                case 'right':
-                    left = rect.right + window.scrollX - popoverRect.width;
-                    break;
-                default:
-                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
-                    return;
-            }
-            break;
-        case 'left':
-        case 'right':
-            switch (alignment) {
-                case 'up':
-                    top = rect.top + window.scrollY;
-                    break;
-                case 'middle':
-                    top = rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
-                    break;
-                case 'down':
-                    top = rect.bottom + window.scrollY - popoverRect.height;
-                    break;
-                default:
-                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
-                    return;
-            }
-            break;
     }
 
     // Apply calculated positions
@@ -91,6 +57,34 @@ function positionPopover(popover, trigger, position) {
 // Function to dismiss all popovers
 function dismissAllPopovers() {
     document.querySelectorAll('.popover').forEach(popover => popover.remove());
+}
+
+function calculatePopoverX(rect, popoverRect, alignment) {
+    switch (alignment) {
+        case 'left':
+            return rect.left + window.scrollX;
+        case 'middle':
+            return rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
+        case 'right':
+            return rect.right + window.scrollX - popoverRect.width;
+        default:
+            console.error(`Unexpected alignment: '${alignment}'`);
+            return 0;
+    }
+}
+
+function calculatePopoverY(rect, popoverRect, alignment) {
+    switch (alignment) {
+        case 'up':
+            return rect.top + window.scrollY;
+        case 'middle':
+            return rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
+        case 'down':
+            return rect.bottom + window.scrollY - popoverRect.height;
+        default:
+            console.error(`Unexpected alignment: '${alignment}'`);
+            return 0;
+    }
 }
 
 // Initialize popovers
