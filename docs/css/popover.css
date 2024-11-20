@@ -7,7 +7,7 @@
     color: #FFF;
     width: 300px;
     max-width: 300px;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.25));
 }
 
 .popover .popover-close {
@@ -32,8 +32,6 @@
     width: 0;
     height: 0;
     border-style: solid;
-    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.50));
-    z-index: -1;
 }
 
 .popover[data-position^="bottom"] .popover-arrow {
@@ -48,7 +46,6 @@
     left: 50%;
     transform: translateX(-50%);
     border-width: 10px 10px 0 10px;
-    border-color: #13294B transparent transparent transparent;
 }
 
 .popover[data-position^="left"] .popover-arrow {
@@ -56,7 +53,6 @@
     top: 50%;
     transform: translateY(-50%);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #13294B;
 }
 
 .popover[data-position^="right"] .popover-arrow {
@@ -64,8 +60,6 @@
     top: 50%;
     transform: translateY(-50%);
     border-width: 10px 10px 10px 0;
-    border-color: transparent #13294B transparent transparent;
-
 }
 
 /* Dark theme */
@@ -94,6 +88,18 @@
     border-color: transparent transparent #13294B transparent;
 }
 
+.popover-dark[data-position^="top"] .popover-arrow {
+    border-color: #13294B transparent transparent transparent;
+}
+
+.popover-dark[data-position^="left"] .popover-arrow {
+    border-color: transparent transparent transparent #13294B;
+}
+
+.popover-dark[data-position^="right"] .popover-arrow {
+    border-color: transparent #13294B transparent transparent;
+}
+
 /* Light theme */
 .popover-light {
     background: #FFF;
@@ -118,4 +124,16 @@
 
 .popover-light[data-position^="bottom"] .popover-arrow {
     border-color: transparent transparent #FFFFFF transparent;
+}
+
+.popover-light[data-position^="top"] .popover-arrow {
+    border-color: #FFFFFF transparent transparent transparent;
+}
+
+.popover-light[data-position^="left"] .popover-arrow {
+    border-color: transparent transparent transparent #FFFFFF;
+}
+
+.popover-light[data-position^="right"] .popover-arrow {
+    border-color: transparent #FFFFFF transparent transparent;
 }
