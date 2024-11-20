@@ -1,5 +1,4 @@
 /* Universal  */
-/*  todo set width to 300 px*/
 .popover {
     font-size: 18px;
     font-family: "Source Sans Pro", sans-serif;
@@ -25,6 +24,46 @@
 .popover .popover-close-unhovered i,
 .popover .popover-close-hovered i {
     transition: color 0.3s ease;
+}
+
+/* Arrow bells and whistles */
+.popover-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.popover[data-position^="bottom"] .popover-arrow {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #13294B transparent;
+}
+
+.popover[data-position^="top"] .popover-arrow {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0 10px;
+    border-color: #13294B transparent transparent transparent;
+}
+
+.popover[data-position^="left"] .popover-arrow {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #13294B transparent transparent;
+}
+
+.popover[data-position^="right"] .popover-arrow {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #13294B;
 }
 
 /* Dark theme */
