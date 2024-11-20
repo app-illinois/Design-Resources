@@ -6,7 +6,7 @@ function getPopoverHtml(title, content, isLight, position) {
         <div class="popover-arrow"></div>
         <div class="popover-header">
           <span class="popover-title">${title}</span>
-          <span class="popover-close">✖</span>
+          <span class="popover-close"><i class="fa fa-solid fa-xmark"></i></span>
         </div>
         <div class="popover-body">${content}</div>
       </div>
