@@ -25,82 +25,61 @@ function positionPopover(popover, trigger, position) {
     // Calculate positions based on mainPosition
     let top = 0, left = 0;
 
+    // first, calculate top vs left
     switch (mainPosition) {
         case 'bottom':
             top = rect.bottom + window.scrollY + padding;
-            switch (alignment) {
-                case 'left':
-                    left = rect.left + window.scrollX;
-                    break;
-                case 'middle':
-                    left = rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
-                    break;
-                case 'right':
-                    left = rect.right + window.scrollX - popoverRect.width;
-                    break;
-                default:
-                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
-                    return;
-            }
             break;
-
         case 'top':
             top = rect.top + window.scrollY - popoverRect.height - padding;
-            switch (alignment) {
-                case 'left':
-                    left = rect.left + window.scrollX;
-                    break;
-                case 'middle':
-                    left = rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
-                    break;
-                case 'right':
-                    left = rect.right + window.scrollX - popoverRect.width;
-                    break;
-                default:
-                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
-                    return;
-            }
             break;
-
         case 'left':
             left = rect.left + window.scrollX - popoverRect.width - padding;
-            switch (alignment) {
-                case 'up':
-                    top = rect.top + window.scrollY;
-                    break;
-                case 'middle':
-                    top = rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
-                    break;
-                case 'down':
-                    top = rect.bottom + window.scrollY - popoverRect.height;
-                    break;
-                default:
-                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
-                    return;
-            }
             break;
-
         case 'right':
             left = rect.right + window.scrollX + padding;
-            switch (alignment) {
-                case 'up':
-                    top = rect.top + window.scrollY;
-                    break;
-                case 'middle':
-                    top = rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
-                    break;
-                case 'down':
-                    top = rect.bottom + window.scrollY - popoverRect.height;
-                    break;
-                default:
-                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
-                    return;
-            }
             break;
-
         default:
             console.error(`Unexpected main position: '${mainPosition}'`);
             return;
+    }
+
+    // then, go back to main position and calculate alignment
+    switch (mainPosition) {
+        case 'bottom':
+        case 'top':
+            switch (alignment) {
+                case 'left':
+                    left = rect.left + window.scrollX;
+                    break;
+                case 'middle':
+                    left = rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
+                    break;
+                case 'right':
+                    left = rect.right + window.scrollX - popoverRect.width;
+                    break;
+                default:
+                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
+                    return;
+            }
+            break;
+        case 'left':
+        case 'right':
+            switch (alignment) {
+                case 'up':
+                    top = rect.top + window.scrollY;
+                    break;
+                case 'middle':
+                    top = rect.top + window.scrollY + (rect.height - popoverRect.height) / 2;
+                    break;
+                case 'down':
+                    top = rect.bottom + window.scrollY - popoverRect.height;
+                    break;
+                default:
+                    console.error(`Unexpected alignment: '${alignment}' for main position '${mainPosition}'`);
+                    return;
+            }
+            break;
     }
 
     // Apply calculated positions
