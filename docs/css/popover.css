@@ -50,3 +50,23 @@
 }
 
 /* Light theme */
+.popover-light {
+    background: #FFF;
+}
+
+.popover-light .popover-header {
+    background: #FFF;
+    color: var(--il-blue--il-blue, #13294B);
+}
+
+.popover-light .popover-body {
+    color: var(--il-blue--il-blue, #13294B);
+}
+
+.popover-light .popover-close-unhovered i {
+    color: var(--il-storm--il-storm, #707372);
+}
+
+.popover-light .popover-close-hovered i {
+    color: var(--il-blue--il-blue, #13294B);
+}
