@@ -24,8 +24,6 @@ function positionPopover(popover, trigger, position) {
 
     // Calculate positions based on mainPosition
     let top = 0, left = 0;
-
-    // first, calculate top vs left
     switch (mainPosition) {
         case 'bottom':
             top = rect.bottom + window.scrollY + padding;
