@@ -59,11 +59,11 @@ function dismissAllPopovers() {
 
 function calculatePopoverX(rect, popoverRect, alignment) {
     switch (alignment) {
-        case '1':
+        case 'left':
             return rect.left + window.scrollX;
-        case '2':
+        case 'middle':
             return rect.left + window.scrollX + (rect.width - popoverRect.width) / 2;
-        case '3':
+        case 'right':
             return rect.right + window.scrollX - popoverRect.width;
         default:
             console.error(`Unexpected alignment: '${alignment}'`);

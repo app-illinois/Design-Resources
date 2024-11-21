@@ -609,34 +609,34 @@
                     <li>data-popover-title: The title of the popover</li>
                     <li>data-popover-html: The content of the popover</li>
                     <li>data-popover-light: Whether the popover should be light or dark</li>
-                    <li>data-popover-pos: The position of the popover relative to the element. Consists of main position and alignment, separated by a dash. Available main and alignment setting are, for a total of 12. The following table shows the possible combinations and where this setting places the popover:</li>
+                    <li>data-popover-pos: The position of the popover relative to the element. Consists of main position and alignment, separated by a dash. The following table shows the possible combinations and where this setting places the popover relative to the spawner element:</li>
                 </ul>
                 <table>
                     <tbody>
                         <tr>
-                            <td>top-1</td>
-                            <td>top-2</td>
-                            <td>top-3</td>
+                            <td>top-left</td>
+                            <td>top-middle</td>
+                            <td>top-right</td>
                         </tr>
                         <tr>
-                            <td>left-1</td>
+                            <td>left-up</td>
                             <td><b>ELEMENT</b></td>
-                            <td>right-1</td>
+                            <td>right-up</td>
                         </tr>
                         <tr>
-                            <td>left-2</td>
+                            <td>left-middle</td>
                             <td><b>ELEMENT</b></td>
-                            <td>right-2</td>
+                            <td>right-midde</td>
                         </tr>
                         <tr>
-                            <td>left-3</td>
+                            <td>left-down</td>
                             <td><b>ELEMENT</b></td>
-                            <td>right-3</td>
+                            <td>right-down</td>
                         </tr>
                         <tr>
-                            <td>bottom-1</td>
-                            <td>bottom-2</td>
-                            <td>bottom-3</td>
+                            <td>bottom-left</td>
+                            <td>bottom-middle</td>
+                            <td>bottom-right</td>
                         </tr>
                     </tbody>
                 </table>
@@ -648,33 +648,34 @@
                 <div class="demo-area">
                     <input type="checkbox" id="mode-switch" class="mode-switch" onclick="togglePopoverLight()"> Create Dark Mode Popovers instead <br>
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                <br><br><br><br><br>
                 <div class="demo-area">
                     <div class="demo-unit">
-
-
                         <i class="fa fa-solid fa-xmark" data-popover-title="This is Lorem" data-popover-light=true data-popover-pos="top-left" data-popover-html="Hi!<br>Hello!"></i>
-
-                        <br>
-                        <br>
-
-                        <i class="fa-solid fa-circle-info" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="center-left" data-popover-html="Hi!<br>Hello!"></i>
-
-                        <br>
-                        <br>
-
-                        <img src="images/Demo-img.png" style="width: 77px;" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="left-down" data-popover-html="Hi!<br>Hello!">
-
-                        <br>
-                        <br>
-
+                        <br><br>
+                        <i class="fa-solid fa-circle-info" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="left-up" data-popover-html="Hi!<br>Hello!"></i>
+                        <br><br>
+                        <img src="images/Demo-img.png" style="width: 77px;" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="right-up" data-popover-html="Hi!<br>Hello!">
+                        <br><br>
+                        <p data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="bottom-left" data-popover-html="Hi!<br>Hello!">John Doe</p>
+                    </div>
+                    <div class="demo-unit">
+                        <i class="fa fa-solid fa-xmark" data-popover-title="This is Lorem" data-popover-light=true data-popover-pos="top-middle" data-popover-html="Hi!<br>Hello!"></i>
+                        <br><br>
+                        <i class="fa-solid fa-circle-info" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="left-middle" data-popover-html="Hi!<br>Hello!"></i>
+                        <br><br>
+                        <img src="images/Demo-img.png" style="width: 77px;" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="right-middle" data-popover-html="Hi!<br>Hello!">
+                        <br><br>
                         <p data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="bottom-middle" data-popover-html="Hi!<br>Hello!">John Doe</p>
-
-
+                    </div>
+                    <div class="demo-unit">
+                        <i class="fa fa-solid fa-xmark" data-popover-title="This is Lorem" data-popover-light=true data-popover-pos="top-right" data-popover-html="Hi!<br>Hello!"></i>
+                        <br><br>
+                        <i class="fa-solid fa-circle-info" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="left-down" data-popover-html="Hi!<br>Hello!"></i>
+                        <br><br>
+                        <img src="images/Demo-img.png" style="width: 77px;" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="right-down" data-popover-html="Hi!<br>Hello!">
+                        <br><br>
+                        <p data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="bottom-right" data-popover-html="Hi!<br>Hello!">John Doe</p>
                     </div>
                 </div>
             </div>
