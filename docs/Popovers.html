@@ -604,7 +604,43 @@
 
             <div>
                 <h2>Instructions</h2>
-                <p>import logic, define data in div</p>
+                <p>Import popover.js and popover.css into your project. Add the following attributes to the element you want to trigger the popover:</p>
+                <ul>
+                    <li>data-popover-title: The title of the popover</li>
+                    <li>data-popover-html: The content of the popover</li>
+                    <li>data-popover-light: Whether the popover should be light or dark</li>
+                    <li>data-popover-pos: The position of the popover relative to the element. Consists of main position and alignment, separated by a dash. Available main and alignment setting are, for a total of 12. The following table shows the possible combinations and where this setting places the popover:</li>
+<!--                    main positions are bottom, top, left, right. aligments are left, middle, right. generate a table with combindations of these spread around the grid-->
+                </ul>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>top-1</td>
+                            <td>top-2</td>
+                            <td>top-3</td>
+                        </tr>
+                        <tr>
+                            <td>left-1</td>
+                            <td><b>ELEMENT</b></td>
+                            <td>right-1</td>
+                        </tr>
+                        <tr>
+                            <td>left-2</td>
+                            <td><b>ELEMENT</b></td>
+                            <td>right-2</td>
+                        </tr>
+                        <tr>
+                            <td>left-3</td>
+                            <td><b>ELEMENT</b></td>
+                            <td>right-3</td>
+                        </tr>
+                        <tr>
+                            <td>bottom-1</td>
+                            <td>bottom-2</td>
+                            <td>bottom-3</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div>
