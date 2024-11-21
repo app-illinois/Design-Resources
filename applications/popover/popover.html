@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popover minimal</title>
+  <link rel='stylesheet' id='bootstrapcss-css' crossorigin="anonymous" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' media='all' />
+  <link rel='stylesheet' id='main-css-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
+  <script type="module" crossorigin src="popover.js"></script>  <!-- Javascript by yours truly -->
+  <link rel="stylesheet" crossorigin href="popover.css">  <!-- CSS by yours truly -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  <!-- You brought FA, right? -->
+  <style>
+    .demo-area {
+      display: flex;
+      justify-content: center;
+
+    }
+    .demo-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+    }
+    </style>
+</head>
+<body>
+  <p>Click on elements below to test the popover in different configurations. The title will contain the position configuration.</p>
+  <div class="demo-area">
+    <input type="checkbox" id="mode-switch" class="mode-switch" onclick="togglePopoverLight()"> Create Dark Mode Popovers instead <br>
+  </div>
+  <br><br><br><br><br>
+  <div class="demo-area">
+    <div class="demo-unit">
+      <i class="fa fa-solid fa-xmark" data-popover-title="top-left" data-popover-light=true data-popover-pos="top-left" data-popover-html="Any HTML<br>that you want"></i>
+      <br><br>
+      <i class="fa-solid fa-circle-info" data-popover-title="left-up" data-popover-light=true data-popover-pos="left-up" data-popover-html="Any HTML<br>that you want"></i>
+      <br><br>
+      <img src="Demo-img.png" style="width: 77px;" data-popover-title="right-up" data-popover-light=true data-popover-pos="right-up" data-popover-html="Any HTML<br>that you want">
+      <br><br>
+      <p data-popover-title="bottom-left" data-popover-light=true data-popover-pos="bottom-left" data-popover-html="Any HTML<br>that you want">John Doe</p>
+    </div>
+    <div class="demo-unit">
+      <i class="fa fa-solid fa-xmark" data-popover-title="top-center" data-popover-light=true data-popover-pos="top-center" data-popover-html="Any HTML<br>that you want"></i>
+      <br><br>
+      <i class="fa-solid fa-circle-info" data-popover-title="left-middle" data-popover-light=true data-popover-pos="left-middle" data-popover-html="Any HTML<br>that you want"></i>
+      <br><br>
+      <img src="Demo-img.png" style="width: 77px;" data-popover-title="right-middle" data-popover-light=true data-popover-pos="right-middle" data-popover-html="Any HTML<br>that you want">
+      <br><br>
+      <p data-popover-title="bottom-center" data-popover-light=true data-popover-pos="bottom-center" data-popover-html="Any HTML<br>that you want">John Doe</p>
+    </div>
+    <div class="demo-unit">
+      <i class="fa fa-solid fa-xmark" data-popover-title="top-right" data-popover-light=true data-popover-pos="top-right" data-popover-html="Any HTML<br>that you want"></i>
+      <br><br>
+      <i class="fa-solid fa-circle-info" data-popover-title="left-down" data-popover-light=true data-popover-pos="left-down" data-popover-html="Any HTML<br>that you want"></i>
+      <br><br>
+      <img src="Demo-img.png" style="width: 77px;" data-popover-title="right-down" data-popover-light=true data-popover-pos="right-down" data-popover-html="Any HTML<br>that you want">
+      <br><br>
+      <p data-popover-title="bottom-right" data-popover-light=true data-popover-pos="bottom-right" data-popover-html="Any HTML<br>that you want">John Doe</p>
+    </div>
+  </div>
+</body>
+</html>
