@@ -34,33 +34,76 @@
     border-style: solid;
 }
 
+
+/* Arrow main positioning */
 .popover[data-position^="bottom"] .popover-arrow {
     top: -10px;
-    left: 50%;
     transform: translateX(-50%);
     border-width: 0 10px 10px 10px;
 }
 
 .popover[data-position^="top"] .popover-arrow {
     bottom: -10px;
-    left: 50%;
     transform: translateX(-50%);
     border-width: 10px 10px 0 10px;
 }
 
 .popover[data-position^="left"] .popover-arrow {
     right: -10px;
-    top: 50%;
     transform: translateY(-50%);
     border-width: 10px 0 10px 10px;
 }
 
 .popover[data-position^="right"] .popover-arrow {
     left: -10px;
-    top: 50%;
     transform: translateY(-50%);
     border-width: 10px 10px 10px 0;
 }
+
+/* Alignment rules */
+/* Shift the entire popover for a dramatic effect  */
+.popover[data-position$="left"] {
+    transform: translateX(20px);
+}
+
+.popover[data-position$="left"] .popover-arrow {
+    right: 10px
+}
+
+.popover[data-position$="right"] {
+    transform: translateX(-20px);
+}
+
+.popover[data-position$="right"] .popover-arrow {
+    left: 30px;
+}
+
+.popover[data-position$="up"] {
+    transform: translateY(20px);
+}
+
+.popover[data-position$="up"] .popover-arrow {
+    bottom: 10px;
+}
+
+.popover[data-position$="down"] {
+    transform: translateY(-20px);
+}
+
+.popover[data-position$="down"] .popover-arrow {
+    top: 30px;
+}
+
+/*broken*/
+.popover[data-position$="middle"] .popover-arrow {
+    top: 50%;
+}
+
+.popover[data-position$="center"] .popover-arrow {
+    left: 50%;
+}
+
+
 
 /* Dark theme */
 
