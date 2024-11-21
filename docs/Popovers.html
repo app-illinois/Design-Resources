@@ -8,7 +8,14 @@
 
     <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
     <script>
-        function OptanonWrapper() { }
+        // write a function to fin elements that have data-popover-light, and witch it to true if its false and vice versa
+        function togglePopoverLight() {
+            var elements = document.querySelectorAll('[data-popover-light]');
+            elements.forEach(function (element) {
+                var current = element.getAttribute('data-popover-light');
+                element.setAttribute('data-popover-light', current === 'true' ? 'false' : 'true');
+            });
+        }
     </script>
     <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
 
@@ -587,22 +594,40 @@
             <br>
 
             <div>
+                <h2>Dependencies</h2>
+                <ul>
+                    <li>Font Awesome</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+            <br>
+
+            <div>
                 <h2>Instructions</h2>
                 <p>import logic, define data in div</p>
             </div>
 
             <div>
                 <h2>Component Examples</h2>
+                <p>Click on elements below to test the popover in different configurations</p>
+                <div class="demo-area">
+                    <input type="checkbox" id="mode-switch" class="mode-switch" onclick="togglePopoverLight()"> Create Dark Mode Popovers instead <br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div class="demo-area">
                     <div class="demo-unit">
 
 
-                        <i class="fa fa-solid fa-xmark" data-popover-title="This is Lorem" data-popover-light=true data-popover-pos="top-middle" data-popover-html="Hi!<br>Hello!"></i>
+                        <i class="fa fa-solid fa-xmark" data-popover-title="This is Lorem" data-popover-light=true data-popover-pos="top-left" data-popover-html="Hi!<br>Hello!"></i>
 
                         <br>
                         <br>
 
-                        <i class="fa-solid fa-circle-info" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="right-up" data-popover-html="Hi!<br>Hello!"></i>
+                        <i class="fa-solid fa-circle-info" data-popover-title="This is Ipsum" data-popover-light=true data-popover-pos="center-left" data-popover-html="Hi!<br>Hello!"></i>
 
                         <br>
                         <br>
