@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Application Development UX Standards</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
+<link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
+<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//onetrust.techservices.illinois.edu' />
+<link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed" href="https://webtheme.illinois.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed" href="https://webtheme.illinois.edu/comments/feed/" />
+
+<link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2' media='all' />
+<link rel='stylesheet' crossorigin href='css/tooltip.css' />
+<script src="js/tooltip.js"></script>
+
+<link rel='stylesheet' id='main-css-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
+<script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6.2" id="toolkit-js"></script>
+<script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525" id="main_js-js"></script>
+<script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js" id="skiptoconf-js"></script>
+<script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
+
+
+	<link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+	
+<style>
+
+		#primary {
+		max-width: 1140px !important;
+		margin: 0 auto;
+		}
+			
+		@media (max-width: 1200px) {
+			#primary {
+			padding: 0 30px;
+			}
+		}
+		
+		h1, h2 {
+		margin-bottom: 0;
+		}
+		
+		p {
+  		margin-bottom: 1rem;
+  		margin-top: 0;
+		}
+
+		@media (max-width: 768px) {
+			#primary {
+			max-width: 100% !important;
+			}			
+		}			
+			
+	</style>
+</head>
+<body class="page-template-default page page-id-1106">
+	<header id="masthead" class="site-header">
+			<div class="masthead_inner d-flex justify-content-between align-items-stretch">
+				<div class="il-header-wrapper flex-grow-1">
+					<il-header>
+						<div slot="wordmark">
+							<il-unit-wordmark>
+								<h1 class="il-secondary-unit"><a href="https://webtheme.illinois.edu">Application Development UX Standards</a></h1>
+							</il-unit-wordmark>
+						</div>
+					</il-header>
+				</div>
+			</div>
+	</header><!-- #masthead -->
+
+	<main id="primary" class="site-main flex-grow-1">
+        <div class="page-wrapper" style="margin-bottom: 30px;">
+            <div>
+                <h1>Tooltip</h1>
+                <p>A tooltip is a small text container that is overlaid on top of other elements in a page to display additional information when triggered via mouse interaction. </p>
+            </div>
+            
+            <div>
+                <h2>Placement</h2>
+                <p>A tooltip is usually used for displaying optional information that doesn't need to be always visible for everyone. It can also be used to contain more detailed versions of texts to reduce the amount of overall texts in a page to avoid overwhelming users. An element that triggers a tooltip is usually marked by an icon or a font styling that makes it stand out from the rest of the interface. </p>
+            </div>
+
+            <div>
+                <h2>Behavior</h2>
+                <p>When a mouse cursor moves on an element that triggers a tooltip, a tooltip is displayed. When a mouse cursor leaves the element, the tooltip is removed from the view. </p>
+            </div>
+
+            <div>
+                <h2>Accessibility Guidelines </h2>
+                <p>Careful consideration is needed regarding color schemes to make it easily distinguishable from the background. It should be also clear on which element this tooltip is providing extra information. </p>
+            </div>
+
+            <div>
+                <h2>Instructions</h2>
+                <ol>
+                    <li>Assign a tooltip class name to an element that triggers a tooltip. The naming convention is <code>'tooltip-{arrow position name}-{color}'</code>. Arrow positions consists of two words, and an arrow position name takes each of first letter such as 'tl' from 'top left', 'rb' from 'right bottom.'
+                        <ul>
+                            <li>Tooltip with an arrow at bottom left and a light background: <code>'tooltip-bl-light'</code></li>
+                            <li>Tooltip with an arrow at left center and a dark background: <code>'tooltip-lc-dark'</code></li>
+                        </ul>
+                    </li>
+                    <li>Create a div with a class <code>tooltip-content</code> which is the tooltip itself.</li>
+                    <li>Create the following elements inside for tooltip texts and append to <code>tooltip-content</code> above: 
+                    <ul>
+                        <li><code>tooltip-text-title</code>: [optional] title of texts in the tooltip</li>
+                        <li><code>tooltip-text-body</code>: main texts in the tooltip </li>
+                    </ul>
+                </ol>
+                <h3>Sample Code</h3>
+                <code>
+                    &lt;div class="tooltip-bc-light"&gt;This is a tooltip<br>
+                    &nbsp;&nbsp;&nbsp;&lt;div class="tooltip-content"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="tooltip-text-title"&gt;Title&lt;/span&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="tooltip-text-body"&gt;Tooltip message&lt;/span&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                </code>
+            </div>
+            
+            <div>
+                <h2>Example</h2>
+                    <div id="tooltip-example-div">
+                        <div id="tooltip-dark-div"></div>
+                        <div id="tooltip-light-div"></div>
+                    </div>
+            </div>
+            <div>
+                <h2>Link</h2>
+                <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/tooltip">Link to this component on GitHub</a></p>
+            </div>
+
+        </div><!-- closes page wrapper -->
+    </main>
+
+    <footer id="colophon" class="site-footer">
+        <il-footer>
+
+            <div slot="contact" class="il-footer-contact uofi_address">
+                <p><a href="https://vigilant-fishstick-2k4pppq.pages.github.io/">Application Development UX Standards</a></p>
+            </div>
+
+            <nav slot="links" class="il-footer-links" aria-label="Legal notices">
+                <ul>
+                    <li><button data-il="cookies"></button></li>
+                    <li><a data-il="privacy"></a></li>
+                    <li><a data-il="copyright"></a></li>
+                    <li><a data-il="accessibility"></a></li>
+                </ul>
+            </nav>
+        </il-footer>
+    </footer><!-- #colophon -->
+
+<div id="gototop" class="hidden">
+	<a href="#"><i class="fa fa-chevron-up"></i><span class="sr-only">Go to top</span></a>
+</div>
+</body>
+</html>

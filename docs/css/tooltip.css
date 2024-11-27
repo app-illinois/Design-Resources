@@ -104,7 +104,7 @@
 }
 
 /* tooltip arrow position */
-[class*="tooltip-bl"] .tooltip-content::after,
+[class*="tooltip-bl"] .tooltip-content::after, 
 [class*="tooltip-tl"] .tooltip-content::after {
     left: 15%;
 }
