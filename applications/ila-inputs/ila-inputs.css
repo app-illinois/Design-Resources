@@ -220,7 +220,7 @@ input[type='text'], input[type='search'], input[type='date'], select {
 
 /* Custom Dropdown Icon */
 select {
-    background-image: url('/images/DownArrow.svg'); 
+    background-image: url('./images/DownArrow.svg'); 
     background-repeat: no-repeat;
     background-position: right 10px center;
     padding-right: 30px; /* Adjust to make space for the icon */
@@ -228,7 +228,7 @@ select {
 
 /* Custom Calendar Icon for Date Input */
 input[type='date'] {
-    background-image: url('/images/calendar.svg');
+    background-image: url('./images/calendar.svg');
     background-repeat: no-repeat;
     background-position: right 10px center;
     padding-right: 30px; /* Adjust to make space for the icon */
@@ -236,7 +236,7 @@ input[type='date'] {
 
 /* Custom Search Icon for Search Input */
 input[type='search'] {
-    background-image: url('/images/SEARCH.svg');
+    background-image: url('./images/SEARCH.svg');
     background-repeat: no-repeat;
     background-position: right 10px center;
     padding-right: 30px; /* Adjust to make space for the icon */
