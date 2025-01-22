@@ -2,60 +2,195 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    />
+    <link
+        rel="profile"
+        href="https://gmpg.org/xfn/11"
+    />
 
     <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
     <script>
-        function OptanonWrapper() { }
+        function OptanonWrapper() {}
     </script>
     <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
 
     <title>Application Development UX Components</title>
-    <meta name='robots' content='max-image-preview:large' />
-    <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
-    <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
-    <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
-    <link rel='dns-prefetch' href='//kit.fontawesome.com' />
-    <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
-    <link rel='dns-prefetch' href='//onetrust.techservices.illinois.edu' />
-    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed" href="https://webtheme.illinois.edu/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed" href="https://webtheme.illinois.edu/comments/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Home Comments Feed" href="https://webtheme.illinois.edu/sample-page-2/feed/" />
-    <script>
-        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/webtheme.illinois.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6" } };
-        /*! This file is auto-generated */
-        !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
-    </script>
-
-    <link rel='stylesheet' id='wp-block-library-css' href='https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6' media='all' />
-    <link rel='stylesheet' id='block-styles-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6' media='all' />
-    <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6' media='all' />
-
-    <link rel='stylesheet' id='bootstrapcss-css' crossorigin="anonymous" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' media='all' />
-    <link rel='stylesheet' id='main-css-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
-    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6" id="toolkit-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525" id="main_js-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js" id="skiptoconf-js"></script>
-    <script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
-    <script crossorigin="anonymous" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" id="bootstrapjs-js"></script>
-    <script crossorigin="anonymous" src="https://kit.fontawesome.com/846f7e331a.js" id="fontawesome-js"></script>
-    <script crossorigin="anonymous" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" id="popper-js"></script>
-    <script data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763" src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" id="onetrust-js"></script>
-    <link rel="https://api.w.org/" href="https://webtheme.illinois.edu/wp-json/" />
-    <link rel="alternate" title="JSON" type="application/json" href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://webtheme.illinois.edu/xmlrpc.php?rsd" />
-    <meta name="generator" content="WordPress 6.6" />
-    <link rel="canonical" href="https://webtheme.illinois.edu/" />
-    <link rel='shortlink' href='https://webtheme.illinois.edu/' />
-    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F" />
-    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml" />
-    <link rel="pingback" href="https://webtheme.illinois.edu/xmlrpc.php">
-    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-    <link rel="stylesheet" href="/Design-Resources/css/ila-slideover.css" />
+    <meta
+        name="robots"
+        content="max-image-preview:large"
+    />
+    <link
+        rel="dns-prefetch"
+        href="//cdn.toolkit.illinois.edu"
+    />
+    <link
+        rel="dns-prefetch"
+        href="//cdn.disability.illinois.edu"
+    />
+    <link
+        rel="dns-prefetch"
+        href="//stackpath.bootstrapcdn.com"
+    />
+    <link
+        rel="dns-prefetch"
+        href="//kit.fontawesome.com"
+    />
+    <link
+        rel="dns-prefetch"
+        href="//cdn.jsdelivr.net"
+    />
+    <link
+        rel="dns-prefetch"
+        href="//onetrust.techservices.illinois.edu"
+    />
+    <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="Illinois Web Theme &raquo; Feed"
+        href="https://webtheme.illinois.edu/feed/"
+    />
+    <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="Illinois Web Theme &raquo; Comments Feed"
+        href="https://webtheme.illinois.edu/comments/feed/"
+    />
+    <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="Illinois Web Theme &raquo; Home Comments Feed"
+        href="https://webtheme.illinois.edu/sample-page-2/feed/"
+    />
+    <link
+        rel="stylesheet"
+        id="wp-block-library-css"
+        href="https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6"
+        media="all"
+    />
+    <link
+        rel="stylesheet"
+        id="block-styles-css"
+        href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6"
+        media="all"
+    />
+    <link
+        rel="stylesheet"
+        id="toolkit-css"
+        href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6"
+        media="all"
+    />
+    <link
+        rel="stylesheet"
+        id="bootstrapcss-css"
+        crossorigin="anonymous"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        media="all"
+    />
+    <link
+        rel="stylesheet"
+        id="main-css-css"
+        href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525"
+        media="all"
+    />
+    <script
+        src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6"
+        id="toolkit-js"
+    ></script>
+    <script
+        src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"
+    ></script>
+    <script
+        src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+        id="jquery-migrate-js"
+    ></script>
+    <script
+        src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+        id="main_js-js"
+    ></script>
+    <script
+        src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+        id="skiptoconf-js"
+    ></script>
+    <script
+        src="https://cdn.disability.illinois.edu/skipto.min.js"
+        id="skipto-js"
+    ></script>
+    <script
+        crossorigin="anonymous"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        id="bootstrapjs-js"
+    ></script>
+    <script
+        crossorigin="anonymous"
+        src="https://kit.fontawesome.com/846f7e331a.js"
+        id="fontawesome-js"
+    ></script>
+    <script
+        crossorigin="anonymous"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        id="popper-js"
+    ></script>
+    <script
+        data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"
+        src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js"
+        id="onetrust-js"
+    ></script>
+    <link
+        rel="https://api.w.org/"
+        href="https://webtheme.illinois.edu/wp-json/"
+    />
+    <link
+        rel="alternate"
+        title="JSON"
+        type="application/json"
+        href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714"
+    />
+    <link
+        rel="EditURI"
+        type="application/rsd+xml"
+        title="RSD"
+        href="https://webtheme.illinois.edu/xmlrpc.php?rsd"
+    />
+    <meta
+        name="generator"
+        content="WordPress 6.6"
+    />
+    <link
+        rel="canonical"
+        href="https://webtheme.illinois.edu/"
+    />
+    <link
+        rel="shortlink"
+        href="https://webtheme.illinois.edu/"
+    />
+    <link
+        rel="alternate"
+        title="oEmbed (JSON)"
+        type="application/json+oembed"
+        href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F"
+    />
+    <link
+        rel="alternate"
+        title="oEmbed (XML)"
+        type="text/xml+oembed"
+        href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml"
+    />
+    <link
+        rel="pingback"
+        href="https://webtheme.illinois.edu/xmlrpc.php"
+    />
+    <link
+        rel="icon"
+        href="https://cdn.brand.illinois.edu/favicon.ico"
+    />
     <style>
         body .tile-list .tile.w66 {
             flex: 0 0 calc(40% - 1.2rem);
@@ -63,7 +198,8 @@
             min-width: calc(40% - 1.2rem);
         }
 
-        #primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > * {
+        #primary_secondary_wrapper header,
+        #primary_secondary_wrapper .entry-content > * {
             max-width: 1140px !important;
         }
 
@@ -73,7 +209,9 @@
             }
         }
 
-        #primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > *, .search #primary_secondary_wrapper article {
+        #primary_secondary_wrapper header,
+        #primary_secondary_wrapper .entry-content > *,
+        .search #primary_secondary_wrapper article {
             margin-left: auto;
             margin-right: auto;
         }
@@ -123,13 +261,17 @@
             max-width: 870px !important;
         }
 
-.page-wrapper {
+        .page-wrapper {
             width: 100%;
             max-width: 1200px;
             margin: 30px auto 0 auto;
             padding: 0 30px;
         }
     </style>
+    <link
+        rel="stylesheet"
+        href="./css/ila-alert.css"
+    />
 </head>
 
 <body>
@@ -155,44 +297,39 @@
         <div class="page-wrapper">
             <div>
                 <h1>Alerts</h1>
-                <p>Used to confirm actions.</p>
             </div>
             <br />
-
-            <div>
-                <h2>Placement</h2>
-                <p>
-                    Place the main alert component(s) ideally at the root level of the page just inside the body tag.
-                </p>
-            </div>
-            <br />
-
             <div>
                 <h2>Component Behavior</h2>
+                <p>Used to confirm actions. This example is adapted from <a href="https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/examples/alertdialog/">W3C's Alert Dialog documentation</a></p>
                 <p>
                     Opens an alert component with semi-transparent
                     overlay to display information about an action being taken and options 
                     for what to do regarding that action. Can be
                     dismissed by clicking the overlay or the close button in
-                    the upper right corner.
+                    the upper right corner. 
                 </p>
             </div>
             <br />
 
             <div>
                 <h2>Accessibility Guidelines</h2>
-                <p>
-                    This component utilizes code from the
-                    <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA Authoring Practices Guide</a>.  <br>
-                    Main points:
-                    <ul>
-                        <li>Has role="alertdialog"</li>
-                        <li>Has aria-modal="true"</li>
-                        <li>Gets focus when it opens</li>
-                        <li>Alert header has an ID so it can be used as aria-labelledby for the component</li>
-                        <li>Alert content has an ID so it can be used as aria-describedby for the component</li>
-                        <li>Acts as a focus trap</li>
-                        <li>Escape key closes the alert</li>
+                <p>Key accessibility guidelines include:
+                    <ul style="margin-bottom: 1rem;">
+                        <li><b>Keyboard Navigation:</b> 
+                            <ul>
+                                <li>Escape key closes the alert</li>
+                            </ul>
+                        </li>
+                        <li><b>Focus Management:</b> Component receives focus when it opens.  Acts as a "focus trap" and cannot be tabbed out of while it is active.</li>
+                        <li><b>Screen Reader Compatibility:</b> Use semantic HTML and ARIA roles to ensure that assistive technologies accurately interpret the alert. 
+                            <ul>
+                                <li>Alert header has an ID so it can be used as aria-labelledby for the component</li>
+                                <li>Alert content has an ID so it can be used as aria-describedby for the component</li>
+                                <li>Has role="alertdialog"</li>
+                                <li>Has aria-modal="true"</li>
+                            </ul>
+                        </li>
                     </ul>
                 </p>
             </div>
@@ -301,4 +438,4 @@
 </body>
 </html>
 
-<script src="/Design-Resources/js/ila-slideover.js"></script>
+<script src="/Design-Resources/js/ila-alert.js"></script>
