@@ -1,4 +1,4 @@
-function openToast(cookiebId) {
+function openCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
     cookieb.classList.add('ila-cookieb--open');
@@ -12,12 +12,12 @@ function openToast(cookiebId) {
     manageAutoclose(cookiebId);
 }
 
-function closeToast(cookiebId) {
+function closeCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--open');
     cookieb.classList.add('ila-cookieb--closed');
 }
 
 function manageAutoclose(cookiebId) {
-    setTimeout(() => closeToast(cookiebId), 8000);
+    setTimeout(() => closeCookieB(cookiebId), 8000);
 }
