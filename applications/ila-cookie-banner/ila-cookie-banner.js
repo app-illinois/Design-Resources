@@ -1,3 +1,6 @@
+
+
+
 function openCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
@@ -19,5 +22,5 @@ function closeCookieB(cookiebId) {
 }
 
 function manageAutoclose(cookiebId) {
-    setTimeout(() => closeCookieB(cookiebId), 8000);
+    /* setTimeout(() => closeCookieB(cookiebId), 8000); */
 }
