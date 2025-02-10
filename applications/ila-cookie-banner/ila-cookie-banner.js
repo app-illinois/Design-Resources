@@ -1,6 +1,3 @@
-
-
-
 function openCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
