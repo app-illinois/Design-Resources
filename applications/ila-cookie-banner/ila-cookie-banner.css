@@ -49,7 +49,7 @@
     margin-bottom: 0px;
 }
 
-/* the only thing that should be in the content area is text. 
+/* the only thing that should be in the content area is text.
    margin should come from the ila-cookieb__content class. */
 .ila-cookieb__content p {
     margin: 0;
@@ -61,8 +61,8 @@
 }
 
 .ila-cookieb__actions {
-    margin: 0;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .ila-cookieb__close-button {
