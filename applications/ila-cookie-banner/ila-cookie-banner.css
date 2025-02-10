@@ -8,8 +8,8 @@
 .cookieb-holder {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0rem;
+    width: auto;
 }
 .cookieb-holder-inner {
     position: relative;
@@ -63,7 +63,6 @@
     padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
     background-color: white;
     position: relative;
-    width: 450px;
 }
 
 /* cookiebs will stack in order of appearance due to the order property */
