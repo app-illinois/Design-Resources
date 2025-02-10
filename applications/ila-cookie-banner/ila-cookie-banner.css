@@ -1,7 +1,7 @@
 :root {
-    --ila-cookieb-margin: 1rem;
-    --ila-cookieb-padding-x: 25px;
-    --ila-cookieb-padding-y: 15px;
+    --ila-cookieb-margin: .25rem;
+    --ila-cookieb-padding-x: 1rem;
+    --ila-cookieb-padding-y: 1rem;
 }
 
 /* cookieb area; allows for multiple cookiebs to stack on top of each other. */
@@ -15,46 +15,6 @@
     position: relative;
     display: flex;
     flex-flow: column-reverse;
-}
-
-.ila-cookieb {
-    /* position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 0; */
-}
-
-.ila-cookieb--single-line .ila-cookieb__cookieb {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-.ila-cookieb--single-line .ila-cookieb__heading {
-    margin: 10px 10px 10px 0;
-}
-.ila-cookieb--single-line .ila-cookieb__heading h3 {
-    margin: 0;
-}
-.ila-cookieb--single-line .ila-cookieb__content {
-    flex-grow: 1;
-}
-.ila-cookieb--single-line .ila-cookieb__close-button {
-    position: relative;
-    margin: auto;
-    order: 2;
-}
-
-.ila-cookieb--success .ila-cookieb__cookieb {
-    background-color: #7de49b;
-}
-.ila-cookieb--info .ila-cookieb__cookieb {
-    background-color: #98e9f2;
-}
-.ila-cookieb--warning .ila-cookieb__cookieb {
-    background-color: #fed976;
-}
-.ila-cookieb--error .ila-cookieb__cookieb {
-    background-color: #ffaea9;
 }
 
 .ila-cookieb__cookieb {
@@ -86,7 +46,7 @@
 
 .ila-cookieb__heading {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 /* the only thing that should be in the content area is text. 
@@ -125,5 +85,5 @@
 }
 
 .ila-cookieb__close-icon {
-    font-size: 35px;
+    font-size: 25px;
 }
