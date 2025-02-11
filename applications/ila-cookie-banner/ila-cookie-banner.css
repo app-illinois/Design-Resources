@@ -1,7 +1,7 @@
 :root {
     --ila-cookieb-margin: .25rem;
     --ila-cookieb-padding-x: 1rem;
-    --ila-cookieb-padding-y: 1rem;
+    --ila-cookieb-padding-y: .3rem;
 }
 
 /* cookieb area; allows for multiple cookiebs to stack on top of each other. */
@@ -96,5 +96,6 @@
 }
 
 .ila-cookieb__close-icon {
+    padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
     font-size: 25px;
 }
