@@ -45,15 +45,21 @@
 }
 
 .ila-cookieb__heading {
-    margin: 0;
+    margin-top: 0;
     margin-bottom: 0px;
 }
+
+.ila-cookieb__h3 {
+    margin: 0 0 auto auto;
+}
+
 
 /* the only thing that should be in the content area is text.
    margin should come from the ila-cookieb__content class. */
 .ila-cookieb__content p {
     margin: 0;
     padding: 0;
+    line-height: 1.5rem;
 }
 
 .ila-cookieb__content {
@@ -91,3 +97,5 @@
 .ila-cookieb__close-button-large {
     margin-left: .5rem;
 }
+
+
