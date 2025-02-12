@@ -4,17 +4,11 @@
     --ila-cookieb-padding-y: .3rem;
 }
 
-/* cookieb area; allows for multiple cookiebs to stack on top of each other. */
 .cookieb-holder {
     position: absolute;
     bottom: 0;
     left: 0rem;
     width: auto;
-}
-.cookieb-holder-inner {
-    position: relative;
-    display: flex;
-    flex-flow: column-reverse;
 }
 
 .ila-cookieb__cookieb {
@@ -25,37 +19,12 @@
     position: relative;
 }
 
-/* cookiebs will stack in order of appearance due to the order property */
-.ila-cookieb.ila-cookieb--open {
-    transition: opacity 0.5s ease-in-out, visibility 0.5s, order 0.1s;
-    opacity: 1;
-    visibility: visible;
-    order: 0;
-}
-
-.ila-cookieb.ila-cookieb--closed {
-    transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
-    visibility: hidden;
-    opacity: 0;
-    order: 1;
-}
-
-.ila-cookieb.ila-cookieb--open.ila-cookieb--first {
-    order: -1;
-}
-
-.ila-cookieb__heading {
-    margin-top: 0;
-    margin-bottom: 0px;
-}
 
 .ila-cookieb__h3 {
     margin: 0 0 auto auto;
 }
 
 
-/* the only thing that should be in the content area is text.
-   margin should come from the ila-cookieb__content class. */
 .ila-cookieb__content p {
     margin: 0;
     padding: 0;
@@ -66,6 +35,7 @@
 .ila-cookieb__content {
     margin: 10px 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .ila-cookieb__actions {
@@ -99,3 +69,20 @@
     padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
     font-size: 25px;
 }
+
+/* allow buttons to slide underneath text on thin screens */
+
+@media (max-width: 400em) {
+    .ila-cookieb__actions {
+        padding-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ila-cookieb__button {
+        margin: .5rem .5rem .5rem .5rem;
+    }
+
+}
+
+
