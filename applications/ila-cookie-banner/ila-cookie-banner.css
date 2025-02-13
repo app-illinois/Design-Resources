@@ -39,7 +39,7 @@
 }
 
 .ila-cookieb__actions {
-    padding-left: 4rem;
+    padding-left: 1rem;
 }
 
 .ila-cookieb__button {
@@ -72,9 +72,9 @@
 
 /* allow buttons to slide underneath text on thin screens */
 
-@media (max-width: 400em) {
+@media (max-width: 1030px) {
     .ila-cookieb__actions {
-        padding-left: 0;
+        padding-left: 1em;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -83,6 +83,9 @@
         margin: .5rem .5rem .5rem .5rem;
     }
 
+    .ila-cookieb__content p {
+        width: 100%;
+    }
 }
 
 
