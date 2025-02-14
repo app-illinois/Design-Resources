@@ -76,6 +76,15 @@
     order: 1;
 }
 
+
+/* `About Cookies` slide out */
+
+.ila-cookieb__slide_small {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+
 /* allow buttons to slide underneath text on thin screens */
 
 @media (max-width: 1030px) {
