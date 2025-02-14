@@ -32,6 +32,10 @@
             rel="stylesheet"
             href="ila-cookie-banner.css"
         />
+        <link
+            rel="stylesheet"
+            href="../ila-slideovers/ila-slideover.css"
+        />
         <style>
             body {
                 font-weight: 400;
@@ -62,7 +66,8 @@
             }
         </style>
     </head>
-    <body onload="openCookieB('ilaCookieBOne')" >
+
+    <body onload="openCookieB('ilaCookieBOne')">
         <il-page>
             <div
                 class="cookieb-holder"
@@ -97,26 +102,76 @@
                                     <a target=_new href="https://www.vpaa.uillinois.edu/resources/cookies">
                                     University of Illinois System Cookie Policy.</a>
                                 </p>
-				    <div class="ila-cookieb__actions">
-					<button
-					    class="il-button ila-cookieb__button"
-					    aria-label="learn about cookies">
-					    About Cookies
-					</button>
-					<button
-					    class="il-button ila-cookieb__button"
-					    onclick="closeCookieB('ilaCookieBOne')"
-					    aria-label="close cookie banner">
-					    Close this Notice
-					</button>
-				    </div>
+                                <div class="ila-cookieb__actions">
+                                    <button
+                                        class="il-button ila-cookieb__button"
+                                        onclick="openSlideover('ilaSlideoverLeft')"
+                                        aria-label="learn about cookies">
+                                        About Cookies
+                                    </button>
+                                    <button
+                                        class="il-button ila-cookieb__button"
+                                        onclick="closeCookieB('ilaCookieBOne')"
+                                        aria-label="close cookie banner">
+                                        Close this Notice
+                                    </button>
+                                </div>
                             </div>
-
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                id="ilaSlideoverLeft"
+                class="ila-slideover ila-slideover--closed ila-slideover--left"
+                role="dialog"
+                aria-labelledby="ilaSlideoverLeftLabel"
+                aria-modal="true"
+            >
+                <div
+                    class="ila-slideover__overlay"
+                    onclick="closeSlideover('ilaSlideoverLeft')"
+                ></div>
+                <div class="ila-slideover__slideover">
+                    <div class="ila-slideover__header">
+                        <h2
+                            id="ilaSlideoverLeftLabel"
+                            class="ila-slideover__label"
+                        >
+                            About Cookies
+                        </h2>
+                        <button
+                            aria-label="close slideover"
+                            class="ila-slideover__close-button"
+                            onclick="closeSlideover('ilaSlideoverLeft')"
+                        >
+                            <div
+                                class="ila-slideover__close-icon il-icon"
+                                role="presentation"
+                            >
+                                cancel
+                            </div>
+                        </button>
+                    </div>
+                    <div class="ila-slideover__content">
+                        <h3>All About Cookies</h3>
+                        <p>
+                            Cookies Text
+                        </p>
+                        <details>
+                            <summary>Details One</summary>
+                            <p>Text Details One</p>
+                        </details>
+                        <details>
+                            <summary>Details Two</summary>
+                            <p>Text Details Two</p>
+                        </details>
                     </div>
                 </div>
             </div>
         </il-page>
         <script src="ila-cookie-banner.js"></script>
+        <script src="../ila-slideovers/ila-slideover.js"></script>
     </body>
+    
 </html>
