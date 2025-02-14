@@ -1,0 +1,106 @@
+:root {
+    --ila-cookieb-margin: .25rem;
+    --ila-cookieb-padding-x: 1rem;
+    --ila-cookieb-padding-y: .3rem;
+}
+
+.cookieb-holder {
+    position: absolute;
+    bottom: 0;
+    left: 0rem;
+    width: auto;
+}
+
+.ila-cookieb__cookieb {
+    border: 1px solid var(--il-gray-2);
+    margin: var(--ila-cookieb-margin);
+    padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
+    background-color: white;
+    position: relative;
+}
+
+.ila-cookieb__h3 {
+    margin: 0 0 auto auto;
+}
+
+.ila-cookieb__content p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+    width: 60%;
+}
+
+.ila-cookieb__content {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ila-cookieb__actions {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.ila-cookieb__button {
+    margin: 0 0 .5rem .5rem;
+}
+
+.ila-cookieb__close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: calc(var(--ila-cookieb-padding-y) - 5px);
+    margin-right: calc(var(--ila-cookieb-padding-x) - 5px);
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.ila-cookieb__close-button:hover,
+.ila-cookieb__close-button:focus {
+    transition: background-color 0.3s;
+    background-color: var(--il-blue);
+    color: white;
+}
+
+.ila-cookieb__close-icon {
+    padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
+    font-size: 25px;
+}
+
+.ila-cookieb.ila-cookieb--closed {
+    transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+
+/* `About Cookies` slide out */
+
+.ila-cookieb__slide_small {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+
+/* allow buttons to slide underneath text on thin screens */
+
+@media (max-width: 1030px) {
+    .ila-cookieb__actions {
+        padding-top: .5em;
+        padding-left: 1em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ila-cookieb__button {
+        margin: .5rem .5rem .5rem .5rem;
+    }
+
+    .ila-cookieb__content p {
+        width: 100%;
+    }
+}
+
