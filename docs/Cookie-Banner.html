@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html
+    lang="en"
+    class="il-toolkit"
+>
+    <head>
+        <meta charset="utf-8" />
+        <title>Illinois Cookie Banner</title>
+
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="dns-prefetch"
+            href="https://cdn.toolkit.illinois.edu"
+        />
+        <link
+            rel="icon"
+            href="https://cdn.brand.illinois.edu/favicon.ico"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+        <title>Cookie Banner Example</title>
+        <link
+            rel="stylesheet"
+            href="css/ila-cookie-banner.css"
+        />
+        <link
+            rel="stylesheet"
+            href="css/ila-slideover.css"
+        />
+        <style>
+            body {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.6666666667em;
+                font-family: var(--il-font-sans);
+                color: var(--il-text-color);
+            }
+
+            a {
+                transition: color 0.3s;
+                color: var(--il-link-color);
+                text-decoration: underline;
+            }
+
+            a:focus,
+            a:hover {
+                outline-style: none;
+                color: var(--il-focused-link-color);
+            }
+            .button-holder {
+                display: flex;
+                position: relative;
+                z-index: 10;
+            }
+            .button-holder button {
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+
+    <body onload="openCookieB('ilaCookieBOne')">
+        <il-page>
+            <div
+                class="cookieb-holder"
+                role="alert"
+            >
+                <div class="cookieb-holder-inner">
+                    <div
+                        id="ilaCookieBOne"
+                        class="ila-cookieb ila-cookieb--closed"
+                    >
+                        <div class="ila-cookieb__cookieb">
+                            <button
+                                type="button"
+                                class="ila-cookieb__close-button"
+                                aria-label="close cookie banner"
+                                onclick="closeCookieB('ilaCookieBOne')"
+                            >
+                                <div
+                                    class="ila-cookieb__close-icon il-icon"
+                                    role="presentation"
+                                >
+                                    cancel
+                                </div>
+                            </button>
+                            <div class="ila-cookieb__heading">
+                                <h3 class="ila-cookieb__h3">Cookie Notice</h3>
+                            </div>
+                            <div class="ila-cookieb__content">
+                                <p>
+                                    We use Cookies on this site to enhance your experience and improve our marketing efforts. Click on “About Cookies” to learn more. By continuing to browse without changing your browser settings to block or delete Cookies, you agree to the storing of Cookies and related technologies on your device.
+
+                                    <a target=_new href="https://www.vpaa.uillinois.edu/resources/cookies">
+                                    University of Illinois System Cookie Policy.</a>
+                                </p>
+                                <div class="ila-cookieb__actions">
+                                    <button
+                                        class="il-button ila-cookieb__button"
+                                        onclick="openSlideover('ilaSlideoverLeft')"
+                                        aria-label="learn about cookies">
+                                        About Cookies
+                                    </button>
+                                    <button
+                                        class="il-button ila-cookieb__button"
+                                        onclick="closeCookieB('ilaCookieBOne')"
+                                        aria-label="close cookie banner">
+                                        Close this Notice
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                id="ilaSlideoverLeft"
+                class="ila-slideover ila-slideover--closed ila-slideover--left"
+                role="dialog"
+                aria-labelledby="ilaSlideoverLeftLabel"
+                aria-modal="true"
+            >
+                <div
+                    class="ila-slideover__overlay"
+                    onclick="closeSlideover('ilaSlideoverLeft')"
+                ></div>
+                <div class="ila-slideover__slideover">
+                    <div class="ila-slideover__header">
+                        <h2
+                            id="ilaSlideoverLeftLabel"
+                            class="ila-slideover__label"
+                        >
+                            Illinois
+                        </h2>
+                        <button
+                            aria-label="close slideover"
+                            class="ila-slideover__close-button"
+                            onclick="closeSlideover('ilaSlideoverLeft')"
+                        >
+                            <div
+                                class="ila-slideover__close-icon il-icon"
+                                role="presentation"
+                            >
+                                cancel
+                            </div>
+                        </button>
+                    </div>
+                    <div class="ila-slideover__content ila-cookieb_slide_content">
+                    </div>
+                </div>
+            </div>
+        </il-page>
+        <script src="js/ila-cookie-banner.js"></script>
+        <script src="js/ila-slideover.js"></script>
+    </body>
+    
+</html>

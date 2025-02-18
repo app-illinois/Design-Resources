@@ -3,4 +3,8 @@ dist
 node_modules
 docs/css/app-toolkit.css
 docs/js/app-toolkit.js
+docs/css/ila-cookie-banner.css
+docs/js/ila-cookie-banner.js
+docs/css/ila-slideover.css
+docs/js/ila-slideover.js
 docs/svg
