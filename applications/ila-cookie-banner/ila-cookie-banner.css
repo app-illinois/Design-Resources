@@ -2,6 +2,9 @@
     --ila-cookieb-margin: .25rem;
     --ila-cookieb-padding-x: 1rem;
     --ila-cookieb-padding-y: .3rem;
+    --ila-cookieb-background-blue: #13294b;
+    --ila-cookieb-font-white: #ffffff;
+    --ila-cookieb-hover-orange: #ff5f05;
 }
 
 .cookieb-holder {
@@ -55,14 +58,21 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    color: var(--ila-cookieb-font-white);
 }
 
 .ila-cookieb__close-button:hover,
 .ila-cookieb__close-button:focus {
     transition: background-color 0.3s;
-    background-color: var(--il-blue);
+    background-color: var(--ila-cookieb-hover-orange);
     color: white;
 }
+
+.ila-cookieb__button:hover,
+.ila-cookieb__button:focus {
+    background-color: var(--ila-cookieb-hover-orange);
+}
+
 
 .ila-cookieb__close-icon {
     padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
@@ -103,4 +113,16 @@
         width: 100%;
     }
 }
+
+/* UIUC Branding */
+.ila-cookieb__cookieb {
+    color: var(--ila-cookieb-font-white);
+    background-color: var(--ila-cookieb-background-blue);
+}
+
+.ila-cookieb__cookieb a {
+    color: var(--ila-cookieb-font-white);
+}
+
+
 
