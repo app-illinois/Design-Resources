@@ -6,7 +6,7 @@
 
 /* toast area; allows for multiple toasts to stack on top of each other. */
 .toast-holder {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);

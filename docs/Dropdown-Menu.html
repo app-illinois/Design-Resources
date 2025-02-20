@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="profile"
+            href="https://gmpg.org/xfn/11"
+        />
+
+        <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
+        <script>
+            function OptanonWrapper() {}
+        </script>
+        <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
+
+        <title>Application Development UX Components</title>
+        <meta
+            name="robots"
+            content="max-image-preview:large"
+        />
+        <link
+            rel="dns-prefetch"
+            href="//cdn.toolkit.illinois.edu"
+        />
+        <link
+            rel="dns-prefetch"
+            href="//cdn.disability.illinois.edu"
+        />
+        <link
+            rel="dns-prefetch"
+            href="//stackpath.bootstrapcdn.com"
+        />
+        <link
+            rel="dns-prefetch"
+            href="//kit.fontawesome.com"
+        />
+        <link
+            rel="dns-prefetch"
+            href="//cdn.jsdelivr.net"
+        />
+        <link
+            rel="dns-prefetch"
+            href="//onetrust.techservices.illinois.edu"
+        />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Illinois Web Theme &raquo; Feed"
+            href="https://webtheme.illinois.edu/feed/"
+        />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Illinois Web Theme &raquo; Comments Feed"
+            href="https://webtheme.illinois.edu/comments/feed/"
+        />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Illinois Web Theme &raquo; Home Comments Feed"
+            href="https://webtheme.illinois.edu/sample-page-2/feed/"
+        />
+        <script>
+            window._wpemojiSettings = {
+                baseUrl:
+                    'https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/',
+                ext: '.png',
+                svgUrl: 'https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/',
+                svgExt: '.svg',
+                source: {
+                    concatemoji:
+                        'https:\/\/webtheme.illinois.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6',
+                },
+            };
+            /*! This file is auto-generated */
+            !(function (i, n) {
+                var o, s, e;
+                function c(e) {
+                    try {
+                        var t = {
+                            supportTests: e,
+                            timestamp: new Date().valueOf(),
+                        };
+                        sessionStorage.setItem(o, JSON.stringify(t));
+                    } catch (e) {}
+                }
+                function p(e, t, n) {
+                    e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                        e.fillText(t, 0, 0);
+                    var t = new Uint32Array(
+                            e.getImageData(
+                                0,
+                                0,
+                                e.canvas.width,
+                                e.canvas.height
+                            ).data
+                        ),
+                        r =
+                            (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                            e.fillText(n, 0, 0),
+                            new Uint32Array(
+                                e.getImageData(
+                                    0,
+                                    0,
+                                    e.canvas.width,
+                                    e.canvas.height
+                                ).data
+                            ));
+                    return t.every(function (e, t) {
+                        return e === r[t];
+                    });
+                }
+                function u(e, t, n) {
+                    switch (t) {
+                        case 'flag':
+                            return n(
+                                e,
+                                '\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f',
+                                '\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f'
+                            )
+                                ? !1
+                                : !n(
+                                      e,
+                                      '\ud83c\uddfa\ud83c\uddf3',
+                                      '\ud83c\uddfa\u200b\ud83c\uddf3'
+                                  ) &&
+                                      !n(
+                                          e,
+                                          '\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f',
+                                          '\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f'
+                                      );
+                        case 'emoji':
+                            return !n(
+                                e,
+                                '\ud83d\udc26\u200d\u2b1b',
+                                '\ud83d\udc26\u200b\u2b1b'
+                            );
+                    }
+                    return !1;
+                }
+                function f(e, t, n) {
+                    var r =
+                            'undefined' != typeof WorkerGlobalScope &&
+                            self instanceof WorkerGlobalScope
+                                ? new OffscreenCanvas(300, 150)
+                                : i.createElement('canvas'),
+                        a = r.getContext('2d', { willReadFrequently: !0 }),
+                        o =
+                            ((a.textBaseline = 'top'),
+                            (a.font = '600 32px Arial'),
+                            {});
+                    return (
+                        e.forEach(function (e) {
+                            o[e] = t(a, e, n);
+                        }),
+                        o
+                    );
+                }
+                function t(e) {
+                    var t = i.createElement('script');
+                    (t.src = e), (t.defer = !0), i.head.appendChild(t);
+                }
+                'undefined' != typeof Promise &&
+                    ((o = 'wpEmojiSettingsSupports'),
+                    (s = ['flag', 'emoji']),
+                    (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+                    (e = new Promise(function (e) {
+                        i.addEventListener('DOMContentLoaded', e, { once: !0 });
+                    })),
+                    new Promise(function (t) {
+                        var n = (function () {
+                            try {
+                                var e = JSON.parse(sessionStorage.getItem(o));
+                                if (
+                                    'object' == typeof e &&
+                                    'number' == typeof e.timestamp &&
+                                    new Date().valueOf() <
+                                        e.timestamp + 604800 &&
+                                    'object' == typeof e.supportTests
+                                )
+                                    return e.supportTests;
+                            } catch (e) {}
+                            return null;
+                        })();
+                        if (!n) {
+                            if (
+                                'undefined' != typeof Worker &&
+                                'undefined' != typeof OffscreenCanvas &&
+                                'undefined' != typeof URL &&
+                                URL.createObjectURL &&
+                                'undefined' != typeof Blob
+                            )
+                                try {
+                                    var e =
+                                            'postMessage(' +
+                                            f.toString() +
+                                            '(' +
+                                            [
+                                                JSON.stringify(s),
+                                                u.toString(),
+                                                p.toString(),
+                                            ].join(',') +
+                                            '));',
+                                        r = new Blob([e], {
+                                            type: 'text/javascript',
+                                        }),
+                                        a = new Worker(URL.createObjectURL(r), {
+                                            name: 'wpTestEmojiSupports',
+                                        });
+                                    return void (a.onmessage = function (e) {
+                                        c((n = e.data)), a.terminate(), t(n);
+                                    });
+                                } catch (e) {}
+                            c((n = f(s, u, p)));
+                        }
+                        t(n);
+                    })
+                        .then(function (e) {
+                            for (var t in e)
+                                (n.supports[t] = e[t]),
+                                    (n.supports.everything =
+                                        n.supports.everything && n.supports[t]),
+                                    'flag' !== t &&
+                                        (n.supports.everythingExceptFlag =
+                                            n.supports.everythingExceptFlag &&
+                                            n.supports[t]);
+                            (n.supports.everythingExceptFlag =
+                                n.supports.everythingExceptFlag &&
+                                !n.supports.flag),
+                                (n.DOMReady = !1),
+                                (n.readyCallback = function () {
+                                    n.DOMReady = !0;
+                                });
+                        })
+                        .then(function () {
+                            return e;
+                        })
+                        .then(function () {
+                            var e;
+                            n.supports.everything ||
+                                (n.readyCallback(),
+                                (e = n.source || {}).concatemoji
+                                    ? t(e.concatemoji)
+                                    : e.wpemoji &&
+                                      e.twemoji &&
+                                      (t(e.twemoji), t(e.wpemoji)));
+                        }));
+            })((window, document), window._wpemojiSettings);
+        </script>
+        <link
+            rel="stylesheet"
+            id="wp-block-library-css"
+            href="https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6"
+            media="all"
+        />
+        <link
+            rel="stylesheet"
+            id="block-styles-css"
+            href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6"
+            media="all"
+        />
+        <link
+            rel="stylesheet"
+            id="toolkit-css"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6"
+            media="all"
+        />
+        <link
+            rel="stylesheet"
+            id="bootstrapcss-css"
+            crossorigin="anonymous"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            media="all"
+        />
+        <link
+            rel="stylesheet"
+            id="main-css-css"
+            href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525"
+            media="all"
+        />
+        <script
+            src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6"
+            id="toolkit-js"
+        ></script>
+        <script
+            src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+            id="jquery-core-js"
+        ></script>
+        <script
+            src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+            id="jquery-migrate-js"
+        ></script>
+        <script
+            src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+            id="main_js-js"
+        ></script>
+        <script
+            src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+            id="skiptoconf-js"
+        ></script>
+        <script
+            src="https://cdn.disability.illinois.edu/skipto.min.js"
+            id="skipto-js"
+        ></script>
+        <script
+            crossorigin="anonymous"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            id="bootstrapjs-js"
+        ></script>
+        <script
+            crossorigin="anonymous"
+            src="https://kit.fontawesome.com/846f7e331a.js"
+            id="fontawesome-js"
+        ></script>
+        <script
+            crossorigin="anonymous"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            id="popper-js"
+        ></script>
+        <script
+            data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"
+            src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js"
+            id="onetrust-js"
+        ></script>
+        <link
+            rel="https://api.w.org/"
+            href="https://webtheme.illinois.edu/wp-json/"
+        />
+        <link
+            rel="alternate"
+            title="JSON"
+            type="application/json"
+            href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714"
+        />
+        <link
+            rel="EditURI"
+            type="application/rsd+xml"
+            title="RSD"
+            href="https://webtheme.illinois.edu/xmlrpc.php?rsd"
+        />
+        <meta
+            name="generator"
+            content="WordPress 6.6"
+        />
+        <link
+            rel="canonical"
+            href="https://webtheme.illinois.edu/"
+        />
+        <link
+            rel="shortlink"
+            href="https://webtheme.illinois.edu/"
+        />
+        <link
+            rel="alternate"
+            title="oEmbed (JSON)"
+            type="application/json+oembed"
+            href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F"
+        />
+        <link
+            rel="alternate"
+            title="oEmbed (XML)"
+            type="text/xml+oembed"
+            href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml"
+        />
+        <link
+            rel="pingback"
+            href="https://webtheme.illinois.edu/xmlrpc.php"
+        />
+        <link
+            rel="icon"
+            href="https://cdn.brand.illinois.edu/favicon.ico"
+        />
+        <style>
+            body .tile-list .tile.w66 {
+                flex: 0 0 calc(40% - 1.2rem);
+                max-width: calc(40% - 1.2rem);
+                min-width: calc(40% - 1.2rem);
+            }
+
+            #primary_secondary_wrapper header,
+            #primary_secondary_wrapper .entry-content > * {
+                max-width: 1140px !important;
+            }
+
+            @media (max-width: 768px) {
+                #primary_secondary_wrapper #secondary {
+                    max-width: 100% !important;
+                }
+            }
+
+            #primary_secondary_wrapper header,
+            #primary_secondary_wrapper .entry-content > *,
+            .search #primary_secondary_wrapper article {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #primary_secondary_wrapper #secondary {
+                max-width: 300px !important;
+            }
+
+            .search #primary_secondary_wrapper article .entry-summary {
+                margin-top: 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .search #primary_secondary_wrapper article .post-thumbnail {
+                max-width: 33%;
+                margin: 0 1rem 0.25rem 1rem;
+                float: right;
+            }
+
+            @media (max-width: 768px) {
+                .search #primary_secondary_wrapper article .post-thumbnail {
+                    max-width: 50%;
+                }
+            }
+
+            @media (max-width: 400px) {
+                .search #primary_secondary_wrapper article .post-thumbnail {
+                    max-width: 100%;
+                    width: 100%;
+                    float: none;
+                    display: block;
+                    padding: 0;
+                    margin: 0 0 0.5rem 0;
+                }
+            }
+
+            .archive #primary_secondary_wrapper #primary {
+                max-width: 1140px;
+            }
+
+            .has-sidebar .archive #primary_secondary_wrapper #primary {
+                max-width: 870px;
+            }
+
+            .has-sidebar #primary_secondary_wrapper main article .alignfull {
+                max-width: 870px !important;
+            }
+
+            .page-wrapper {
+                width: 100%;
+                max-width: 1200px;
+                margin: 30px auto 0 auto;
+                padding: 0 30px;
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="./css/ila-dropdown-menu.css"
+        />
+    </head>
+
+    <body>
+        <header
+            id="masthead"
+            class="site-header"
+        >
+            <div
+                class="masthead_inner d-flex justify-content-between align-items-stretch"
+            >
+                <div class="il-header-wrapper flex-grow-1">
+                    <il-header>
+                        <div slot="wordmark">
+                            <il-unit-wordmark>
+                                <p class="il-primary-unit">
+                                    <a href="https://appdev.illinois.edu/"
+                                        >Application Development Standards</a
+                                    >
+                                </p>
+                                <h1 class="il-secondary-unit">
+                                    <a
+                                        href="https://app-illinois.github.io/Design-Resources/"
+                                        >Application Development UX
+                                        Components</a
+                                    >
+                                </h1>
+                            </il-unit-wordmark>
+                        </div>
+
+                        <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
+                    </il-header>
+                </div>
+            </div>
+        </header>
+        <!-- #masthead -->
+        <main>
+            <div
+                class="page-wrapper"
+                style="margin-bottom: 30px"
+            >
+                <div>
+                    <h1>Dropdown Menu</h1>
+                    <!-- <p>This CCS and JS can be applied to a table to allow the header and first column to freeze when scrolling, allowing for a better expereicne on smaller screens.</p> -->
+                </div>
+
+                <br />
+
+                <div>
+                    <h2>Component Behavior</h2>
+
+                    <p>
+                        This example is adapted from
+                        <a
+                            href="https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/examples/menu-button-links/"
+                            >W3C's Navigation Menu Button documentation</a
+                        >.
+                    </p>
+
+                    <p>
+                        The dropdown menu component allows a user to click to
+                        expand the menu to access links, as in site navigation.
+                    </p>
+                </div>
+
+                <br />
+
+                <div>
+                    <h2>Accessibility Guidelines</h2>
+
+                    <p>
+                        The dropdown menu is made accessible to ensure that
+                        users with disabilities can interact with it
+                        effectively. See W3C link above for full guidelines. Key
+                        accessibility guidelines include:
+                    </p>
+
+                    <ul style="margin-bottom: 1rem">
+                        <li>
+                            <b>ARIA Attributes:</b> Should ideally be an
+                            unordered list.
+                        </li>
+                        <li>
+                            <b>Keyboard Navigation:</b>
+                            <ul>
+                                <li>
+                                    Menu button should get tab focus and be
+                                    activated with the down arrow, enter key, or
+                                    space key.
+                                </li>
+                                <li>
+                                    Menu should be navigated with arrow keys and
+                                    link items should be activated with the
+                                    space or enter key.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Focus Management:</b> Items in menu list should
+                            receive focus styles when selected.
+                        </li>
+                        <li>
+                            <b>Screen Reader Compatibility:</b> Use semantic
+                            HTML and ARIA roles to ensure that assistive
+                            technologies accurately interpret the dropdown menu.
+                            <ul>
+                                <li>List should have role="menu".</li>
+                                <li>List items should have role="menuitem".</li>
+                                <li>
+                                    List element should make use of
+                                    aria-haspopup, aria-expanded, and
+                                    aria-controls.
+                                </li>
+                                <li>
+                                    Aria property aria-activedescendant should
+                                    be used in order for the screenreader to
+                                    know which item is being selected.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <br />
+
+                <div>
+                    <h2>Component Example</h2>
+
+                    <div class="ila-dropdown-menu">
+                        <button
+                            class="il-button ila-dropdown-menu__button"
+                            type="button"
+                            id="ilaMenuButton"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="ilaDropdownMenu"
+                        >
+                            Menu
+                            <svg
+                                class="ila-dropdown-menu__button-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                            >
+                                <title>chevron-down</title>
+                                <path
+                                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                                />
+                            </svg>
+                        </button>
+                        <ul
+                            id="ilaDropdownMenu"
+                            class="ila-dropdown-menu__menu"
+                            role="menu"
+                            tabindex="-1"
+                            aria-labelledby="ilaMenuButton"
+                            aria-activedescendant="ilaMenuItem1"
+                        >
+                            <li
+                                id="ilaMenuItem1"
+                                class="ila-dropdown-menu__menu-item"
+                                role="menuitem"
+                            >
+                                Action 1
+                            </li>
+                            <li
+                                id="ilaMenuItem2"
+                                class="ila-dropdown-menu__menu-item"
+                                role="menuitem"
+                            >
+                                Action 2
+                            </li>
+                            <li
+                                id="ilaMenuItem3"
+                                class="ila-dropdown-menu__menu-item"
+                                role="menuitem"
+                            >
+                                Action 3
+                            </li>
+                            <li
+                                id="ilaMenuItem4"
+                                class="ila-dropdown-menu__menu-item"
+                                role="menuitem"
+                            >
+                                Action 4
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <br />
+
+                <div>
+                    <h2>Link</h2>
+                    <p>
+                        <a
+                            href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-dropdown-menu"
+                        >
+                            Link to this component on GitHub
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- closes page wrapper -->
+        </main>
+
+        <footer
+            id="colophon"
+            class="site-footer"
+        >
+            <il-footer>
+                <div
+                    slot="contact"
+                    class="il-footer-contact uofi_address"
+                >
+                    <p>
+                        <a href="https://appdev.illinois.edu/"
+                            >Application Development Standards</a
+                        >
+                    </p>
+                </div>
+
+                <nav
+                    slot="links"
+                    class="il-footer-links"
+                    aria-label="Legal notices"
+                >
+                    <ul>
+                        <li><button data-il="cookies"></button></li>
+                        <li><a data-il="privacy"></a></li>
+                        <li><a data-il="copyright"></a></li>
+                        <li><a data-il="accessibility"></a></li>
+                    </ul>
+                </nav>
+            </il-footer>
+        </footer>
+        <!-- #colophon -->
+    </body>
+</html>
+<script src="./js/ila-dropdown-menu.js"></script>
