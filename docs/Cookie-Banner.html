@@ -67,7 +67,7 @@
         </style>
     </head>
 
-    <body onload="openCookieB('ilaCookieBOne')">
+    <body onload="openCookieB('ilaCookieBOne')" class="page-template-default page page-id-1106">
         <header id="masthead" class="site-header">
             <div class="masthead_inner d-flex justify-content-between align-items-stretch">
                 <div class="il-header-wrapper flex-grow-1">
@@ -83,7 +83,55 @@
             </div>
         </header><!-- #masthead -->
         
-        <il-page>
+        <il-page id="primary" class="site-main flex-grow-1">
+
+            <div class="page-wrapper" style="margin-bottom: 30px;">
+                <div>
+                    <h1>Cookie Banner</h1>
+                    <p>
+                        Provides a Cookie Notification Banner that includes
+                        buttons to open a slideout where more information can 
+                        be provided to the User
+                    </p>
+                </div>
+                
+                <div>
+                    <h2>Placement</h2>
+                    <p>
+                        Use with JavaScript onload functionality
+                    </p>
+                </div>
+    
+                <div>
+                    <h2>Behavior</h2>
+                    <p> Places a notification at the bottom of the screen
+                    </p>
+                </div>
+    
+                <div>
+                    <h2>Accessibility Guidelines </h2>
+                    <p>
+                        TODO: Describe accessibility concerns and requirements 
+                        with the item, as well as any best practices.
+                    </p>
+                </div>
+    
+                <div>
+                    <h2>Example</h2>
+                    <p>
+                        The Cookie Banner is presented after loading this page
+                    </p>
+                </div>
+                <div>
+                    <h2>Link</h2>
+                    <p>
+                        TODO: Provide a link to this design standard in the 
+                        GitHub repository
+                    </p>
+                </div>
+    
+            </div><!-- closes page wrapper -->
+
             <div
                 class="cookieb-holder"
                 role="alert"
@@ -172,6 +220,7 @@
                     </div>
                 </div>
             </div>
+
         </il-page>
 
         <footer id="colophon" class="site-footer">
