@@ -68,6 +68,21 @@
     </head>
 
     <body onload="openCookieB('ilaCookieBOne')">
+        <header id="masthead" class="site-header">
+            <div class="masthead_inner d-flex justify-content-between align-items-stretch">
+                <div class="il-header-wrapper flex-grow-1">
+                    <il-header>
+                        <div slot="wordmark">
+                            <il-unit-wordmark>
+                      <p class="il-primary-unit"><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>     
+                           <h1 class="il-secondary-unit"><a href="https://app-illinois.github.io/Design-Resources/">Application Development UX Components</a></h1>
+                         </il-unit-wordmark>
+                        </div>
+                    </il-header>
+                </div>
+            </div>
+        </header><!-- #masthead -->
+        
         <il-page>
             <div
                 class="cookieb-holder"
@@ -158,6 +173,23 @@
                 </div>
             </div>
         </il-page>
+
+        <footer id="colophon" class="site-footer">
+            <il-footer>
+                <div slot="contact" class="il-footer-contact uofi_address">
+                    <p><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>
+                </div>
+                <nav slot="links" class="il-footer-links" aria-label="Legal notices">
+                    <ul>
+                        <!--<li><button data-il="cookies"></button></li> This is a static html site with no cookies-->
+                        <li><a data-il="privacy"></a></li>
+                        <li><a data-il="copyright"></a></li>
+                        <li><a data-il="accessibility"></a></li>
+                    </ul>
+                </nav>
+            </il-footer>
+        </footer><!-- #colophon -->
+
         <script src="js/ila-cookie-banner.js"></script>
         <script src="js/ila-slideover.js"></script>
     </body>
