@@ -2,9 +2,9 @@
     --ila-cookieb-margin: .25rem;
     --ila-cookieb-padding-x: 1rem;
     --ila-cookieb-padding-y: .3rem;
-    --ila-cookieb-background-blue: #13294b;
+    --ila-cookieb-background-blue: var(--il-blue);
     --ila-cookieb-font-white: #ffffff;
-    --ila-cookieb-hover-orange: #ff5f05;
+    --ila-cookieb-hover-orange: var(--il-orange);
 }
 
 .cookieb-holder {
@@ -79,13 +79,14 @@
     font-size: 25px;
 }
 
-.ila-cookieb.ila-cookieb--closed {
-    transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
-    visibility: hidden;
-    opacity: 0;
-    order: 1;
+@media prefers-reduced-motion {
+    .ila-cookieb.ila-cookieb--closed {
+        transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
+        visibility: hidden;
+        opacity: 0;
+        order: 1;
+    }
 }
-
 
 /* `About Cookies` slide out */
 
