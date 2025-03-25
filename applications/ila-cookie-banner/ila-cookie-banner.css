@@ -79,9 +79,15 @@
     font-size: 25px;
 }
 
-@media prefers-reduced-motion {
+.ila-cookieb.ila-cookieb--closed {
+    transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+@media (prefers-reduced-motion) {
     .ila-cookieb.ila-cookieb--closed {
-        transition: opacity 0.25s ease-in-out, visibility 0.25s, order 1s;
         visibility: hidden;
         opacity: 0;
         order: 1;
