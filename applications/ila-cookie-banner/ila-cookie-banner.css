@@ -23,7 +23,7 @@
 }
 
 .ila-cookieb__h3 {
-    margin: 0 0 auto auto;
+    margin: 0.5rem 0 auto auto;
 }
 
 .ila-cookieb__content p {
@@ -46,6 +46,18 @@
 
 .ila-cookieb__button {
     margin: 0 0 .5rem .5rem;
+}
+
+.ila-cookieb__button-center-slideover {
+    display: flex;
+    justify-content: center;
+}
+
+.ila-cookieb__button-close-slideover:hover,
+.ila-cookieb__button-close-slideover:focus {
+    transition: background-color 0.3s;
+    background-color: var(--ila-cookieb-hover-orange);
+    color: white;
 }
 
 .ila-cookieb__close-button {
@@ -101,6 +113,9 @@
     line-height: 1.2em;
 }
 
+.ila-cookieb__pointer_hover {
+    cursor: pointer;
+}
 
 /* allow buttons to slide underneath text on thin screens */
 
@@ -121,6 +136,14 @@
     }
 }
 
+/* Make Slideout wider on thin screens */
+
+@media (max-width: 1030px) {
+    .ila-slideover--left .ila-slideover__slideover {
+        right: 5% !important;
+    }
+}
+
 /* UIUC Branding */
 .ila-cookieb__cookieb {
     color: var(--ila-cookieb-font-white);
@@ -131,5 +154,10 @@
     color: var(--ila-cookieb-font-white);
 }
 
+/* Hide Cookie Banner when Printing */
 
-
+@media print{    
+    .ila-cookieb_no-printing {
+        display: none !important;
+    }
+}

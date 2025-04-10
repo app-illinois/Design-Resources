@@ -126,7 +126,7 @@
 
         </div><!-- closes page wrapper -->
 
-        <div class="cookieb-holder" role="alert">
+        <div class="cookieb-holder ila-cookieb_no-printing" role="alert">
             <div class="cookieb-holder-inner">
                 <div id="ilaCookieBOne" class="ila-cookieb ila-cookieb--closed">
                     <div class="ila-cookieb__cookieb">
@@ -164,8 +164,9 @@
                 </div>
             </div>
         </div>
-        <div id="ilaSlideoverLeft" class="ila-slideover ila-slideover--closed ila-slideover--left" role="dialog"
-            aria-labelledby="ilaSlideoverLeftLabel" aria-modal="true">
+        <div id="ilaSlideoverLeft" 
+            class="ila-slideover ila-slideover--closed ila-slideover--left ila-cookieb_no-printing" 
+            role="dialog" aria-labelledby="ilaSlideoverLeftLabel" aria-modal="true">
             <div class="ila-slideover__overlay" onclick="closeSlideover('ilaSlideoverLeft')"></div>
             <div class="ila-slideover__slideover">
                 <div class="ila-slideover__header">
@@ -201,7 +202,9 @@
                             Illinois System Cookie Policy</a> for more information.
                     </p>
                     <details>
-                        <summary>Strictly Necessary Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Strictly Necessary Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Strictly Necessary Cookies are first-party Cookies that are necessary for the website to
                             function. They can be either permanent or temporary and are usually only set in response to
@@ -213,7 +216,9 @@
                             the site will not work.</p>
                     </details>
                     <details>
-                        <summary>Performance Cookies - Always Active</summary>
+                        <summary  class="ila-cookieb__pointer_hover">
+                            Performance Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Performance Cookies allow us to count visits and traffic sources so we can measure and
                             improve the performance and effectiveness of University websites. Performance Cookies also
@@ -230,7 +235,9 @@
                             work.</p>
                     </details>
                     <details>
-                        <summary>Functional Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Functional Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Functional Cookies enhance the performance and functionality of our websites but are
                             non-essential to their use. These permanent Cookies allow our website to remember
@@ -241,7 +248,9 @@
                             Cookies, some or all of these services may not function properly.</p>
                     </details>
                     <details>
-                        <summary>Targeting Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Targeting Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Targeting Cookies are used to deliver content tailored to your interests and may be
                             temporary or permanent. They may also be first-party or third-party Cookies. Targeting
@@ -259,7 +268,16 @@
                             that you have provided to them or that they have collected from your use of their services.
                             If you set your browser to block or delete Cookies, you will still see advertisements, but
                             they will be less targeted to your interests.</p>
+                    </details>
                 </div>
+                <div class="ila-cookieb__button-center-slideover">
+                    <button aria-label="close slideover" 
+                        class="il-button ila-cookieb__button-close-slideover"
+                        onclick="closeSlideover('ilaSlideoverLeft');"
+                    >
+                        Close
+                    </button>
+            </div>
             </div>
         </div>
 
