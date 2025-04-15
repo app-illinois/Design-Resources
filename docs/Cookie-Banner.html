@@ -1,18 +1,40 @@
-<!DOCTYPE html>
-
-<html lang="en" class="il-toolkit">
+<!doctype html>
+<html lang="en-US">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
     <title>Illinois Cookie Banner</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
+    <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
+    <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+    <link rel='dns-prefetch' href='//kit.fontawesome.com' />
+    <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed"
+        href="https://webtheme.illinois.edu/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed"
+        href="https://webtheme.illinois.edu/comments/feed/" />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="dns-prefetch" href="https://cdn.toolkit.illinois.edu" />
-    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css" />
-    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
-    <title>Cookie Banner Example</title>
+    <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2'
+        media='all' />
+
+    <link rel='stylesheet' id='main-css-css'
+        href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
+    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6.2" id="toolkit-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+        id="jquery-migrate-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+        id="main_js-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+        id="skiptoconf-js"></script>
+    <script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
+
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+
     <link rel="stylesheet" href="css/ila-cookie-banner.css" />
     <link rel="stylesheet" href="css/ila-slideover.css" />
     <style>
@@ -111,11 +133,12 @@
                 <p>
                     The Cookie Banner is presented after loading this page
                 </p>
-                <button onclick="openSlideover('ilaSlideoverLeft')" aria-label="learn about cookies"
+                <button type="button" onclick="openSlideover('ilaSlideoverLeft')" aria-label="learn about cookies"
                     class="il-button ila-cookieb__button">
                     About Cookies
                 </button>
             </div>
+
             <div>
                 <h2>Link</h2>
                 <p>
@@ -150,12 +173,12 @@
                                     University of Illinois System Cookie Policy.</a>
                             </p>
                             <div class="ila-cookieb__actions">
-                                <button class="il-button ila-cookieb__button"
+                                <button type="button" class="il-button ila-cookieb__button"
                                     onclick="openSlideover('ilaSlideoverLeft')" aria-label="learn about cookies">
                                     About Cookies
                                 </button>
-                                <button class="il-button ila-cookieb__button" onclick="closeCookieB('ilaCookieBOne')"
-                                    aria-label="close cookie banner">
+                                <button type="button" class="il-button ila-cookieb__button"
+                                    onclick="closeCookieB('ilaCookieBOne')" aria-label="close cookie banner">
                                     Close this Notice
                                 </button>
                             </div>
@@ -164,16 +187,16 @@
                 </div>
             </div>
         </div>
-        <div id="ilaSlideoverLeft" 
-            class="ila-slideover ila-slideover--closed ila-slideover--left ila-cookieb_no-printing" 
-            role="dialog" aria-labelledby="ilaSlideoverLeftLabel" aria-modal="true">
+        <div id="ilaSlideoverLeft"
+            class="ila-slideover ila-slideover--closed ila-slideover--left ila-cookieb_no-printing" role="dialog"
+            aria-labelledby="ilaSlideoverLeftLabel" aria-modal="true">
             <div class="ila-slideover__overlay" onclick="closeSlideover('ilaSlideoverLeft')"></div>
             <div class="ila-slideover__slideover">
                 <div class="ila-slideover__header">
                     <h2 id="ilaSlideoverLeftLabel" class="ila-slideover__label">
                         Illinois
                     </h2>
-                    <button aria-label="close slideover" class="ila-slideover__close-button"
+                    <button type="button" aria-label="close slideover" class="ila-slideover__close-button"
                         onclick="closeSlideover('ilaSlideoverLeft')">
                         <div class="ila-slideover__close-icon il-icon" role="presentation">
                             cancel
@@ -216,7 +239,7 @@
                             the site will not work.</p>
                     </details>
                     <details>
-                        <summary  class="ila-cookieb__pointer_hover">
+                        <summary class="ila-cookieb__pointer_hover">
                             Performance Cookies - Always Active
                         </summary>
                         <p class="ila-cookieb__slide_small">
@@ -271,13 +294,12 @@
                     </details>
                 </div>
                 <div class="ila-cookieb__button-center-slideover">
-                    <button aria-label="close slideover" 
+                    <button type="button" aria-label="close slideover"
                         class="il-button ila-cookieb__button-close-slideover"
-                        onclick="closeSlideover('ilaSlideoverLeft');"
-                    >
+                        onclick="closeSlideover('ilaSlideoverLeft');">
                         Close
                     </button>
-            </div>
+                </div>
             </div>
         </div>
 
