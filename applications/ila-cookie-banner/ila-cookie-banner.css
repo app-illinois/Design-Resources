@@ -54,7 +54,8 @@
 }
 
 .ila-cookieb__button-close-slideover:hover,
-.ila-cookieb__button-close-slideover:focus {
+.ila-cookieb__button-close-slideover:focus,
+.ila-cookieb__button-close-slideover:active {
     transition: background-color 0.3s;
     background-color: var(--ila-cookieb-hover-orange);
     color: white;
@@ -74,17 +75,18 @@
 }
 
 .ila-cookieb__close-button:hover,
-.ila-cookieb__close-button:focus {
+.ila-cookieb__close-button:focus,
+.ila-cookieb__close-button:active {
     transition: background-color 0.3s;
     background-color: var(--ila-cookieb-hover-orange);
     color: white;
 }
 
 .ila-cookieb__button:hover,
-.ila-cookieb__button:focus {
+.ila-cookieb__button:focus,
+.ila-cookieb__button:active {
     background-color: var(--ila-cookieb-hover-orange);
 }
-
 
 .ila-cookieb__close-icon {
     padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
@@ -145,6 +147,7 @@
 }
 
 /* UIUC Branding */
+
 .ila-cookieb__cookieb {
     color: var(--ila-cookieb-font-white);
     background-color: var(--ila-cookieb-background-blue);
@@ -156,8 +159,62 @@
 
 /* Hide Cookie Banner when Printing */
 
-@media print{    
+@media print {
     .ila-cookieb_no-printing {
         display: none !important;
+    }
+}
+
+.ila-cookieb__popup-info span {
+    display: none;
+}
+
+.ila-cookieb__popup-info:hover span,
+.ila-cookieb__popup-info:focus span,
+.ila-cookieb__popup-info:active span {
+    display: block;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 10rem;
+    padding: 1rem;
+    background-color: var(--il-blue);
+    color: #ffffff;
+    border-style: solid;
+    border-color: var(--il-orange);
+}
+
+@media (max-width: 1030px) {
+
+    .ila-cookieb__popup-info:hover span,
+    .ila-cookieb__popup-info:focus span,
+    .ila-cookieb__popup-info:active span {
+        bottom: 7rem;
+    }
+}
+
+.ila-cookieb__popup-info-slideout span {
+    display: none;
+}
+
+.ila-cookieb__popup-info-slideout:hover span,
+.ila-cookieb__popup-info-slideout:focus span,
+.ila-cookieb__popup-info-slideout:active span {
+    display: block;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 10rem;
+    padding: 1rem;
+    background-color: var(--il-blue);
+    color: #ffffff;
+    border-style: solid;
+    border-color: var(--il-orange);
+}
+
+@media (max-width: 1030px) {
+
+    .ila-cookieb__popup-info-slideout:hover span,
+    .ila-cookieb__popup-info-slideout:focus span,
+    .ila-cookieb__popup-info-slideout:active span {
+        bottom: 7rem;
     }
 }
