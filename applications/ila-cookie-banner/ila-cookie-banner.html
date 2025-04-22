@@ -75,13 +75,14 @@
     </style>
 </head>
 
-<body onload="openCookieB('ilaCookieBOne')">
+<body onload="openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad')">
     <il-page>
 
         <div class="cookieb-holder ila-cookieb_no-printing" role="alert">
             <div class="cookieb-holder-inner">
                 <div id="ilaCookieBOne" class="ila-cookieb ila-cookieb--closed">
-                    <div class="ila-cookieb__cookieb">
+                    <div tabindex="0" id="ilaCookieBFocusOnLoad" class="ila-cookieb__cookieb"
+                        aria-label="Cookie Banner">
                         <button type="button" class="ila-cookieb__close-button" aria-label="close cookie banner"
                             onclick="closeCookieB('ilaCookieBOne')">
                             <div class="ila-cookieb__close-icon il-icon" role="presentation">

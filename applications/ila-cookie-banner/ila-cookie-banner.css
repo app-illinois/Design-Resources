@@ -201,7 +201,7 @@
 .ila-cookieb__popup-info-slideout:active span {
     display: block;
     position: absolute;
-    bottom: 2.5rem;
+    bottom: auto;
     left: 10rem;
     padding: 1rem;
     background-color: var(--il-blue);
@@ -215,6 +215,6 @@
     .ila-cookieb__popup-info-slideout:hover span,
     .ila-cookieb__popup-info-slideout:focus span,
     .ila-cookieb__popup-info-slideout:active span {
-        bottom: 7rem;
+        bottom: auto;
     }
 }

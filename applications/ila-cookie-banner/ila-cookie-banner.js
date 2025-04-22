@@ -1,4 +1,4 @@
-function openCookieB(cookiebId) {
+function openCookieB(cookiebId, focusOnLoad) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
     cookieb.classList.add('ila-cookieb--open');
@@ -10,6 +10,8 @@ function openCookieB(cookiebId) {
     });
     cookieb.classList.add('ila-cookieb--first');
     manageAutoclose(cookiebId);
+    
+    document.getElementById(focusOnLoad).focus();
 }
 
 function closeCookieB(cookiebId) {
