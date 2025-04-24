@@ -78,7 +78,7 @@
 <body onload="openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad', 'ilaCookieModal')">
     <il-page>
 
-        <div id="ilaCookieModal"></div>
+        <div id="ilaCookieModal" aria-modal="true"></div>
 
         <div class="cookieb-holder ila-cookieb_no-printing" role="alert">
             <div class="cookieb-holder-inner">
@@ -109,7 +109,8 @@
                             </p>
                             <div class="ila-cookieb__actions">
                                 <button type="button" class="il-button ila-cookieb__button"
-                                    onclick="openSlideover('ilaSlideoverLeft')" aria-label="learn about cookies">
+                                    onclick="openSlideover('ilaSlideoverLeft')"
+                                    aria-label="learn about cookies - opens modal dialogue">
                                     About Cookies
                                 </button>
                                 <button type="button" class="il-button ila-cookieb__button"
@@ -130,9 +131,9 @@
             <div class="ila-slideover__slideover">
                 <div class="ila-slideover__header">
                     <h2 id="ilaSlideoverLeftLabel" class="ila-slideover__label">
-                        Illinois
+                        University of Illinois - Cookie Information
                     </h2>
-                    <button type="button" aria-label="close slideover" class="ila-slideover__close-button"
+                    <button type="button" aria-label="close" class="ila-slideover__close-button"
                         onclick="closeSlideover('ilaSlideoverLeft')">
                         <div class="ila-slideover__close-icon il-icon" role="presentation">
                             cancel
