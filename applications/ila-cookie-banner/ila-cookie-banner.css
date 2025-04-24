@@ -12,6 +12,7 @@
     bottom: 0;
     left: 0rem;
     width: auto;
+    z-index: 2000;
 }
 
 .ila-cookieb__cookieb {
@@ -98,6 +99,7 @@
     visibility: hidden;
     opacity: 0;
     order: 1;
+    position: absolute;
 }
 
 @media (prefers-reduced-motion) {
@@ -105,6 +107,7 @@
         visibility: hidden;
         opacity: 0;
         order: 1;
+        position: absolute;
     }
 }
 
@@ -217,4 +220,18 @@
     .ila-cookieb__popup-info-slideout:active span {
         bottom: auto;
     }
+}
+
+.ila-cookieb-noscroll {
+    overflow: hidden;
+}
+
+.ila-cookieb-modal {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #24242496;
 }

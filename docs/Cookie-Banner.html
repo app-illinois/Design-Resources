@@ -75,7 +75,7 @@
     </style>
 </head>
 
-<body onload="openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad')">
+<body onload="openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad', 'ilaCookieModal')">
     <header id="masthead" class="site-header">
         <div class="masthead_inner d-flex justify-content-between align-items-stretch">
             <div class="il-header-wrapper flex-grow-1">
@@ -149,13 +149,15 @@
 
         </div><!-- closes page wrapper -->
 
+        <div id="ilaCookieModal"></div>
+
         <div class="cookieb-holder ila-cookieb_no-printing" role="alert">
             <div class="cookieb-holder-inner">
                 <div id="ilaCookieBOne" class="ila-cookieb ila-cookieb--closed">
                     <div tabindex="0" id="ilaCookieBFocusOnLoad" class="ila-cookieb__cookieb"
                         aria-label="Cookie Banner">
                         <button type="button" class="ila-cookieb__close-button" aria-label="close cookie banner"
-                            onclick="closeCookieB('ilaCookieBOne')">
+                            onclick="closeCookieB('ilaCookieBOne', 'ilaCookieModal')">
                             <div class="ila-cookieb__close-icon il-icon" role="presentation">
                                 cancel
                             </div>
@@ -182,7 +184,8 @@
                                     About Cookies
                                 </button>
                                 <button type="button" class="il-button ila-cookieb__button"
-                                    onclick="closeCookieB('ilaCookieBOne')" aria-label="close cookie banner">
+                                    onclick="closeCookieB('ilaCookieBOne', 'ilaCookieModal')"
+                                    aria-label="close cookie banner">
                                     Close this Notice
                                 </button>
                             </div>
