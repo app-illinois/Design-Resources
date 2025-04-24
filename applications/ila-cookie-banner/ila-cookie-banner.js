@@ -1,4 +1,4 @@
-function openCookieB(cookiebId, focusOnLoad, modalID) {
+function openCookieB(cookiebId, focusOnLoad) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
     cookieb.classList.add('ila-cookieb--open');
@@ -11,23 +11,27 @@ function openCookieB(cookiebId, focusOnLoad, modalID) {
     cookieb.classList.add('ila-cookieb--first');
     manageAutoclose(cookiebId);
 
-    document.body.classList.add('ila-cookieb-noscroll');
+    // Used to disable scroll on the page 
+    // document.body.classList.add('ila-cookieb-noscroll');
 
-    let modalIDvar = document.getElementById(modalID);
-    modalIDvar.classList.add('ila-cookieb-modal');
+    // Used to enable a modal background on the page
+    // let modalIDvar = document.getElementById(modalID);
+    // modalIDvar.classList.add('ila-cookieb-modal');
 
     document.getElementById(focusOnLoad).focus();
 }
 
-function closeCookieB(cookiebId, modalID) {
+function closeCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--open');
     cookieb.classList.add('ila-cookieb--closed');
 
-    document.body.classList.remove('ila-cookieb-noscroll');
+    // Used to enable scroll on the page 
+    // document.body.classList.remove('ila-cookieb-noscroll');
 
-    let modalIDvar = document.getElementById(modalID);
-    modalIDvar.classList.remove('ila-cookieb-modal');
+    // Used to disable a modal background on the page
+    // let modalIDvar = document.getElementById(modalID);
+    // modalIDvar.classList.remove('ila-cookieb-modal');
 }
 
 function manageAutoclose(cookiebId) {

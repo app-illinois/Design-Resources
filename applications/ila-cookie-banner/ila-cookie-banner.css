@@ -222,11 +222,15 @@
     }
 }
 
-.ila-cookieb-noscroll {
-    overflow: hidden;
-}
+/* Used to enable or disable scroll on the page */
 
-.ila-cookieb-modal {
+/* .ila-cookieb-noscroll {
+    overflow: hidden;
+} */
+
+/* Used to enable or disable a modal background on the page  */
+
+/* .ila-cookieb-modal {
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -234,4 +238,5 @@
     right: 0;
     left: 0;
     background-color: #24242496;
-}
+} *
+ 
