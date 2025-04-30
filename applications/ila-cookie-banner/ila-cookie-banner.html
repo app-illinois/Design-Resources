@@ -1,18 +1,40 @@
-<!DOCTYPE html>
-
-<html lang="en" class="il-toolkit">
+<!doctype html>
+<html lang="en-US">
 
 <head>
-    <meta charset="utf-8" />
-    <title>ILA CookieB</title>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="dns-prefetch" href="https://cdn.toolkit.illinois.edu" />
-    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css" />
-    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
     <title>Cookie Banner Example</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
+    <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
+    <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+    <link rel='dns-prefetch' href='//kit.fontawesome.com' />
+    <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed"
+        href="https://webtheme.illinois.edu/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed"
+        href="https://webtheme.illinois.edu/comments/feed/" />
+
+    <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2'
+        media='all' />
+
+    <link rel='stylesheet' id='main-css-css'
+        href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
+    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6.2" id="toolkit-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+        id="jquery-migrate-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+        id="main_js-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+        id="skiptoconf-js"></script>
+    <script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
+
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+
     <link rel="stylesheet" href="ila-cookie-banner.css" />
     <link rel="stylesheet" href="../ila-slideovers/ila-slideover.css" />
     <style>
@@ -45,15 +67,24 @@
         .button-holder button {
             margin-right: 5px;
         }
+
+        .page-wrapper {
+            margin: 30px auto 0 auto;
+            padding: 0 30px;
+        }
     </style>
 </head>
 
-<body onload="openCookieB('ilaCookieBOne')">
+<body onload="openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad')">
     <il-page>
-        <div class="cookieb-holder" role="alert">
+
+        <!-- <div id="ilaCookieModal" aria-modal="true"></div> -->
+
+        <div class="cookieb-holder ila-cookieb_no-printing" role="alert">
             <div class="cookieb-holder-inner">
                 <div id="ilaCookieBOne" class="ila-cookieb ila-cookieb--closed">
-                    <div class="ila-cookieb__cookieb">
+                    <div tabindex="0" id="ilaCookieBFocusOnLoad" class="ila-cookieb__cookieb"
+                        aria-label="Cookie Banner">
                         <button type="button" class="ila-cookieb__close-button" aria-label="close cookie banner"
                             onclick="closeCookieB('ilaCookieBOne')">
                             <div class="ila-cookieb__close-icon il-icon" role="presentation">
@@ -69,17 +100,21 @@
                                 efforts. Click on “About Cookies” to learn more. By continuing to browse without
                                 changing your browser settings to block or delete Cookies, you agree to the storing of
                                 Cookies and related technologies on your device.
-
-                                <a target=_new href="https://www.vpaa.uillinois.edu/resources/cookies">
-                                    University of Illinois System Cookie Policy.</a>
+                                <br>
+                                <a class="ila-cookieb__popup-info" target=_new
+                                    href="https://www.vpaa.uillinois.edu/resources/cookies">
+                                    <strong>University of Illinois System Cookie Policy.</strong>
+                                    <span>Link opens in a new window</span>
+                                </a>
                             </p>
                             <div class="ila-cookieb__actions">
-                                <button class="il-button ila-cookieb__button"
-                                    onclick="openSlideover('ilaSlideoverLeft')" aria-label="learn about cookies">
+                                <button type="button" class="il-button ila-cookieb__button"
+                                    onclick="openSlideover('ilaSlideoverLeft')"
+                                    aria-label="learn about cookies - opens modal dialogue">
                                     About Cookies
                                 </button>
-                                <button class="il-button ila-cookieb__button" onclick="closeCookieB('ilaCookieBOne')"
-                                    aria-label="close cookie banner">
+                                <button type="button" class="il-button ila-cookieb__button"
+                                    onclick="closeCookieB('ilaCookieBOne')" aria-label="close cookie banner">
                                     Close this Notice
                                 </button>
                             </div>
@@ -88,15 +123,16 @@
                 </div>
             </div>
         </div>
-        <div id="ilaSlideoverLeft" class="ila-slideover ila-slideover--closed ila-slideover--left" role="dialog"
+        <div id="ilaSlideoverLeft"
+            class="ila-slideover ila-slideover--closed ila-slideover--left ila-cookieb_no-printing" role="dialog"
             aria-labelledby="ilaSlideoverLeftLabel" aria-modal="true">
             <div class="ila-slideover__overlay" onclick="closeSlideover('ilaSlideoverLeft')"></div>
             <div class="ila-slideover__slideover">
                 <div class="ila-slideover__header">
                     <h2 id="ilaSlideoverLeftLabel" class="ila-slideover__label">
-                        Illinois
+                        University of Illinois - Cookie Information
                     </h2>
-                    <button aria-label="close slideover" class="ila-slideover__close-button"
+                    <button type="button" aria-label="close" class="ila-slideover__close-button"
                         onclick="closeSlideover('ilaSlideoverLeft')">
                         <div class="ila-slideover__close-icon il-icon" role="presentation">
                             cancel
@@ -121,11 +157,17 @@
                         intended.
                     </p>
                     <p class="ila-cookieb__slide_small">
-                        See the <a target=_new href="https://www.vpaa.uillinois.edu/resources/cookies">University of
-                            Illinois System Cookie Policy</a> for more information.
+                        See the
+                        <a class="ila-cookieb__popup-info-slideout" target=_new
+                            href="https://www.vpaa.uillinois.edu/resources/cookies">
+                            <strong>University of Illinois System Cookie Policy</strong>
+                            <span>Link opens in a new window</span>
+                        </a> for more information.
                     </p>
                     <details>
-                        <summary>Strictly Necessary Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Strictly Necessary Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Strictly Necessary Cookies are first-party Cookies that are necessary for the website to
                             function. They can be either permanent or temporary and are usually only set in response to
@@ -137,7 +179,9 @@
                             the site will not work.</p>
                     </details>
                     <details>
-                        <summary>Performance Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Performance Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Performance Cookies allow us to count visits and traffic sources so we can measure and
                             improve the performance and effectiveness of University websites. Performance Cookies also
@@ -154,7 +198,9 @@
                             work.</p>
                     </details>
                     <details>
-                        <summary>Functional Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Functional Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Functional Cookies enhance the performance and functionality of our websites but are
                             non-essential to their use. These permanent Cookies allow our website to remember
@@ -165,7 +211,9 @@
                             Cookies, some or all of these services may not function properly.</p>
                     </details>
                     <details>
-                        <summary>Targeting Cookies - Always Active</summary>
+                        <summary class="ila-cookieb__pointer_hover">
+                            Targeting Cookies - Always Active
+                        </summary>
                         <p class="ila-cookieb__slide_small">
                             Targeting Cookies are used to deliver content tailored to your interests and may be
                             temporary or permanent. They may also be first-party or third-party Cookies. Targeting
@@ -183,10 +231,20 @@
                             that you have provided to them or that they have collected from your use of their services.
                             If you set your browser to block or delete Cookies, you will still see advertisements, but
                             they will be less targeted to your interests.</p>
+                    </details>
+                </div>
+                <div class="ila-cookieb__button-center-slideover">
+                    <button type="button" aria-label="close slideover"
+                        class="il-button ila-cookieb__button-close-slideover"
+                        onclick="closeSlideover('ilaSlideoverLeft');">
+                        Close
+                    </button>
                 </div>
             </div>
         </div>
+
     </il-page>
+
     <script src="ila-cookie-banner.js"></script>
     <script src="../ila-slideovers/ila-slideover.js"></script>
 </body>

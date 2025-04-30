@@ -12,6 +12,7 @@
     bottom: 0;
     left: 0rem;
     width: auto;
+    z-index: 2000;
 }
 
 .ila-cookieb__cookieb {
@@ -23,7 +24,7 @@
 }
 
 .ila-cookieb__h3 {
-    margin: 0 0 auto auto;
+    margin: 0.5rem 0 auto auto;
 }
 
 .ila-cookieb__content p {
@@ -48,6 +49,19 @@
     margin: 0 0 .5rem .5rem;
 }
 
+.ila-cookieb__button-center-slideover {
+    display: flex;
+    justify-content: center;
+}
+
+.ila-cookieb__button-close-slideover:hover,
+.ila-cookieb__button-close-slideover:focus,
+.ila-cookieb__button-close-slideover:active {
+    transition: background-color 0.3s;
+    background-color: var(--ila-cookieb-hover-orange);
+    color: white;
+}
+
 .ila-cookieb__close-button {
     position: absolute;
     right: 0;
@@ -62,17 +76,18 @@
 }
 
 .ila-cookieb__close-button:hover,
-.ila-cookieb__close-button:focus {
+.ila-cookieb__close-button:focus,
+.ila-cookieb__close-button:active {
     transition: background-color 0.3s;
     background-color: var(--ila-cookieb-hover-orange);
     color: white;
 }
 
 .ila-cookieb__button:hover,
-.ila-cookieb__button:focus {
+.ila-cookieb__button:focus,
+.ila-cookieb__button:active {
     background-color: var(--ila-cookieb-hover-orange);
 }
-
 
 .ila-cookieb__close-icon {
     padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
@@ -84,6 +99,7 @@
     visibility: hidden;
     opacity: 0;
     order: 1;
+    position: absolute;
 }
 
 @media (prefers-reduced-motion) {
@@ -91,6 +107,7 @@
         visibility: hidden;
         opacity: 0;
         order: 1;
+        position: absolute;
     }
 }
 
@@ -101,6 +118,9 @@
     line-height: 1.2em;
 }
 
+.ila-cookieb__pointer_hover {
+    cursor: pointer;
+}
 
 /* allow buttons to slide underneath text on thin screens */
 
@@ -121,7 +141,16 @@
     }
 }
 
+/* Make Slideout wider on thin screens */
+
+@media (max-width: 1030px) {
+    .ila-slideover--left .ila-slideover__slideover {
+        right: 5% !important;
+    }
+}
+
 /* UIUC Branding */
+
 .ila-cookieb__cookieb {
     color: var(--ila-cookieb-font-white);
     background-color: var(--ila-cookieb-background-blue);
@@ -131,5 +160,83 @@
     color: var(--ila-cookieb-font-white);
 }
 
+/* Hide Cookie Banner when Printing */
 
+@media print {
+    .ila-cookieb_no-printing {
+        display: none !important;
+    }
+}
 
+.ila-cookieb__popup-info span {
+    display: none;
+}
+
+.ila-cookieb__popup-info:hover span,
+.ila-cookieb__popup-info:focus span,
+.ila-cookieb__popup-info:active span {
+    display: block;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 10rem;
+    padding: 1rem;
+    background-color: var(--il-blue);
+    color: #ffffff;
+    border-style: solid;
+    border-color: var(--il-orange);
+}
+
+@media (max-width: 1030px) {
+
+    .ila-cookieb__popup-info:hover span,
+    .ila-cookieb__popup-info:focus span,
+    .ila-cookieb__popup-info:active span {
+        bottom: 7rem;
+    }
+}
+
+.ila-cookieb__popup-info-slideout span {
+    display: none;
+}
+
+.ila-cookieb__popup-info-slideout:hover span,
+.ila-cookieb__popup-info-slideout:focus span,
+.ila-cookieb__popup-info-slideout:active span {
+    display: block;
+    position: absolute;
+    bottom: auto;
+    left: 10rem;
+    padding: 1rem;
+    background-color: var(--il-blue);
+    color: #ffffff;
+    border-style: solid;
+    border-color: var(--il-orange);
+}
+
+@media (max-width: 1030px) {
+
+    .ila-cookieb__popup-info-slideout:hover span,
+    .ila-cookieb__popup-info-slideout:focus span,
+    .ila-cookieb__popup-info-slideout:active span {
+        bottom: auto;
+    }
+}
+
+/* Used to enable or disable scroll on the page */
+
+/* .ila-cookieb-noscroll {
+    overflow: hidden;
+} */
+
+/* Used to enable or disable a modal background on the page  */
+
+/* .ila-cookieb-modal {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #24242496;
+} *
+ 
