@@ -5,6 +5,10 @@
     --ila-cookieb-font-white: #ffffff;
 }
 
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
 .cookieb-holder {
     position: fixed;
     bottom: 0;

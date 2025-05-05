@@ -50,14 +50,14 @@ async function addCookieBanner() {
     /* Appends to the end of the page. */
     
     // Add cookie banner to page
-    let banner_content = await getCookieBannerContent('partials/ila-cookie-banner-content.part.html');
-    banner_content += "<style>";
+    let banner_content = "<style>";
+    banner_content += await getCookieBannerContent('css/ila-slideover.css');
     banner_content += await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
     // banner_content += await getCookieBannerContent('css/ila-cookie-uic-colors.css');
     // banner_content += await getCookieBannerContent('css/ila-cookie-uis-colors.css');
     banner_content += await getCookieBannerContent('css/ila-cookie-banner.css');
-    banner_content += await getCookieBannerContent('css/ila-slideover.css');
     banner_content += "</style>";
+    banner_content += await getCookieBannerContent('partials/ila-cookie-banner-content.part.html');
     document.body.insertAdjacentHTML("beforeend", banner_content);
     
     // Show cookie banner
