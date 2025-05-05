@@ -39,12 +39,13 @@ function manageAutoclose(cookiebId) {
     /* setTimeout(() => closeCookieB(cookiebId), 8000); */
 }
 
-async function addCookieB(cookiebId) {
-    let cookieb = document.getElementById(cookiebId);
+async function addCookieB(addCookieId) {
+    debugger;
+    let cookieb = document.getElementById(addCookieId);
     /* Preferred path */
-    var content_path = 'js/ila-cookie-banner-content.html';
+    // var content_path = 'js/ila-cookie-banner-content.html';
     /* Path For Debugging */ 
-    // var content_path = '/applications/ila-cookie-banner/ila-cookie-banner-content.html';
+    var content_path = '/applications/ila-cookie-banner/ila-cookie-banner-content.html';
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
     cookieb.insertAdjacentHTML("afterbegin", banner_content);
