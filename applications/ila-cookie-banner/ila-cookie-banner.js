@@ -1,5 +1,4 @@
 async function openCookieB(cookiebId, focusOnLoad) {
-    await addCookieB('ila-cookie-banner-here');
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
     cookieb.classList.add('ila-cookieb--open');
@@ -39,11 +38,40 @@ function manageAutoclose(cookiebId) {
     /* setTimeout(() => closeCookieB(cookiebId), 8000); */
 }
 
-async function addCookieB(addCookieId) {
-    debugger;
-    let cookieb = document.getElementById(addCookieId);
+async function getCookieBannerContent() {
     var content_path = 'partials/ila-cookie-banner-content.part.html';
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
+    return banner_content
+}
+
+async function addCookieBanner() {
+    /* Appends to the end of the page. */
+    
+    // Add cookie banner to page
+    let banner_content = await getCookieBannerContent();
+    document.body.insertAdjacentHTML("afterend", banner_content);
+    
+    // Show cookie banner
+    openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad');
+}
+
+// async function OptanonWrapper() {
+//     /* Replace old OneTrust banner. */
+//     await addCookieBanner();
+// }
+
+async function addCookieBannerToDiv() {
+    /* Allows controlling placement of banner in page content. 
+     * Requires <div id='ila-cookie-banner-here' /> to be added to page HTML.
+    */
+    let cookieb = document.getElementById('ila-cookie-banner-here');
+    var content_path = 'partials/ila-cookie-banner-content.part.html';
+    let banner_response = await fetch(content_path);
+    let banner_content = await getCookieBannerContent();
     cookieb.insertAdjacentHTML("afterbegin", banner_content);
 }
+
+window.onload = function(){
+    addCookieBanner();
+};
