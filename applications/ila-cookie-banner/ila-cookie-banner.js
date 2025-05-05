@@ -38,20 +38,26 @@ function manageAutoclose(cookiebId) {
     /* setTimeout(() => closeCookieB(cookiebId), 8000); */
 }
 
-async function getCookieBannerContent() {
+async function getCookieBannerContent(content_path) {
     /* Tip: It may be necssary to expand content_path to 
     include the full final web URL of the partial file. */
-    var content_path = 'partials/ila-cookie-banner-content.part.html';
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
-    return banner_content
+    return banner_content;
 }
 
 async function addCookieBanner() {
     /* Appends to the end of the page. */
     
     // Add cookie banner to page
-    let banner_content = await getCookieBannerContent();
+    let banner_content = await getCookieBannerContent('partials/ila-cookie-banner-content.part.html');
+    banner_content += "<style>";
+    banner_content += await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
+    // banner_content += await getCookieBannerContent('css/ila-cookie-uic-colors.css');
+    // banner_content += await getCookieBannerContent('css/ila-cookie-uis-colors.css');
+    banner_content += await getCookieBannerContent('css/ila-cookie-banner.css');
+    banner_content += await getCookieBannerContent('css/ila-slideover.css');
+    banner_content += "</style>";
     document.body.insertAdjacentHTML("beforeend", banner_content);
     
     // Show cookie banner
