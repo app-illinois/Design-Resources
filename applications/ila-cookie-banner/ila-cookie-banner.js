@@ -39,6 +39,8 @@ function manageAutoclose(cookiebId) {
 }
 
 async function getCookieBannerContent() {
+    /* Tip: It may be necssary to expand content_path to 
+    include the full final web URL of the partial file. */
     var content_path = 'partials/ila-cookie-banner-content.part.html';
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
@@ -60,9 +62,6 @@ async function addCookieBannerToDiv() {
     /* Allows controlling placement of banner in page content. 
      * Requires <div id='ila-cookie-banner-here' /> to be added to page HTML.
     */
-    let cookieb = document.getElementById('ila-cookie-banner-here');
-    var content_path = 'partials/ila-cookie-banner-content.part.html';
-    let banner_response = await fetch(content_path);
     let banner_content = await getCookieBannerContent();
     cookieb.insertAdjacentHTML("afterbegin", banner_content);
 }
