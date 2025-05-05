@@ -56,11 +56,6 @@ async function addCookieBanner() {
     openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad');
 }
 
-// async function OptanonWrapper() {
-//     /* Replace old OneTrust banner. */
-//     await addCookieBanner();
-// }
-
 async function addCookieBannerToDiv() {
     /* Allows controlling placement of banner in page content. 
      * Requires <div id='ila-cookie-banner-here' /> to be added to page HTML.
