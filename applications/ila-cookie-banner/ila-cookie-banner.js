@@ -64,14 +64,6 @@ async function addCookieBanner() {
     openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad');
 }
 
-async function addCookieBannerToDiv() {
-    /* Allows controlling placement of banner in page content. 
-     * Requires <div id='ila-cookie-banner-here' /> to be added to page HTML.
-    */
-    let banner_content = await getCookieBannerContent();
-    cookieb.insertAdjacentHTML("afterbegin", banner_content);
-}
-
 window.onload = function(){
     addCookieBanner();
 };
