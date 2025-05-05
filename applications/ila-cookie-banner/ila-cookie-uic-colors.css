@@ -1,0 +1,12 @@
+:root {
+    /**** UIC Colors ****/
+    --ila-cookieb-main: #001E62;
+    --ila-cookieb-accent: #FFBF3F;
+    --ila-cookieb-hover-button-font: #001E62;
+    --ila-cookieb-hover-text-font: var(--ila-cookieb-font-white);
+    --il-focused-link-color: #333333;
+    --ila-cookieb-line-color: #FFBF3F;
+    --ila-cookieb-focused-link-color: #FFBF3F;
+    --ila-cookieb-slideout-focused-link-color: #333333;
+    --ila-cookieb-link-color: #001E62;
+}
