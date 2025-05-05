@@ -50,7 +50,7 @@ async function addCookieBanner() {
     
     // Add cookie banner to page
     let banner_content = await getCookieBannerContent();
-    document.body.insertAdjacentHTML("afterend", banner_content);
+    document.body.insertAdjacentHTML("beforeend", banner_content);
     
     // Show cookie banner
     openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad');
