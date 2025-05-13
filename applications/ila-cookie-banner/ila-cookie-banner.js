@@ -1,6 +1,8 @@
 
 // TODO: Update this to a load-balanced resilient (CDN) path:
 let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+// For local testing purposes, uncomment the line below and comment out the line above:
+//let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
 
 async function openCookieB(cookiebId, focusOnLoad) {
@@ -16,7 +18,7 @@ async function openCookieB(cookiebId, focusOnLoad) {
     cookieb.classList.add('ila-cookieb--first');
     manageAutoclose(cookiebId);
 
-    // Used to disable scroll on the page 
+    // Used to disable scroll on the page
     // document.body.classList.add('ila-cookieb-noscroll');
 
     // Used to enable a modal background on the page
@@ -31,7 +33,7 @@ function closeCookieB(cookiebId) {
     cookieb.classList.remove('ila-cookieb--open');
     cookieb.classList.add('ila-cookieb--closed');
 
-    // Used to enable scroll on the page 
+    // Used to enable scroll on the page
     // document.body.classList.remove('ila-cookieb-noscroll');
 
     // Used to disable a modal background on the page
@@ -44,7 +46,7 @@ function manageAutoclose(cookiebId) {
 }
 
 async function getCookieBannerContent(content_path) {
-    /* Tip: It may be necssary to expand content_path to 
+    /* Tip: It may be necssary to expand content_path to
     include the full final web URL of the partial file. */
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
@@ -65,7 +67,7 @@ async function addCookieBanner() {
             theme = script_element.getAttribute("data-domain-script");
         }
     }
-    
+
     switch(theme) {
         case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
         case "uic":
@@ -79,8 +81,8 @@ async function addCookieBanner() {
             css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uiuc-colors.css');
             break;
     }
-    
-    
+
+
     // Add cookie banner to page
     let banner_content = "<style>";
     banner_content += await getCookieBannerContent(get_url + '/css/ila-slideover.css');
@@ -89,9 +91,16 @@ async function addCookieBanner() {
     banner_content += "</style>";
     banner_content += await getCookieBannerContent(get_url + '/partials/ila-cookie-banner-content.part.html');
     document.body.insertAdjacentHTML("beforeend", banner_content);
-    
+
     // Show cookie banner
     openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad');
+// Open the 'About Cookies' slide-over when existing legacy 'About Cookies' buttons are clicked.
+    let about_button = document.getElementById("ot-sdk-btn");
+    if (about_button) {
+        about_button.addEventListener("click", function() {
+            openSlideover('ilaCookieSlideover');
+        });
+    }
 }
 
 window.onload = function(){

@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir -p ./docs/css
 mkdir -p ./docs/js
 find ./applications -iregex .*[.]js$ -exec cp {} ./docs/js \;
