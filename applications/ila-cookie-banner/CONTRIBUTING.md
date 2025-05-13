@@ -10,8 +10,9 @@ On Windows, use this script:
 
 ```powershell
 Copy-Item .\applications\ila-cookie-banner\ila-cookie-banner-content.part.html .\docs\partials\
-Copy-Item .\applications\ila-cookie-banner\ila-cookie-banner.js .\docs\js\
 Copy-Item .\applications\ila-cookie-banner\*.css .\docs\css\
+Copy-Item .\applications\ila-cookie-banner\ila-cookie-banner.js .\docs\js\
+Get-Content .\applications\ila-slideovers\ila-slideover.js | Out-File -Append docs\js\ila-cookie-banner.js
 ```
 
 2. Run a mini local webserver.

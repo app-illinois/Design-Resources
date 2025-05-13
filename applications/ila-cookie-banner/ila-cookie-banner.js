@@ -48,8 +48,19 @@ async function getCookieBannerContent(content_path) {
 
 async function addCookieBanner() {
     /* Appends to the end of the page. */
-    let theme = document.getElementById("cookie-banner-script").getAttribute("data-domain-script");
-
+    let script_element = document.getElementById("cookie-banner-script");
+    let theme = 0;
+    if(script_element){
+        theme = script_element.getAttribute("data-domain-script");
+    }
+    else {
+        // Legacy configurations may only have the <script data-domain-script=...>, with no id set.
+        script_element = document.querySelector('script[data-domain-script]');
+        if(script_element){
+            theme = script_element.getAttribute("data-domain-script");
+        }
+    }
+    
     switch(theme) {
         case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
         case "uic":
@@ -63,6 +74,7 @@ async function addCookieBanner() {
             css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
             break;
     }
+    
     
     // Add cookie banner to page
     let banner_content = "<style>";
