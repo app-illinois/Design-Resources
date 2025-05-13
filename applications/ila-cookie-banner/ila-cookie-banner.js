@@ -25,7 +25,8 @@ async function openCookieB(cookiebId) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.add('ila-cookieb-modal');
 
-    document.getElementById('ilaCookieBFocusOnLoad').focus();
+    let cookie_header = document.getElementById('ilaCookieNoticeHeader');
+    if(cookie_header){ cookie_header.focus(); }
 }
 
 function closeCookieB(cookiebId) {
@@ -39,6 +40,8 @@ function closeCookieB(cookiebId) {
     // Used to disable a modal background on the page
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.remove('ila-cookieb-modal');
+    let h1tag = document.querySelector('h1');
+    if(h1tag) { h1tag.focus(); }
 }
 
 function manageAutoclose(cookiebId) {
@@ -94,7 +97,8 @@ async function addCookieBanner() {
 
     // Show cookie banner
     openCookieB('ilaCookieBOne');
-// Open the 'About Cookies' slide-over when existing legacy 'About Cookies' buttons are clicked.
+
+    // Open the 'About Cookies' slide-over when existing legacy 'About Cookies' buttons are clicked.
     let about_button = document.getElementById("ot-sdk-btn");
     if (about_button) {
         about_button.addEventListener("click", function() {
