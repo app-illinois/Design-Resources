@@ -2,10 +2,10 @@
 // TODO: Update this to a load-balanced resilient (CDN) path:
 let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
 // For local testing purposes, uncomment the line below and comment out the line above:
-//let cookie_banner_root_url = '.';
+// let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
 
-async function openCookieB(cookiebId, focusOnLoad) {
+async function openCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
     cookieb.classList.add('ila-cookieb--open');
@@ -25,7 +25,7 @@ async function openCookieB(cookiebId, focusOnLoad) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.add('ila-cookieb-modal');
 
-    document.getElementById(focusOnLoad).focus();
+    document.getElementById('ilaCookieBFocusOnLoad').focus();
 }
 
 function closeCookieB(cookiebId) {
@@ -93,7 +93,7 @@ async function addCookieBanner() {
     document.body.insertAdjacentHTML("beforeend", banner_content);
 
     // Show cookie banner
-    openCookieB('ilaCookieBOne', 'ilaCookieBFocusOnLoad');
+    openCookieB('ilaCookieBOne');
 // Open the 'About Cookies' slide-over when existing legacy 'About Cookies' buttons are clicked.
     let about_button = document.getElementById("ot-sdk-btn");
     if (about_button) {
