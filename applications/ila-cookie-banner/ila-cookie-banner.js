@@ -48,21 +48,41 @@ async function getCookieBannerContent(content_path) {
 
 async function addCookieBanner() {
     /* Appends to the end of the page. */
-    let theme = document.getElementById("cookie-banner-script").getAttribute("data-domain-script");
-
-    switch(theme) {
-        case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
-        case "uic":
-            css_content = await getCookieBannerContent('css/ila-cookie-uic-colors.css');
-            break;
-        case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
-        case "uis":
-            css_content = await getCookieBannerContent('css/ila-cookie-uis-colors.css');
-            break;
-        default:
-            css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
-            break;
+    let script_element = document.getElementById("cookie-banner-script");
+    let theme = 0;
+    if(script_element){
+        theme = script_element.getAttribute("data-domain-script");
     }
+    else {
+        // Legacy configurations may only have the <script data-domain-script=...>, with no id set.
+        script_element = document.querySelector('script[data-domain-script]');
+        if(script_element){
+            theme = script_element.getAttribute("data-domain-script");
+        }
+    }
+    
+    if(theme) {
+        switch(theme) {
+            case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
+            case "uic":
+                css_content = await getCookieBannerContent('css/ila-cookie-uic-colors.css');
+                break;
+            case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
+            case "uis":
+                css_content = await getCookieBannerContent('css/ila-cookie-uis-colors.css');
+                break;
+            default:
+                css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
+                break;
+        }
+    }
+    else {
+        // If all else fails, use our default CSS
+        console.debug("No cookie banner theme found, using default.")
+        css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
+
+    }
+    
     
     // Add cookie banner to page
     let banner_content = "<style>";
