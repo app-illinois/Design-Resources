@@ -1,3 +1,8 @@
+
+// TODO: Update this to a load-balanced resilient (CDN) path:
+let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+let get_url = cookie_banner_root_url;
+
 async function openCookieB(cookiebId, focusOnLoad) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
@@ -64,25 +69,25 @@ async function addCookieBanner() {
     switch(theme) {
         case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
         case "uic":
-            css_content = await getCookieBannerContent('css/ila-cookie-uic-colors.css');
+            css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uic-colors.css');
             break;
         case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
         case "uis":
-            css_content = await getCookieBannerContent('css/ila-cookie-uis-colors.css');
+            css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uis-colors.css');
             break;
         default:
-            css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
+            css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uiuc-colors.css');
             break;
     }
     
     
     // Add cookie banner to page
     let banner_content = "<style>";
-    banner_content += await getCookieBannerContent('css/ila-slideover.css');
-    banner_content += await getCookieBannerContent('css/ila-cookie-banner.css');
+    banner_content += await getCookieBannerContent(get_url + '/css/ila-slideover.css');
+    banner_content += await getCookieBannerContent(get_url + '/css/ila-cookie-banner.css');
     banner_content += css_content;
     banner_content += "</style>";
-    banner_content += await getCookieBannerContent('partials/ila-cookie-banner-content.part.html');
+    banner_content += await getCookieBannerContent(get_url + '/partials/ila-cookie-banner-content.part.html');
     document.body.insertAdjacentHTML("beforeend", banner_content);
     
     // Show cookie banner
