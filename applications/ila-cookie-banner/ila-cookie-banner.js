@@ -61,26 +61,18 @@ async function addCookieBanner() {
         }
     }
     
-    if(theme) {
-        switch(theme) {
-            case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
-            case "uic":
-                css_content = await getCookieBannerContent('css/ila-cookie-uic-colors.css');
-                break;
-            case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
-            case "uis":
-                css_content = await getCookieBannerContent('css/ila-cookie-uis-colors.css');
-                break;
-            default:
-                css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
-                break;
-        }
-    }
-    else {
-        // If all else fails, use our default CSS
-        console.debug("No cookie banner theme found, using default.")
-        css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
-
+    switch(theme) {
+        case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
+        case "uic":
+            css_content = await getCookieBannerContent('css/ila-cookie-uic-colors.css');
+            break;
+        case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
+        case "uis":
+            css_content = await getCookieBannerContent('css/ila-cookie-uis-colors.css');
+            break;
+        default:
+            css_content = await getCookieBannerContent('css/ila-cookie-uiuc-colors.css');
+            break;
     }
     
     
