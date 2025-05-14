@@ -1,7 +1,11 @@
-<div class="cookieb-holder ila-cookieb_no-printing" role="alert">
+<div 
+    role="dialog"
+    aria-labelledby="ilaCookieNoticeHeader"
+    aria-describedby="ilaCookieNoticeDetails"
+    class="cookieb-holder ila-cookieb_no-printing">
     <div class="cookieb-holder-inner">
         <div id="ilaCookieBOne" class="ila-cookieb ila-cookieb--closed">
-            <div tabindex="0" id="ilaCookieBFocusOnLoad" class="ila-cookieb__cookieb"
+            <div class="ila-cookieb__cookieb"
                 aria-label="Cookie Notice">
                 <button type="button" class="ila-cookieb__close-button" aria-label="close cookie notice"
                     onclick="closeCookieB('ilaCookieBOne')">
@@ -9,16 +13,15 @@
                         <strong>X</strong>
                     </div>
                 </button>
-                <div class="ila-cookieb__heading">
+                <div tabindex="0" id="ilaCookieNoticeHeader" class="ila-cookieb__heading">
                     <h2 class="ila-cookieb__h3">Cookie Notice</h2>
                 </div>
-                <div class="ila-cookieb__content">
+                <div id="ilaCookieNoticeDetails" class="ila-cookieb__content">
                     <p>
                         We use Cookies on this site to enhance your experience and improve our marketing
                         efforts. Click on “About Cookies” to learn more. By continuing to browse without
                         changing your browser settings to block or delete Cookies, you agree to the storing of
                         Cookies and related technologies on your device.
-                        <br>
                         <a class="ila-cookieb__popup-info-link ila-cookieb__popup-info" target=_new
                             href="https://www.vpaa.uillinois.edu/resources/cookies">
                             <strong>University of Illinois System Cookie Policy.</strong>

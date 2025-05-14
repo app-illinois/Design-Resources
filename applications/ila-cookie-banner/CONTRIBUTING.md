@@ -1,21 +1,16 @@
 ## Local Testing / Debugging the Cookie Banner
 
-1. Copy all necessary files to the `docs/js` and `docs/css` folder.
+1. Swap the commented URL at the top of `ila-cookie-banner.js` so that the version with `'.'` is un-commented.
+
+2. Copy all necessary files to the `docs/js`, `docs/css`, and `docs/partials` folder.
 
 This happens automatically when the site is deployed, but must be done manually locally.
 
-On Linux or Mac run: `setuppages.sh`.
+On Linux or Mac run `setuppages.sh`.
 
-On Windows, use this script:
+On Windows, use run `setuppages.ps1`.
 
-```powershell
-Copy-Item .\applications\ila-cookie-banner\ila-cookie-banner-content.part.html .\docs\partials\
-Copy-Item .\applications\ila-cookie-banner\*.css .\docs\css\
-Copy-Item .\applications\ila-cookie-banner\ila-cookie-banner.js .\docs\js\
-Get-Content .\applications\ila-slideovers\ila-slideover.js | Out-File -Append docs\js\ila-cookie-banner.js
-```
-
-2. Run a mini local webserver.
+3. Run a mini local webserver.
 
 Modern browsers tend not to allow dynamic loading of page elements from local files, so a mini web server is needed when working on the cookie banner.
 
