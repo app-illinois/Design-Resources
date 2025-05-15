@@ -5,6 +5,8 @@ let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
 // let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
 
+var this_script = document.currentScript; // Must run before any function calls
+
 async function openCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
     cookieb.classList.remove('ila-cookieb--closed');
@@ -58,18 +60,7 @@ async function getCookieBannerContent(content_path) {
 
 async function addCookieBanner() {
     /* Appends to the end of the page. */
-    let script_element = document.getElementById("cookie-banner-script");
-    let theme = 0;
-    if(script_element){
-        theme = script_element.getAttribute("data-domain-script");
-    }
-    else {
-        // Legacy configurations may only have the <script data-domain-script=...>, with no id set.
-        script_element = document.querySelector('script[data-domain-script]');
-        if(script_element){
-            theme = script_element.getAttribute("data-domain-script");
-        }
-    }
+    let theme = this_script.getAttribute("data-domain-script");
 
     switch(theme) {
         case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
