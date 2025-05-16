@@ -1,20 +1,18 @@
 <div 
     role="dialog"
     aria-labelledby="ilaCookieNoticeHeader"
-    aria-describedby="ilaCookieNoticeDetails"
     class="cookieb-holder ila-cookieb_no-printing">
     <div class="cookieb-holder-inner">
         <div id="ilaCookieBOne" class="ila-cookieb ila-cookieb--closed">
-            <div class="ila-cookieb__cookieb"
-                aria-label="Cookie Notice">
+            <div class="ila-cookieb__cookieb">
                 <button type="button" class="ila-cookieb__close-button" aria-label="close cookie notice"
                     onclick="closeCookieB('ilaCookieBOne')">
                     <div class="ila-cookieb__close-icon" role="presentation">
                         <strong>X</strong>
                     </div>
                 </button>
-                <div tabindex="0" id="ilaCookieNoticeHeader" class="ila-cookieb__heading">
-                    <h2 class="ila-cookieb__h3">Cookie Notice</h2>
+                <div class="ila-cookieb__heading">
+                    <h2 id="ilaCookieNoticeHeader" class="ila-cookieb__h3">Cookie Notice</h2>
                 </div>
                 <div id="ilaCookieNoticeDetails" class="ila-cookieb__content">
                     <p>
@@ -34,7 +32,7 @@
                             aria-label="learn about cookies - opens modal dialogue">
                             About Cookies
                         </button>
-                        <button type="button" class="il-button ila-cookieb__button"
+                        <button id="ilaCookieCloseButton" type="button" class="il-button ila-cookieb__button"
                             onclick="closeCookieB('ilaCookieBOne')" aria-label="close cookie notice">
                             Close Cookie Notice
                         </button>

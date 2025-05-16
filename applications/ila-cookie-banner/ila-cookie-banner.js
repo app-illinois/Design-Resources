@@ -27,8 +27,9 @@ async function openCookieB(cookiebId) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.add('ila-cookieb-modal');
 
-    let cookie_header = document.getElementById('ilaCookieNoticeHeader');
-    if(cookie_header){ cookie_header.focus(); }
+    let cookie_focus = document.getElementById('ilaCookieCloseButton');
+    if(cookie_focus){ cookie_focus.focus(); }
+
 }
 
 function closeCookieB(cookiebId) {
@@ -42,6 +43,8 @@ function closeCookieB(cookiebId) {
     // Used to disable a modal background on the page
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.remove('ila-cookieb-modal');
+    
+    // Put focus at the start of the page.
     let h1tag = document.querySelector('h1');
     if(h1tag) { h1tag.focus(); }
 }
