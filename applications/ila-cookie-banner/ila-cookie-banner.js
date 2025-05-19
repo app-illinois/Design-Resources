@@ -1,14 +1,14 @@
 
 // TODO: Update this to a load-balanced resilient (CDN) path:
-// let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
 // For local testing purposes, uncomment the line below and comment out the line above:
-let cookie_banner_root_url = '.';
+//let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
 
 var this_script = document.currentScript; // Must run before any function calls
 
 async function openCookieB(cookiebId) {
-    // Do not show if our 'dismiss' cookie is set 
+    // Do not show if our 'dismiss' cookie is set
     let skip = await getDismissCookieNotice();
     if(skip) { return; }
 
@@ -43,14 +43,14 @@ function closeCookieB(cookiebId) {
 
     // Used to enable scroll on the page
     // document.body.classList.remove('ila-cookieb-noscroll');
-    // 
-    
+    //
+
     setDismissCookieNotice();
 
     // Used to disable a modal background on the page
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.remove('ila-cookieb-modal');
-    
+
     // Put focus at the start of the page.
     let h1tag = document.querySelector('h1');
     if(h1tag) { h1tag.focus(); }
@@ -70,7 +70,7 @@ async function getCookieBannerContent(content_path) {
 
 async function setDismissCookieNotice() {
     var expires = new Date();
-    expires.setMonth(expires.getMonth() + 6); 
+    expires.setMonth(expires.getMonth() + 6);
     document.cookie = "cookie_notice=hide;expires=" + expires.toUTCString();
 }
 
@@ -80,13 +80,13 @@ async function getDismissCookieNotice() {
         return false;
     }
     return true;
-} 
+}
 
 
 function unsetCookieNoticeCookie() {
     // Helper for Demo Pages - Call this to make the Notice appear again.
     var expires = new Date();
-    expires.setMonth(expires.getMonth() - 1); 
+    expires.setMonth(expires.getMonth() - 1);
     document.cookie = "cookie_notice=hide;expires=" + expires.toUTCString();
     location.reload();
 }
