@@ -3,6 +3,7 @@
     --ila-cookieb-padding-x: 1rem;
     --ila-cookieb-padding-y: .3rem;
     --ila-cookieb-font-white: #ffffff;
+    --ila-cookieb-button-border-color: #ffffff;
 }
 
 body {
@@ -57,7 +58,7 @@ body {
   text-align: center;
   text-decoration: none;
   border-radius: .25em;
-  border: 2px solid var(--il-button-border-color);
+  border: 2px solid var(--ila-cookieb-button-border-color);
   font: 700 1.1875rem/1.25rem var(--il-font-sans);
   letter-spacing: .01em;
   transition: background-color .3s;
