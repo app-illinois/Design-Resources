@@ -79,6 +79,16 @@ async function getDismissCookieNotice() {
     return true;
 } 
 
+
+function unsetCookieNoticeCookie() {
+    // Helper for Demo Pages - Call this to make the Notice appear again.
+    var expires = new Date();
+    expires.setMonth(expires.getMonth() - 1); 
+    document.cookie = "cookie_notice=hide;expires=" + expires.toUTCString();
+    location.reload();
+}
+
+
 async function addCookieBanner() {
     /* Appends to the end of the page. */
     let theme = this_script.getAttribute("data-domain-script");
