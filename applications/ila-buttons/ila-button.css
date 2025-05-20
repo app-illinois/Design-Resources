@@ -1,176 +1,192 @@
-/* button-groups */
+
+/* ==========================================================================
+   Button System: ila-button
+   ========================================================================== */
+:root {
+    --il-storm: #707372;
+}
+
+/* Button Group
+   ========================================================================== */
 .ila-button-group {
     display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 16px;
-    flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    align-content: flex-start; /* Align lines to the start when wrapping */
+    gap: 16px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
 }
 
+/* Base Button Styles
+   ========================================================================== */
 .ila-button {
-    display: inline-flex;
+    display: inline-flex; /* Allows for gap and alignment of inner content */
     padding: 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 4px;
-    font-family: "Source Sans Pro";
-    font-size: 19px;
-    font-style: normal;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 10px; /* Space between text and icon (if any) */
+    border-radius: 4px;   
     font-weight: 700;
     line-height: 20px;
+    text-decoration: none; /* Remove default underline for <a> styled as button */
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease; /* Smooth transitions */
+    border-style: solid; /* Explicitly set border-style */
+    border-width: 2px; /* Default border width */
 }
 
-/*tertiary-blue-button*/
+    /* Button Icon
+   ========================================================================== */
+    .ila-button span { 
+        width: 22px;
+        height: 22px;      
+        background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M18.1239 8.12391H11.8761V1.87609C11.8761 0.845397 11.0307 0 10 0C8.96931 0 8.12391 0.845397 8.12391 1.87609V8.12391H1.87609C0.845397 8.12391 0 8.96931 0 10C0 11.0307 0.845397 11.8761 1.87609 11.8761H8.12391V18.1239C8.12391 19.1546 8.96931 20 10 20C11.0307 20 11.8761 19.1546 11.8761 18.1239V11.8761H18.1239C19.1546 11.8761 20 11.0307 20 10C20 8.96931 19.1546 8.12391 18.1239 8.12391Z' fill='%2313294B'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+/* Tertiary Buttons
+   ========================================================================== */
 .ila-tert-button-blue {
-    border: 2px solid var(--white, #FFF);
-    background: var(--il-blue, #13294B);
+    border-color: var(--white, #FFF);
+    background-color: var(--il-blue, #13294B);
     color: var(--white, #FFF);
 }
 
-/*secondary-orange-button*/
+/* Secondary Buttons
+   ========================================================================== */
 .ila-sec-button-orange {
-    border: 2px solid var(--il-orange, #FF5F05);
-    background: var(--il-orange, #FF5F05);
+    border-color: var(--il-orange, #FF5F05);
+    background-color: var(--il-orange, #FF5F05);
     color: var(--white, #FFF);
 }
 
-/*secondary-blue-button*/
 .ila-sec-button-blue {
-    border: 2px solid var(--il-blue, #13294B);
-    background: var(--il-blue, #13294B);
+    border-color: var(--il-blue, #13294B);
+    background-color: var(--il-blue, #13294B);
     color: var(--white, #FFF);
 }
 
-/*primary-orange-button*/
+/* Primary Buttons
+   ========================================================================== */
 .ila-pri-button-orange {
-    border: 2px solid var(--il-orange, #FF5F05);
-    background: var(--white, #FFF);
+    border-color: var(--il-orange, #FF5F05);
+    background-color: var(--white, #FFF);
     color: var(--il-orange, #FF5F05);
 }
 
-/* primary-blue-button */
 .ila-pri-button-blue {
-    border: 2px solid var(--il-blue, #13294B);
-    background: var(--white, #FFF);
+    border-color: var(--il-blue, #13294B);
+    background-color: var(--white, #FFF);
     color: var(--il-blue, #13294B);
 }
 
-/*tertiary-orange-button*/
-.ila-tert-button-orange {
-    border: 2px solid var(--white, #FFF);
-    background: var(--il-orange, #FF5F05);
-    color: var(--white, #FFF);
-}
-
-.ila-button:hover {   
+/* Hover States
+   ========================================================================== */
+.ila-button:hover:not(:disabled) {
     text-decoration-line: underline;
 }
 
-/*tertiary-blue-button*/
-.ila-tert-button-blue:hover {
-    border: 2px solid var(--il-blue, #13294B);
-    background: var(--white, #FFF);
-    color: var(--il-blue, #13294B);
-}
-
-/*secondary-orange-button*/
-.ila-sec-button-orange:hover {
-    border: 2px solid var(--il-orange, #FF5F05);
-    background: var(--white, #FFF);
+.ila-sec-button-orange:hover:not(:disabled) {
+    background-color: var(--white, #FFF);
     color: var(--il-orange, #FF5F05);
+    /* border-color: var(--il-orange, #FF5F05); /* Already set by base .ila-sec-button-orange */
 }
 
-/*secondary-blue-button*/
-.ila-sec-button-blue:hover {
-    border: 2px solid var(--il-blue, #13294B);
-    background: var(--white, #FFF);
-    /* Text */
+.ila-sec-button-blue:hover:not(:disabled) {
+    background-color: var(--white, #FFF);
     color: var(--il-blue, #13294B);
+    /* border-color: var(--il-blue, #13294B); /* Already set by base .ila-sec-button-blue */
 }
 
-/*primary-orange-button*/
-.ila-pri-button-orange:hover {
-    border: 2px solid var(--il-orange, #FF5F05);
-    background: var(--il-orange, #FF5F05);
+.ila-pri-button-orange:hover:not(:disabled) {
+    background-color: var(--il-orange, #FF5F05);
     color: var(--white, #FFF);
+    /* border-color: var(--il-orange, #FF5F05); /* Already set */
 }
 
-/* primary-blue-button */
-.ila-pri-button-blue:hover {
-    border: 2px solid var(--il-blue, #13294B);
-    background: var(--il-blue, #13294B);
+.ila-pri-button-blue:hover:not(:disabled) {
+    background-color: var(--il-blue, #13294B);
     color: var(--white, #FFF);
+    /* border-color: var(--il-blue, #13294B); /* Already set */
 }
 
-/*tertiary-orange-button*/
-.ila-tert-button-orange:hover {
-    border: 2px solid var(--il-orange, #FF5F05);
-    background: var(--white, #FFF);
-    color: var(--il-orange, #FF5F05);
-}
-
-.ila-button:focus { 
+/* Focus State
+   ========================================================================== */
+.ila-button:focus:not(:disabled) {
+    outline: none; /* Remove default browser outline to rely on custom style */  
     border-top: 2px solid var(--il-blue, #13294B);
     border-right: 2px solid var(--il-blue, #13294B);
     border-bottom: 4px solid var(--il-blue, #13294B);
     border-left: 2px solid var(--il-blue, #13294B);
-    background: var(--il-arches, #C7EDF8);
-    color: var(--il-blue, #13294B);   
-    text-decoration-line: underline;
+    background-color: var(--il-arches, #C7EDF8);
+    color: var(--il-blue, #13294B);
+    text-decoration-line: underline; /* Consistent with hover */
 }
 
-button:active {    
+/* Active States
+   ========================================================================== */
+.ila-button:active:not(:disabled) {
+    transform: translateY(1px); /* Subtle press effect */
+}
+
+.ila-sec-button-orange:active:not(:disabled) {
+    border-width: 4px; 
+    border-color: var(--il-orange, #FF5F05);
+    background-color: var(--il-blue, #13294B);
     color: var(--white, #FFF);
 }
 
-/*tertiary-orange-button*/
-.ila-tert-button-orange:active {
-    border: 4px solid var(--il-orange, #FF5F05);
-    background: var(--il-blue, #13294B);
+.ila-sec-button-blue:active:not(:disabled) {
+    border-width: 4px;
+    border-color: var(--il-blue, #13294B);
+    background-color: var(--il-orange, #FF5F05);
+    color: var(--white, #FFF);
 }
 
-/*tertiary-blue-button*/
-.ila-tert-button-blue:active {
-    border: 4px solid var(--il-blue, #13294B);
-    background: var(--il-orange, #FF5F05);
+.ila-pri-button-orange:active:not(:disabled) {
+    border-width: 4px;
+    border-color: var(--il-orange, #FF5F05);
+    background-color: var(--il-blue, #13294B);
+    color: var(--white, #FFF);
 }
 
-/*secondary-orange-button*/
-.ila-sec-button-orange:active {
-    border: 4px solid var(--il-orange, #FF5F05);
-    background: var(--il-blue, #13294B);
+.ila-pri-button-blue:active:not(:disabled) {
+    border-width: 4px;
+    border-color: var(--il-blue, #13294B);
+    background-color: var(--il-orange, #FF5F05);
+    color: var(--white, #FFF);
+}
+/* Disabled State
+   ========================================================================== */
+.ila-button:disabled,
+.ila-button[disabled] { /* Targets both the pseudo-class and attribute */
+    border-width: 2px; /* Ensure consistent border width */
+    border-color: var(--il-storm, #707372);
+    background-color: var(--white, #FFF); 
+    color: var(--il-storm, #707372);
+    cursor: not-allowed;
+    pointer-events: none; /* CRITICAL: Stops hover, active, focus, and click events */
+    text-decoration-line: none !important; /* Override any hover/focus underlines */
+    box-shadow: none !important; /* Override any focus shadows */
+    transform: none !important; /* Override any active transforms */
 }
 
-/*secondary-blue-button*/
-.ila-sec-button-blue:active {
-    border: 4px solid var(--il-blue, #13294B);
-    background: var(--il-orange, #FF5F05);
+
+/* Ensure all variants adopt the standard disabled appearance and override their specific styles */
+.ila-tert-button-blue:disabled, .ila-tert-button-blue[disabled],
+.ila-sec-button-orange:disabled, .ila-sec-button-orange[disabled],
+.ila-sec-button-blue:disabled, .ila-sec-button-blue[disabled],
+.ila-pri-button-orange:disabled, .ila-pri-button-orange[disabled],
+.ila-pri-button-blue:disabled, .ila-pri-button-blue[disabled] {  
+    background-color: var(--white, #FFF) !important; /* Ensure override of variant backgrounds */
+    color: var(--il-storm, #707372) !important; /* Ensure override of variant text colors */
+    border-color: var(--il-storm, #707372) !important; /* Ensure override of variant border colors */
+   
 }
 
-/*primary-orange-button*/
-.ila-pri-button-orange:active {
-    border: 4px solid var(--il-orange, #FF5F05);
-    background: var(--il-blue, #13294B);
-}
 
-/* primary-blue-button */
-.ila-pri-button-blue:active {
-    border: 4px solid var(--il-blue, #13294B);
-    background: var(--il-orange, #FF5F05);
-}
 
-button:disabled {    
-    border: 2px solid var(--il-storm, #707372);
-    background: var(--white, #FFF);
-    color: var(--il-storm, #707372);   
-}
-
-.ila-button span {
-    width: 22px;
-    height: 22px;
-    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M18.1239 8.12391H11.8761V1.87609C11.8761 0.845397 11.0307 0 10 0C8.96931 0 8.12391 0.845397 8.12391 1.87609V8.12391H1.87609C0.845397 8.12391 0 8.96931 0 10C0 11.0307 0.845397 11.8761 1.87609 11.8761H8.12391V18.1239C8.12391 19.1546 8.96931 20 10 20C11.0307 20 11.8761 19.1546 11.8761 18.1239V11.8761H18.1239C19.1546 11.8761 20 11.0307 20 10C20 8.96931 19.1546 8.12391 18.1239 8.12391Z' fill='%2313294B'/%3E%3C/svg%3E");
-}
 
 
 
