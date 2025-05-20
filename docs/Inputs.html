@@ -207,6 +207,25 @@
 
                 <br>  <br>
 
+                <h2>Standard File Upload</h2>
+                <div class="ila-file-upload-container">
+                    <input type="file" id="fileUpload1" aria-label="Upload file">
+                    <label for="fileUpload1" class="ila-file-upload-label">Choose File</label>
+                    <span class="ila-file-upload-placeholder" id="placeholder1">No file selected...</span>
+                </div>
+
+                <br>
+
+                <h2>Disabled File Upload</h2>
+                <div class="ila-file-upload-container disabled">
+                    <input type="file" id="fileUpload2" disabled aria-label="Upload file (disabled)">
+                    <label for="fileUpload2" class="ila-file-upload-label">Choose File</label>
+                    <span class="ila-file-upload-placeholder">Upload disabled</span>
+                </div>
+
+                <br>  <br>
+
+
                 <div>
                     <h2>Link</h2>
                     <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-inputs">Follow this link to the design standard in the GitHub repository. </a></p>
@@ -237,3 +256,29 @@
 
 </body>
 </html>
+
+
+<script>
+    // Optional JavaScript to update placeholder text
+    const fileInput1 = document.getElementById('fileUpload1');
+    const placeholder1 = document.getElementById('placeholder1');
+    const container1 = fileInput1.closest('.ila-file-upload-container');
+
+    if (fileInput1) {
+        fileInput1.addEventListener('change', function () {
+            if (this.files && this.files.length > 0) {
+                placeholder1.textContent = this.files[0].name;
+                if (container1) {
+                    container1.classList.add('file-chosen');
+                }
+            } else {
+                placeholder1.textContent = 'No file selected...';
+                if (container1) {
+                    container1.classList.remove('file-chosen');
+                }
+            }
+        });
+    }
+       
+
+</script>
