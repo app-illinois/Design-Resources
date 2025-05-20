@@ -269,21 +269,22 @@
 }
 
 /* ========== FILE UPLOAD ========== */
-/*
 .ila-file-upload-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
-    border: 1px solid var(--ilaGrey);
+    padding: 12px;
+    border: 2px solid var(--ilaGrey);
     background-color: white;
     width: 100%;
     transition: border-color var(--transition-fast), background-color var(--transition-fast);
     position: relative;
+    box-sizing: border-box;
 }
 
     .ila-file-upload-container:hover {
-        background-color: var(--ilaGrey);
+        background-color: #F0F7FA;
+        border-color: var(--ilaOrange);
     }
 
     .ila-file-upload-container:focus-within {
@@ -310,20 +311,57 @@
         left: 0;
         opacity: 0;
         width: 100%;
+        height: 100%;
+        cursor: pointer;
     }
 
+/* === STYLING THE BUTTON === */
 .ila-file-upload-label {
     display: inline-block;
     cursor: pointer;
-    font-size: 14px;
-    padding: 6px 12px;
-    border: 1px solid var(--ilaGrey);
-    color: #333;
-    background-color: #f8f8f8;
-    border-radius: 4px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px 20px; /* More padding */
+    border: 1px solid var(--ilaBlue); /* Blue border */
+    color: white; /* White text */
+    background-color: var(--ilaBlue); /* Blue background */
+    border-radius: 5px; /* Slightly more rounded corners */
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    z-index: 1;
 }
+
+    .ila-file-upload-label:hover {
+        background-color: var(--white, #FFF);
+        color: var(--il-blue, #13294B);
+    }
+
+    .ila-file-upload-label:active {
+        background-color: #004085; /* Darkest blue when clicking */
+        transform: translateY(1px); /* Simple press effect */
+    }
+/* === END STYLING THE BUTTON === */
+
 
 .ila-file-upload-placeholder {
     color: #bbb;
+    flex-grow: 1;
+    padding-left: 10px;
+    font-size: 14px;
+    z-index: 1;
 }
-*/
+
+.ila-file-upload-container.file-chosen .ila-file-upload-placeholder {
+    color: #333;
+}
+
+.ila-file-upload-container.disabled .ila-file-upload-label {
+    background-color: #b0b0b0;
+    color: #f0f0f0;
+    border-color: #999;
+    cursor: not-allowed;
+}
+
+    .ila-file-upload-container.disabled .ila-file-upload-label:hover {
+        background-color: #b0b0b0; /* Keep disabled style on hover */
+        border-color: #999;
+    }
