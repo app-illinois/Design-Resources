@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\applications",
+    "\\applications\\ila-inputs",
+    "\\applications\\ila-inputs\\css",
+    "\\docs"
   ],
-  "SelectedNode": "\\C:\\Users\\aobanion\\Documents\\Code\\TestProject",
   "PreviewInSolutionExplorer": false
 }
