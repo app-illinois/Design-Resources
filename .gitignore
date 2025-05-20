@@ -1,12 +1,7 @@
 .idea
 dist
 node_modules
-docs/css/app-toolkit.css
-docs/js/app-toolkit.js
+docs/css
+docs/js
 docs/svg
-.vs/Design-Resources/v16/.suo
-.vs/slnx.sqlite
-.vs/VSWorkspaceState.json
-.vs/Design-Resources/config/applicationhost.config
-.vs/VSWorkspaceState.json
-.vs/slnx.sqlite
+docs/partials
