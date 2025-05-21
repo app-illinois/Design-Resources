@@ -117,7 +117,7 @@
                     All the names should be self explanitory. This is needed to have enough specificity to override the default styles from the Illinois Framework.
                 </p>
                 <p>
-                    Radio Buttons: ila-radio<br/>
+                    Radio Buttons: ila-radio<br />
                     Checkboxes: ila-checkbox<br />
                     Standard Inputs (text, tel, pass, etc): ila-input<br />
                     Calendar: ila-calendar<br />
@@ -230,6 +230,22 @@
                 </div>
 
                 <br>  <br>
+                <h3>Toggle Button</h3>
+
+                <div class="ila-input-group">
+                    <button type="button" id="default" aria-pressed="false">
+                        Default
+                    </button>
+                </div>
+
+                <div class="ila-input-group">
+                    <button type="button" id="disabled" aria-pressed="true" disabled>
+                        Disabled
+                    </button>
+                </div>
+
+                <br>  <br>
+
 
 
                 <div>
@@ -264,27 +280,4 @@
 </html>
 
 
-<script>
-    // Optional JavaScript to update placeholder text
-    const fileInput1 = document.getElementById('fileUpload1');
-    const placeholder1 = document.getElementById('placeholder1');
-    const container1 = fileInput1.closest('.ila-file-upload-container');
-
-    if (fileInput1) {
-        fileInput1.addEventListener('change', function () {
-            if (this.files && this.files.length > 0) {
-                placeholder1.textContent = this.files[0].name;
-                if (container1) {
-                    container1.classList.add('file-chosen');
-                }
-            } else {
-                placeholder1.textContent = 'No file selected...';
-                if (container1) {
-                    container1.classList.remove('file-chosen');
-                }
-            }
-        });
-    }
-       
-
-</script>
+<script src="./js/ila-inputs.js"></script> 
