@@ -113,8 +113,9 @@
             <div>
                 <h2>Instructions</h2>
                 <p>
-                    All form elements will need to be in a div with the "ila-input-group" class applied, and inputs will need classes assigned from the list below.
-                    All the names should be self explanitory. This is needed to have enough specificity to override the default styles from the Illinois Framework.
+                    All form elements will need to be in a div with the "ila-input-group" class applied, and inputs will need classes assigned from the list below.<br />
+                    All the names should be self explanitory. This is needed to have enough specificity to override the default styles from the Illinois Framework.<br />
+                    Widths on all elements below are set on this page for demonstration purposes.
                 </p>
                 <p>
                     Radio Buttons: ila-radio<br />
@@ -167,7 +168,7 @@
                 <br><br>
 
                 <h3>Inputs:</h3>
-                <div class="ila-input-group">
+                <div class="ila-input-group" style="width:300px;">
                     <label for="txt">Text:</label>
                     <input class="ila-input" type="text" id="txt" name="fname">
                     <label for="num">Number:</label>
@@ -180,19 +181,19 @@
 
                 <br>  <br>
                 <h3>Calendar Select:</h3>
-                <div class="ila-input-group">
+                <div class="ila-input-group" style="width:300px;">
                     <input class="ila-calendar" type="date" id="start" name="trip-start" value="2018-07-22" />
                 </div>
 
                 <br>  <br>
                 <h3>Search Select:</h3>
-                <div class="ila-input-group">
+                <div class="ila-input-group" style="width:300px;">
                     <input class="ila-search" type="search" name="fsrch" id="fsrch" placeholder="Search">
                 </div>
 
                 <br>  <br>
                 <h3>Select Dropdown:</h3> <br>
-                <div class="ila-input-group">
+                <div class="ila-input-group" style="width:300px;">
                     <label for="cars">Choose a car:</label>
 
                     <select class="ila-select" name="cars" id="cars">
@@ -205,7 +206,7 @@
 
                 <br>  <br>
                 <h3>Text Area:</h3>
-                <div class="ila-input-group">
+                <div class="ila-input-group" style="width:300px;">
                     <label for="txtarea">Label for textarea:</label>
 
                     <textarea class="ila-textarea" id="txtarea" rows="4" cols="50"></textarea>
@@ -214,7 +215,7 @@
                 <br>  <br>
 
                 <h2>Standard File Upload</h2>
-                <div class="ila-file-upload-container">
+                <div class="ila-file-upload-container" style="width:300px;">
                     <input type="file" id="fileUpload1" aria-label="Upload file">
                     <label for="fileUpload1" class="ila-file-upload-label">Choose File</label>
                     <span class="ila-file-upload-placeholder" id="placeholder1">No file selected...</span>
@@ -223,7 +224,7 @@
                 <br>
 
                 <h2>Disabled File Upload</h2>
-                <div class="ila-file-upload-container disabled">
+                <div class="ila-file-upload-container disabled" style="width:300px;">
                     <input type="file" id="fileUpload2" disabled aria-label="Upload file (disabled)">
                     <label for="fileUpload2" class="ila-file-upload-label">Choose File</label>
                     <span class="ila-file-upload-placeholder">Upload disabled</span>
@@ -246,7 +247,23 @@
 
                 <br>  <br>
 
+                <!--<h3>Validation example:</h3>
+                <div class="ila-input-group">
+                    <label for="txt">Text:</label>
+                    <input class="ila-input" type="text" id="txt" name="fname">
+                </div>
 
+
+                <br>  <br>-->
+                <!--<input type="range" class="ila-range-slider" min="0" max="100" value="50" list="markers" style="width:300px;">
+
+                <datalist id="markers">
+                    <option value="0"></option>
+                    <option value="25"></option>
+                    <option value="50"></option>
+                    <option value="75"></option>
+                    <option value="100"></option>
+                </datalist>-->
 
                 <div>
                     <h2>Link</h2>

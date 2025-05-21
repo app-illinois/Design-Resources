@@ -542,3 +542,282 @@ ila-input-group.ila-toggles {
         color-adjust: exact;
     }
 }
+
+
+/* ========== RANGE INPUT (Revised for more 'enabled' default look) ========== */
+
+/*
+  Define variables based on the toggle button aesthetics.
+  These could be in :root or a common parent class like .ila-input-group.
+  Make sure these are defined in your actual CSS where they can be accessed.
+*/
+/*:root {*/ /* Or a more specific selector like .ila-style-context */
+    /*--ila-storm-60: #8E9090;*/ /* For disabled elements */
+    /*--ila-storm-85: #929191;*/ /* Default subtle grey (used for track) */
+    /*--ila-orange: #FF5F05;*/ /* Hover accent */
+    /*--ila-blue-dark: #13294b;*/ /* Focus/active primary color, NOW DEFAULT THUMB BORDER */
+    /*--ila-blue-light: #C7EDF8;*/ /* Focus/active secondary color */
+    /*--ila-white: #fff;*/ /* Thumb background, etc. */
+    /* Range slider specific variables */
+    /*--ila-range-track-height: 0.6em;
+    --ila-range-track-border-radius: 1em;
+    --ila-range-thumb-size: 1.6em;
+    --ila-range-thumb-border-width: 0.25em;
+}*/
+
+/* Basic styling for the range input */
+/*input[type="range"].ila-range-slider {
+    display: block;
+    width: 100%;
+    margin: 1.5em 0;*/ /* Consistent with toggle group item margins */
+    /*background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}*/
+
+    /* === WebKit (Chrome, Safari, new Edge) === */
+    /*input[type="range"].ila-range-slider::-webkit-slider-runnable-track {
+        width: 100%;
+        height: var(--ila-range-track-height);
+        background: var(--ila-storm-85);*/ /* Default track color */
+        /*border-radius: var(--ila-range-track-border-radius);
+        border: none;
+        transition: background 0.25s ease;
+    }
+
+    input[type="range"].ila-range-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: var(--ila-range-thumb-size);
+        height: var(--ila-range-thumb-size);
+        background: var(--ila-white);
+        border-radius: 50%;*/
+        /* CHANGED: Default thumb border to dark blue for more 'enabled' look */
+        /*border: var(--ila-range-thumb-border-width) solid var(--ila-blue-dark);*/
+        /* Vertically center thumb on track */
+        /*margin-top: calc((var(--ila-range-track-height) - var(--ila-range-thumb-size)) / 2);
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+    }*/
+
+    /* Hover states for WebKit */
+    /*input[type="range"].ila-range-slider:hover::-webkit-slider-thumb {
+        border-color: var(--ila-orange);*/ /* Orange for hover, consistent */
+    /*}*/
+
+    /* Focus outline for the whole input */
+    /*input[type="range"].ila-range-slider:focus-visible {
+        outline: 3px solid var(--ila-blue-dark);
+        outline-offset: 0.2em;
+    }*/
+
+        /* Focus states for WebKit - track and thumb change */
+        /*input[type="range"].ila-range-slider:focus-visible::-webkit-slider-runnable-track {
+            background: var(--ila-blue-light);*/ /* Track bg changes to light blue */
+        /*}
+
+        input[type="range"].ila-range-slider:focus-visible::-webkit-slider-thumb {
+            background-color: var(--ila-blue-dark);*/ /* Thumb bg changes to dark blue */
+            /*border-color: var(--ila-blue-light);*/ /* Thumb border changes to light blue */
+        /*}*/
+
+    /* Active (dragging) states for WebKit thumb */
+    /*input[type="range"].ila-range-slider:active::-webkit-slider-thumb {
+        background-color: var(--ila-blue-dark);
+        border-color: var(--ila-blue-dark);
+    }*/
+
+
+    /* === Mozilla Firefox === */
+    /*input[type="range"].ila-range-slider::-moz-range-track {
+        width: 100%;
+        height: var(--ila-range-track-height);
+        background: var(--ila-storm-85);*/ /* Default track color */
+        /*border-radius: var(--ila-range-track-border-radius);
+        border: none;
+        transition: background 0.25s ease;
+    }
+
+    input[type="range"].ila-range-slider::-moz-range-thumb {
+        width: var(--ila-range-thumb-size);
+        height: var(--ila-range-thumb-size);
+        background: var(--ila-white);
+        border-radius: 50%;*/
+        /* CHANGED: Default thumb border to dark blue */
+        /*border: var(--ila-range-thumb-border-width) solid var(--ila-blue-dark);
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+    }*/
+
+    /* Progress fill for Firefox */
+    /*input[type="range"].ila-range-slider::-moz-range-progress {
+        background-color: var(--ila-blue-dark);*/ /* "Active" color for filled part */
+        /*height: var(--ila-range-track-height);
+        border-radius: var(--ila-range-track-border-radius);
+        border: none;
+    }*/
+
+    /* Hover states for Firefox */
+    /*input[type="range"].ila-range-slider:hover::-moz-range-thumb {
+        border-color: var(--ila-orange);
+    }*/
+
+    /* Focus states for Firefox */
+    /*input[type="range"].ila-range-slider:focus-visible::-moz-range-track {
+        background: var(--ila-blue-light);
+    }
+
+    input[type="range"].ila-range-slider:focus-visible::-moz-range-thumb {
+        background-color: var(--ila-blue-dark);
+        border-color: var(--ila-blue-light);
+    }
+
+    input[type="range"].ila-range-slider:focus-visible::-moz-range-progress {
+        background-color: var(--ila-blue-dark);
+    }*/
+
+    /* Active (dragging) states for Firefox thumb */
+    /*input[type="range"].ila-range-slider:active::-moz-range-thumb {
+        background-color: var(--ila-blue-dark);
+        border-color: var(--ila-blue-dark);
+    }*/
+
+
+    /* === Microsoft Edge (Legacy) & IE === */
+    /*input[type="range"].ila-range-slider::-ms-track {
+        width: 100%;
+        height: var(--ila-range-track-height);
+        background: transparent;
+        border-color: transparent;
+        border-width: calc(var(--ila-range-thumb-size) / 2) 0;
+        color: transparent;
+        transition: background 0.25s ease;
+    }
+
+    input[type="range"].ila-range-slider::-ms-fill-lower {
+        background: var(--ila-blue-dark);*/ /* Filled part */
+        /*border-radius: var(--ila-range-track-border-radius);
+        transition: background 0.25s ease;
+    }
+
+    input[type="range"].ila-range-slider::-ms-fill-upper {
+        background: var(--ila-storm-85);*/ /* Unfilled part - default track color */
+        /*border-radius: var(--ila-range-track-border-radius);
+        transition: background 0.25s ease;
+    }
+
+    input[type="range"].ila-range-slider::-ms-thumb {
+        width: var(--ila-range-thumb-size);
+        height: var(--ila-range-thumb-size);
+        background: var(--ila-white);
+        border-radius: 50%;*/
+        /* CHANGED: Default thumb border to dark blue */
+        /*border: var(--ila-range-thumb-border-width) solid var(--ila-blue-dark);
+        margin-top: 0px;
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+    }*/
+
+    /* Hover states for IE/Edge Legacy */
+    /*input[type="range"].ila-range-slider:hover::-ms-thumb {
+        border-color: var(--ila-orange);
+    }*/
+
+    /* Focus states for IE/Edge Legacy */
+    /*input[type="range"].ila-range-slider:focus-visible::-ms-fill-upper {
+        background: var(--ila-blue-light);
+    }
+
+    input[type="range"].ila-range-slider:focus-visible::-ms-fill-lower {
+        background: var(--ila-blue-dark);
+    }
+
+    input[type="range"].ila-range-slider:focus-visible::-ms-thumb {
+        background-color: var(--ila-blue-dark);
+        border-color: var(--ila-blue-light);
+    }*/
+
+    /* Active (dragging) states for IE/Edge Legacy thumb */
+    /*input[type="range"].ila-range-slider:active::-ms-thumb {
+        background-color: var(--ila-blue-dark);
+        border-color: var(--ila-blue-dark);
+    }*/
+
+
+    /* === Disabled State (Common logic, applied with browser-specific selectors) === */
+    /*input[type="range"].ila-range-slider:disabled {
+        cursor: not-allowed;
+    }*/
+
+        /* Disabled WebKit */
+        /*input[type="range"].ila-range-slider:disabled::-webkit-slider-runnable-track {
+            background: var(--ila-storm-60);
+        }
+
+        input[type="range"].ila-range-slider:disabled::-webkit-slider-thumb {
+            background: var(--ila-white);
+            border-color: var(--ila-storm-60);*/ /* Clearly different from new default blue border */
+            /*cursor: not-allowed;
+        }*/
+
+        /* Disabled Firefox */
+        /*input[type="range"].ila-range-slider:disabled::-moz-range-track {
+            background: var(--ila-storm-60);
+        }
+
+        input[type="range"].ila-range-slider:disabled::-moz-range-thumb {
+            background: var(--ila-white);
+            border-color: var(--ila-storm-60);
+            cursor: not-allowed;
+        }
+
+        input[type="range"].ila-range-slider:disabled::-moz-range-progress {
+            background-color: var(--ila-storm-85);
+        }*/
+
+        /* Disabled IE/Edge Legacy */
+        /*input[type="range"].ila-range-slider:disabled::-ms-fill-lower {
+            background: var(--ila-storm-85);
+        }
+
+        input[type="range"].ila-range-slider:disabled::-ms-fill-upper {
+            background: var(--ila-storm-60);
+        }
+
+        input[type="range"].ila-range-slider:disabled::-ms-thumb {
+            background: var(--ila-white);
+            border-color: var(--ila-storm-60);
+            cursor: not-allowed;
+        }*/
+
+/* Reduced motion - remove transitions */
+/*@media screen and (prefers-reduced-motion: reduce) {
+    input[type="range"].ila-range-slider::-webkit-slider-runnable-track,
+    input[type="range"].ila-range-slider::-webkit-slider-thumb,
+    input[type="range"].ila-range-slider::-moz-range-track,
+    input[type="range"].ila-range-slider::-moz-range-thumb,
+    input[type="range"].ila-range-slider::-moz-range-progress,
+    input[type="range"].ila-range-slider::-ms-track,
+    input[type="range"].ila-range-slider::-ms-fill-lower,
+    input[type="range"].ila-range-slider::-ms-fill-upper,
+    input[type="range"].ila-range-slider::-ms-thumb {
+        transition: none !important;
+    }
+}*/
+
+/* Print styles - ensure colors are printed */
+/*@media print {
+    input[type="range"].ila-range-slider,
+    input[type="range"].ila-range-slider::-webkit-slider-runnable-track,
+    input[type="range"].ila-range-slider::-webkit-slider-thumb,
+    input[type="range"].ila-range-slider::-moz-range-track,
+    input[type="range"].ila-range-slider::-moz-range-thumb,
+    input[type="range"].ila-range-slider::-moz-range-progress,
+    input[type="range"].ila-range-slider::-ms-fill-lower,
+    input[type="range"].ila-range-slider::-ms-fill-upper,
+    input[type="range"].ila-range-slider::-ms-thumb {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}*/
