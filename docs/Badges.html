@@ -445,10 +445,10 @@
     href="./css/ila-badge.css"
   >
   <!-- local imports for local testing docs page. -->
-  <link
+  <!-- <link
     rel="stylesheet"
     href="../applications/ila-badges/ila-badge.css"
-  />
+  /> -->
 </head>
 
 <body>
@@ -574,6 +574,18 @@
           Badges do not need any additional accessibility functionality if
           their meaning can be inferred from context (ie, the badge is read by
           the screen reader after or before the item it is badging).
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Instructions</h2>
+        <p>
+          Place the image (or div with background image, etc) inside a div with the class ila-badge__container. Create a
+          span with
+          class ila-badge as a direct child of this container.
+          There are two css properties of ila-badge you may need to tweak depending on your image. The default values
+          are 'top: -5px' and 'left: 70%'. Customize these by either applying your own class or using the style property
+          on the span tag which has the ila-badge class.
         </p>
       </div>
       <br />

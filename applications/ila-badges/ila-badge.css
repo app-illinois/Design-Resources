@@ -36,7 +36,8 @@
 }
 .ila-badge {
   position: absolute;
-
+  top: -5px;
+  left: 70%;
   width: fit-content;
   height: auto;
   color: #ffffff;
