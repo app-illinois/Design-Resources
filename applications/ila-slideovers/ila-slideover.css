@@ -1,95 +1,90 @@
 /* component styles */
 :root {
-    --ila-slideover-padding-x: 25px;
-    --ila-slideover-padding-y: 5px;
+  --ila-slideover-padding-x: 25px;
+  --ila-slideover-padding-y: 5px;
 }
 .ila-body--has-dialog {
-    overflow: hidden;
+  overflow: hidden;
 }
 .ila-slideover {
-    position: fixed;
-    z-index: 3000;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .ila-slideover--closed {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 250ms, visibility 250ms;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms, visibility 250ms;
 }
 
 .ila-slideover--open {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 500ms, visibility 500ms;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms, visibility 500ms;
 }
 .ila-slideover__overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #24242496;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #24242496;
+  cursor: pointer;
 }
 
 .ila-slideover__slideover {
-    position: absolute;
-    box-shadow: 0px 0px 17px 0px black;
-    background: white;
-    overflow-y: auto;
+  position: absolute;
+  box-shadow: 0px 0px 17px 0px black;
+  background: white;
+  overflow-y: auto;
 }
 
 .ila-slideover--right .ila-slideover__slideover {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 70%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 70%;
 }
 .ila-slideover--left .ila-slideover__slideover {
-    top: 0;
-    bottom: 0;
-    right: 70%;
-    left: 0;
+  top: 0;
+  bottom: 0;
+  right: 70%;
+  left: 0;
 }
 
 .ila-slideover__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
-    border-bottom: 2px solid var(--il-orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
+  border-bottom: 2px solid var(--il-orange);
 }
 
 .ila-slideover__label {
-    margin: 0;
+  margin: 0;
 }
 
 .ila-slideover__close-button {
-    border: none;
-    background: transparent;
-    padding: 5px;
-    cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
 }
 .ila-slideover__close-icon {
-    font-size: 35px;
+  font-size: 35px;
 }
 .ila-slideover__close-button:hover,
 .ila-slideover__close-button:focus {
-    transition: background-color 0.3s;
-    background-color: var(--il-blue);
-    color: white;
+  transition: background-color 0.3s;
+  background-color: var(--il-blue);
+  color: white;
 }
 
 .ila-slideover__content {
-    padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
-}
-
-/* global styles */
-body {
-    font-family: 'Source Sans Pro';
+  padding: var(--ila-slideover-padding-y) var(--ila-slideover-padding-x);
 }
