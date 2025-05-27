@@ -1,0 +1,16 @@
+name: Cookie banner zip
+on:
+  workflow_dispatch:
+    branches:
+      - develop
+jobs:
+  make_zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create zip file
+        run: bash ./make-cookie-zip.sh
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: cookie-banner.zip
