@@ -4,6 +4,12 @@
     --ila-cookieb-padding-y: .3rem;
     --ila-cookieb-font-white: #ffffff;
     --ila-cookieb-button-border-color: #001E62;
+    /* These are echoed here to provide non-toolkit sites consistent style: */
+    --ila-cookieb-border-gray: #707070; /* from toolkit v2 --il-gray-2 */
+    --ila-cookieb-button-blue: #13294b; /* from toolkit v2 --il-blue */
+    --ila-cookieb-button-background-color: #ffffff; /* white */
+    --ila-cookieb-font-sans: "Source Sans Pro", sans-serif;
+    --ila-cookieb-button-foreground-color: #13294b; /* from --il-blue */
 }
 
 body {
@@ -19,7 +25,7 @@ body {
 }
 
 .ila-cookieb__cookieb {
-    border: 1px solid var(--il-gray-2);
+    border: 1px solid var(--ila-cookieb-border-gray);
     margin: var(--ila-cookieb-margin);
     padding: var(--ila-cookieb-padding-y) var(--ila-cookieb-padding-x);
     background-color: white;
@@ -50,16 +56,16 @@ body {
 
 .ila-cookieb__button {
   --color-primary: #fff;
-  --color-secondary: var(--il-blue);
-  background-color: var(--il-button-background-color);
-  color: var(--il-button-foreground-color);
+  --color-secondary: var(--ila-cookieb-button-blue);
+  background-color: var(--ila-cookieb-button-background-color);
+  color: var(--ila-cookieb-button-foreground-color);
   display: inline-block;
   padding: 12px 20px;
   text-align: center;
   text-decoration: none;
   border-radius: .25em;
   border: 2px solid var(--ila-cookieb-button-border-color);
-  font: 700 1.1875rem/1.25rem var(--il-font-sans);
+  font: 700 1.1875rem/1.25rem var(--ila-cookieb-font-sans);
   letter-spacing: .01em;
   transition: background-color .3s;
   cursor: pointer;
