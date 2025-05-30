@@ -9,10 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Create zip file
+      - name: Stage release files
         run: bash ./make-cookie-zip.sh
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cookie-banner
-          path: cookie-banner-stage
+          path: cookie-zip-stage

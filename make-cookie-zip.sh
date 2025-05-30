@@ -14,8 +14,3 @@ cat applications/ila-slideovers/ila-slideover.js >>./cookie-zip-stage/js/ila-coo
 
 # Leave a copy under the old name for old hardcoded URLs
 cp ./cookie-zip-stage/js/ila-cookie-banner.js ./cookie-zip-stage/otSDKStub.js
-
-# Create archive
-cd cookie-zip-stage
-zip cookie-banner.zip */*
-mv cookie-banner.zip ..
