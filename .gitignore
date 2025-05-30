@@ -1,6 +1,7 @@
 .idea
 dist
 node_modules
+cookie-zip-stage/
 docs/css
 docs/js
 docs/svg
