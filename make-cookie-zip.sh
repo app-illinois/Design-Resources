@@ -16,4 +16,6 @@ cat applications/ila-slideovers/ila-slideover.js >>./cookie-zip-stage/js/ila-coo
 cp ./cookie-zip-stage/js/ila-cookie-banner.js ./cookie-zip-stage/otSDKStub.js
 
 # Create archive
-zip cookie-banner.zip cookie-zip-stage/*
+cd cookie-zip-stage
+zip cookie-banner.zip */*
+mv cookie-banner.zip ..
