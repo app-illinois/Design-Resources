@@ -56,6 +56,16 @@ function closeCookieB(cookiebId) {
     if(h1tag) { h1tag.focus(); }
 }
 
+// function focusOnHeader() {
+//     let header_tag = document.getElementById('system-cookie-policy-link');
+//     if(header_tag) { header_tag.focus(); }
+// }
+
+// function openCookieSlideover(cookiebId) {
+//     openSlideover(cookiebId);
+//     focusOnHeader();
+// }
+
 function manageAutoclose(cookiebId) {
     /* setTimeout(() => closeCookieB(cookiebId), 8000); */
 }

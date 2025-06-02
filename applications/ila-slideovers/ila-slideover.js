@@ -5,8 +5,8 @@ var aria = aria || {};
 
 aria.Utils = aria.Utils || {};
 
-window.openSlideover = function (dialogId) {
-    new aria.Dialog(dialogId);
+window.openSlideover = async function (dialogId) {
+    await new aria.Dialog(dialogId);
     // Put focus on a button.
     let button_tag = document.querySelector(`#${dialogId} button`);
     console.log(button_tag);
@@ -52,6 +52,27 @@ aria.Utils.focusLastDescendant = function (element) {
   }; // end focusLastDescendant
 
 /**
+ * @description Set focus on descendant nodes until the last focusable element is
+ *       found.
+ * @param element
+ *          DOM node for which to find the last focusable descendant.
+ * @returns {boolean}
+ *  true if a focusable element is found and focus is set.
+ */
+aria.Utils.focusLastDescendant = function (element) {
+    for (var i = element.childNodes.length; i > 0; i--) {
+        var child = element.childNodes[i];
+        if (
+            aria.Utils.attemptFocus(child) ||
+            aria.Utils.focusLastDescendant(child)
+        ) {
+            return true;
+        }
+    }
+    return false;
+}; // end focusFirstDescendant
+
+/**
  * @description Set Attempt to set focus on the current node.
  * @param element
  *          The node to attempt to focus on.
@@ -59,7 +80,7 @@ aria.Utils.focusLastDescendant = function (element) {
  *  true if element is focused.
  */
 aria.Utils.attemptFocus = function (element) {
-    console.debug('Attempting to focus on element:', element);
+    console.log('Attempting to focus on element:', element);
     if (!aria.Utils.isFocusable(element)) {
         console.warn(
             'Attempted to focus on an element that is not focusable.',
