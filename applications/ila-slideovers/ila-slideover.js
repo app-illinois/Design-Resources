@@ -7,6 +7,10 @@ aria.Utils = aria.Utils || {};
 
 window.openSlideover = function (dialogId) {
     new aria.Dialog(dialogId);
+    // Put focus on a button.
+    let button_tag = document.querySelector(`#${dialogId} button`);
+    console.log(button_tag);
+    aria.Utils.attemptFocus(button_tag);
 };
 
 window.closeSlideover = function () {
@@ -55,7 +59,12 @@ aria.Utils.focusLastDescendant = function (element) {
  *  true if element is focused.
  */
 aria.Utils.attemptFocus = function (element) {
+    console.debug('Attempting to focus on element:', element);
     if (!aria.Utils.isFocusable(element)) {
+        console.warn(
+            'Attempted to focus on an element that is not focusable.',
+            element
+        );
         return false;
     }
 
@@ -64,8 +73,10 @@ aria.Utils.attemptFocus = function (element) {
         element.focus();
     } catch (e) {
         // continue regardless of error
+        console.warn('Error focusing element:', e);
     }
     aria.Utils.IgnoreUtilFocusChanges = false;
+    console.debug('Focused element:', element);
     return document.activeElement === element;
 }; // end attemptFocus
 
