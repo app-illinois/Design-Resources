@@ -1,525 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-        />
-        <link
-            rel="profile"
-            href="https://gmpg.org/xfn/11"
-        />
 
-        <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
-        <script>
-            function OptanonWrapper() {}
-        </script>
-        <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <link
+    rel="profile"
+    href="https://gmpg.org/xfn/11"
+  />
 
-        <title>Application Development UX Components</title>
-        <meta
-            name="robots"
-            content="max-image-preview:large"
-        />
-        <link
-            rel="dns-prefetch"
-            href="//cdn.toolkit.illinois.edu"
-        />
-        <link
-            rel="dns-prefetch"
-            href="//cdn.disability.illinois.edu"
-        />
-        <link
-            rel="dns-prefetch"
-            href="//stackpath.bootstrapcdn.com"
-        />
-        <link
-            rel="dns-prefetch"
-            href="//kit.fontawesome.com"
-        />
-        <link
-            rel="dns-prefetch"
-            href="//cdn.jsdelivr.net"
-        />
-        <link
-            rel="dns-prefetch"
-            href="//onetrust.techservices.illinois.edu"
-        />
-        <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="Illinois Web Theme &raquo; Feed"
-            href="https://webtheme.illinois.edu/feed/"
-        />
-        <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="Illinois Web Theme &raquo; Comments Feed"
-            href="https://webtheme.illinois.edu/comments/feed/"
-        />
-        <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="Illinois Web Theme &raquo; Home Comments Feed"
-            href="https://webtheme.illinois.edu/sample-page-2/feed/"
-        />
-        <link
-            rel="stylesheet"
-            id="wp-block-library-css"
-            href="https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6"
-            media="all"
-        />
-        <link
-            rel="stylesheet"
-            id="block-styles-css"
-            href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6"
-            media="all"
-        />
-        <link
-            rel="stylesheet"
-            id="toolkit-css"
-            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6"
-            media="all"
-        />
-        <link
-            rel="stylesheet"
-            id="bootstrapcss-css"
-            crossorigin="anonymous"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            media="all"
-        />
-        <link
-            rel="stylesheet"
-            id="main-css-css"
-            href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525"
-            media="all"
-        />
-        <script
-            src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6"
-            id="toolkit-js"
-        ></script>
-        <script
-            src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
-            id="jquery-core-js"
-        ></script>
-        <script
-            src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
-            id="jquery-migrate-js"
-        ></script>
-        <script
-            src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
-            id="main_js-js"
-        ></script>
-        <script
-            src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
-            id="skiptoconf-js"
-        ></script>
-        <script
-            src="https://cdn.disability.illinois.edu/skipto.min.js"
-            id="skipto-js"
-        ></script>
-        <script
-            crossorigin="anonymous"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            id="bootstrapjs-js"
-        ></script>
-        <script
-            crossorigin="anonymous"
-            src="https://kit.fontawesome.com/846f7e331a.js"
-            id="fontawesome-js"
-        ></script>
-        <script
-            crossorigin="anonymous"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            id="popper-js"
-        ></script>
-        <script
-            data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"
-            src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js"
-            id="onetrust-js"
-        ></script>
-        <link
-            rel="https://api.w.org/"
-            href="https://webtheme.illinois.edu/wp-json/"
-        />
-        <link
-            rel="alternate"
-            title="JSON"
-            type="application/json"
-            href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714"
-        />
-        <link
-            rel="EditURI"
-            type="application/rsd+xml"
-            title="RSD"
-            href="https://webtheme.illinois.edu/xmlrpc.php?rsd"
-        />
-        <meta
-            name="generator"
-            content="WordPress 6.6"
-        />
-        <link
-            rel="canonical"
-            href="https://webtheme.illinois.edu/"
-        />
-        <link
-            rel="shortlink"
-            href="https://webtheme.illinois.edu/"
-        />
-        <link
-            rel="alternate"
-            title="oEmbed (JSON)"
-            type="application/json+oembed"
-            href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F"
-        />
-        <link
-            rel="alternate"
-            title="oEmbed (XML)"
-            type="text/xml+oembed"
-            href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml"
-        />
-        <link
-            rel="pingback"
-            href="https://webtheme.illinois.edu/xmlrpc.php"
-        />
-        <link
-            rel="icon"
-            href="https://cdn.brand.illinois.edu/favicon.ico"
-        />
-        <style>
-            body .tile-list .tile.w66 {
-                flex: 0 0 calc(40% - 1.2rem);
-                max-width: calc(40% - 1.2rem);
-                min-width: calc(40% - 1.2rem);
-            }
+  <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
+  <script>
+    function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
 
-            #primary_secondary_wrapper header,
-            #primary_secondary_wrapper .entry-content > * {
-                max-width: 1140px !important;
-            }
+  <title>Application Development UX Components</title>
+  <meta
+    name="robots"
+    content="max-image-preview:large"
+  />
+  <link
+    rel="dns-prefetch"
+    href="//cdn.toolkit.illinois.edu"
+  />
+  <link
+    rel="dns-prefetch"
+    href="//cdn.disability.illinois.edu"
+  />
+  <link
+    rel="dns-prefetch"
+    href="//stackpath.bootstrapcdn.com"
+  />
+  <link
+    rel="dns-prefetch"
+    href="//kit.fontawesome.com"
+  />
+  <link
+    rel="dns-prefetch"
+    href="//cdn.jsdelivr.net"
+  />
+  <link
+    rel="dns-prefetch"
+    href="//onetrust.techservices.illinois.edu"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Illinois Web Theme &raquo; Feed"
+    href="https://webtheme.illinois.edu/feed/"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Illinois Web Theme &raquo; Comments Feed"
+    href="https://webtheme.illinois.edu/comments/feed/"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Illinois Web Theme &raquo; Home Comments Feed"
+    href="https://webtheme.illinois.edu/sample-page-2/feed/"
+  />
+  <link
+    rel="stylesheet"
+    id="wp-block-library-css"
+    href="https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6"
+    media="all"
+  />
+  <link
+    rel="stylesheet"
+    id="block-styles-css"
+    href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6"
+    media="all"
+  />
+  <link
+    rel="stylesheet"
+    id="toolkit-css"
+    href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6"
+    media="all"
+  />
+  <link
+    rel="stylesheet"
+    id="bootstrapcss-css"
+    crossorigin="anonymous"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    media="all"
+  />
+  <link
+    rel="stylesheet"
+    id="main-css-css"
+    href="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525"
+    media="all"
+  />
+  <script
+    src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6"
+    id="toolkit-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+    id="jquery-core-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+    id="jquery-migrate-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+    id="main_js-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+    id="skiptoconf-js"
+  ></script>
+  <script
+    src="https://cdn.disability.illinois.edu/skipto.min.js"
+    id="skipto-js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    id="bootstrapjs-js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    src="https://kit.fontawesome.com/846f7e331a.js"
+    id="fontawesome-js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    id="popper-js"
+  ></script>
+  <script
+    data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"
+    src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js"
+    id="onetrust-js"
+  ></script>
+  <link
+    rel="https://api.w.org/"
+    href="https://webtheme.illinois.edu/wp-json/"
+  />
+  <link
+    rel="alternate"
+    title="JSON"
+    type="application/json"
+    href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714"
+  />
+  <link
+    rel="EditURI"
+    type="application/rsd+xml"
+    title="RSD"
+    href="https://webtheme.illinois.edu/xmlrpc.php?rsd"
+  />
+  <meta
+    name="generator"
+    content="WordPress 6.6"
+  />
+  <link
+    rel="canonical"
+    href="https://webtheme.illinois.edu/"
+  />
+  <link
+    rel="shortlink"
+    href="https://webtheme.illinois.edu/"
+  />
+  <link
+    rel="alternate"
+    title="oEmbed (JSON)"
+    type="application/json+oembed"
+    href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F"
+  />
+  <link
+    rel="alternate"
+    title="oEmbed (XML)"
+    type="text/xml+oembed"
+    href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml"
+  />
+  <link
+    rel="pingback"
+    href="https://webtheme.illinois.edu/xmlrpc.php"
+  />
+  <link
+    rel="icon"
+    href="https://cdn.brand.illinois.edu/favicon.ico"
+  />
+  <style>
+    body .tile-list .tile.w66 {
+      flex: 0 0 calc(40% - 1.2rem);
+      max-width: calc(40% - 1.2rem);
+      min-width: calc(40% - 1.2rem);
+    }
 
-            @media (max-width: 768px) {
-                #primary_secondary_wrapper #secondary {
-                    max-width: 100% !important;
-                }
-            }
+    #primary_secondary_wrapper header,
+    #primary_secondary_wrapper .entry-content>* {
+      max-width: 1140px !important;
+    }
 
-            #primary_secondary_wrapper header,
-            #primary_secondary_wrapper .entry-content > *,
-            .search #primary_secondary_wrapper article {
-                margin-left: auto;
-                margin-right: auto;
-            }
+    @media (max-width: 768px) {
+      #primary_secondary_wrapper #secondary {
+        max-width: 100% !important;
+      }
+    }
 
-            #primary_secondary_wrapper #secondary {
-                max-width: 300px !important;
-            }
+    #primary_secondary_wrapper header,
+    #primary_secondary_wrapper .entry-content>*,
+    .search #primary_secondary_wrapper article {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-            .search #primary_secondary_wrapper article .entry-summary {
-                margin-top: 0;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
+    #primary_secondary_wrapper #secondary {
+      max-width: 300px !important;
+    }
 
-            .search #primary_secondary_wrapper article .post-thumbnail {
-                max-width: 33%;
-                margin: 0 1rem 0.25rem 1rem;
-                float: right;
-            }
+    .search #primary_secondary_wrapper article .entry-summary {
+      margin-top: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
 
-            @media (max-width: 768px) {
-                .search #primary_secondary_wrapper article .post-thumbnail {
-                    max-width: 50%;
-                }
-            }
+    .search #primary_secondary_wrapper article .post-thumbnail {
+      max-width: 33%;
+      margin: 0 1rem 0.25rem 1rem;
+      float: right;
+    }
 
-            @media (max-width: 400px) {
-                .search #primary_secondary_wrapper article .post-thumbnail {
-                    max-width: 100%;
-                    width: 100%;
-                    float: none;
-                    display: block;
-                    padding: 0;
-                    margin: 0 0 0.5rem 0;
-                }
-            }
+    @media (max-width: 768px) {
+      .search #primary_secondary_wrapper article .post-thumbnail {
+        max-width: 50%;
+      }
+    }
 
-            .archive #primary_secondary_wrapper #primary {
-                max-width: 1140px;
-            }
+    @media (max-width: 400px) {
+      .search #primary_secondary_wrapper article .post-thumbnail {
+        max-width: 100%;
+        width: 100%;
+        float: none;
+        display: block;
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+      }
+    }
 
-            .has-sidebar .archive #primary_secondary_wrapper #primary {
-                max-width: 870px;
-            }
+    .archive #primary_secondary_wrapper #primary {
+      max-width: 1140px;
+    }
 
-            .has-sidebar #primary_secondary_wrapper main article .alignfull {
-                max-width: 870px !important;
-            }
+    .has-sidebar .archive #primary_secondary_wrapper #primary {
+      max-width: 870px;
+    }
 
-            .page-wrapper {
-                width: 100%;
-                max-width: 1200px;
-                margin: 30px auto 0 auto;
-                padding: 0 30px;
-            }
-        </style>
-        <link
-            rel="stylesheet"
-            href="./css/ila-toast.css"
-        />
-    </head>
+    .has-sidebar #primary_secondary_wrapper main article .alignfull {
+      max-width: 870px !important;
+    }
 
-    <body>
-        <header
-            id="masthead"
-            class="site-header"
+    .page-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 30px auto 0 auto;
+      padding: 0 30px;
+    }
+  </style>
+  <link
+    rel="stylesheet"
+    href="./css/ila-toast.css"
+  />
+  <script src="./js/ila-toast.js"></script>
+  <!-- local imports for local testing docs page. -->
+  <!-- <link
+    rel="stylesheet"
+    href="../applications/ila-toast/ila-toast.css"
+  />
+  <script src="../applications/ila-toast/ila-toast.js"></script> -->
+</head>
+
+<body>
+  <header
+    id="masthead"
+    class="site-header"
+  >
+    <div class="masthead_inner d-flex justify-content-between align-items-stretch">
+      <div class="il-header-wrapper flex-grow-1">
+        <il-header>
+          <div slot="wordmark">
+            <il-unit-wordmark>
+              <p class="il-primary-unit">
+                <a href="https://appdev.illinois.edu/">Application Development Standards</a>
+              </p>
+              <h1 class="il-secondary-unit">
+                <a href="https://app-illinois.github.io/Design-Resources/">Application Development UX Components</a>
+              </h1>
+            </il-unit-wordmark>
+          </div>
+
+          <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
+        </il-header>
+      </div>
+    </div>
+  </header>
+  <!-- #masthead -->
+  <main>
+    <div class="page-wrapper">
+      <div>
+        <h1>Toasts</h1>
+      </div>
+      <br />
+
+      <div>
+        <h2>Component Behavior</h2>
+        <p>
+          Alert the user to non-urgent status changes and optionally provide
+          actions to take as a response to status changes. Ie, a toast that
+          notifies the user that there are new changes to view with a button
+          to view changes.
+        </p>
+        <p>
+          Opens small, dismissable dialogs typically on the bottom of the
+          screen, though other locations are common. It is common practice for
+          toasts to disappear after a set amount of time. If multiple toasts
+          are activated, they stack one on top of the other with the newest
+          toast on the bottom of the screen (or beginning of the order). Toasts with autoclose will pause their
+          autoclose functionality when the toast is moused over or focused within.
+        </p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Accessibility Guidelines</h2>
+        <p>
+          A toast should have role="alert". Note that for the screen reader to
+          announce changes, role="alert" must be on a container that exists
+          from pageload where the elements inside are changing; in this case,
+          role="alert" would go on the div which is holding all the toasts
+          (.toast-holder) so it can observe them opening and closing. Toast autoclose interval is set relatively short
+          on this
+          page for demonstration purposes, but should be configured to a time long enough for all users (including those
+          using keyboard) to be able to interact with it. Strongly consider disabling autoclose for alerts that have
+          action buttons.
+        </p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Instructions</h2>
+        <p>
+          Copy HTML structure of toast-holder and place somewhere at the root level of your page, such as
+          inside the body tag. Copy the structure of whichever toast style you'd like to use and set the id property to
+          whatever you'd like. Call the openToast function with your toast id, a true/false value for using the
+          autoclose functionality, and if you are using autoclose, the time in
+          milliseconds you want it to stay open. Multiple toasts will automatically reflow within toast-holder.
+        </p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Component Example</h2>
+        <button
+          class="il-button"
+          onclick="openToast('ilaToastOne', false)"
         >
+          Open Toast 1
+        </button>
+        <button
+          class="il-button"
+          onclick="openToast('ilaToastTwo', true, 8000)"
+        >
+          Open Toast 2
+        </button>
+        <button
+          class="il-button"
+          onclick="openToast('ilaToastThree', true, 8000)"
+        >
+          Open Toast 3
+        </button>
+      </div>
+      <br />
+
+      <div>
+        <h2>Link</h2>
+        <p>
+          <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-toast">Follow this
+            link to the component in the GitHub repository.</a>
+        </p>
+      </div>
+    </div>
+    <!-- closes page wrapper -->
+  </main>
+  <div
+    class="toast-holder"
+    role="status"
+  >
+    <div class="toast-holder-inner">
+      <div
+        id="ilaToastOne"
+        class="ila-toast ila-toast--closed"
+      >
+        <div class="ila-toast__toast">
+          <button
+            type="button"
+            class="ila-toast__close-button"
+            aria-label="close toast"
+            onclick="closeToast('ilaToastOne')"
+          >
             <div
-                class="masthead_inner d-flex justify-content-between align-items-stretch"
+              class="ila-toast__close-icon il-icon"
+              role="presentation"
             >
-                <div class="il-header-wrapper flex-grow-1">
-                    <il-header>
-                        <div slot="wordmark">
-                            <il-unit-wordmark>
-                                <p class="il-primary-unit">
-                                    <a href="https://appdev.illinois.edu/"
-                                        >Application Development Standards</a
-                                    >
-                                </p>
-                                <h1 class="il-secondary-unit">
-                                    <a
-                                        href="https://app-illinois.github.io/Design-Resources/"
-                                        >Application Development UX
-                                        Components</a
-                                    >
-                                </h1>
-                            </il-unit-wordmark>
-                        </div>
-
-                        <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
-                    </il-header>
-                </div>
+              cancel
             </div>
-        </header>
-        <!-- #masthead -->
-        <main>
-            <div class="page-wrapper">
-                <div>
-                    <h1>Toasts</h1>
-                </div>
-                <br />
-
-                <div>
-                    <h2>Component Behavior</h2>
-                    <p>
-                        Alert the user to non-urgent status changes and
-                        optionally provide actions to take as a response to
-                        status changes. Ie, a toast that notifies the user that
-                        there are new changes to view with a button to view
-                        changes.
-                    </p>
-                    <p>
-                        Opens small, dismissable dialogs typically on the bottom
-                        of the screen, though other locations are common. It is
-                        common practice for toasts to disappear after a set
-                        amount of time. If multiple toasts are activated, they
-                        stack one on top of the other with the newest toast on
-                        the bottom of the screen (or beginning of the order).
-                    </p>
-                </div>
-                <br />
-
-                <div>
-                    <h2>Accessibility Guidelines</h2>
-                    <p>
-                        A toast should have role="alert". Note that for the
-                        screen reader to announce changes, role="alert" must be
-                        on a container that exists from pageload where the
-                        elements inside are changing; in this case, role="alert"
-                        would go on the div which is holding all the toasts
-                        (.toast-holder) so it can observe them opening and
-                        closing.
-                    </p>
-                </div>
-                <br />
-
-                <div>
-                    <h2>Component Example</h2>
-                    <button
-                        class="il-button"
-                        onclick="openToast('ilaToastOne')"
-                    >
-                        Open Toast 1
-                    </button>
-                    <button
-                        class="il-button"
-                        onclick="openToast('ilaToastTwo')"
-                    >
-                        Open Toast 2
-                    </button>
-                    <button
-                        class="il-button"
-                        onclick="openToast('ilaToastThree')"
-                    >
-                        Open Toast 3
-                    </button>
-                </div>
-                <br />
-
-                <div>
-                    <h2>Link</h2>
-                    <p>
-                        <a
-                            href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-toast"
-                            >Follow this link to the component in the GitHub
-                            repository.</a
-                        >
-                    </p>
-                </div>
-            </div>
-            <!-- closes page wrapper -->
-        </main>
-        <div
-            class="toast-holder"
-            role="status"
-        >
-            <div class="toast-holder-inner">
-                <div
-                    id="ilaToastOne"
-                    class="ila-toast ila-toast--closed"
-                >
-                    <div class="ila-toast__toast">
-                        <button
-                            type="button"
-                            class="ila-toast__close-button"
-                            aria-label="close toast"
-                            onclick="closeToast('ilaToastOne')"
-                        >
-                            <div
-                                class="ila-toast__close-icon il-icon"
-                                role="presentation"
-                            >
-                                cancel
-                            </div>
-                        </button>
-                        <div class="ila-toast__heading">
-                            <h3>Toast with heading and a button</h3>
-                        </div>
-                        <div class="ila-toast__content">
-                            <p>
-                                Description with some additional information.
-                                Can be multiple lines. Could include a
-                                <a href="#">descriptive link</a>.
-                            </p>
-                        </div>
-                        <div class="ila-toast__actions">
-                            <button class="il-button">Action</button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    id="ilaToastTwo"
-                    class="ila-toast ila-toast--closed"
-                >
-                    <div class="ila-toast__toast">
-                        <button
-                            type="button"
-                            class="ila-toast__close-button"
-                            aria-label="close toast"
-                            onclick="closeToast('ilaToastTwo')"
-                        >
-                            <div
-                                class="ila-toast__close-icon il-icon"
-                                role="presentation"
-                            >
-                                cancel
-                            </div>
-                        </button>
-                        <div class="ila-toast__heading">
-                            <h3>Toast with heading</h3>
-                        </div>
-                        <div class="ila-toast__content">
-                            <p>
-                                Description with some additional information.
-                                Can be multiple lines. Could include a
-                                <a href="#">descriptive link</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    id="ilaToastThree"
-                    class="ila-toast ila-toast--closed ila-toast--single-line"
-                >
-                    <div class="ila-toast__toast">
-                        <button
-                            type="button"
-                            class="ila-toast__close-button"
-                            aria-label="close toast"
-                            onclick="closeToast('ilaToastThree')"
-                        >
-                            <div
-                                class="ila-toast__close-icon il-icon"
-                                role="presentation"
-                            >
-                                cancel
-                            </div>
-                        </button>
-                        <div class="ila-toast__content">
-                            <p>Single line toast</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </button>
+          <div class="ila-toast__heading">
+            <h3>Toast with heading and a button</h3>
+          </div>
+          <div class="ila-toast__content">
+            <p>
+              Description with some additional information. Can be multiple
+              lines. Could include a
+              <a href="#">descriptive link</a>.
+            </p>
+          </div>
+          <div class="ila-toast__actions">
+            <button class="il-button">Action</button>
+          </div>
         </div>
-        <footer
-            id="colophon"
-            class="site-footer"
-        >
-            <il-footer>
-                <div
-                    slot="contact"
-                    class="il-footer-contact uofi_address"
-                >
-                    <p>
-                        <a href="https://appdev.illinois.edu/"
-                            >Application Development Standards</a
-                        >
-                    </p>
-                </div>
+      </div>
+      <div
+        id="ilaToastTwo"
+        class="ila-toast ila-toast--closed"
+      >
+        <div class="ila-toast__toast">
+          <button
+            type="button"
+            class="ila-toast__close-button"
+            aria-label="close toast"
+            onclick="closeToast('ilaToastTwo')"
+          >
+            <div
+              class="ila-toast__close-icon il-icon"
+              role="presentation"
+            >
+              cancel
+            </div>
+          </button>
+          <div class="ila-toast__heading">
+            <h3>Toast with heading</h3>
+          </div>
+          <div class="ila-toast__content">
+            <p>
+              Description with some additional information. Can be multiple
+              lines. Could include a
+              <a href="#">descriptive link</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="ilaToastThree"
+        class="ila-toast ila-toast--closed ila-toast--single-line"
+      >
+        <div class="ila-toast__toast">
+          <button
+            type="button"
+            class="ila-toast__close-button"
+            aria-label="close toast"
+            onclick="closeToast('ilaToastThree')"
+          >
+            <div
+              class="ila-toast__close-icon il-icon"
+              role="presentation"
+            >
+              cancel
+            </div>
+          </button>
+          <div class="ila-toast__content">
+            <p>Single line toast</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer
+    id="colophon"
+    class="site-footer"
+  >
+    <il-footer>
+      <div
+        slot="contact"
+        class="il-footer-contact uofi_address"
+      >
+        <p>
+          <a href="https://appdev.illinois.edu/">Application Development Standards</a>
+        </p>
+      </div>
 
-                <div
-                    slot="parent"
-                    class="il-footer-parent"
-                >
-                    <p>
-                        <a
-                            href="https://webtheme.illinois.edu/application-development/"
-                            >Web Implementation Guidelines Group</a
-                        >
-                    </p>
-                </div>
+      <div
+        slot="parent"
+        class="il-footer-parent"
+      >
+        <p>
+          <a href="https://webtheme.illinois.edu/application-development/">Web Implementation Guidelines Group</a>
+        </p>
+      </div>
 
-                <nav
-                    slot="links"
-                    class="il-footer-links"
-                    aria-label="Legal notices"
-                >
-                    <ul>
-                        <li><button data-il="cookies"></button></li>
-                        <li><a data-il="privacy"></a></li>
-                        <li><a data-il="copyright"></a></li>
-                        <li><a data-il="accessibility"></a></li>
-                    </ul>
-                </nav>
-            </il-footer>
-        </footer>
-        <!-- #colophon -->
-    </body>
+      <nav
+        slot="links"
+        class="il-footer-links"
+        aria-label="Legal notices"
+      >
+        <ul>
+          <li><button data-il="cookies"></button></li>
+          <li><a data-il="privacy"></a></li>
+          <li><a data-il="copyright"></a></li>
+          <li><a data-il="accessibility"></a></li>
+        </ul>
+      </nav>
+    </il-footer>
+  </footer>
+  <!-- #colophon -->
+</body>
+
 </html>
-
-<script src="./js/ila-toast.js"></script>

@@ -1,4 +1,6 @@
-function openToast(toastId) {
+const { use } = require("react");
+
+function openToast(toastId, useAutoclose, closeDelay) {
     let toast = document.getElementById(toastId);
     toast.classList.remove('ila-toast--closed');
     toast.classList.add('ila-toast--open');
@@ -9,15 +11,26 @@ function openToast(toastId) {
         element.classList.remove('ila-toast--first');
     });
     toast.classList.add('ila-toast--first');
-    manageAutoclose(toastId);
+
+    if (useAutoclose) {
+      let toastTimeout = setTimeout(() => closeToast(toastId), closeDelay);
+
+      toast.addEventListener('mouseenter', (event) => {
+        clearTimeout(toastTimeout);
+      });
+      toast.addEventListener("focusin", (event) => {
+        clearTimeout(toastTimeout);})
+      toast.addEventListener('mouseleave', (event) => {
+        toastTimeout = setTimeout(() => closeToast(toastId), closeDelay);
+      });
+      toast.addEventListener("focusout", (event) => {
+        toastTimeout = setTimeout(() => closeToast(toastId), closeDelay);
+      })
+  }
 }
 
 function closeToast(toastId) {
     let toast = document.getElementById(toastId);
     toast.classList.remove('ila-toast--open');
     toast.classList.add('ila-toast--closed');
-}
-
-function manageAutoclose(toastId) {
-    setTimeout(() => closeToast(toastId), 8000);
 }

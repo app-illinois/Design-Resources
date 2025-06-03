@@ -2,341 +2,529 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <link
+    rel="profile"
+    href="https://gmpg.org/xfn/11"
+  >
 
-    <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
-    <script>
-        function OptanonWrapper() { }
-    </script>
-    <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
+  <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
+  <script>
+    function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
 
-    <title>Application Development UX Components</title>
-    <meta name='robots' content='max-image-preview:large' />
-    <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
-    <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
-    <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
-    <link rel='dns-prefetch' href='//kit.fontawesome.com' />
-    <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
-    <link rel='dns-prefetch' href='//onetrust.techservices.illinois.edu' />
-    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed" href="https://webtheme.illinois.edu/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed" href="https://webtheme.illinois.edu/comments/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Home Comments Feed" href="https://webtheme.illinois.edu/sample-page-2/feed/" />
-    <link rel='stylesheet' id='wp-block-library-css' href='https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6' media='all' />
-    <link rel='stylesheet' id='block-styles-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6' media='all' />
-    <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6' media='all' />
+  <title>Application Development UX Components</title>
+  <meta
+    name='robots'
+    content='max-image-preview:large'
+  />
+  <link
+    rel='dns-prefetch'
+    href='//cdn.toolkit.illinois.edu'
+  />
+  <link
+    rel='dns-prefetch'
+    href='//cdn.disability.illinois.edu'
+  />
+  <link
+    rel='dns-prefetch'
+    href='//stackpath.bootstrapcdn.com'
+  />
+  <link
+    rel='dns-prefetch'
+    href='//kit.fontawesome.com'
+  />
+  <link
+    rel='dns-prefetch'
+    href='//cdn.jsdelivr.net'
+  />
+  <link
+    rel='dns-prefetch'
+    href='//onetrust.techservices.illinois.edu'
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Illinois Web Theme &raquo; Feed"
+    href="https://webtheme.illinois.edu/feed/"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Illinois Web Theme &raquo; Comments Feed"
+    href="https://webtheme.illinois.edu/comments/feed/"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Illinois Web Theme &raquo; Home Comments Feed"
+    href="https://webtheme.illinois.edu/sample-page-2/feed/"
+  />
+  <link
+    rel='stylesheet'
+    id='wp-block-library-css'
+    href='https://webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.6'
+    media='all'
+  />
+  <link
+    rel='stylesheet'
+    id='block-styles-css'
+    href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.6'
+    media='all'
+  />
+  <link
+    rel='stylesheet'
+    id='toolkit-css'
+    href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6'
+    media='all'
+  />
 
-    <link rel='stylesheet' id='bootstrapcss-css' crossorigin="anonymous" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' media='all' />
-    <link rel='stylesheet' id='main-css-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
-    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6" id="toolkit-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525" id="main_js-js"></script>
-    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js" id="skiptoconf-js"></script>
-    <script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
-    <script crossorigin="anonymous" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" id="bootstrapjs-js"></script>
-    <script crossorigin="anonymous" src="https://kit.fontawesome.com/846f7e331a.js" id="fontawesome-js"></script>
-    <script crossorigin="anonymous" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" id="popper-js"></script>
-    <script data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763" src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" id="onetrust-js"></script>
-    <link rel="https://api.w.org/" href="https://webtheme.illinois.edu/wp-json/" />
-    <link rel="alternate" title="JSON" type="application/json" href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://webtheme.illinois.edu/xmlrpc.php?rsd" />
-    <meta name="generator" content="WordPress 6.6" />
-    <link rel="canonical" href="https://webtheme.illinois.edu/" />
-    <link rel='shortlink' href='https://webtheme.illinois.edu/' />
-    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F" />
-    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml" />
-    <link rel="pingback" href="https://webtheme.illinois.edu/xmlrpc.php">
-    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-    <style>
-        body .tile-list .tile.w66 {
-            flex: 0 0 calc(40% - 1.2rem);
-            max-width: calc(40% - 1.2rem);
-            min-width: calc(40% - 1.2rem);
-        }
+  <link
+    rel='stylesheet'
+    id='bootstrapcss-css'
+    crossorigin="anonymous"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'
+    media='all'
+  />
+  <link
+    rel='stylesheet'
+    id='main-css-css'
+    href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525'
+    media='all'
+  />
+  <script
+    src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6"
+    id="toolkit-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+    id="jquery-core-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+    id="jquery-migrate-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+    id="main_js-js"
+  ></script>
+  <script
+    src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+    id="skiptoconf-js"
+  ></script>
+  <script
+    src="https://cdn.disability.illinois.edu/skipto.min.js"
+    id="skipto-js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    id="bootstrapjs-js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    src="https://kit.fontawesome.com/846f7e331a.js"
+    id="fontawesome-js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    id="popper-js"
+  ></script>
+  <script
+    data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"
+    src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js"
+    id="onetrust-js"
+  ></script>
+  <link
+    rel="https://api.w.org/"
+    href="https://webtheme.illinois.edu/wp-json/"
+  />
+  <link
+    rel="alternate"
+    title="JSON"
+    type="application/json"
+    href="https://webtheme.illinois.edu/wp-json/wp/v2/pages/714"
+  />
+  <link
+    rel="EditURI"
+    type="application/rsd+xml"
+    title="RSD"
+    href="https://webtheme.illinois.edu/xmlrpc.php?rsd"
+  />
+  <meta
+    name="generator"
+    content="WordPress 6.6"
+  />
+  <link
+    rel="canonical"
+    href="https://webtheme.illinois.edu/"
+  />
+  <link
+    rel='shortlink'
+    href='https://webtheme.illinois.edu/'
+  />
+  <link
+    rel="alternate"
+    title="oEmbed (JSON)"
+    type="application/json+oembed"
+    href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F"
+  />
+  <link
+    rel="alternate"
+    title="oEmbed (XML)"
+    type="text/xml+oembed"
+    href="https://webtheme.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebtheme.illinois.edu%2F&#038;format=xml"
+  />
+  <link
+    rel="pingback"
+    href="https://webtheme.illinois.edu/xmlrpc.php"
+  >
+  <link
+    rel="icon"
+    href="https://cdn.brand.illinois.edu/favicon.ico"
+  >
+  <style>
+    body .tile-list .tile.w66 {
+      flex: 0 0 calc(40% - 1.2rem);
+      max-width: calc(40% - 1.2rem);
+      min-width: calc(40% - 1.2rem);
+    }
 
-        #primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > * {
-            max-width: 1140px !important;
-        }
+    #primary_secondary_wrapper header,
+    #primary_secondary_wrapper .entry-content>* {
+      max-width: 1140px !important;
+    }
 
-        @media (max-width: 768px) {
-            #primary_secondary_wrapper #secondary {
-                max-width: 100% !important;
-            }
-        }
+    @media (max-width: 768px) {
+      #primary_secondary_wrapper #secondary {
+        max-width: 100% !important;
+      }
+    }
 
-        #primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > *, .search #primary_secondary_wrapper article {
-            margin-left: auto;
-            margin-right: auto;
-        }
+    #primary_secondary_wrapper header,
+    #primary_secondary_wrapper .entry-content>*,
+    .search #primary_secondary_wrapper article {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        #primary_secondary_wrapper #secondary {
-            max-width: 300px !important;
-        }
+    #primary_secondary_wrapper #secondary {
+      max-width: 300px !important;
+    }
 
-        .search #primary_secondary_wrapper article .entry-summary {
-            margin-top: 0;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+    .search #primary_secondary_wrapper article .entry-summary {
+      margin-top: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
 
-        .search #primary_secondary_wrapper article .post-thumbnail {
-            max-width: 33%;
-            margin: 0 1rem 0.25rem 1rem;
-            float: right;
-        }
+    .search #primary_secondary_wrapper article .post-thumbnail {
+      max-width: 33%;
+      margin: 0 1rem 0.25rem 1rem;
+      float: right;
+    }
 
-        @media (max-width: 768px) {
-            .search #primary_secondary_wrapper article .post-thumbnail {
-                max-width: 50%;
-            }
-        }
+    @media (max-width: 768px) {
+      .search #primary_secondary_wrapper article .post-thumbnail {
+        max-width: 50%;
+      }
+    }
 
-        @media (max-width: 400px) {
-            .search #primary_secondary_wrapper article .post-thumbnail {
-                max-width: 100%;
-                width: 100%;
-                float: none;
-                display: block;
-                padding: 0;
-                margin: 0 0 0.5rem 0;
-            }
-        }
+    @media (max-width: 400px) {
+      .search #primary_secondary_wrapper article .post-thumbnail {
+        max-width: 100%;
+        width: 100%;
+        float: none;
+        display: block;
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+      }
+    }
 
-        .archive #primary_secondary_wrapper #primary {
-            max-width: 1140px;
-        }
+    .archive #primary_secondary_wrapper #primary {
+      max-width: 1140px;
+    }
 
-        .has-sidebar .archive #primary_secondary_wrapper #primary {
-            max-width: 870px;
-        }
+    .has-sidebar .archive #primary_secondary_wrapper #primary {
+      max-width: 870px;
+    }
 
-        .has-sidebar #primary_secondary_wrapper main article .alignfull {
-            max-width: 870px !important;
-        }
+    .has-sidebar #primary_secondary_wrapper main article .alignfull {
+      max-width: 870px !important;
+    }
 
-        .page-wrapper {
-            width: 100%;
-            max-width: 1200px;
-            margin: 30px auto 0 auto;
-            padding: 0 30px;
-        }
-    </style>
-    <link rel="stylesheet" href="./css/ila-slideover.css" />
+    .page-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 30px auto 0 auto;
+      padding: 0 30px;
+    }
+  </style>
+  <link
+    rel="stylesheet"
+    href="./css/ila-slideover.css"
+  />
+  <script src="./js/ila-slideover.js"></script>
+  <!-- local imports for local testing docs page. -->
+  <!-- <link rel="stylesheet" href="../applications/ila-slideovers/ila-slideover.css" />
+    <script src="../applications/ila-slideovers/ila-slideover.js"></script> -->
 </head>
 
 <body>
-    <header id="masthead" class="site-header">
-        <div class="masthead_inner d-flex justify-content-between align-items-stretch">
-            <div class="il-header-wrapper flex-grow-1">
-                <il-header>
-                    <div slot="wordmark">
-                        <il-unit-wordmark>
-                       <p class="il-primary-unit"><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>     
-                       <h1 class="il-secondary-unit"><a href="https://app-illinois.github.io/Design-Resources/">Application Development UX Components</a></h1>
-                        </il-unit-wordmark>
-                    </div>
+  <header
+    id="masthead"
+    class="site-header"
+  >
+    <div class="masthead_inner d-flex justify-content-between align-items-stretch">
+      <div class="il-header-wrapper flex-grow-1">
+        <il-header>
+          <div slot="wordmark">
+            <il-unit-wordmark>
+              <p class="il-primary-unit"><a href="https://appdev.illinois.edu/">Application Development Standards</a>
+              </p>
+              <h1 class="il-secondary-unit"><a href="https://app-illinois.github.io/Design-Resources/">Application
+                  Development UX Components</a></h1>
+            </il-unit-wordmark>
+          </div>
 
-                    <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
+          <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
 
-                </il-header>
+        </il-header>
 
-            </div>
-        </div>
-    </header><!-- #masthead -->
-    <main>
-        <div class="page-wrapper">
-            <div>
-                <h1>Slideover</h1>
-                <p>Used as a way to display additional information.</p>
-            </div>
-            <br />
-
-            <div>
-                <h2>Placement</h2>
-                <p>
-                    Place the main slideover component(s) ideally at the root level of the page just inside the body tag.
-                </p>
-            </div>
-            <br />
-
-            <div>
-                <h2>Component Behavior</h2>
-                <p>
-                    Opens a slideover component with semi-transparent
-                    overlay to display additional information. Can be
-                    dismissed by clicking the overlay or the close button in
-                    the upper right corner.
-                </p>
-            </div>
-            <br />
-
-            <div>
-                <h2>Accessibility Guidelines</h2>
-                <p>
-                    This component utilizes code from the
-                    <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA Authoring Practices Guide</a>.  <br>
-                    Main points:
-                    <ul>
-                        <li>Has role="dialog"</li>
-                        <li>Has aria-modal="true"</li>
-                        <li>Slideover header has an ID so it can be used as aria-labelledby for the component</li>
-                        <li>Acts as a focus trap</li>
-                        <li>Escape key closes the slideover</li>
-                    </ul>
-                </p>
-            </div>
-            <br />
-
-            <div>
-                <h2>Component Example</h2>
-                <button class="il-button"
-                        onclick="openSlideover('ilaSlideoverRight')">
-                    Open Right Slideover
-                </button>
-                <button class="il-button"
-                        onclick="openSlideover('ilaSlideoverLeft')">
-                    Open Left Slideover
-                </button>
-            </div>
-            <br />
-
-            <div>
-                <h2>Link</h2>
-                <p>
-                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-slideovers">Follow this link to the component on GitHub.</a>
-                </p>
-            </div>
-        </div>
-        <!-- closes page wrapper -->
-    </main>
-    <div id="ilaSlideoverRight"
-         class="ila-slideover ila-slideover--closed ila-slideover--right"
-         role="dialog"
-         aria-labelledby="ilaSlideoverRightLabel"
-         aria-modal="true">
-        <div class="ila-slideover__overlay"
-             onclick="closeSlideover('ilaSlideoverLeft')"></div>
-        <div class="ila-slideover__slideover">
-            <div class="ila-slideover__header">
-                <h2 id="ilaSlideoverRightLabel"
-                    class="ila-slideover__label">
-                    Title of Right Slideover
-                </h2>
-                <button aria-label="close slideover"
-                        class="ila-slideover__close-button"
-                        onclick="closeSlideover('ilaSlideoverRight')">
-                    <svg class="ila-slideover__close-icon"
-                         role="presentation"
-                         xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 352 512">
-                        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="ila-slideover__content">
-                <h3>Content in a slideover</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed lectus velit, feugiat in lacinia eget, tristique ut
-                    orci. Phasellus ut egestas tellus. In hac habitasse
-                    platea dictumst. Nullam efficitur finibus facilisis. In
-                    dui ipsum, congue ut ornare vitae, sollicitudin vitae
-                    velit. Proin congue nunc quam, a sagittis purus suscipit
-                    sed. Quisque tincidunt congue erat, ac placerat ex
-                    dapibus in. Duis velit risus, mattis a volutpat et,
-                    gravida nec velit. Proin ut sem tortor. Aliquam
-                    venenatis sollicitudin nulla, venenatis porttitor augue
-                    auctor in. Integer facilisis lectus sed lacus elementum,
-                    ut ultrices turpis molestie. In in viverra nunc. Cras
-                    placerat arcu et rutrum congue. Phasellus scelerisque,
-                    nibh ac egestas viverra, ligula magna tristique dolor, a
-                    porttitor lacus risus placerat tortor. Suspendisse
-                    potenti. Praesent venenatis erat arcu, vitae mollis elit
-                    lobortis quis. Duis et molestie mi, nec porta ipsum.
-                    Etiam condimentum cursus lacus quis maximus. Sed vel
-                    tortor id turpis eleifend facilisis. Integer hendrerit
-                    tellus ut accumsan blandit. In hac habitasse platea
-                    dictumst. Proin pellentesque id lectus a tristique.
-                    Morbi eu lacus convallis, lobortis ex eu, consequat
-                    augue.
-                </p>
-            </div>
-        </div>
+      </div>
     </div>
-    <div id="ilaSlideoverLeft"
-         class="ila-slideover ila-slideover--closed ila-slideover--left"
-         role="dialog"
-         aria-labelledby="ilaSlideoverLeftLabel"
-         aria-modal="true">
-        <div class="ila-slideover__overlay"
-             onclick="closeSlideover('ilaSlideoverLeft')"></div>
-        <div class="ila-slideover__slideover">
-            <div class="ila-slideover__header">
-                <h2 id="ilaSlideoverLeftLabel"
-                    class="ila-slideover__label">
-                    Title of Left Slideover
-                </h2>
-                <button aria-label="close slideover"
-                        class="ila-slideover__close-button"
-                        onclick="closeSlideover('ilaSlideoverLeft')">
-                    <svg class="ila-slideover__close-icon"
-                         role="presentation"
-                         xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 352 512">
-                        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="ila-slideover__content">
-                <h3>Content in a slideover</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed lectus velit, feugiat in lacinia eget, tristique ut
-                    orci. Phasellus ut egestas tellus. In hac habitasse
-                    platea dictumst. Nullam efficitur finibus facilisis. In
-                    dui ipsum, congue ut ornare vitae, sollicitudin vitae
-                    velit. Proin congue nunc quam, a sagittis purus suscipit
-                    sed. Quisque tincidunt congue erat, ac placerat ex
-                    dapibus in. Duis velit risus, mattis a volutpat et,
-                    gravida nec velit. Proin ut sem tortor. Aliquam
-                    venenatis sollicitudin nulla, venenatis porttitor augue
-                    auctor in. Integer facilisis lectus sed lacus elementum,
-                    ut ultrices turpis molestie. In in viverra nunc. Cras
-                    placerat arcu et rutrum congue. Phasellus scelerisque,
-                    nibh ac egestas viverra, ligula magna tristique dolor, a
-                    porttitor lacus risus placerat tortor. Suspendisse
-                    potenti. Praesent venenatis erat arcu, vitae mollis elit
-                    lobortis quis. Duis et molestie mi, nec porta ipsum.
-                    Etiam condimentum cursus lacus quis maximus. Sed vel
-                    tortor id turpis eleifend facilisis. Integer hendrerit
-                    tellus ut accumsan blandit. In hac habitasse platea
-                    dictumst. Proin pellentesque id lectus a tristique.
-                    Morbi eu lacus convallis, lobortis ex eu, consequat
-                    augue.
-                </p>
-            </div>
-        </div>
+  </header><!-- #masthead -->
+  <main>
+    <div class="page-wrapper">
+      <div>
+        <h1>Slideover</h1>
+        <p>Used as a way to display additional information.</p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Placement</h2>
+        <p>
+          Place the main slideover component(s) ideally at the root level of the page just inside the body tag.
+        </p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Component Behavior</h2>
+        <p>
+          Opens a slideover component with semi-transparent
+          overlay to display additional information. Can be
+          dismissed by clicking the overlay or the close button in
+          the upper right corner.
+        </p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Accessibility Guidelines</h2>
+        <p>
+          This component utilizes code from the
+          <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA Authoring Practices Guide</a>. <br>
+          Main points:
+        <ul>
+          <li>Has role="dialog"</li>
+          <li>Has aria-modal="true"</li>
+          <li>Slideover header has an ID so it can be used as aria-labelledby for the component</li>
+          <li>Acts as a focus trap</li>
+          <li>Escape key closes the slideover</li>
+        </ul>
+        </p>
+      </div>
+      <br />
+
+      <div>
+        <h2>Component Example</h2>
+        <button
+          class="il-button"
+          onclick="openSlideover('ilaSlideoverLeft')"
+        >
+          Open Left Slideover
+        </button>
+        <button
+          class="il-button"
+          onclick="openSlideover('ilaSlideoverRight')"
+        >
+          Open Right Slideover
+        </button>
+      </div>
+      <br />
+
+      <div>
+        <h2>Link</h2>
+        <p>
+          <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-slideovers">Follow
+            this link to the component on GitHub.</a>
+        </p>
+      </div>
     </div>
-    <footer id="colophon" class="site-footer">
-        <il-footer>
+    <!-- closes page wrapper -->
+  </main>
+  <div
+    id="ilaSlideoverRight"
+    class="ila-slideover ila-slideover--closed ila-slideover--right"
+    role="dialog"
+    aria-labelledby="ilaSlideoverRightLabel"
+    aria-modal="true"
+  >
+    <div
+      class="ila-slideover__overlay"
+      onclick="closeSlideover('ilaSlideoverLeft')"
+    ></div>
+    <div class="ila-slideover__slideover">
+      <div class="ila-slideover__header">
+        <h2
+          id="ilaSlideoverRightLabel"
+          class="ila-slideover__label"
+        >
+          Title of Right Slideover
+        </h2>
+        <button
+          aria-label="close slideover"
+          class="ila-slideover__close-button"
+          onclick="closeSlideover('ilaSlideoverRight')"
+        >
+          <div
+            class="ila-slideover__close-icon il-icon"
+            role="presentation"
+          >
+            cancel
+          </div>
+        </button>
+      </div>
+      <div class="ila-slideover__content">
+        <h3>Content in a slideover</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Sed lectus velit, feugiat in lacinia eget, tristique ut
+          orci. Phasellus ut egestas tellus. In hac habitasse
+          platea dictumst. Nullam efficitur finibus facilisis. In
+          dui ipsum, congue ut ornare vitae, sollicitudin vitae
+          velit. Proin congue nunc quam, a sagittis purus suscipit
+          sed. Quisque tincidunt congue erat, ac placerat ex
+          dapibus in. Duis velit risus, mattis a volutpat et,
+          gravida nec velit. Proin ut sem tortor. Aliquam
+          venenatis sollicitudin nulla, venenatis porttitor augue
+          auctor in. Integer facilisis lectus sed lacus elementum,
+          ut ultrices turpis molestie. In in viverra nunc. Cras
+          placerat arcu et rutrum congue. Phasellus scelerisque,
+          nibh ac egestas viverra, ligula magna tristique dolor, a
+          porttitor lacus risus placerat tortor. Suspendisse
+          potenti. Praesent venenatis erat arcu, vitae mollis elit
+          lobortis quis. Duis et molestie mi, nec porta ipsum.
+          Etiam condimentum cursus lacus quis maximus. Sed vel
+          tortor id turpis eleifend facilisis. Integer hendrerit
+          tellus ut accumsan blandit. In hac habitasse platea
+          dictumst. Proin pellentesque id lectus a tristique.
+          <a href="#">Morbi eu lacus convallis</a>, lobortis ex eu, consequat
+          augue.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    id="ilaSlideoverLeft"
+    class="ila-slideover ila-slideover--closed ila-slideover--left"
+    role="dialog"
+    aria-labelledby="ilaSlideoverLeftLabel"
+    aria-modal="true"
+  >
+    <div
+      class="ila-slideover__overlay"
+      onclick="closeSlideover('ilaSlideoverLeft')"
+    ></div>
+    <div class="ila-slideover__slideover">
+      <div class="ila-slideover__header">
+        <h2
+          id="ilaSlideoverLeftLabel"
+          class="ila-slideover__label"
+        >
+          Title of Left Slideover
+        </h2>
+        <button
+          aria-label="close slideover"
+          class="ila-slideover__close-button"
+          onclick="closeSlideover('ilaSlideoverLeft')"
+        >
+          <div
+            class="ila-slideover__close-icon il-icon"
+            role="presentation"
+          >
+            cancel
+          </div>
+        </button>
+      </div>
+      <div class="ila-slideover__content">
+        <h3>Content in a slideover</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Sed lectus velit, feugiat in lacinia eget, tristique ut
+          orci. Phasellus ut egestas tellus. In hac habitasse
+          platea dictumst. Nullam efficitur finibus facilisis. In
+          dui ipsum, congue ut ornare vitae, sollicitudin vitae
+          velit. Proin congue nunc quam, a sagittis purus suscipit
+          sed. Quisque tincidunt congue erat, ac placerat ex
+          dapibus in. Duis velit risus, mattis a volutpat et,
+          gravida nec velit. Proin ut sem tortor. Aliquam
+          venenatis sollicitudin nulla, venenatis porttitor augue
+          auctor in. Integer facilisis lectus sed lacus elementum,
+          ut ultrices turpis molestie. In in viverra nunc. Cras
+          placerat arcu et rutrum congue. Phasellus scelerisque,
+          nibh ac egestas viverra, ligula magna tristique dolor, a
+          porttitor lacus risus placerat tortor. Suspendisse
+          potenti. Praesent venenatis erat arcu, vitae mollis elit
+          lobortis quis. Duis et molestie mi, nec porta ipsum.
+          Etiam condimentum cursus lacus quis maximus. Sed vel
+          tortor id turpis eleifend facilisis. Integer hendrerit
+          tellus ut accumsan blandit. In hac habitasse platea
+          dictumst. Proin pellentesque id lectus a tristique.
+          Morbi eu lacus convallis, lobortis ex eu, consequat
+          augue.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    id="colophon"
+    class="site-footer"
+  >
+    <il-footer>
 
-            <div slot="contact" class="il-footer-contact uofi_address">
-                <p><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>
-            </div>
+      <div
+        slot="contact"
+        class="il-footer-contact uofi_address"
+      >
+        <p><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>
+      </div>
 
-            <nav slot="links" class="il-footer-links" aria-label="Legal notices">
-                <ul>
-                    <li><button data-il="cookies"></button></li>
-                    <li><a data-il="privacy"></a></li>
-                    <li><a data-il="copyright"></a></li>
-                    <li><a data-il="accessibility"></a></li>
-                </ul>
-            </nav>
-        </il-footer>
-    </footer><!-- #colophon -->
+      <nav
+        slot="links"
+        class="il-footer-links"
+        aria-label="Legal notices"
+      >
+        <ul>
+          <li><button data-il="cookies"></button></li>
+          <li><a data-il="privacy"></a></li>
+          <li><a data-il="copyright"></a></li>
+          <li><a data-il="accessibility"></a></li>
+        </ul>
+      </nav>
+    </il-footer>
+  </footer><!-- #colophon -->
 </body>
-</html>
 
-<script src="./js/ila-slideover.js"></script>
+</html>
