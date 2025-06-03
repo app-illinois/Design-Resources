@@ -5,11 +5,8 @@ var aria = aria || {};
 
 aria.Utils = aria.Utils || {};
 
-window.openSlideover = async function (dialogId) {
-    await new aria.Dialog(dialogId);
-    // Put focus on a button.
-    let title_tag = document.querySelector(`.ila-slideover__label`);
-    aria.Utils.attemptFocus(title_tag);
+window.openSlideover = function (dialogId) {
+    new aria.Dialog(dialogId);
 };
 
 window.closeSlideover = function () {
@@ -138,6 +135,10 @@ aria.Dialog = function (dialogId) {
         this.dialogNode.nextSibling
     );
     this.postNode.tabIndex = 0;
+
+    let title_tag = document.querySelector(`.ila-slideover__label`);
+    title_tag.setAttribute('tabindex', '0');
+    setTimeout(function(){    title_tag.focus();   },500);
 
     this.addListeners();
     aria.openedDialog = this;
