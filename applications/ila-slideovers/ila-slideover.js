@@ -8,9 +8,8 @@ aria.Utils = aria.Utils || {};
 window.openSlideover = async function (dialogId) {
     await new aria.Dialog(dialogId);
     // Put focus on a button.
-    let button_tag = document.querySelector(`#${dialogId} button`);
-    console.log(button_tag);
-    aria.Utils.attemptFocus(button_tag);
+    let title_tag = document.querySelector(`.ila-slideover__label`);
+    aria.Utils.attemptFocus(title_tag);
 };
 
 window.closeSlideover = function () {
@@ -277,6 +276,9 @@ aria.Utils.isFocusable = function (element) {
         case 'TEXTAREA':
             return true;
         default:
+            if (element.tabIndex >= 0) {
+                return true;
+            }
             return false;
     }
 };
