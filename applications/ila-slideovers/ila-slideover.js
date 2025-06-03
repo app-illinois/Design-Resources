@@ -34,6 +34,19 @@ aria.Utils.focusFirstDescendant = function (element) {
     return false;
 }; // end focusFirstDescendant
 
+aria.Utils.focusLastDescendant = function (element) {
+    for (var i = element.childNodes.length - 1; i >= 0; i--) {
+      var child = element.childNodes[i];
+      if (
+        aria.Utils.attemptFocus(child) ||
+        aria.Utils.focusLastDescendant(child)
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }; // end focusLastDescendant
+
 /**
  * @description Set Attempt to set focus on the current node.
  * @param element
