@@ -55,12 +55,11 @@ aria.Utils.focusLastDescendant = function (element) {
  *  true if element is focused.
  */
 aria.Utils.attemptFocus = function (element) {
-    console.log('Attempting to focus on element:', element);
     if (!aria.Utils.isFocusable(element)) {
-        console.warn(
-            'Attempted to focus on an element that is not focusable.',
-            element
-        );
+        // console.debug(
+        //     'Attempted to focus on an element that is not focusable.',
+        //     element
+        // );
         return false;
     }
 
@@ -72,7 +71,7 @@ aria.Utils.attemptFocus = function (element) {
         console.warn('Error focusing element:', e);
     }
     aria.Utils.IgnoreUtilFocusChanges = false;
-    console.debug('Focused element:', element);
+    // console.debug('Focused element:', element);
     return document.activeElement === element;
 }; // end attemptFocus
 
