@@ -5,8 +5,8 @@ var aria = aria || {};
 
 aria.Utils = aria.Utils || {};
 
-window.openSlideover = function (dialogId) {
-    new aria.Dialog(dialogId);
+window.openSlideover = function (dialogId, returnFocus) {
+    new aria.Dialog(dialogId, returnFocus);
 };
 
 window.closeSlideover = function () {
@@ -95,7 +95,7 @@ document.addEventListener('keyup', aria.handleEscape);
  * @param dialogId
  *          The ID of the element serving as the dialog container.
  */
-aria.Dialog = function (dialogId) {
+aria.Dialog = function (dialogId, returnFocus) {
     this.dialogNode = document.getElementById(dialogId);
     if (this.dialogNode === null) {
         throw new Error('No element found with id="' + dialogId + '".');
@@ -144,6 +144,7 @@ aria.Dialog = function (dialogId) {
     this.dialogNode.classList.add('ila-slideover--open'); // make visible
     this.dialogNode.classList.remove('ila-slideover--closed');
     this.lastFocus = document.activeElement;
+    this.returnFocus = returnFocus;
 }; // end Dialog constructor
 
 /**
@@ -161,6 +162,10 @@ aria.Dialog.prototype.close = function () {
     this.dialogNode.classList.remove('ila-slideover--open');
 
     document.body.classList.remove(aria.Utils.dialogOpenClass);
+    // return_to_button = this.lastFocus;
+    //. setTimeout(function(){    return_to_button.focus();   },500);
+    this.returnFocus.focus();
+    debugger;
 }; // end close
 
 aria.Dialog.prototype.addListeners = function () {
