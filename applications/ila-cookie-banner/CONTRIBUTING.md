@@ -22,5 +22,6 @@ python -m http.server 8888
 
 Once this mini web server is running, the pages can be tested by visiting `http://localhost:8888`.
 
-> Standard disclaimer: the Python mini web server is not acceptable for any production hosting.
+To test the cookie banner, use the URL `http://localhost:8888/docs/Cookie-Banner.html`.
 
+> Standard disclaimer: the Python mini web server is not acceptable for any production hosting.

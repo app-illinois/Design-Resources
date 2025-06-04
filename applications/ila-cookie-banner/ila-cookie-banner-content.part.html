@@ -48,15 +48,9 @@
     <div class="ila-slideover__overlay" onclick="closeSlideover('ilaCookieSlideover')"></div>
     <div class="ila-slideover__slideover">
         <div class="ila-slideover__header ila-cookieb-slideover__header">
-            <h2 id="ilaCookieSlideoverLabel" class="ila-slideover__label">
+            <h2 id="ilaCookieSlideoverLabel" class="ila-slideover__label" aria-label="University of Illinois - Cookie Information">
                 University of Illinois - Cookie Information
             </h2>
-            <button type="button" aria-label="close cookie notice" class="ila-slideover__close-button"
-                onclick="closeSlideover('ilaCookieSlideover')">
-                <div class="ila-slideover__close-icon" role="presentation">
-                    <strong>X</strong>
-                </div>
-            </button>
         </div>
         <div class="ila-slideover__content ila-cookieb_slide_content">
             <h3>About Cookies</h3>
@@ -77,7 +71,7 @@
             </p>
             <p class="ila-cookieb__slide_small">
                 See the
-                <a class="ila-cookieb__popup-info-slideout-link ila-cookieb__popup-info-slideout" target=_new
+                <a id="system-cookie-policy-link" class="ila-cookieb__popup-info-slideout-link ila-cookieb__popup-info-slideout ila-cookieb__small-font-link" target=_new
                     href="https://www.vpaa.uillinois.edu/resources/cookies">
                     <strong>University of Illinois System Cookie Policy</strong>
                     <span>Link opens in a new window</span>

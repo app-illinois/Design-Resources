@@ -56,6 +56,10 @@ aria.Utils.focusLastDescendant = function (element) {
  */
 aria.Utils.attemptFocus = function (element) {
     if (!aria.Utils.isFocusable(element)) {
+        // console.debug(
+        //     'Attempted to focus on an element that is not focusable.',
+        //     element
+        // );
         return false;
     }
 
@@ -64,8 +68,10 @@ aria.Utils.attemptFocus = function (element) {
         element.focus();
     } catch (e) {
         // continue regardless of error
+        console.warn('Error focusing element:', e);
     }
     aria.Utils.IgnoreUtilFocusChanges = false;
+    // console.debug('Focused element:', element);
     return document.activeElement === element;
 }; // end attemptFocus
 
@@ -128,6 +134,10 @@ aria.Dialog = function (dialogId) {
         this.dialogNode.nextSibling
     );
     this.postNode.tabIndex = 0;
+
+    let title_tag = document.querySelector(`.ila-slideover__label`);
+    title_tag.setAttribute('tabindex', '0');
+    setTimeout(function(){    title_tag.focus();   },500);
 
     this.addListeners();
     aria.openedDialog = this;
@@ -266,6 +276,9 @@ aria.Utils.isFocusable = function (element) {
         case 'TEXTAREA':
             return true;
         default:
+            if (element.tabIndex >= 0) {
+                return true;
+            }
             return false;
     }
 };

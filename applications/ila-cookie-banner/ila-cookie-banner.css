@@ -10,6 +10,8 @@
     --ila-cookieb-button-background-color: #ffffff; /* white */
     --ila-cookieb-font-sans: "Source Sans Pro", sans-serif;
     --ila-cookieb-button-foreground-color: #13294b; /* from --il-blue */
+    /* https://brand.illinois.edu/visual-identity/color */
+    --ila-cookieb-small-link-focus: #c84113; /* from -il-altgeld */
 }
 
 body {
@@ -144,6 +146,12 @@ body {
 
 .ila-cookieb__pointer_hover {
     cursor: pointer;
+}
+
+.ila-cookieb__small-font-link:hover,
+.ila-cookieb__small-font-link:focus,
+.ila-cookieb__small-font-link:active {
+    color: var(--ila-cookieb-small-link-focus);
 }
 
 /* allow buttons to slide underneath text on thin screens */
