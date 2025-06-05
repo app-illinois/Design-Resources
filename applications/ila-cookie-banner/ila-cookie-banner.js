@@ -113,6 +113,7 @@ async function addCookieBanner() {
 
 
     // Add cookie banner to page
+    let about_button = document.getElementById("ot-sdk-btn");
     let banner_content = "<style>";
     banner_content += await getCookieBannerContent(get_url + '/css/ila-slideover.css');
     banner_content += await getCookieBannerContent(get_url + '/css/ila-cookie-banner.css');
@@ -121,6 +122,11 @@ async function addCookieBanner() {
     banner_content += await getCookieBannerContent(get_url + '/partials/ila-cookie-banner-content.part.html');
     if (!banner_content.includes("Cookie Notice")) {
         console.warn("Unexpected Cookie Notice:", banner_content);
+        if (about_button) {
+            about_button.addEventListener("click", function() {
+                alert("Cookie Notice is down for maintenance.");
+            });
+        }
         return;  /* Prevents appending error message to live webpage. */
     }
     document.body.insertAdjacentHTML("beforeend", banner_content);
@@ -129,7 +135,6 @@ async function addCookieBanner() {
     openCookieB('ilaCookieBOne');
 
     // Open the 'About Cookies' slide-over when existing legacy 'About Cookies' buttons are clicked.
-    let about_button = document.getElementById("ot-sdk-btn");
     if (about_button) {
         about_button.addEventListener("click", function() {
             openSlideover('ilaCookieSlideover', about_button);
