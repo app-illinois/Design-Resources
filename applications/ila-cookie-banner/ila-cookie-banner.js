@@ -66,7 +66,7 @@ async function getCookieBannerContent(content_path) {
     include the full final web URL of the partial file. */
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
-    if (banner_response.includes("Cookie Notice")) {
+    if (banner_content.includes("Cookie Notice")) {
         return banner_content;
     }
     console.warn("Unexpected Cookie Notice:", banner_content);
