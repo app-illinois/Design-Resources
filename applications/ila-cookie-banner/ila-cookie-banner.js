@@ -66,11 +66,7 @@ async function getCookieBannerContent(content_path) {
     include the full final web URL of the partial file. */
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
-    if (banner_content.includes("Cookie Notice")) {
-        return banner_content;
-    }
-    console.warn("Unexpected Cookie Notice:", banner_content);
-    return "";  /* Prevents appending error message to live webpage. */
+    return banner_content;
 }
 
 async function setDismissCookieNotice() {
@@ -123,6 +119,10 @@ async function addCookieBanner() {
     banner_content += css_content;
     banner_content += "</style>";
     banner_content += await getCookieBannerContent(get_url + '/partials/ila-cookie-banner-content.part.html');
+    if (!banner_content.includes("Cookie Notice")) {
+        console.warn("Unexpected Cookie Notice:", banner_content);
+        return;  /* Prevents appending error message to live webpage. */
+    }
     document.body.insertAdjacentHTML("beforeend", banner_content);
 
     // Show cookie banner
