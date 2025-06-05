@@ -1,8 +1,8 @@
 
 // TODO: Update this to a load-balanced resilient (CDN) path:
-// let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
 // For local testing purposes, uncomment the line below and comment out the line above:
-let cookie_banner_root_url = '.';
+// let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
 
 var this_script = document.currentScript; // Must run before any function calls
