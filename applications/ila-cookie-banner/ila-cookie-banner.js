@@ -126,7 +126,8 @@ async function addCookieBanner() {
                 alert("Cookie Notice is down for maintenance.");
             });
         }
-        return;  /* Prevents appending error message to live webpage. */
+        return;  /* Prevents showing any S3 error messages at the end of every
+                    campus webpage. */
     }
     document.body.insertAdjacentHTML("beforeend", banner_content);
 
