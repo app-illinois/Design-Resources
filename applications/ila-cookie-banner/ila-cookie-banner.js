@@ -127,7 +127,6 @@ async function addCookieBanner() {
     let about_button = document.getElementById("ot-sdk-btn");
     if (about_button) {
         about_button.addEventListener("click", function() {
-            // TODO: also pass returnFocus in from the cookie banner content partial
             openSlideover('ilaCookieSlideover', about_button);
         });
     }

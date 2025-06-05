@@ -6,7 +6,13 @@ var aria = aria || {};
 aria.Utils = aria.Utils || {};
 
 window.openSlideover = function (dialogId, returnFocus) {
-    new aria.Dialog(dialogId, returnFocus);
+    button_to_return_focus_to = returnFocus
+    if(returnFocus) {
+        if(!returnFocus.focus) {
+            button_to_return_focus_to = document.getElementById(returnFocus);
+        }
+    }
+    new aria.Dialog(dialogId, button_to_return_focus_to);
 };
 
 window.closeSlideover = function () {
