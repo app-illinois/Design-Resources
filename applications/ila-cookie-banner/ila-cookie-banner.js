@@ -1,6 +1,7 @@
 
 // TODO: Update this to a load-balanced resilient (CDN) path:
-let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+// let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+let cookie_banner_root_url = 'https://google.com'; // DEBUG TODO: REMOVE ME!
 // For local testing purposes, uncomment the line below and comment out the line above:
 // let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
@@ -65,7 +66,11 @@ async function getCookieBannerContent(content_path) {
     include the full final web URL of the partial file. */
     let banner_response = await fetch(content_path);
     let banner_content = await banner_response.text();
-    return banner_content;
+    if (banner_response.includes("Cookie Notice") {
+        return banner_content;
+    }
+    console.warn("Unexpected Cookie Notice:", banner_content);
+    return "";  /* Prevents appending error message to live webpage. */
 }
 
 async function setDismissCookieNotice() {
