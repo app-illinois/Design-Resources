@@ -168,10 +168,8 @@ aria.Dialog.prototype.close = function () {
     this.dialogNode.classList.remove('ila-slideover--open');
 
     document.body.classList.remove(aria.Utils.dialogOpenClass);
-    // return_to_button = this.lastFocus;
-    //. setTimeout(function(){    return_to_button.focus();   },500);
+    // return focus to the button that opened the dialog
     this.returnFocus.focus();
-    debugger;
 }; // end close
 
 aria.Dialog.prototype.addListeners = function () {
