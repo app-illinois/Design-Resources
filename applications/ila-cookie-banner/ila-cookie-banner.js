@@ -2,10 +2,10 @@
 // let cookie_banner_root_url = 'https://onetrust.techservices.illinois.edu/1.0.0';
 
 // For demonstrating the latest version on the demo site:
-let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
+// let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
 
 // For local testing purposes, uncomment the line below and comment out the line above:
-// let cookie_banner_root_url = '.';
+let cookie_banner_root_url = '.';
 let get_url = cookie_banner_root_url;
 
 var this_script = document.currentScript; // Must run before any function calls
@@ -54,9 +54,9 @@ function closeCookieB(cookiebId) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.remove('ila-cookieb-modal');
 
-    // Put focus at the start of the page.
-    let h1tag = document.querySelector('h1');
-    if(h1tag) { h1tag.focus(); }
+    // Put focus back to the page body on close
+    document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
+    document.body.focus();
 }
 
 function manageAutoclose(cookiebId) {
