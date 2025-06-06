@@ -22,14 +22,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  defaults:
-    shell: bash
-    working-directory: .
   # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      shell: bash
+      working-directory: .
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
