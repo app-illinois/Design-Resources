@@ -7,7 +7,7 @@
             <div class="ila-cookieb__cookieb">
                 <button type="button" class="ila-cookieb__close-button" aria-label="close cookie notice"
                     onclick="closeCookieB('ilaCookieBOne')">
-                    <div class="ila-cookieb__close-icon" role="presentation">
+                    <div class="ila-cookieb__close-icon" aria-hidden="true">
                         <strong>X</strong>
                     </div>
                 </button>
@@ -28,8 +28,7 @@
                     </p>
                     <div class="ila-cookieb__actions">
                         <button id="ilaCookieAboutButton" type="button" class="ila-cookieb__button"
-                            onclick="openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton')"
-                            aria-label="learn about cookies - opens modal dialogue">
+                            onclick="openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton')">
                             About Cookies
                         </button>
                         <button id="ilaCookieCloseButton" type="button" class="ila-cookieb__button"
