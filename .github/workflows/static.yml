@@ -39,7 +39,7 @@ jobs:
         uses: actions/configure-pages@v5
       
       - name: Copy files to their web-ready locations
-      - run: ./setuppages.sh
+        run: ./setuppages.sh
       
       - name: Insall minify tool
         run: apt install minify
