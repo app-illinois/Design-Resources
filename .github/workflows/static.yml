@@ -43,7 +43,7 @@ jobs:
         run: ./setuppages.sh
       
       - name: Insall minify tool
-        run: apt install minify
+        run: sudo apt install minify
 
       # Work around for Gulp CSS-Concat being unmaintained
       # Relies on work done in setuppages.sh
