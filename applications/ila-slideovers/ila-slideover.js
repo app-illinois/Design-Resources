@@ -141,9 +141,10 @@ aria.Dialog = function (dialogId, returnFocus) {
     );
     this.postNode.tabIndex = 0;
 
-    let title_tag = document.querySelector(`.ila-slideover__label`);
-    title_tag.setAttribute('tabindex', '0');
-    setTimeout(function(){    title_tag.focus();   },500);
+    // Set the initial focus for screen-readers
+    let slide_div = document.getElementById(dialogId);
+    slide_div.setAttribute('tabindex', '-1'); // Focusable, but outside tab order
+    setTimeout(function(){    slide_div.focus();   },500);
 
     this.addListeners();
     aria.openedDialog = this;
