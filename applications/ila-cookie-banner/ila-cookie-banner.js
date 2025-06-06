@@ -34,7 +34,8 @@ async function openCookieB(cookiebId) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.add('ila-cookieb-modal');
 
-    let cookie_focus = document.getElementById('ilaCookieCloseButton');
+    // Start the focus on the X button so that reading can continue from there.
+    let cookie_focus = document.getElementById('ilaCookieBXButton');
     if(cookie_focus){ cookie_focus.focus(); }
 
 }
@@ -54,9 +55,9 @@ function closeCookieB(cookiebId) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.remove('ila-cookieb-modal');
 
-    // Put focus at the start of the page.
-    let h1tag = document.querySelector('h1');
-    if(h1tag) { h1tag.focus(); }
+    // Put focus back to the page body on close
+    document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
+    document.body.focus();
 }
 
 function manageAutoclose(cookiebId) {
