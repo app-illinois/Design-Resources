@@ -140,6 +140,14 @@ async function addCookieBanner() {
             openSlideover('ilaCookieSlideover', about_button);
         });
     }
+    
+    // Dismiss the Cookie banner when `Escape` is pressed
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeCookieB('ilaCookieBOne');
+        }
+    });
+    
 }
 
 window.onload = function(){
