@@ -34,7 +34,8 @@ async function openCookieB(cookiebId) {
     // let modalIDvar = document.getElementById(modalID);
     // modalIDvar.classList.add('ila-cookieb-modal');
 
-    let cookie_focus = document.getElementById('ilaCookieCloseButton');
+    // Start the focus on the X button so that reading can continue from there.
+    let cookie_focus = document.getElementById('ilaCookieBXButton');
     if(cookie_focus){ cookie_focus.focus(); }
 
 }
