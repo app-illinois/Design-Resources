@@ -142,6 +142,7 @@ aria.Dialog = function (dialogId, returnFocus) {
     this.postNode.tabIndex = 0;
 
     // Set the initial focus for screen-readers
+    // (Preferred pattern because this is a modal alert)
     let slide_div = document.getElementById(dialogId);
     slide_div.setAttribute('tabindex', '-1'); // Focusable, but outside tab order
     setTimeout(function(){    slide_div.focus();   },500);
