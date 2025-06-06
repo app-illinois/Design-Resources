@@ -40,7 +40,7 @@ jobs:
         uses: actions/configure-pages@v5
       
       - name: Copy files to their web-ready locations
-        run: ./setuppages.sh
+        run: bash ./setuppages.sh
       
       - name: Insall minify tool
         run: sudo apt install minify
@@ -48,7 +48,7 @@ jobs:
       # Work around for Gulp CSS-Concat being unmaintained
       # Relies on work done in setuppages.sh
       - name: Copy minified CSS to /docs/css/app-toolkit.css
-        run: ./setup_bundles.sh
+        run: bash ./setup_bundles.sh
 
       - run: npm install
       - run: npm rebuild
