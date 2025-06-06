@@ -23,17 +23,17 @@ function minifyJS(){
 }
 
 
-function concatCSS() {
-    return gulp.src('applications/**/*.css')
-    .pipe(concatCss("app-toolkit.css"))
-    .pipe(gulp.dest('docs/css/'));
-  }
+// function concatCSS() {
+//     return gulp.src('applications/**/*.css')
+//     .pipe(concatCss("app-toolkit.css"))
+//     .pipe(gulp.dest('docs/css/'));
+//   }
 
-  function minifyCSS() {
-    return gulp.src('docs/css/app-toolkit.css') 
-      .pipe(cleanCSS({ compatibility: 'ie8' }))
-      .pipe(gulp.dest('docs/css')); 
-  }
+//   function minifyCSS() {
+//     return gulp.src('docs/css/app-toolkit.css') 
+//       .pipe(cleanCSS({ compatibility: 'ie8' }))
+//       .pipe(gulp.dest('docs/css')); 
+//   }
   
   
-exports.default = series(concatCSS, minifyCSS, concatJS, minifyJS, copySVG);
+exports.default = series(concatJS, minifyJS, copySVG);
