@@ -1,7 +1,7 @@
 let cookie_url = 'DEPLOY_URL';
 if (!cookie_url.contains('https')) {
     cookie_url = '.'; // For local testing only
-    console.warn('Cookie banner is in development mode: ' 
+    console.warn('Cookie Banner is in development mode: ' 
         + 'Please set cookie_url in production.');
 }
 
