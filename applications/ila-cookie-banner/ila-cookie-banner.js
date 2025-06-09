@@ -1,4 +1,4 @@
-let cookie_url = 'DEPLOY_URL';
+let cookie_url = 'DEPLOY_URL';  // This is replaced with the correct URL during GitHub Action runs.
 if (!cookie_url.contains('https')) {
     cookie_url = '.'; // For local testing only
     console.warn('Cookie Banner is in development mode: ' 
