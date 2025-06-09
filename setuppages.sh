@@ -1,6 +1,6 @@
 #!/bin/bash
 DEPLOY_URL='https://app-illinois.github.io/Design-Resources'
-STAGE_DIR=cookie-zip-stage
+STAGE_DIR='docs'
 
 mkdir -p $STAGE_DIR/css
 mkdir -p $STAGE_DIR/js
