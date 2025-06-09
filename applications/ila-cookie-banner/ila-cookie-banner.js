@@ -1,12 +1,9 @@
-// TODO: Update this to a load-balanced resilient (CDN) path:
-// let cookie_banner_root_url = 'https://onetrust.techservices.illinois.edu/1.0.0';
-
-// For demonstrating the latest version on the demo site:
-let cookie_banner_root_url = 'https://app-illinois.github.io/Design-Resources';
-
-// For local testing purposes, uncomment the line below and comment out the line above:
-// let cookie_banner_root_url = '.';
-let get_url = cookie_banner_root_url;
+let cookie_url = 'DEPLOY_URL';
+if (!cookie_url.contains('https')) {
+    cookie_url = '.'; // For local testing only
+    console.warn('Cookie banner is in development mode: ' 
+        + 'Please set cookie_url in production.');
+}
 
 var this_script = document.currentScript; // Must run before any function calls
 
@@ -103,14 +100,14 @@ async function addCookieBanner() {
     switch(theme) {
         case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
         case "uic":
-            css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uic-colors.css');
+            css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uic-colors.css');
             break;
         case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
         case "uis":
-            css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uis-colors.css');
+            css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uis-colors.css');
             break;
         default:
-            css_content = await getCookieBannerContent(get_url + '/css/ila-cookie-uiuc-colors.css');
+            css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uiuc-colors.css');
             break;
     }
 
@@ -118,11 +115,11 @@ async function addCookieBanner() {
     // Add cookie banner to page
     let about_button = document.getElementById("ot-sdk-btn");
     let banner_content = "<style>";
-    banner_content += await getCookieBannerContent(get_url + '/css/ila-slideover.css');
-    banner_content += await getCookieBannerContent(get_url + '/css/ila-cookie-banner.css');
+    banner_content += await getCookieBannerContent(cookie_url + '/css/ila-slideover.css');
+    banner_content += await getCookieBannerContent(cookie_url + '/css/ila-cookie-banner.css');
     banner_content += css_content;
     banner_content += "</style>";
-    banner_content += await getCookieBannerContent(get_url + '/partials/ila-cookie-banner-content.part.html');
+    banner_content += await getCookieBannerContent(cookie_url + '/partials/ila-cookie-banner-content.part.html');
     if (!banner_content.includes("Cookie Notice")) {
         console.warn("Unexpected Cookie Notice:", banner_content);
         if (about_button) {
