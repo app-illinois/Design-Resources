@@ -1,16 +1,23 @@
 #!/bin/bash
-mkdir -p ./cookie-zip-stage
-mkdir -p ./cookie-zip-stage/js
-mkdir -p ./cookie-zip-stage/css
-mkdir -p ./cookie-zip-stage/partials
+DEPLOY_URL='https://onetrust.techservices.illinois.edu/1.0.0'
+STAGE_DIR=cookie-zip-stage
+
+mkdir -p $STAGE_DIR/js
+mkdir -p $STAGE_DIR/css
+mkdir -p $STAGE_DIR/partials
 
 # Start staging
-cp ./applications/ila-cookie-banner/*.js ./cookie-zip-stage/js
-cp ./applications/ila-cookie-banner/*.css ./cookie-zip-stage/css
-cp ./applications/ila-cookie-banner/*.part.html ./cookie-zip-stage/partials
+cp ./applications/ila-cookie-banner/*.js $STAGE_DIR/js
+cp ./applications/ila-cookie-banner/*.css $STAGE_DIR/css
+cp ./applications/ila-cookie-banner/*.part.html $STAGE_DIR/partials
+if [[ $OSTYPE == darwin* ]]; then
+    sed -i '' -e "s;DEPLOY_URL;$DEPLOY_URL;" $STAGE_DIR/js/ila-cookie-banner.js
+else
+    sed -i "s;DEPLOY_URL;$DEPLOY_URL;" $STAGE_DIR/js/ila-cookie-banner.js
+fi
 
 # Pack slideover in with cookie banner
-cat applications/ila-slideovers/ila-slideover.js >>./cookie-zip-stage/js/ila-cookie-banner.js
+cat applications/ila-slideovers/ila-slideover.js >>$STAGE_DIR/js/ila-cookie-banner.js
 
 # Leave a copy under the old name for old hardcoded URLs
-cp ./cookie-zip-stage/js/ila-cookie-banner.js ./cookie-zip-stage/otSDKStub.js
+cp $STAGE_DIR/js/ila-cookie-banner.js $STAGE_DIR/otSDKStub.js
