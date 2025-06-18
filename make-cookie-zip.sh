@@ -10,6 +10,8 @@ mkdir -p $STAGE_DIR/partials
 cp ./applications/ila-cookie-banner/*.js $STAGE_DIR/js
 cp ./applications/ila-cookie-banner/*.css $STAGE_DIR/css
 cp ./applications/ila-cookie-banner/*.part.html $STAGE_DIR/partials
+cp ./applications/ila-cookie-banner/RELEASE.md $STAGE_DIR
+
 if [[ $OSTYPE == darwin* ]]; then
     sed -i '' -e "s;DEPLOY_URL;$DEPLOY_URL;" $STAGE_DIR/js/ila-cookie-banner.js
 else
