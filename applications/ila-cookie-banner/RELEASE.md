@@ -55,7 +55,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 	
 ## Production Release
 
-## Step 5. Production Release
+### Step 5. Activate the New Release
 
 + Make a backup copy of `https://onetrust.techservices.illinois.edu/otSDKStub.js` to `YYYY.MM.DD.otSDKStub.js`
 
