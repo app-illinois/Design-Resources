@@ -59,7 +59,7 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 
 	> Warning: The next step causes the new version of the cookie banner to start appearing across all sites that use the file.
 
-+ Copy `otSDKStub.js` from `1.0.0` to the CDN root. 
++ Copy `otSDKStub.js` from `1.0.0` to the CDN root
  
 	> Tip: The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated.
 
