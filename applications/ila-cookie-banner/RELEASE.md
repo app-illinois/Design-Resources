@@ -11,7 +11,7 @@ The target audience for this document is the team that maintains the CDN that se
 + Create a new folder, named for the versioned release.
 > For example, if `1.0.0`: https://onetrust.techservices.illinois.edu/1.0.0
 		
-### Step 2. Get the latest cookie banner zip file from GitHub Actions.
+### Step 2. Get the latest cookie banner zip file from GitHub Actions
 
 + Visit https://github.com/app-illinois/Design-Resources/actions
 + Click on `Cookie banner zip`
