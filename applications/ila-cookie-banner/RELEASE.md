@@ -64,7 +64,7 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 	> Tip: You can roll back to the previous version by restoring `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js`.
 	> This is recommended if any part of `Step 6: Verify the Release` fails.
 
-### Step 6. Verify the release
+### Step 6. Verify the Release
 
 + In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line. For example: https://cookieme.rslater.web.illinois.edu/
 
