@@ -75,7 +75,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 + Reload the page, to capture a copy of all network traffic.
 + Review the rows returned - find the rows from our CDN domain (`onetrust.techservices.illinois.edu`).
 
-> Tip: If no such rows are found, then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
+        > Tip: If no such rows are found, then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
 
 + In these rows, confirm that the expected release number (i.e. `1.0.0`) appears in the `GET URL` details.
 
