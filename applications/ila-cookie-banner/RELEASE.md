@@ -18,7 +18,7 @@ The target audience for this document is the team that maintains the CDN that se
 + Click on [`Cookie banner zip`](https://github.com/app-illinois/Design-Resources/actions/workflows/cookie-banner-zip.yaml)
 + Click on the the latest successful run - the top one with a green icon.
 
-	> Tip: Failed runs are not expected. Contact the development team if the most recent `Cookie banner zip` GitHub action failed (indicated by a red icon).
+	> Warning: Failed runs are not expected. Contact the development team if the most recent `Cookie banner zip` GitHub action failed (indicated by a red icon).
 
 + Find and click `cookie-banner` under the `Artifacts` section of the `GitHub Actions Cookie banner zip` page.
 + Find the Zip file in your browser downloads directory.
@@ -57,7 +57,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 
 + Make a backup copy of `https://onetrust.techservices.illinois.edu/otSDKStub.js` to `YYYY.MM.DD.otSDKStub.js`
 
-	> Tip: The next step causes the new version of the cookie banner to start appearing across all sites that use the file.
+	> Warning: The next step causes the new version of the cookie banner to start appearing across all sites that use the file.
 
 + Put the new `otSDKStub.js` at the CDN root. - Copy the file verified in step 3 - `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to the CDN root `https://onetrust.techservices.illinois.edu/otSDKStub.js`.
 
@@ -66,9 +66,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 
 ### Step 6. Verify the release
 
-+ In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line.
-
-        > For example: https://cookieme.rslater.web.illinois.edu/
++ In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line. For example: https://cookieme.rslater.web.illinois.edu/
 
 + Press F12 to open the `Developer Tools`.
 + Find and open the `Network` tab of `Developer Tools`.
@@ -76,7 +74,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 + Reload the page, to capture a copy of all network traffic.
 + Review the rows returned - find the rows from our CDN domain (`onetrust.techservices.illinois.edu`).
 
-        > Tip: If no such rows are found, then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
+	> Tip: If no such rows are found, then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
 
 + In these rows, confirm that the expected release number (i.e. `1.0.0`) appears in the `GET URL` details. For example:
 
