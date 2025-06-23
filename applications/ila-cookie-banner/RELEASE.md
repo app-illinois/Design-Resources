@@ -71,7 +71,7 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 
 + Press F12 to open the `Developer Tools`
 + Find and open the `Network` tab of `Developer Tools`.
-+ Ensure that `Disable Cache` is checked. (Otherwise the browser may re-use old downloaded files to save time, but break this test.)
++ Ensure that `Disable Cache` is checked (Otherwise the browser may re-use old downloaded files to save time, but break this test)
 + Reload the page, to capture a copy of all network traffic
 + Review the rows returned - find the rows from our CDN domain (`onetrust.techservices.illinois.edu`).
 
