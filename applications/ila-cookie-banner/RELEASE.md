@@ -77,9 +77,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 
         > Tip: If no such rows are found, then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
 
-+ In these rows, confirm that the expected release number (i.e. `1.0.0`) appears in the `GET URL` details.
-
-For example:
++ In these rows, confirm that the expected release number (i.e. `1.0.0`) appears in the `GET URL` details. For example:
 
 	```
 	GET https://onetrust.techservices.illinois.edu/1.0.0/partials/ila-cookie-banner-content.part.html
