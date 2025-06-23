@@ -1,6 +1,6 @@
 # Cookie Banner Release Process
 
-This is a guide for installing the a new release of the campus cookie banner to the content delivery network (CDN) server S3 bucket.
+This is a guide for installing a new release of the campus cookie banner to the Content Delivery Network (CDN).
 
 The target audience for this document is the team that maintains the CDN that serves the shared cookie banner.
 
