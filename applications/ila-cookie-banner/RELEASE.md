@@ -65,12 +65,9 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 
 	> For example: copy `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to `https://onetrust.techservices.illinois.edu/otSDKStub.js`
 
-	> Tip: You can roll back to the previous version by restoring `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js`.
-	> This is recommended if any part of `Step 6: Verify the Release` fails.
-
 ### Step 6. Verify the Release
 
-+ In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line. For example: https://cookieme.rslater.web.illinois.edu/
++ In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line. For example, we have been testing with https://cookieme.rslater.web.illinois.edu/
 
 + Press F12 to open the `Developer Tools`.
 + Find and open the `Network` tab of `Developer Tools`.
@@ -78,7 +75,7 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 + Reload the page, to capture a copy of all network traffic.
 + Review the rows returned - find the rows from our CDN domain (`onetrust.techservices.illinois.edu`).
 
-	> Tip: If no such rows are found, then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
+	> Tip: If no such rows are found, then the deployment was not fully successful. Follow `How to Roll Back a Release` below, and then reach out to the development team.
 
 + In these rows, confirm that the expected release number (i.e. `1.0.0`) appears in the `GET URL` details. For example:
 
@@ -90,4 +87,12 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 	GET https://onetrust.techservices.illinois.edu/1.0.0/css/ila-cookie-banner.css
 	```
 	
-	> Tip: If these URLs *do not include* the expected `onetrust.techservices.illinois` and the current release version (such as `1.0.0`), then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
+	> Tip: If these URLs *do not include* the expected `onetrust.techservices.illinois` and the current release version (such as `1.0.0`), then the deployment was not fully successful. Follow `How to Roll Back a Release` below, and then reach out to the development team.
+	
+### How to Roll Back a Release
+
+The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated.
+
+You can roll back to the previous version by restoring `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` in the CDN root.
+
+Rolling back is recommended if any part of `Step 6: Verify the Release` fails.
