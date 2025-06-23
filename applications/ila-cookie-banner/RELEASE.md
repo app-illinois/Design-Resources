@@ -86,4 +86,4 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 	GET https://onetrust.techservices.illinois.edu/1.0.0/css/ila-cookie-banner.css
 	```
 	
-> Tip: If these URLs do not include the expected `onetrust.techservices.illinois` and the current release version (such as `1.0.0`), then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
+> Tip: If these URLs *do not include* the expected `onetrust.techservices.illinois` and the current release version (such as `1.0.0`), then the deployment was not fully successful. Restore `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` and reach out to the development team.
