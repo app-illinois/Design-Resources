@@ -21,7 +21,7 @@ The target audience for this document is the team that maintains the CDN that se
 	> Warning: Failed runs are not expected. Contact the development team if the most recent `Cookie banner zip` GitHub action failed (indicated by a red icon).
 
 + Find and click `cookie-banner` under the `Artifacts` section of the `GitHub Actions Cookie banner zip` page.
-+ Find the Zip file in your browser downloads directory.
++ Find the Zip file in your browser downloads directory
 	
 ### Step 3. Extract & upload the contents of the zip file to the path created in step one
 
