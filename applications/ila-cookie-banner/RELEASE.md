@@ -16,7 +16,7 @@ The target audience for this document is the team that maintains the CDN that se
 
 + Visit https://github.com/app-illinois/Design-Resources/actions
 + Click on [`Cookie banner zip`](https://github.com/app-illinois/Design-Resources/actions/workflows/cookie-banner-zip.yaml)
-+ Click on the the latest successful run - the top one with a green icon.
++ Click on the the latest successful run - the top one with a green icon
 
 	> Warning: Failed runs are not expected. Contact the development team if the most recent `Cookie banner zip` GitHub action failed (indicated by a red icon).
 
