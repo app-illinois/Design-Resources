@@ -59,7 +59,11 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 
 	> Warning: The next step causes the new version of the cookie banner to start appearing across all sites that use the file.
 
-+ Put the new `otSDKStub.js` at the CDN root, by copying the file verified in step 3 to the CDN root. (Copy `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to `https://onetrust.techservices.illinois.edu/otSDKStub.js`)
++ Copy `otSDKStub.js` from `1.0.0` to the CDN root. 
+ 
+	> Tip: The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated.
+
+	> For example: copy `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to `https://onetrust.techservices.illinois.edu/otSDKStub.js`
 
 	> Tip: You can roll back to the previous version by restoring `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js`.
 	> This is recommended if any part of `Step 6: Verify the Release` fails.
