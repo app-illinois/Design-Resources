@@ -67,7 +67,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 
 + In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line.
 
-> For example: https://cookieme.rslater.web.illinois.edu/
+        > For example: https://cookieme.rslater.web.illinois.edu/
 
 + Press F12 to open the `Developer Tools`.
 + Find and open the `Network` tab of `Developer Tools`.
