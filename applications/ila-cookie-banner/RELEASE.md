@@ -23,9 +23,9 @@ The target audience for this document is the team that maintains the CDN that se
 + Find and click `cookie-banner` under the `Artifacts` section of the `GitHub Actions Cookie banner zip` page.
 + Find the Zip file in your browser downloads directory.
 	
-### Step 3. Extract & place the contents of the zip file into the folder created in step one
+### Step 3. Extract & upload the contents of the zip file to the path created in step one
 
-After extracted correctly, the contents of the `1.0.0` folder should look like:
+After the zip file contents are extracted & uploaded, the contents of the `1.0.0` folder should look like:
 
 	1.0.0
 	├── css
