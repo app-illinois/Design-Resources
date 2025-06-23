@@ -14,14 +14,14 @@ The target audience for this document is the team that maintains the CDN that se
 		
 ### Step 2. Get the latest cookie banner zip file from GitHub Actions.
 
-	+ Visit https://github.com/app-illinois/Design-Resources/actions
-	+ Click on `Cookie banner zip`
-	+ Click on the the latest successful run - the top one with a green icon.
++ Visit https://github.com/app-illinois/Design-Resources/actions
++ Click on `Cookie banner zip`
++ Click on the the latest successful run - the top one with a green icon.
 
 	> Tip: Failed runs are not expected. Contact the development team if the most recent `Cookie banner zip` GitHub action failed (indicated by a red icon).
 
-	+ Find and click `cookie-banner` under the `Artifacts` section of the `GitHub Actions Cookie banner zip` page.
-	+ Find the Zip file in your browser downloads directory.
++ Find and click `cookie-banner` under the `Artifacts` section of the `GitHub Actions Cookie banner zip` page.
++ Find the Zip file in your browser downloads directory.
 	
 ### Step 3. Extract and place the contents of the zip file into the folder created in step one, above.
 
@@ -44,8 +44,8 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 
 ### Step 4. Verify the main JavaScript file
 
-	+ With a text editor, open `otSDKStub.js`.
-	+ For release `1.0.0`, verify that the first line of `otSDKStub.js` contains `1.0.0`:
++ With a text editor, open `otSDKStub.js`.
++ For release `1.0.0`, verify that the first line of `otSDKStub.js` contains `1.0.0`:
 	
 	```
 	let cookie_url = 'https://onetrust.techservices.illinois.edu/1.0.0';
