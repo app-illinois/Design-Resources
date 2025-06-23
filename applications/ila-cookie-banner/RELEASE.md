@@ -8,9 +8,8 @@ The target audience for this document is the team that maintains the CDN that se
 
 ### Step 1. Create the new release folder.
 
-	Create a new folder, named for the versioned release. For example, if `1.0.0`:
-
-		https://onetrust.techservices.illinois.edu/1.0.0
++ Create a new folder, named for the versioned release.
+> For example, if `1.0.0`: https://onetrust.techservices.illinois.edu/1.0.0
 		
 ### Step 2. Get the latest cookie banner zip file from GitHub Actions.
 
