@@ -57,8 +57,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 ### Step 5. Activate the New Release
 
 + Make a backup copy of `https://onetrust.techservices.illinois.edu/otSDKStub.js` to `YYYY.MM.DD.otSDKStub.js`
-
-> NOTE: **The next step causes the new version of the cookie banner to start appearing across all sites that use the file.**
+        > NOTE: **The next step causes the new version of the cookie banner to start appearing across all sites that use the file.**
 
 + Put the new `otSDKStub.js` at the CDN root. - Copy the file verified in step 3 - `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to the CDN root `https://onetrust.techservices.illinois.edu/otSDKStub.js`.
 
