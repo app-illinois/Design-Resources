@@ -61,7 +61,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 
 + Put the new `otSDKStub.js` at the CDN root. - Copy the file verified in step 3 - `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to the CDN root `https://onetrust.techservices.illinois.edu/otSDKStub.js`.
 
-> Tip: You can roll back to the previous version by restoring `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js`. This is recommended if any part of `Step 6: Verify the Release` fails.
+        > Tip: You can roll back to the previous version by restoring `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js`. This is recommended if any part of `Step 6: Verify the Release` fails.
 
 ### Step 6. Verify the release
 
