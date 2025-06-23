@@ -91,8 +91,4 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 	
 ### How to Roll Back a Release
 
-The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated.
-
-You can roll back to the previous version by restoring the most recent `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` in the CDN root.
-
-Rolling back is recommended if any part of `Step 6: Verify the Release` fails.
+The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated. You can roll back to the previous version by restoring the most recent `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` in the CDN root. Rolling back is recommended if any part of `Step 6: Verify the Release` fails.
