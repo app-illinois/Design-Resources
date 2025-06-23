@@ -27,7 +27,6 @@ The target audience for this document is the team that maintains the CDN that se
 
 After extracted correctly, the contents of the `1.0.0` folder should look like:
 
-	```
 	1.0.0
 	├── css
 	│   ├── ila-cookie-banner.css
@@ -40,14 +39,13 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 	├── partials
 	│   └── ila-cookie-banner-content.part.html
 	└── RELEASE.md
-	```
 
 ### Step 4. Verify the main JavaScript file
 
 + With a text editor, open `otSDKStub.js`.
 + For release `1.0.0`, verify that the first line of `otSDKStub.js` contains `1.0.0`:
 	
-	```
+	```javascript
 	let cookie_url = 'https://onetrust.techservices.illinois.edu/1.0.0';
 	```
 	
