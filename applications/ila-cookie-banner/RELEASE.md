@@ -22,7 +22,7 @@ Click on [`Cookie banner zip`](https://github.com/app-illinois/Design-Resources/
 + Find and click `cookie-banner` under the `Artifacts` section of the `GitHub Actions Cookie banner zip` page.
 + Find the Zip file in your browser downloads directory.
 	
-### Step 3. Extract and place the contents of the zip file into the folder created in step one, above.
+### Step 3. Extract & place the contents of the zip file into the folder created in step one
 
 After extracted correctly, the contents of the `1.0.0` folder should look like:
 
