@@ -49,7 +49,7 @@ After extracted correctly, the contents of the `1.0.0` folder should look like:
 	let cookie_url = 'https://onetrust.techservices.illinois.edu/1.0.0';
 	```
 	
-	> Tip: If the version number (such as `1.0.0`) in the first line does not match the expected release version, reach out to the development team.
+	> Warning: If the version number (such as `1.0.0`) in the first line does not match the expected release version, the new version will not load properly. Reach out to the development team.
 	
 ## Production Release
 
