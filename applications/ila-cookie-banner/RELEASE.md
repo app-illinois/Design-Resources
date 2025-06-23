@@ -6,7 +6,7 @@ The target audience for this document is the team that maintains the CDN that se
 
 ## Stage the New Release
 
-### Step 1. Create the new release folder.
+### Step 1. Create the new release folder
 
 + Create a new folder, named for the versioned release.
 > For example, if `1.0.0`: https://onetrust.techservices.illinois.edu/1.0.0
