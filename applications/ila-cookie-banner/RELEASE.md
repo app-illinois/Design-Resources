@@ -42,7 +42,7 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 
 ### Step 4. Verify the main JavaScript file
 
-+ With a text editor, open `otSDKStub.js`.
++ With a text editor, open `otSDKStub.js`
 + For release `1.0.0`, verify that the first line of `otSDKStub.js` contains `1.0.0`:
 	
 	```javascript
