@@ -23,7 +23,7 @@ body {
     bottom: 0;
     left: 0rem;
     width: auto;
-    z-index: 2000;
+    z-index: 30000; /* Some University site headers (or parts of headers) have z-index 10,000, displaying under can cause mixed content display */
 }
 
 .ila-cookieb__cookieb {
