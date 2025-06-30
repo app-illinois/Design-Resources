@@ -55,19 +55,19 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 
 ### Step 5. Activate the New Release
 
-+ Make a backup copy of `https://onetrust.techservices.illinois.edu/otSDKStub.js` to `YYYY.MM.DD.otSDKStub.js`
++ Make a backup copy of `https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js` to `YYYY.MM.DD.otSDKStub.js`
 
 	> Warning: The next step causes the new version of the cookie banner to start appearing across all sites that use the file.
 
-+ Copy `otSDKStub.js` from `1.0.0` to the CDN root
++ Copy `otSDKStub.js` from `1.0.0` to the `scripttemplates` folder on the CDN
  
 	> Tip: The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated.
 
-	> For example: copy `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to `https://onetrust.techservices.illinois.edu/otSDKStub.js`
+	> For example: copy `https://onetrust.techservices.illinois.edu/1.0.0/otSDKStub.js` to `https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js`
 
 ### Step 6. Verify the Release
 
-+ In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/otSDKStub.js` with a `<script src=...>` line. For example, we have been testing with https://cookieme.rslater.web.illinois.edu/
++ In a browser, visit a website that imports `https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js` with a `<script src=...>` line. For example, we have been testing with https://app-illinois.github.io/Design-Resources/
 
 + Press F12 to open the `Developer Tools`
 + Find and open the `Network` tab of `Developer Tools`
@@ -91,4 +91,4 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 	
 ### How to Roll Back a Release
 
-The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated. You can roll back to the previous version by restoring the most recent `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` in the CDN root. Rolling back is recommended if any part of `Step 6: Verify the Release` fails.
+The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated. You can roll back to the previous version by restoring the most recent `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` in the `scripttemplates` folder. Rolling back is recommended if any part of `Step 6: Verify the Release` fails.
