@@ -183,7 +183,8 @@ body {
 
 /* UIUC Branding */
 
-.ila-cookieb__cookieb {
+html body .ila-cookieb__cookieb {
+    /* html body makes this style stronger, but still allows !important to override */
     color: var(--ila-cookieb-font-white);
     background-color: var(--ila-cookieb-main);
 }
