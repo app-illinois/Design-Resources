@@ -151,6 +151,6 @@ async function addCookieBanner() {
     
 }
 
-window.onload = function(){
+window.addEventListener("load", function(event){
     addCookieBanner();
-};
+});
