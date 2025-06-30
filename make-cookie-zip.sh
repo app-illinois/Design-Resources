@@ -9,6 +9,7 @@ mkdir -p $STAGE_DIR/partials
 # Start staging
 cp ./applications/ila-cookie-banner/*.js $STAGE_DIR/js
 cp ./applications/ila-cookie-banner/*.css $STAGE_DIR/css
+cp ./applications/ila-slideovers/*.css $STAGE_DIR/css
 cp ./applications/ila-cookie-banner/*.part.html $STAGE_DIR/partials
 cp ./applications/ila-cookie-banner/RELEASE.md $STAGE_DIR
 
