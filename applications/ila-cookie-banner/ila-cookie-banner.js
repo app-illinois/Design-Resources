@@ -1,7 +1,7 @@
 let cookie_url = 'DEPLOY_URL';  // This is replaced with the correct URL during GitHub Action runs.
-if (!cookie_url.includes('https')) {
+if (window.location.hostname === 'localhost') {
     cookie_url = '.'; // For local testing only
-    console.warn('Cookie Banner is in development mode: ' 
+    console.warn('Cookie Banner is in development mode: '
         + 'Please set cookie_url in production.');
 }
 
@@ -141,14 +141,14 @@ async function addCookieBanner() {
             openSlideover('ilaCookieSlideover', about_button);
         });
     }
-    
+
     // Dismiss the Cookie banner when `Escape` is pressed
     document.addEventListener("keydown", function(event) {
         if (event.key === "Escape") {
             closeCookieB('ilaCookieBOne');
         }
     });
-    
+
 }
 
 window.addEventListener("load", function(event){
