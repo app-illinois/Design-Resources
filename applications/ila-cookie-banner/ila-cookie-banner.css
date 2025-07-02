@@ -14,7 +14,8 @@
     --ila-cookieb-small-link-focus: #c84113; /* from -il-altgeld */
 }
 
-body .cookieb-holder {
+
+.ila-cookieb-font-family {
     font-family: "Source Sans Pro", sans-serif;
 }
 
