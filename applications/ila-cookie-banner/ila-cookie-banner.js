@@ -22,17 +22,19 @@ async function openCookieB(cookiebId) {
         element.classList.remove('ila-cookieb--first');
     });
     cookieb.classList.add('ila-cookieb--first');
+    
     manageAutoclose(cookiebId);
 
     // Used to disable scroll on the page
-    // document.body.classList.add('ila-cookieb-noscroll');
+    document.body.classList.add('ila-cookieb-noscroll');
 
     // Used to enable a modal background on the page
-    // let modalIDvar = document.getElementById(modalID);
-    // modalIDvar.classList.add('ila-cookieb-modal');
+    let modalIDvar = document.getElementById('ilaCookieModal');
+    modalIDvar.classList.add('ila-cookieb-modal');
 
     // Start the focus on the X button so that reading can continue from there.
-    let cookie_focus = document.getElementById('ilaCookieBXButton');
+    let cookie_focus = document.getElementById('ilaCookieNoticeDiv');
+    cookie_focus.setAttribute('tabindex', '-1'); // Focusable, but outside tab order
     if(cookie_focus){ cookie_focus.focus(); }
 
 }
@@ -42,16 +44,16 @@ function closeCookieB(cookiebId) {
     cookieb.classList.remove('ila-cookieb--open');
     cookieb.classList.add('ila-cookieb--closed');
 
-    // Used to enable scroll on the page
-    // document.body.classList.remove('ila-cookieb-noscroll');
-    //
-
+    // Remember that the notice has been dismissed 
     setDismissCookieNotice();
+    
+    // Used to enable scroll on the page
+    document.body.classList.remove('ila-cookieb-noscroll');
 
     // Used to disable a modal background on the page
-    // let modalIDvar = document.getElementById(modalID);
-    // modalIDvar.classList.remove('ila-cookieb-modal');
-
+    let modalIDvar = document.getElementById('ilaCookieModal');
+    modalIDvar.classList.remove('ila-cookieb-modal');
+    
     // Put focus back to the page body on close
     document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
     document.body.focus();
@@ -148,9 +150,26 @@ async function addCookieBanner() {
             closeCookieB('ilaCookieBOne');
         }
     });
+    createCookieNoticeFocusCycle();
 
 }
 
 window.addEventListener("load", function(event){
     addCookieBanner();
 });
+
+function createCookieNoticeFocusCycle() {
+    first = document.getElementById("ilaCookieBXButton");
+    first.addEventListener('keydown', function(e){
+        if (e.keyCode===9 && e.shiftKey) {
+            last.focus();
+            e.preventDefault();
+        }});
+
+    last = document.getElementById("ilaCookieCloseButton");
+    last.addEventListener('keydown', function(e){
+        if (e.keyCode===9 && !e.shiftKey) {
+            first.focus();
+            e.preventDefault();
+        }});
+}
