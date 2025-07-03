@@ -22,6 +22,7 @@ async function openCookieB(cookiebId) {
         element.classList.remove('ila-cookieb--first');
     });
     cookieb.classList.add('ila-cookieb--first');
+    
     manageAutoclose(cookiebId);
 
     // Used to disable scroll on the page
@@ -52,7 +53,7 @@ function closeCookieB(cookiebId) {
     // Used to disable a modal background on the page
     let modalIDvar = document.getElementById('ilaCookieModal');
     modalIDvar.classList.remove('ila-cookieb-modal');
-
+    
     // Put focus back to the page body on close
     document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
     document.body.focus();
@@ -149,9 +150,26 @@ async function addCookieBanner() {
             closeCookieB('ilaCookieBOne');
         }
     });
+    createCookieNoticeFocusCycle();
 
 }
 
 window.addEventListener("load", function(event){
     addCookieBanner();
 });
+
+function createCookieNoticeFocusCycle() {
+    first = document.getElementById("ilaCookieBXButton");
+    first.addEventListener('keydown', function(e){
+        if (e.keyCode===9 && e.shiftKey) {
+            last.focus();
+            e.preventDefault();
+        }});
+
+    last = document.getElementById("ilaCookieCloseButton");
+    last.addEventListener('keydown', function(e){
+        if (e.keyCode===9 && !e.shiftKey) {
+            first.focus();
+            e.preventDefault();
+        }});
+}
