@@ -32,7 +32,8 @@ async function openCookieB(cookiebId) {
     modalIDvar.classList.add('ila-cookieb-modal');
 
     // Start the focus on the X button so that reading can continue from there.
-    let cookie_focus = document.getElementById('ilaCookieBXButton');
+    let cookie_focus = document.getElementById('ilaCookieNoticeDiv');
+    cookie_focus.setAttribute('tabindex', '-1'); // Focusable, but outside tab order
     if(cookie_focus){ cookie_focus.focus(); }
 
 }
