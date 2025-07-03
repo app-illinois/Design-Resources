@@ -25,11 +25,11 @@ async function openCookieB(cookiebId) {
     manageAutoclose(cookiebId);
 
     // Used to disable scroll on the page
-    // document.body.classList.add('ila-cookieb-noscroll');
+    document.body.classList.add('ila-cookieb-noscroll');
 
     // Used to enable a modal background on the page
-    // let modalIDvar = document.getElementById(modalID);
-    // modalIDvar.classList.add('ila-cookieb-modal');
+    let modalIDvar = document.getElementById('ilaCookieModal');
+    modalIDvar.classList.add('ila-cookieb-modal');
 
     // Start the focus on the X button so that reading can continue from there.
     let cookie_focus = document.getElementById('ilaCookieBXButton');
@@ -42,15 +42,15 @@ function closeCookieB(cookiebId) {
     cookieb.classList.remove('ila-cookieb--open');
     cookieb.classList.add('ila-cookieb--closed');
 
-    // Used to enable scroll on the page
-    // document.body.classList.remove('ila-cookieb-noscroll');
-    //
-
+    // Remember that the notice has been dismissed 
     setDismissCookieNotice();
+    
+    // Used to enable scroll on the page
+    document.body.classList.remove('ila-cookieb-noscroll');
 
     // Used to disable a modal background on the page
-    // let modalIDvar = document.getElementById(modalID);
-    // modalIDvar.classList.remove('ila-cookieb-modal');
+    let modalIDvar = document.getElementById('ilaCookieModal');
+    modalIDvar.classList.remove('ila-cookieb-modal');
 
     // Put focus back to the page body on close
     document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
