@@ -16,7 +16,7 @@
         href="https://webtheme.illinois.edu/feed/" />
     <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed"
         href="https://webtheme.illinois.edu/comments/feed/" />
-
+    
     <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2'
         media='all' />
 
@@ -42,7 +42,12 @@
             font-size: 18px;
             line-height: 1.6666666667em;
             font-family: var(--il-font-sans);
-            color: var(--il-text-color);
+        }
+        
+        p, h2 {
+            /* Test for CSS bug that can break contrast. */
+            /* This CSS should lose to CSS in the Cookie Notice files. */
+            color: black;
         }
 
         a {
