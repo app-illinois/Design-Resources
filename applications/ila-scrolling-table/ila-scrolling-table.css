@@ -59,6 +59,7 @@ thead tr > th:first-child {
 position: sticky;
 left: 0;
 z-index: 11; /* keeps the first column in the head visible above the rest of the column heads when you scroll horizontally */
+box-shadow: 4px 0 0 0 #fff; /* Creates the thick right border effect */
 }
 
 tbody tr > th:first-child {
@@ -66,6 +67,7 @@ background-color: #dedede;
 color: #000;
 position: sticky;
 left: 0;
+box-shadow: 4px 0 0 0 #000; /* Creates the thick right border effect */
 }
 
 tbody tr th, tbody tr td {
