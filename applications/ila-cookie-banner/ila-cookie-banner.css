@@ -8,15 +8,10 @@
     --ila-cookieb-border-gray: #707070; /* from toolkit v2 --il-gray-2 */
     --ila-cookieb-button-blue: #13294b; /* from toolkit v2 --il-blue */
     --ila-cookieb-button-background-color: #ffffff; /* white */
-    --ila-cookieb-font-sans: "Source Sans Pro", sans-serif;
+    --ila-cookieb-font-sans: "Source Sans", sans-serif;
     --ila-cookieb-button-foreground-color: #13294b; /* from --il-blue */
     /* https://brand.illinois.edu/visual-identity/color */
     --ila-cookieb-small-link-focus: #c84113; /* from -il-altgeld */
-}
-
-
-.ila-cookieb-font-family {
-    font-family: "Source Sans Pro", sans-serif;
 }
 
 .cookieb-holder {
@@ -30,6 +25,13 @@
 .cookieb-holder h2,
 .cookieb-holder p{
     color: var(--ila-cookieb-font-white);
+    font-family: "Source Sans", sans-serif;
+}
+
+.cookieb-slideover-holder h2,
+.cookieb-slideover-holder h3,
+.cookieb-slideover-holder p{
+    font-family: "Source Sans", sans-serif;
 }
 
 #ilaCookieSlideover {
