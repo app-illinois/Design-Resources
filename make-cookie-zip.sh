@@ -1,5 +1,9 @@
 #!/bin/bash
-DEPLOY_URL='https://onetrust.techservices.illinois.edu/1.1.0'
+if [[ -z "$GITHUB_REF_NAME" ]]; then
+    echo "GITHUB_REF_NAME is not set. Please set it to the version tag."
+    exit 1
+fi
+DEPLOY_URL="https://onetrust.techservices.illinois.edu/$GITHUB_REF_NAME"
 STAGE_DIR=cookie-zip-stage
 
 mkdir -p $STAGE_DIR/js

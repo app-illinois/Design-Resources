@@ -1,8 +1,8 @@
 name: Cookie banner zip
 on:
-  workflow_dispatch:
-    branches:
-      - develop
+  push:
+    tags:
+      - '*'
 jobs:
   make_zip:
     runs-on: ubuntu-latest
@@ -14,5 +14,5 @@ jobs:
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: cookie-banner
+          name: cookie-banner-${{ github.ref_name }}
           path: cookie-zip-stage
