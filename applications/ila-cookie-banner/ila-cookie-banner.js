@@ -1,4 +1,5 @@
 let cookie_url = 'DEPLOY_URL';  // This is replaced with the correct URL during GitHub Action runs.
+// cookie_url = '.' // Uncomment when testing specific domain using local host entries.
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     cookie_url = '.'; // For local testing only
     console.warn('Cookie Banner is in development mode: '
@@ -83,13 +84,25 @@ function getBaseDomain() {
 }
 
 function getCookieString(expires) {
-    return "cookie_notice=hide;domain=" + getBaseDomain() + ";expires=" + expires.toUTCString();
+    return "cookie_notice=hide;SameSite=Lax;domain=" + getBaseDomain() + ";expires=" + expires.toUTCString();
 }
+
+function getFallBackCookieString(expires) {
+    return "cookie_notice=hide;SameSite=Lax;expires=" + expires.toUTCString();
+}
+
 
 async function setDismissCookieNotice() {
     var expires = new Date();
     expires.setMonth(expires.getMonth() + 6);
     document.cookie = getCookieString(expires);
+    if(!await getDismissCookieNotice())
+    {
+        // Site headers may reject our attempt to set a domain-wide cookie. (github.io does)
+        // Recover by setting a cookie only for the current sub-domain.
+        console.debug("Browser rejected domain-wide cookie. Setting local cookie to suppress dismissed notice.");
+        document.cookie = getFallBackCookieString(expires);
+    }
 }
 
 async function getDismissCookieNotice() {
