@@ -1,5 +1,5 @@
 let cookie_url = 'DEPLOY_URL';  // This is replaced with the correct URL during GitHub Action runs.
-if (window.location.hostname === 'localhost') {
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     cookie_url = '.'; // For local testing only
     console.warn('Cookie Banner is in development mode: '
         + 'Please set cookie_url in production.');
@@ -71,10 +71,25 @@ async function getCookieBannerContent(content_path) {
     return banner_content;
 }
 
+function getBaseDomain() {
+  const hostname = window.location.hostname;
+  const parts = hostname.split('.');
+
+  if (parts.length >= 2) {
+    return '.' + parts.slice(-2).join('.'); // returns last two terms of url
+  } else {
+    return hostname; // fallback for localhost, etc.
+  }
+}
+
+function getCookieString(expires) {
+    return "cookie_notice=hide;domain=" + getBaseDomain() + ";expires=" + expires.toUTCString();
+}
+
 async function setDismissCookieNotice() {
     var expires = new Date();
     expires.setMonth(expires.getMonth() + 6);
-    document.cookie = "cookie_notice=hide;expires=" + expires.toUTCString();
+    document.cookie = getCookieString(expires);
 }
 
 async function getDismissCookieNotice() {
@@ -90,7 +105,7 @@ function unsetCookieNoticeCookie() {
     // Helper for Demo Pages - Call this to make the Notice appear again.
     var expires = new Date();
     expires.setMonth(expires.getMonth() - 1);
-    document.cookie = "cookie_notice=hide;expires=" + expires.toUTCString();
+    document.cookie = getCookieString(expires);
     location.reload();
 }
 
