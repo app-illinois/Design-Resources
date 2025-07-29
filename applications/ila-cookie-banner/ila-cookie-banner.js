@@ -23,7 +23,7 @@ async function openCookieB(cookiebId) {
         element.classList.remove('ila-cookieb--first');
     });
     cookieb.classList.add('ila-cookieb--first');
-    
+
     manageAutoclose(cookiebId);
 
     // Used to disable scroll on the page
@@ -45,16 +45,16 @@ function closeCookieB(cookiebId) {
     cookieb.classList.remove('ila-cookieb--open');
     cookieb.classList.add('ila-cookieb--closed');
 
-    // Remember that the notice has been dismissed 
+    // Remember that the notice has been dismissed
     setDismissCookieNotice();
-    
+
     // Used to enable scroll on the page
     document.body.classList.remove('ila-cookieb-noscroll');
 
     // Used to disable a modal background on the page
     let modalIDvar = document.getElementById('ilaCookieModal');
     modalIDvar.classList.remove('ila-cookieb-modal');
-    
+
     // Put focus back to the page body on close
     document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
     document.body.focus();
@@ -113,15 +113,15 @@ async function getDismissCookieNotice() {
     return true;
 }
 
-
 function unsetCookieNoticeCookie() {
     // Helper for Demo Pages - Call this to make the Notice appear again.
     var expires = new Date();
     expires.setMonth(expires.getMonth() - 1);
-    document.cookie = getCookieString(expires);
+    // Use getFallBackCookieString because getCookieString does not work on
+    // github.io domains.
+    document.cookie = getFallBackCookieString(expires);
     location.reload();
 }
-
 
 async function addCookieBanner() {
     /* Appends to the end of the page. */
@@ -140,7 +140,6 @@ async function addCookieBanner() {
             css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uiuc-colors.css');
             break;
     }
-
 
     // Add cookie banner to page
     let about_button = document.getElementById("ot-sdk-btn");
