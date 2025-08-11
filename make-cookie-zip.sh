@@ -1,5 +1,5 @@
 #!/bin/bash
-DEPLOY_URL='https://onetrust.techservices.illinois.edu/1.1.0'
+DEPLOY_URL='https://onetrust.techservices.illinois.edu/1.1.2'
 STAGE_DIR=cookie-zip-stage
 
 mkdir -p $STAGE_DIR/js
