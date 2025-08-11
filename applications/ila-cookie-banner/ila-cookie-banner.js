@@ -42,22 +42,28 @@ async function openCookieB(cookiebId) {
 
 function closeCookieB(cookiebId) {
     let cookieb = document.getElementById(cookiebId);
-    cookieb.classList.remove('ila-cookieb--open');
-    cookieb.classList.add('ila-cookieb--closed');
 
-    // Remember that the notice has been dismissed
-    setDismissCookieNotice();
+    // Only move forward if the Cookie Banner is Open
+    if (cookieb.classList.contains('ila-cookieb--open')) {
 
-    // Used to enable scroll on the page
-    document.body.classList.remove('ila-cookieb-noscroll');
+        cookieb.classList.remove('ila-cookieb--open');
+        cookieb.classList.add('ila-cookieb--closed');
 
-    // Used to disable a modal background on the page
-    let modalIDvar = document.getElementById('ilaCookieModal');
-    modalIDvar.classList.remove('ila-cookieb-modal');
+        // Remember that the notice has been dismissed
+        setDismissCookieNotice();
 
-    // Put focus back to the page body on close
-    document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
-    document.body.focus();
+        // Used to enable scroll on the page
+        document.body.classList.remove('ila-cookieb-noscroll');
+
+        // Used to disable a modal background on the page
+        let modalIDvar = document.getElementById('ilaCookieModal');
+        modalIDvar.classList.remove('ila-cookieb-modal');
+
+        // Put focus back to the page body on close
+        document.body.setAttribute('tabindex', '-1'); // Focusable but outside tab order
+        document.body.focus();
+
+    }
 }
 
 function manageAutoclose(cookiebId) {
