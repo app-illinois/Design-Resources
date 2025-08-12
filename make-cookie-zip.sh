@@ -1,6 +1,15 @@
 #!/bin/bash
-DEPLOY_URL='https://onetrust.techservices.illinois.edu/1.1.2'
+CHANGELOG=./applications/ila-cookie-banner/CHANGELOG.md
+VERSION=$(cat ./applications/ila-cookie-banner/VERSION)
+echo "Creating cookie zip for version $VERSION"
+DEPLOY_URL="https://onetrust.techservices.illinois.edu/$VERSION"
 STAGE_DIR=cookie-zip-stage
+
+if ! grep -q $VERSION $CHANGELOG; then
+    echo "Error: version $VERSION not found in CHANGELOG.md."
+    echo "Please update the changelog: $CHANGELOG"
+    exit 1
+fi
 
 mkdir -p $STAGE_DIR/js
 mkdir -p $STAGE_DIR/css
