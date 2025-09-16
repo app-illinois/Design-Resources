@@ -3,52 +3,89 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
-    />
-    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.toolkit.illinois.edu/3/toolkit.css"
+>
+    <script type="module" src="https://cdn.toolkit.illinois.edu/3/toolkit.js"></script>
     <title>Treeview Example</title>
     <link rel="stylesheet" href="ila-treeview.css" />
   </head>
 
   <body>
-    <h1>Treeview</h1>
-    <ul class="treeview-navigation" role="tree" aria-label="Mythical University">
-
+    <ul
+      class="ila-treeview"
+      role="tree"
+      aria-label="Mythical University"
+    >
       <li role="none">
         <a role="treeitem" aria-expanded="false" aria-owns="id-about-subtree" href="#">
-          <span class="label">
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
-                <polygon points="2 1, 12 1, 7 9"></polygon>
+          <div>
+            <span class="ila-treeview-treeitem__icon">
+              <svg
+                width="10"
+                height="14"
+                viewBox="0 0 10 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.9375 7.53125L2.875 13.625C2.5625 13.9062 2.09375 13.9062 1.8125 13.625L1.09375 12.9062C0.8125 12.625 0.8125 12.1562 1.09375 11.8438L5.90625 7L1.09375 2.1875C0.8125 1.875 0.8125 1.40625 1.09375 1.125L1.8125 0.40625C2.09375 0.125 2.5625 0.125 2.875 0.40625L8.9375 6.5C9.21875 6.78125 9.21875 7.25 8.9375 7.53125Z"
+                  fill="#13294B"
+                />
               </svg>
+
+
             </span>
-            About
-          </span>
+            <span class="ila-treeview-treeitem__label">
+              About
+              </span>
+          </div>
         </a>
         <ul id="id-about-subtree" role="group" aria-label="About">
           <li role="none">
-            <a role="treeitem" href="#overview">
+            <a
+              role="treeitem"
+              href="#"
+            >
               <span class="label">Overview</span>
             </a>
           </li>
           <li role="none">
-            <a role="treeitem" href="#adminstration">
+            <a
+              role="treeitem"
+              href="#"
+            >
               <span class="label">Administration</span>
             </a>
           </li>
           <li role="none">
-            <a role="treeitem" aria-expanded="false" aria-owns="id-facts-subtree" href="#facts">
-              <span class="label">
-                <span class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
-                    <polygon points="2 1, 12 1, 7 9"></polygon>
+            <a
+              role="treeitem"
+              aria-expanded="false"
+              aria-owns="id-facts-subtree"
+              href="#"
+            >
+              <div>
+                <span class="ila-treeview-treeitem__icon">
+                  <svg
+                    width="10"
+                    height="14"
+                    viewBox="0 0 10 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.9375 7.53125L2.875 13.625C2.5625 13.9062 2.09375 13.9062 1.8125 13.625L1.09375 12.9062C0.8125 12.625 0.8125 12.1562 1.09375 11.8438L5.90625 7L1.09375 2.1875C0.8125 1.875 0.8125 1.40625 1.09375 1.125L1.8125 0.40625C2.09375 0.125 2.5625 0.125 2.875 0.40625L8.9375 6.5C9.21875 6.78125 9.21875 7.25 8.9375 7.53125Z"
+                      fill="#13294B"
+                    />
                   </svg>
-                </span>
-                Facts
+
               </span>
+            <span class="ila-treeview-treeitem__label">
+              Facts
+              </span>
+            </div>
             </a>
             <ul id="id-facts-subtree" role="group" aria-label="Facts">
               <li role="none">
@@ -72,14 +109,26 @@
       </li>
       <li role="none">
         <a role="treeitem" aria-expanded="false" aria-owns="id-admissions-subtree" href="#admissions">
-          <span class="label">
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
-                <polygon points="2 1, 12 1, 7 9"></polygon>
+          <div>
+            <span class="ila-treeview-treeitem__icon">
+              <svg
+                width="10"
+                height="14"
+                viewBox="0 0 10 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.9375 7.53125L2.875 13.625C2.5625 13.9062 2.09375 13.9062 1.8125 13.625L1.09375 12.9062C0.8125 12.625 0.8125 12.1562 1.09375 11.8438L5.90625 7L1.09375 2.1875C0.8125 1.875 0.8125 1.40625 1.09375 1.125L1.8125 0.40625C2.09375 0.125 2.5625 0.125 2.875 0.40625L8.9375 6.5C9.21875 6.78125 9.21875 7.25 8.9375 7.53125Z"
+                  fill="#13294B"
+                />
               </svg>
+
             </span>
-            Admissions
-          </span>
+            <span class="ila-treeview-treeitem__label">
+              Admissions
+              </span>
+          </div>
         </a>
         <ul id="id-admissions-subtree" role="group" aria-label="Admissions">
           <li role="none">
@@ -100,6 +149,6 @@
         </ul>
       </li>
     </ul>
-    <script src="ila-Treeview.js"></script>
+    <script src="ila-treeview.js"></script>
   </body>
 </html>

@@ -37,7 +37,7 @@ class TreeViewNavigation {
       }
       var groupNode = this.getGroupNode(ti);
       if (groupNode) {
-        var span = ti.querySelector('span.icon');
+        var span = ti.querySelector('span.ila-treeview-treeitem__icon');
         span.addEventListener('click', this.onIconClick.bind(this));
       }
     }
@@ -279,6 +279,7 @@ class TreeViewNavigation {
 
   onIconClick(event) {
     var tgt = event.currentTarget;
+    console.log('icon click', tgt);
 
     if (this.isExpanded(tgt.parentNode.parentNode)) {
       this.collapseTreeitem(tgt.parentNode.parentNode);
@@ -405,6 +406,7 @@ class TreeViewNavigation {
 
 window.addEventListener('load', function () {
   var trees = document.querySelectorAll('[role="tree"]');
+  console.log('init')
 
   for (let i = 0; i < trees.length; i++) {
     new TreeViewNavigation(trees[i]);
