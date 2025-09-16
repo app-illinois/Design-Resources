@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+    />
+    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+    <title>Treeview Example</title>
+    <link rel="stylesheet" href="ila-treeview.css" />
+  </head>
+
+  <body>
+    <h1>Treeview</h1>
+    <ul class="treeview-navigation" role="tree" aria-label="Mythical University">
+
+      <li role="none">
+        <a role="treeitem" aria-expanded="false" aria-owns="id-about-subtree" href="#">
+          <span class="label">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
+                <polygon points="2 1, 12 1, 7 9"></polygon>
+              </svg>
+            </span>
+            About
+          </span>
+        </a>
+        <ul id="id-about-subtree" role="group" aria-label="About">
+          <li role="none">
+            <a role="treeitem" href="#overview">
+              <span class="label">Overview</span>
+            </a>
+          </li>
+          <li role="none">
+            <a role="treeitem" href="#adminstration">
+              <span class="label">Administration</span>
+            </a>
+          </li>
+          <li role="none">
+            <a role="treeitem" aria-expanded="false" aria-owns="id-facts-subtree" href="#facts">
+              <span class="label">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
+                    <polygon points="2 1, 12 1, 7 9"></polygon>
+                  </svg>
+                </span>
+                Facts
+              </span>
+            </a>
+            <ul id="id-facts-subtree" role="group" aria-label="Facts">
+              <li role="none">
+                <a role="treeitem" href="#history">
+                  <span class="label">History</span>
+                </a>
+              </li>
+              <li role="none">
+                <a role="treeitem" href="#current-statistics">
+                  <span class="label"> Current Statistics </span>
+                </a>
+              </li>
+              <li role="none">
+                <a role="treeitem" href="#awards">
+                  <span class="label">Awards</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li role="none">
+        <a role="treeitem" aria-expanded="false" aria-owns="id-admissions-subtree" href="#admissions">
+          <span class="label">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
+                <polygon points="2 1, 12 1, 7 9"></polygon>
+              </svg>
+            </span>
+            Admissions
+          </span>
+        </a>
+        <ul id="id-admissions-subtree" role="group" aria-label="Admissions">
+          <li role="none">
+            <a role="treeitem" href="#apply">
+              <span class="label">Apply</span>
+            </a>
+          </li>
+          <li role="none">
+            <a role="treeitem" href="#signup">
+              <span class="label">Sign Up</span>
+            </a>
+          </li>
+          <li role="none">
+            <a role="treeitem" href="#visit">
+              <span class="label">Visit</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <script src="ila-Treeview.js"></script>
+  </body>
+</html>

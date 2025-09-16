@@ -1,0 +1,192 @@
+/* component styles */
+:root {
+  --ila-treeview-padding-x: 25px;
+  --ila-treeview-padding-y: 5px;
+}
+.ila-body--has-dialog {
+  overflow: hidden;
+}
+.ila-treeview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.ila-treeview--closed {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.ila-treeview--open {
+  display: block;
+  z-index: 30000; /* Some University site headers (or parts of headers) have z-index 10,000. Displaying under 10,000 can cause mixed content display. */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms, visibility 500ms;
+}
+.ila-treeview__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #24242496;
+  cursor: pointer;
+}
+
+.ila-treeview__treeview {
+  position: absolute;
+  box-shadow: 0px 0px 17px 0px black;
+  background: white;
+  overflow-y: auto;
+}
+
+.ila-treeview--right .ila-treeview__treeview {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 70%;
+}
+.ila-treeview--left .ila-treeview__treeview {
+  top: 0;
+  bottom: 0;
+  right: 70%;
+  left: 0;
+}
+
+.ila-treeview__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--ila-treeview-padding-y) var(--ila-treeview-padding-x);
+  border-bottom: 2px solid var(--il-orange);
+}
+
+.ila-treeview__label {
+  margin: 0;
+  padding: .2em 0;
+}
+
+.ila-treeview__close-button {
+  border: none;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.ila-treeview__close-icon {
+  font-size: 35px;
+}
+.ila-treeview__close-button:hover,
+.ila-treeview__close-button:focus {
+  transition: background-color 0.3s;
+  background-color: var(--il-blue);
+  color: white;
+}
+
+.ila-treeview__content {
+  padding: var(--ila-treeview-padding-y) var(--ila-treeview-padding-x);
+}
+
+.ila-treeview ul,
+.ila-treeview li {
+  margin: 0;
+  padding: 0;
+}
+
+.ila-treeview li li span.label {
+  padding-left: 1em;
+}
+
+.ila-treeview li li li span.label {
+  padding-left: 2em;
+}
+
+.ila-treeview[role="tree"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ila-treeview[role="tree"] li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ila-treeview a[role="treeitem"] ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ila-treeview
+  a[role="treeitem"][aria-expanded="false"]
+  + [role="group"] {
+  display: none;
+}
+
+.ila-treeview a[role="treeitem"][aria-expanded="true"] + [role="group"] {
+  display: block;
+}
+
+.ila-treeview a[role="treeitem"] > span svg {
+  transform: translate(0, 0);
+}
+
+.ila-treeview a[role="treeitem"][aria-expanded="false"] > span svg {
+  transform: rotate(270deg) translate(2px, 2px);
+}
+
+.ila-treeview a[role="treeitem"] {
+  margin: 0;
+  padding: 4px;
+  padding-left: 9px;
+  text-decoration: none;
+  color: #005a9c;
+  border: none;
+  display: block;
+}
+
+.ila-treeview a[role="treeitem"][aria-current] {
+  border-left: 5px solid #005a9c;
+  padding-left: 4px;
+  background-color: #ddd;
+}
+
+.ila-treeview a[role="treeitem"] span.icon svg polygon {
+  stroke-width: 2px;
+  fill: currentcolor;
+  stroke: transparent;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+
+.ila-treeview a[role="treeitem"]:focus {
+  outline: 0;
+  padding: 2px;
+  padding-left: 7px;
+  border: 2px #005a9c solid;
+}
+
+.ila-treeview a[role="treeitem"][aria-current]:focus {
+  padding-left: 4px;
+  border-left-width: 5px;
+}
+
+.ila-treeview a[role="treeitem"]:hover {
+  background-color: #adddff;
+  text-decoration: underline;
+  padding-left: 4px;
+  border-left: 5px solid #333;
+}
+
+.ila-treeview a[role="treeitem"] span.icon:hover {
+  color: #333;
+}
+
+.ila-treeview a[role="treeitem"] span.icon svg polygon:hover {
+  stroke: currentcolor;
+}
