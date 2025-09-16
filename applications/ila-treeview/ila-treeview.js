@@ -11,7 +11,6 @@
 
 class TreeViewNavigation {
   constructor(node) {
-    var linkURL, linkTitle;
 
     // Check whether node is a DOM element
     if (typeof node !== 'object') {
@@ -41,32 +40,6 @@ class TreeViewNavigation {
         span.addEventListener('click', this.onIconClick.bind(this));
       }
     }
-  }
-
-  getAriaCurrentURL() {
-    let url = false;
-    let node = this.treeNode.querySelector('[aria-current]');
-    if (node) {
-      url = node.href;
-    }
-    return url;
-  }
-
-  updateAriaCurrent(url) {
-    if (typeof url !== 'string') {
-      url = this.getAriaCurrentURL();
-    }
-
-    this.treeitems.forEach((item) => {
-      if (item.href === url) {
-        item.setAttribute('aria-current', 'page');
-        // Make sure link is visible
-        this.showTreeitem(item);
-        this.setTabIndex(item);
-      } else {
-        item.removeAttribute('aria-current');
-      }
-    });
   }
 
   showTreeitem(treeitem) {
@@ -167,7 +140,7 @@ class TreeViewNavigation {
   }
 
   expandAllSiblingTreeitems(treeitem) {
-    var parentNode = treeitem.parentNode.parentNode;
+    var parentNode = treeitem.parentNode;
 
     if (parentNode) {
       var siblingTreeitemNodes = parentNode.querySelectorAll(
@@ -185,6 +158,7 @@ class TreeViewNavigation {
   }
 
   setFocusToNextTreeitem(treeitem) {
+    console.log('setFocusToNextTreeitem', treeitem);
     var visibleTreeitems = this.getVisibleTreeitems();
     var nextItem = false;
 
@@ -201,6 +175,7 @@ class TreeViewNavigation {
   }
 
   setFocusToPreviousTreeitem(treeitem) {
+    console.log('setFocusToPreviousTreeitem', treeitem);
     var visibleTreeitems = this.getVisibleTreeitems();
     var prevItem = false;
 
@@ -219,7 +194,7 @@ class TreeViewNavigation {
 
   setFocusToParentTreeitem(treeitem) {
     if (this.isInSubtree(treeitem)) {
-      var ti = treeitem.parentNode.parentNode.previousElementSibling;
+      var ti = treeitem.parentNode.previousElementSibling;
       this.setFocusToTreeitem(ti);
     }
   }
@@ -281,10 +256,10 @@ class TreeViewNavigation {
     var tgt = event.currentTarget;
     console.log('icon click', tgt);
 
-    if (this.isExpanded(tgt.parentNode.parentNode)) {
-      this.collapseTreeitem(tgt.parentNode.parentNode);
+    if (this.isExpanded(tgt.parentNode)) {
+      this.collapseTreeitem(tgt.parentNode);
     } else {
-      this.expandTreeitem(tgt.parentNode.parentNode);
+      this.expandTreeitem(tgt.parentNode);
     }
 
     event.preventDefault();
