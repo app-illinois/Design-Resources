@@ -90,11 +90,11 @@ function getBaseDomain() {
 }
 
 function getCookieString(expires) {
-    return "cookie_notice=hide;SameSite=Lax;domain=" + getBaseDomain() + ";expires=" + expires.toUTCString();
+    return "cookie_notice=hide;Path=/;SameSite=Lax;domain=" + getBaseDomain() + ";expires=" + expires.toUTCString();
 }
 
 function getFallBackCookieString(expires) {
-    return "cookie_notice=hide;SameSite=Lax;expires=" + expires.toUTCString();
+    return "cookie_notice=hide;Path=/;SameSite=Lax;expires=" + expires.toUTCString();
 }
 
 
