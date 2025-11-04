@@ -1,4 +1,4 @@
-class DataTable extends HTMLElement {
+class ILADataTable extends HTMLElement {
     constructor() {
         super();
         this.lastSort = null;
@@ -100,6 +100,6 @@ class DataTable extends HTMLElement {
 
 window.addEventListener('DOMContentLoaded', () => {
     if (!customElements.get('ila-datatable')) {
-        customElements.define('ila-datatable', DataTable);
+        customElements.define('ila-datatable', ILADataTable);
     }
 });
