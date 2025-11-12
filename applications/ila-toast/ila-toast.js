@@ -1,5 +1,3 @@
-const { use } = require("react");
-
 function openToast(toastId, useAutoclose, closeDelay) {
     let toast = document.getElementById(toastId);
     toast.classList.remove('ila-toast--closed');
