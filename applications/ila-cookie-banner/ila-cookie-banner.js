@@ -167,6 +167,15 @@ async function addCookieBanner() {
     }
     document.body.insertAdjacentHTML("beforeend", banner_content);
 
+    // Begin slideover click events
+    let bind_button = document.getElementById("ilaCookieBXButton");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeCookieB('ilaCookieBOne');
+        });
+    }
+    // End slideover click events
+
     // Show cookie banner
     openCookieB('ilaCookieBOne');
 
