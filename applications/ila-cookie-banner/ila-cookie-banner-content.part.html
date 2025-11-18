@@ -31,8 +31,7 @@
                         <button id="ilaCookieAboutButton" type="button" class="ila-cookieb__button">
                             About Cookies
                         </button>
-                        <button id="ilaCookieCloseButton" type="button" class="ila-cookieb__button"
-                            onclick="closeCookieB('ilaCookieBOne')" aria-label="close cookie notice">
+                        <button id="ilaCookieCloseButton" type="button" class="ila-cookieb__button" aria-label="close cookie notice">
                             Close Cookie Notice
                         </button>
                     </div>
@@ -44,7 +43,7 @@
 <div id="ilaCookieSlideover"
     class="ila-slideover ila-slideover--closed ila-slideover--left cookieb-slideover-holder ila-cookieb_no-printing" role="dialog"
     aria-labelledby="ilaCookieSlideoverLabel" aria-modal="true">
-    <div class="ila-slideover__overlay" onclick="closeSlideover('ilaCookieSlideover')"></div>
+    <div id="ilaSlideoverOverlay" class="ila-slideover__overlay"></div>
     <div class="ila-slideover__slideover">
         <div class="ila-slideover__header ila-cookieb-slideover__header">
             <h2 id="ilaCookieSlideoverLabel" class="ila-slideover__label">
@@ -146,9 +145,8 @@
             </details>
         </div>
         <div class="ila-cookieb__button-center-slideover">
-            <button type="button" aria-label="close slideover"
-                class="ila-cookieb__button ila-cookieb__button-close-slideover"
-                onclick="closeSlideover('ilaCookieSlideover');">
+            <button id="ilaCookieSlideClose" type="button" aria-label="close slideover"
+                class="ila-cookieb__button ila-cookieb__button-close-slideover">
                 Close
             </button>
         </div>
