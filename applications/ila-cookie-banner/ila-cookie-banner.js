@@ -174,6 +174,13 @@ async function addCookieBanner() {
             closeCookieB('ilaCookieBOne');
         });
     }
+
+    bind_button = document.getElementById("ilaCookieAboutButton");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton');
+        });
+    }
     // End slideover click events
 
     // Show cookie banner
