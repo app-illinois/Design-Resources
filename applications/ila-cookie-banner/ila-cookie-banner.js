@@ -130,42 +130,88 @@ function unsetCookieNoticeCookie() {
 }
 
 async function addCookieBanner() {
-    /* Appends to the end of the page. */
-    let theme = this_script.getAttribute("data-domain-script");
 
-    switch(theme) {
-        case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
-        case "uic":
-            css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uic-colors.css');
-            break;
-        case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
-        case "uis":
-            css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uis-colors.css');
-            break;
-        default:
-            css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uiuc-colors.css');
-            break;
-    }
-
-    // Add cookie banner to page
     let about_button = document.getElementById("ot-sdk-btn");
-    let banner_content = "<style>";
-    banner_content += await getCookieBannerContent(cookie_url + '/css/ila-slideover.css');
-    banner_content += await getCookieBannerContent(cookie_url + '/css/ila-cookie-banner.css');
-    banner_content += css_content;
-    banner_content += "</style>";
-    banner_content += await getCookieBannerContent(cookie_url + '/partials/ila-cookie-banner-content.part.html');
-    if (!banner_content.includes("Cookie Notice")) {
-        console.warn("Unexpected Cookie Notice:", banner_content);
-        if (about_button) {
-            about_button.addEventListener("click", function() {
-                alert("Cookie Notice is down for maintenance.");
-            });
+
+    let data_fetch = this_script.getAttribute("data-fetch");
+    if(data_fetch != "no"){
+        debugger;
+
+        /* Appends to the end of the page. */
+        let theme = this_script.getAttribute("data-domain-script");
+
+        switch(theme) {
+            case "c2f2262d-b694-4eba-8f4b-142c102b685a":  // UIC
+            case "uic":
+                css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uic-colors.css');
+                break;
+            case "698d1fb7-b06b-4591-adbf-ac44ae3ef77b": // UIS
+            case "uis":
+                css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uis-colors.css');
+                break;
+            default:
+                css_content = await getCookieBannerContent(cookie_url + '/css/ila-cookie-uiuc-colors.css');
+                break;
         }
-        return;  /* Prevents showing any S3 error messages at the end of every
-                    campus webpage. */
+
+        // Add cookie banner to page
+        let banner_content = "<style>";
+        banner_content += await getCookieBannerContent(cookie_url + '/css/ila-slideover.css');
+        banner_content += await getCookieBannerContent(cookie_url + '/css/ila-cookie-banner.css');
+        banner_content += css_content;
+        banner_content += "</style>";
+        banner_content += await getCookieBannerContent(cookie_url + '/partials/ila-cookie-banner-content.part.html');
+        if (!banner_content.includes("Cookie Notice")) {
+            console.warn("Unexpected Cookie Notice:", banner_content);
+            if (about_button) {
+                about_button.addEventListener("click", function() {
+                    alert("Cookie Notice is down for maintenance.");
+                });
+            }
+            return;  /* Prevents showing any S3 error messages at the end of every
+                        campus webpage. */
+        }
+        document.body.insertAdjacentHTML("beforeend", banner_content);
+
     }
-    document.body.insertAdjacentHTML("beforeend", banner_content);
+
+
+    // Begin slideover click events
+    let bind_button = document.getElementById("ilaCookieBXButton");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeCookieB('ilaCookieBOne');
+        });
+    }
+
+    bind_button = document.getElementById("ilaCookieAboutButton");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton');
+        });
+    }
+
+    bind_button = document.getElementById("ilaCookieCloseButton");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeCookieB('ilaCookieBOne');
+        });
+    }
+
+    bind_button = document.getElementById("ilaSlideoverOverlay");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeSlideover('ilaCookieSlideover');
+        });
+    }
+
+    bind_button = document.getElementById("ilaCookieSlideClose");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeSlideover('ilaCookieSlideover');
+        });
+    }
+    // End slideover click events
 
     document.querySelectorAll("[data-cookie-action]").forEach(button => {
         switch (button.getAttribute("data-cookie-action")) {
