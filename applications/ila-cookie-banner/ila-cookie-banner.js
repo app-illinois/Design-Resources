@@ -181,6 +181,27 @@ async function addCookieBanner() {
             openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton');
         });
     }
+
+    bind_button = document.getElementById("ilaCookieCloseButton");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeCookieB('ilaCookieBOne');
+        });
+    }
+
+    bind_button = document.getElementById("ilaSlideoverOverlay");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeSlideover('ilaCookieSlideover');
+        });
+    }
+
+    bind_button = document.getElementById("ilaCookieSlideClose");
+    if (bind_button) {
+        bind_button.addEventListener("click", function() {
+            closeSlideover('ilaCookieSlideover');
+        });
+    }
     // End slideover click events
 
     // Show cookie banner
