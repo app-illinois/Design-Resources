@@ -133,7 +133,7 @@ async function addCookieBanner() {
 
     let about_button = document.getElementById("ot-sdk-btn");
 
-    let data_fetch = this_script.getAttribute("data-fetch");
+    let data_fetch = this_script.getAttribute("data-cookie-fetch");
     if(data_fetch != "no"){
         debugger;
 
