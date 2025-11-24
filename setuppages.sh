@@ -20,8 +20,6 @@ fi
 cat applications/ila-slideovers/ila-slideover.js >> $STAGE_DIR/js/ila-cookie-banner.js
 
 # Build Cookie Demo pages
-
-
 cat $STAGE_DIR/Cookie-Banner.part.html > $STAGE_DIR/Cookie-Banner.html
 cat $STAGE_DIR/Cookie-Banner-UIUC.part.html >> $STAGE_DIR/Cookie-Banner.html
 
@@ -30,7 +28,6 @@ cat $STAGE_DIR/Cookie-Banner-UIC.part.html >> $STAGE_DIR/Cookie-Banner-UIC.html
 
 cat $STAGE_DIR/Cookie-Banner.part.html > $STAGE_DIR/Cookie-Banner-UIS.html
 cat $STAGE_DIR/Cookie-Banner-UIS.part.html >> $STAGE_DIR/Cookie-Banner-UIS.html
-
 
 cat $STAGE_DIR/Cookie-Banner.part.html > $STAGE_DIR/Cookie-Banner-CSP.html
 cat $STAGE_DIR/Cookie-Banner-CSP.part.html >> $STAGE_DIR/Cookie-Banner-CSP.html
