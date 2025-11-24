@@ -27,7 +27,7 @@ The target audience for this document is the team that maintains the CDN that se
 
 After the zip file contents are extracted & uploaded, the contents of the `x.y.z` folder should look like:
 
-    .
+    x.y.z
     ├── css
     │   ├── ila-cookie-banner.css
     │   ├── ila-cookie-uic-colors.css
