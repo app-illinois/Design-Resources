@@ -135,7 +135,6 @@ async function addCookieBanner() {
 
     let data_fetch = this_script.getAttribute("data-cookie-fetch");
     if(data_fetch != "no"){
-        debugger;
 
         /* Appends to the end of the page. */
         let theme = this_script.getAttribute("data-domain-script");
