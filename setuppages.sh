@@ -21,5 +21,5 @@ cat applications/ila-slideovers/ila-slideover.js >> $STAGE_DIR/js/ila-cookie-ban
 
 # Append ila-cookie-banner.part.html to Cookie-Banner-CSP.html, immitating a Server Side Include
 cat $STAGE_DIR/Cookie-Banner-CSP.part.html > $STAGE_DIR/Cookie-Banner-CSP.html
-cat applications/ila-cookie-banner/ila-cookie-banner.part.html >> $STAGE_DIR/Cookie-Banner-CSP.html
+cat applications/ila-cookie-banner/ila-cookie-banner-content.part.html >> $STAGE_DIR/Cookie-Banner-CSP.html
 
