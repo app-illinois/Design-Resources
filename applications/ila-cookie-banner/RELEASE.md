@@ -103,5 +103,5 @@ The file `otSDKStub.js` in the CDN root determines which version of the cookie n
 - `otSDKStub.js` is the main JavaScript file copied and renamed to support legacy configurations.
 - `ila-cookie-banner.css` and `ila-slideover.css` contain styles necessary for the banner and 'About Cookies' slide-over to function.
 - `ila-cookie-<campus>-colors.css` contain campus branded accessible colors.
-- `ila-cookie-banner-content.part.html` contains the HTML and text content of the `About Cookies` slide-over.
+- `ila-cookie-banner-content.part.html` contains the HTML and text content of the cookie notice banner and the `About Cookies` slide-over.
 
