@@ -167,42 +167,30 @@ async function addCookieBanner() {
     }
     document.body.insertAdjacentHTML("beforeend", banner_content);
 
-    // Begin slideover click events
-    let bind_button = document.getElementById("ilaCookieBXButton");
-    if (bind_button) {
-        bind_button.addEventListener("click", function() {
-            closeCookieB('ilaCookieBOne');
-        });
-    }
-
-    bind_button = document.getElementById("ilaCookieAboutButton");
-    if (bind_button) {
-        bind_button.addEventListener("click", function() {
-            openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton');
-        });
-    }
-
-    bind_button = document.getElementById("ilaCookieCloseButton");
-    if (bind_button) {
-        bind_button.addEventListener("click", function() {
-            closeCookieB('ilaCookieBOne');
-        });
-    }
-
-    bind_button = document.getElementById("ilaSlideoverOverlay");
-    if (bind_button) {
-        bind_button.addEventListener("click", function() {
-            closeSlideover('ilaCookieSlideover');
-        });
-    }
-
-    bind_button = document.getElementById("ilaCookieSlideClose");
-    if (bind_button) {
-        bind_button.addEventListener("click", function() {
-            closeSlideover('ilaCookieSlideover');
-        });
-    }
-    // End slideover click events
+    document.querySelectorAll("[data-cookie-action]").forEach(button => {
+        switch (button.getAttribute("data-cookie-action")) {
+            case "close-banner":
+                button.addEventListener("click", function() {
+                    closeCookieB('ilaCookieBOne');
+                });
+                break;
+            case "open-about":
+                button.addEventListener("click", function() {
+                    openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton');
+                });
+                break;
+            case "close-about":
+                button.addEventListener("click", function() {
+                    closeSlideover('ilaCookieSlideover');
+                });
+                break;
+            case "unhide-banner":
+                button.addEventListener("click", function() {
+                    unsetCookieNoticeCookie();
+                });
+                break;
+        }
+    });
 
     // Show cookie banner
     openCookieB('ilaCookieBOne');
