@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>UIC Cookie Banner</title>
+    <title>Illinois Cookie Banner</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
     <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
@@ -42,7 +42,13 @@
             font-size: 18px;
             line-height: 1.6666666667em;
             font-family: var(--il-font-sans);
-            color: var(--il-text-color);
+        }
+
+        p, h2 {
+            /* Test for CSS bug that can break contrast. */
+            /* This CSS should lose to CSS in the Cookie Notice files. */
+            color: black;
+            font-family: "proxima-nova-alt", sans-serif;
         }
 
         a {
@@ -97,11 +103,15 @@
 
         <div class="page-wrapper" style="margin-bottom: 30px;">
             <div>
-                <h1>UIC Cookie Banner</h1>
+                <h1>Illinois Cookie Banner</h1>
                 <p>
                     Provides a Cookie Notification Banner that includes
                     buttons to open a slideout where more information can
                     be provided to the User
+                </p>
+                <p>
+                    This page gives an example of serving all Cookie Banner resources locally,
+                    which may be required when using stronger Content Security Policy headers.
                 </p>
             </div>
 
@@ -133,8 +143,8 @@
                     The Cookie Banner is presented after loading this page
                 </p>
                 <p><a href="Cookie-Banner.html">Illinois example here.</a></p>
+                <p><a href="Cookie-Banner-UIC.html">UIC example here.</a></p>
                 <p><a href="Cookie-Banner-UIS.html">UIS example here.</a></p>
-                <p><a href="Cookie-Banner-CSP.html">Content Security Policy example here.</a></p>
                 <button type="button" id="ot-sdk-btn" class="ot-sdk-show-settings il-button">
                     About Cookies
                 </button>
@@ -176,10 +186,23 @@
         </il-footer>
     </footer><!-- #colophon -->
 
-    <script data-domain-script="uic" src="js/ila-cookie-banner.js"></script>
-    <!--
-    data-comain-script="c2f2262d-b694-4eba-8f4b-142c102b685a" also works
+    <script data-cookie-fetch="no" src="js/ila-cookie-banner.js"></script>
+
+    <!-- Locally server all necessary CSS: -->
+    <link rel='stylesheet' href='css/ila-cookie-banner.css'/>
+    <link rel='stylesheet' href='css/ila-slideover.css'/>
+    <link rel='stylesheet' href='css/ila-cookie-uiuc-colors.css'/>
+
+    <!-- Embed all HTML from `ila-cookie-banner-content.part.html` into each page.
+
+        Typically this should be done with a server-side include (SSI).
+
+        Appending the raw HTML to each page also works.
+
+        Notice that the contents of `ila-cookie-banner-content.part.html` 
+        were appended after `</html>` when this serverless demo page was built.
     -->
+
 </body>
 
 </html>

@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Add Path attribute to cookie strings (#233)
+- Add Path attribute to cookie strings (Issue [#233](https://github.com/app-illinois/Design-Resources/issues/233))
+- Update Cookie Banner to support Content Security Policy Headers (Issue [#241](https://github.com/app-illinois/Design-Resources/issues/241))
+- Add data-cookie-fetch flag to Cookie Banner to support CSP headers (Issue [#242](https://github.com/app-illinois/Design-Resources/issues/242))
 
 ## [1.1.2] - 2025-08-11
 
