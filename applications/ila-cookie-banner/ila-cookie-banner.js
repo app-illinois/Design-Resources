@@ -167,6 +167,31 @@ async function addCookieBanner() {
     }
     document.body.insertAdjacentHTML("beforeend", banner_content);
 
+    document.querySelectorAll("[data-cookie-action]").forEach(button => {
+        switch (button.getAttribute("data-cookie-action")) {
+            case "close-banner":
+                button.addEventListener("click", function() {
+                    closeCookieB('ilaCookieBOne');
+                });
+                break;
+            case "open-about":
+                button.addEventListener("click", function() {
+                    openSlideover('ilaCookieSlideover', 'ilaCookieAboutButton');
+                });
+                break;
+            case "close-about":
+                button.addEventListener("click", function() {
+                    closeSlideover('ilaCookieSlideover');
+                });
+                break;
+            case "unhide-banner":
+                button.addEventListener("click", function() {
+                    unsetCookieNoticeCookie();
+                });
+                break;
+        }
+    });
+
     // Show cookie banner
     openCookieB('ilaCookieBOne');
 
