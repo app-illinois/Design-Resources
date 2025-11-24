@@ -13,3 +13,9 @@ Get-ChildItem -Recurse -Filter *.css -Path .\applications\ | Copy-Item -Destinat
 Get-ChildItem -Recurse -Filter *.part.html -Path .\applications\ | Copy-Item -Destination "$($STAGE_DIR)\partials\" -Force
 
 Get-Content .\applications\ila-slideovers\ila-slideover.js | Out-File -Append "$($STAGE_DIR)\js\ila-cookie-banner.js"
+
+
+# Append ila-cookie-banner.part.html to Cookie-Banner-CSP.html, immitating a Server Side Include
+Get-Content "$(STAGE_DIR)\docs\Cookie-Banner-CSP.part.html" | Out-File "$(STAGE_DIR)\docs\Cookie-Banner-CSP.html"
+Get-Content .\applications\ila-cookie-banner\ila-cookie-banner.part.html | Out-File -Append "$(STAGE_DIR)\docs\Cookie-Banner-CSP.html"
+

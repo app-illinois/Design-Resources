@@ -18,3 +18,8 @@ fi
 
 # Allows ila.cookie.banner.js to function with only a single js import.
 cat applications/ila-slideovers/ila-slideover.js >> $STAGE_DIR/js/ila-cookie-banner.js
+
+# Append ila-cookie-banner.part.html to Cookie-Banner-CSP.html, immitating a Server Side Include
+cat $STAGE_DIR/docs/Cookie-Banner-CSP.part.html > $STAGE_DIR/docs/Cookie-Banner-CSP.html
+cat applications/ila-cookie-banner/ila-cookie-banner.part.html >> $STAGE_DIR/docs/Cookie-Banner-CSP.html
+
