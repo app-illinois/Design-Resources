@@ -1,7 +1,7 @@
 const createTooltip = ((type, className) => {
     const outerDiv = document.createElement('div');
     outerDiv.style.minWidth = '500px';
-
+    
     className.forEach(eachClass => {
         const tooltip = document.createElement('button');
         tooltip.classList.add(`tooltip-${eachClass}-${type}`);
@@ -13,7 +13,7 @@ const createTooltip = ((type, className) => {
 
         const content = document.createElement('div');
         content.classList.add('tooltip-content');
-
+        
         const textTitle = document.createElement('span');
         textTitle.classList.add('tooltip-text-title');
         textTitle.innerText = 'Aristotle (disambiguation)';
@@ -53,7 +53,7 @@ const createExample = () => {
         titleLight.innerText = 'Light background';
         titleLight.style.marginBottom = '15px';
         parentDiv.appendChild(titleLight);
-
+        
         arrowPositions.forEach(group => {
             const eachGroupDiv = document.createElement('div');
             eachGroupDiv.style.display = 'flex';
@@ -73,7 +73,7 @@ const createExample = () => {
         titleDark.innerText = 'Dark background';
         titleDark.style.marginBottom = '15px';
         parentDiv.appendChild(titleDark);
-
+            
         arrowPositions.forEach(group => {
             const eachGroupDiv = document.createElement('div');
             eachGroupDiv.style.display = 'flex';
