@@ -25,20 +25,23 @@ The target audience for this document is the team that maintains the CDN that se
 	
 ### Step 3. Extract & upload the contents of the zip file to the path created in step one
 
-After the zip file contents are extracted & uploaded, the contents of the `1.0.0` folder should look like:
+After the zip file contents are extracted & uploaded, the contents of the `x.y.z` folder should look like:
 
-	1.0.0
-	├── css
-	│   ├── ila-cookie-banner.css
-	│   ├── ila-cookie-uic-colors.css
-	│   ├── ila-cookie-uis-colors.css
-	│   └── ila-cookie-uiuc-colors.css
-	├── js
-	│   └── ila-cookie-banner.js
-	├── otSDKStub.js
-	├── partials
-	│   └── ila-cookie-banner-content.part.html
-	└── RELEASE.md
+    x.y.z
+    ├── css
+    │   ├── ila-cookie-banner.css
+    │   ├── ila-cookie-uic-colors.css
+    │   ├── ila-cookie-uis-colors.css
+    │   ├── ila-cookie-uiuc-colors.css
+    │   └── ila-slideover.css
+    ├── js
+    │   └── ila-cookie-banner.js
+    ├── otSDKStub.js
+    ├── partials
+    │   └── ila-cookie-banner-content.part.html
+    └── RELEASE.md
+
+For the purpose of each included file, see `### Appendix A: Guide to Release File Contents`, below.
 
 ### Step 4. Verify the main JavaScript file
 
@@ -92,3 +95,13 @@ After the zip file contents are extracted & uploaded, the contents of the `1.0.0
 ### How to Roll Back a Release
 
 The file `otSDKStub.js` in the CDN root determines which version of the cookie notice is activated. You can roll back to the previous version by restoring the most recent `YYYY.MM.DD.otSDKStub.js` to `otSDKStub.js` in the `scripttemplates` folder. Rolling back is recommended if any part of `Step 6: Verify the Release` fails.
+
+
+### Appendix A: Guide to Release File Contents
+
+- `ila-cookie-banner.js` contains the main JavaScript.
+- `otSDKStub.js` is the main JavaScript file copied and renamed to support legacy configurations.
+- `ila-cookie-banner.css` and `ila-slideover.css` contain styles necessary for the banner and 'About Cookies' slide-over to function.
+- `ila-cookie-<campus>-colors.css` contain campus branded accessible colors.
+- `ila-cookie-banner-content.part.html` contains the HTML and text content of the cookie notice banner and the `About Cookies` slide-over.
+
