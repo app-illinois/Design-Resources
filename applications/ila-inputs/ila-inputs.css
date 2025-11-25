@@ -1,382 +1,555 @@
+
+/* ============================ Brand colours in case the WIGG CSS doesn't include them in the future  ============================ */
 :root {
-    --ilaLightBlue: #C4E9F5;
+    --ilaLightBlue: #c4e9f5;
     --ilaOrange: #ff5f05;
     --ilaBlue: #13294b;
     --ilaLightGrey: #f4f4f4;
     --ilaGrey: #707372;
+    --input-size: 20px;
+    --transition-fast: 0.2s;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    align-self: stretch;
+/* ============================ INPUT STYLES ============================ */
+.ila-input,
+.ila-select,
+.ila-textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 14px;
+    padding: 8px;
+    color: #333;
+    border: 2px solid var(--ilaGrey);
+    background-color: white;
+    width: 100%;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
-    .input-group span {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-        align-self: stretch;
+    .ila-input::placeholder,
+    .ila-select::placeholder,
+    .ila-textarea::placeholder {
+        color: var(--ilaGrey);
     }
 
-    .input-group label {
-        margin-bottom: 0px;
+    .ila-input:hover,
+    .ila-select:hover,
+    .ila-textarea:hover {
+        background-color: #F0F7FA; /* HOVER COLOR*/
+        border-color: var(--ilaOrange);
     }
 
-/* RADION BUTTONS */
+    .ila-input:focus,
+    .ila-select:focus,
+    .ila-textarea:focus {
+        border: 2px solid var(--ilaBlue);
+        background-color: var(--ilaLightBlue);
+        outline: none;
+    }
 
-/* NORMAL */
-input[type='radio'] {
-    width: 20px;
-    height: 20px;
+    .ila-input:focus-visible,
+    .ila-select:focus-visible,
+    .ila-textarea:focus-visible {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+    }
+
+    .ila-input:active,
+    .ila-select:active,
+    .ila-textarea:active {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+    }
+
+    .ila-input:disabled,
+    .ila-select:disabled,
+    .ila-textarea:disabled {
+        background-color: #e0e0e0;
+        border-color: #aaa;
+        color: #aaa;
+        cursor: not-allowed;
+    }
+
+/* ============================ RADIO ============================ */
+.ila-radio {
+    box-sizing: border-box;
+    width: var(--input-size);
+    height: var(--input-size);
+    border-radius: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+    border: 2px solid var(--ilaGrey);
+    box-shadow: none;
+    position: relative;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    cursor: pointer;
 }
 
-    /* NORMAL HOVER */
-    input[type='radio']:hover {
-        appearance: none;
-        -webkit-appearance: none;
+
+    .ila-radio::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(var(--input-size) * 0.5);
+        height: calc(var(--input-size) * 0.5);
+        background-color: var(--ilaBlue);
         border-radius: 50%;
-        border: 3px solid #FFF;
-        box-shadow: 0 0 0 2px var(--ilaOrange);
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform var(--transition-fast);
     }
 
-    /* NORMAL FOCUS */
-    input[type='radio']:focus {
-        appearance: none;
-        -webkit-appearance: none;
-        border-radius: 50%;
-        background: var(--ilaOrange);
-        border: 3px solid #FFF;
-        box-shadow: 0 0 0 1px var(--ilaBlue);
-    }
-
-    /* SELECTED */
-    input[type='radio']:checked {
-        appearance: none;
-        -webkit-appearance: none;
-        border-radius: 50%;
-        background: var(--ilaBlue);
-        border: 3px solid #FFF;
-        box-shadow: 0 0 0 1px var(--ilaBlue);
-    }
-
-    /* SELECTED HOVER   */
-    input[type='radio']:hover:checked {
-        appearance: none;
-        -webkit-appearance: none;
-        border-radius: 50%;
-        background: var(--ilaOrange);
-        border: 3px solid #FFF;
-        box-shadow: 0 0 0 1px var(--ilaBlue);
-    }
-
-    /* SELECTED */
-    input[type='radio']:checked:focus {
-        appearance: none;
-        -webkit-appearance: none;
-        border-radius: 50%;
-        background: var(--ilaBlue);
-        border: 3px solid var(--ilaLightBlue);
-        box-shadow: 0 0 0 1px var(--ilaBlue);
+    .ila-radio:hover {
+        border-color: var(--ilaOrange);
+        background-color: #F0F7FA;
     }
 
 
-/* Base Checkbox Style */
-input[type='checkbox'] {
-    width: 20px;
-    height: 20px;
+    .ila-radio:focus {
+        border-color: var(--ilaOrange);
+        background-color: #F0F7FA;
+    }
+
+    .ila-radio:checked {
+        border-color: var(--ilaBlue);
+        background-color: var(--ilaLightBlue);
+    }
+
+        .ila-radio:checked::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .ila-radio:checked:focus {
+            border-color: var(--ilaBlue);
+            background-color: var(--ilaLightBlue);
+        }
+
+/* ============================ CHECKBOXES ============================ */
+
+.ila-checkbox {
+    width: var(--input-size);
+    height: var(--input-size);
     appearance: none;
     -webkit-appearance: none;
     background: transparent;
-    border: 2px solid #ccc; /* Light gray border */
+    border: 2px solid var(--ilaGrey);
     position: relative;
     cursor: pointer;
 }
 
-    /* Normal Hover */
-    input[type='checkbox']:hover:not(:checked) {
-        border: 2px solid var(--ilaOrange); /* Orange border */
+    .ila-checkbox:hover:not(:checked),
+    .ila-checkbox:focus:not(:checked) {
+        border-color: var(--ilaOrange);
+        background-color: #F0F7FA; /* HOVER COLOR*/
     }
 
-    /* Normal Focus */
-    input[type='checkbox']:focus:not(:checked) {
-        border: 2px solid var(--ilaOrange); /* Orange border */
-        background-color: white;
-        outline: none;
+    .ila-checkbox:checked {
+        border-color: var(--ilaBlue);
+        background-color: var(--ilaLightBlue);
     }
 
-    /* Selected (Checked) */
-    input[type='checkbox']:checked {
-        background: white; /* White background */
-        border: 2px solid var(--ilaBlue); /* Dark blue border */
-    }
-
-        input[type='checkbox']:checked::before {
+        .ila-checkbox:checked::before {
             content: "";
             position: absolute;
-            top: 3px; /* Adjusted for centering */
-            left: 5px; /* Adjusted for centering */
+            top: 3px;
+            left: 5px;
             width: 6px;
             height: 8px;
             border: solid var(--ilaBlue);
-            border-width: 0 2px 2px 0; /* Checkmark thickness */
-            transform: rotate(45deg); /* Checkmark shape */
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
         }
 
-    /* Selected Hover */
-    input[type='checkbox']:hover:checked {
-        background: white;
-        border: 2px solid var(--ilaBlue);
+    .ila-checkbox:hover:checked::before {
+        border-color: var(--ilaOrange);
     }
 
-        input[type='checkbox']:hover:checked::before {
-            border-color: var(--ilaOrange); /* Orange checkmark on hover */
-        }
-
-    /* Selected Focus */
-    input[type='checkbox']:checked:focus {
-        background: var(--ilaBlue); /* Blue background */
-        border: 2px solid var(--ilaLightBlue); /* Light blue border */
-    }
-
-        input[type='checkbox']:checked:focus::before {
-            border-color: white; /* White checkmark for focused checked state */
-        }
-
-    /* Disabled */
-    input[type='checkbox']:disabled {
-        background: #e0e0e0; /* Gray background */
-        border: 2px solid #aaa; /* Dark gray border */
-        cursor: not-allowed;
-    }
-
-        input[type='checkbox']:disabled::before {
-            border-color: #aaa; /* Gray checkmark for disabled state */
-        }
-
-        input[type='checkbox']:disabled + label {
-            color: #aaa; /* Grayed-out label text */
-        }
-
-
-/* Base Style for Text Input (applies to other inputs as well) */
-input[type='text'], input[type='search'], input[type='date'], select {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid #ccc;
-    padding: 8px;
-    font-size: 14px;
-    color: #333;
-    width: 100%;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-        display: none;
-        -webkit-appearance: none;
-    }
-
-    /* Placeholder Text */
-    input::placeholder, select::placeholder {
-        color: #bbb;
-    }
-
-    /* Normal Hover */
-    input[type='text']:hover, input[type='search']:hover, input[type='date']:hover, select:hover {
-        background-color: #eee;
-        border-color: #ccc;
-    }
-
-    /* Focus */
-    input[type='text']:focus, input[type='search']:focus, input[type='date']:focus, select:focus {
-        border: 2px solid var(--ilaBlue);
+    .ila-checkbox:checked:focus {
+        border-color: var(--ilaBlue);
         background-color: var(--ilaLightBlue);
-        outline: none;
     }
 
-    /* Focus-Visible (keyboard navigation or special focus indicator) */
-    input[type='text']:focus-visible, input[type='search']:focus-visible, input[type='date']:focus-visible, select:focus-visible {
-        border: 2px solid var(--ilaOrange);
-        background-color: white;
-        outline: none;
-    }
-
-    /* Active */
-    input[type='text']:active, input[type='search']:active, input[type='date']:active, select:active {
-        border: 2px solid var(--ilaOrange);
-        background-color: white;
-    }
-
-    /* Disabled */
-    input[type='text']:disabled, input[type='search']:disabled, input[type='date']:disabled, select:disabled {
-        background-color: #e0e0e0;
+    .ila-checkbox:disabled {
+        background: #e0e0e0;
         border-color: #aaa;
-        color: #aaa;
         cursor: not-allowed;
     }
 
-/* Custom Dropdown Icon */
-select {
-    background-image: url('./images/DownArrow.svg'); 
+        .ila-checkbox:disabled::before {
+            border-color: #aaa;
+        }
+
+        .ila-checkbox:disabled + label {
+            color: #aaa;
+        }
+
+/* ============================ SPECIAL INPUT VARIANTS ============================ */
+
+.ila-search,
+.ila-calendar,
+.ila-select {
+    position: relative;
+    padding-right: 30px;
     background-repeat: no-repeat;
     background-position: right 10px center;
-    padding-right: 30px; /* Adjust to make space for the icon */
-}
-
-/* Custom Calendar Icon for Date Input */
-input[type='date'] {
-    background-image: url('./images/calendar.svg');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px; /* Adjust to make space for the icon */
-}
-
-/* Custom Search Icon for Search Input */
-input[type='search'] {
-    background-image: url('./images/SEARCH.svg');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px; /* Adjust to make space for the icon */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Base Style for Textarea */
-textarea {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid #ccc;
-    padding: 8px;
-    font-size: 14px;
-    color: #333;
+    border: 2px solid var(--ilaGrey);
     width: 100%;
-    resize: vertical; /* Allows vertical resizing only */
-    transition: border-color 0.2s, background-color 0.2s;
+    -moz-appearance: none;
 }
 
-    /* Placeholder Text */
-    textarea::placeholder {
-        color: #bbb;
-    }
-
-    /* Normal Hover */
-    textarea:hover {
-        background-color: #eee;
-        border-color: #ccc;
-    }
-
-    /* Focus */
-    textarea:focus {
-        border: 2px solid var(--ilaBlue);
-        background-color: var(--ilaLightBlue);
-        outline: none;
-    }
-
-    /* Focus-Visible (keyboard navigation or special focus indicator) */
-    textarea:focus-visible {
-        border: 2px solid var(--ilaOrange);
-        background-color: white;
-        outline: none;
-    }
-
-    /* Active */
-    textarea:active {
-        border: 2px solid var(--ilaOrange);
-        background-color: white;
-    }
-
-    /* Disabled */
-    textarea:disabled {
-        background-color: #e0e0e0;
-        border-color: #aaa;
-        color: #aaa;
-        cursor: not-allowed;
+    /* Hover State */
+    .ila-search:hover,
+    .ila-calendar:hover,
+    .ila-select:hover {
+        border-color: var(--ilaOrange);
+        background-color: #F0F7FA; /* HOVER COLOR*/
     }
 
 
 
+.ila-search {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2213%22%20height%3D%2214%22%20viewBox%3D%220%200%2013%2014%22%20fill%3D%22none%22%3E%3Cg%20clip-path%3D%22url(%23clip0_3163_8362)%22%3E%3Cpath%20d%3D%22M7.92972%201.86172C6.11508%200.0470712%203.1733%200.0470712%201.36196%201.86172C-0.452685%203.67636%20-0.452685%206.61483%201.36196%208.42948C3.00473%2010.0722%205.56638%2010.221%207.38434%208.88892L11.1194%2013.176C11.5491%2013.6057%2012.2498%2013.6057%2012.6795%2013.176C13.1092%2012.7463%2013.1092%2012.0455%2012.6795%2011.6158L8.42222%207.84112C9.72123%206.02648%209.55927%203.49126%207.92972%201.86172ZM7.04388%207.54364C5.71843%208.86909%203.57325%208.86909%202.2478%207.54364C0.922347%206.21819%200.922347%204.07301%202.2478%202.74755C3.57325%201.4221%205.71843%201.4221%207.04388%202.74755C8.36933%204.07301%208.36933%206.21819%207.04388%207.54364Z%22%20fill%3D%22%23FF5F05%22/%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_3163_8362%22%3E%3Crect%20width%3D%2213%22%20height%3D%2213%22%20fill%3D%22white%22%20transform%3D%22translate(0%200.5)%22/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E');
+}
 
-/* Base Style for File Upload Container */
-.file-upload-container {
+.ila-calendar {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23FF6F00%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%222%22%20ry%3D%222%22/%3E%3Cline%20x1%3D%2216%22%20y1%3D%222%22%20x2%3D%2216%22%20y2%3D%226%22/%3E%3Cline%20x1%3D%228%22%20y1%3D%222%22%20x2%3D%228%22%20y2%3D%226%22/%3E%3Cline%20x1%3D%223%22%20y1%3D%2210%22%20x2%3D%2221%22%20y2%3D%2210%22/%3E%3C/svg%3E');
+    pointer-events: auto;
+    color: transparent;
+    text-shadow: 0 0 0 #333;
+}
+
+    .ila-calendar::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+.ila-select {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2213%22%20height%3D%229%22%20viewBox%3D%220%200%2013%209%22%20fill%3D%22none%22%3E%3Cg%20clip-path%3D%22url(%23clip0_3163_8483)%22%3E%3Cpath%20d%3D%22M6.98785%208.77842C6.76884%209.07516%206.22752%209.07516%206.00851%208.77842L3.04157%204.7219L0.0787562%200.66864C-0.140252%200.371901%200.132475%200.000161171%200.56636%200.000161171H12.4341C12.868%200.000161171%2013.1407%200.371901%2012.9217%200.66864L9.95479%204.72516L6.98785%208.77842Z%22%20fill%3D%22%23FF5F05%22/%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_3163_8483%22%3E%3Crect%20width%3D%229%22%20height%3D%2213%22%20fill%3D%22white%22%20transform%3D%22matrix(0%20-1%201%200%200%209)%22/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E');
+}
+
+/* ============================ TEXTAREA ============================ */
+
+.ila-textarea {
+    resize: both;
+}
+
+/* ============================ FILE UPLOAD ============================ */
+.ila-file-upload-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border: 2px solid var(--ilaGrey);
     background-color: white;
     width: 100%;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    position: relative;
+    box-sizing: border-box;
 }
 
-    /* Base Style for File Upload Button */
-    .file-upload-container input[type="file"] {
-        appearance: none;
-        -webkit-appearance: none;
-        width: 100%;
-        opacity: 0; /* Hide the default file input */
-        position: absolute;
-        left: 0;
-        top: 0;
+    .ila-file-upload-container:hover {
+        background-color: #F0F7FA;
+        border-color: var(--ilaOrange);
     }
 
-.file-upload-label {
+    .ila-file-upload-container:focus-within {
+        border: 2px solid var(--ilaBlue);
+        background-color: var(--ilaLightBlue);
+    }
+
+    .ila-file-upload-container:focus-visible,
+    .ila-file-upload-container:active {
+        border: 2px solid var(--ilaOrange);
+        background-color: white;
+    }
+
+    .ila-file-upload-container.disabled {
+        background-color: #e0e0e0;
+        border-color: #aaa;
+        color: #aaa;
+        cursor: not-allowed;
+    }
+
+    .ila-file-upload-container input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+
+.ila-file-upload-label {
     display: inline-block;
     cursor: pointer;
-    font-size: 14px;
-    padding: 6px 12px;
-    border: 1px solid #333;
-    color: #333;
-    background-color: #f8f8f8;
-    border-radius: 4px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--ilaBlue);
+    color: white;
+    background-color: var(--ilaBlue);
+    border-radius: 5px;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    z-index: 1;
 }
 
-/* Placeholder Text Styling */
-.file-upload-placeholder {
+    .ila-file-upload-label:hover {
+        background-color: var(--white, #FFF);
+        color: var(--il-blue, #13294B);
+    }
+
+    .ila-file-upload-label:active {
+        background-color: #004085;
+        transform: translateY(1px);
+    }
+
+
+
+.ila-file-upload-placeholder {
     color: #bbb;
+    flex-grow: 1;
+    padding-left: 10px;
+    font-size: 14px;
+    z-index: 1;
 }
 
-/* Normal Hover */
-.file-upload-container:hover {
-    background-color: #eee;
-    border-color: #ccc;
+.ila-file-upload-container.file-chosen .ila-file-upload-placeholder {
+    color: #333;
 }
 
-/* Focus */
-.file-upload-container:focus-within {
-    border: 2px solid var(--ilaBlue);
-    background-color: var(--ilaLightBlue);
-    outline: none;
-}
-
-/* Focus-Visible (keyboard navigation or special focus indicator) */
-.file-upload-container:focus-visible {
-    border: 2px solid var(--ilaOrange);
-    background-color: white;
-    outline: none;
-}
-
-/* Active */
-.file-upload-container:active {
-    border: 2px solid var(--ilaOrange);
-    background-color: white;
-}
-
-/* Disabled */
-.file-upload-container.disabled {
-    background-color: #e0e0e0;
-    border-color: #aaa;
-    color: #aaa;
+.ila-file-upload-container.disabled .ila-file-upload-label {
+    background-color: #b0b0b0;
+    color: #f0f0f0;
+    border-color: #999;
     cursor: not-allowed;
+}
+
+    .ila-file-upload-container.disabled .ila-file-upload-label:hover {
+        background-color: #b0b0b0;
+        border-color: #999;
+    }
+
+
+/* ============================ TOGGLE BUTTON ============================ */
+
+.ila-toggles div {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ila-toggles > div {
+    margin: 1.5em 0;
+}
+
+    .ila-toggles > div:first-of-type {
+        margin-top: 1em;
+    }
+
+    .ila-toggles > div:last-of-type {
+        margin-bottom: 1em;
+    }
+
+.ila-toggles {
+    border: 0.15em solid rgba(0, 0, 0, 0.25);
+}
+
+.ila-toggle-group [aria-pressed] {
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    color: inherit;
+    background: none;
+    font: inherit;
+    line-height: inherit;
+    text-align: left;
+    padding: .4em 0 .4em 4em;
+    position: relative;
+    outline: none;
+}
+
+    .ila-toggle-group [aria-pressed][disabled],
+    .ila-toggle-group [aria-pressed][disabled]:hover {
+        color: var(--il-storm-60, #8E9090);
+    }
+
+
+    .ila-toggle-group [aria-pressed]::before,
+    .ila-toggle-group [aria-pressed]::after {
+        content: "";
+        position: absolute;
+        height: 1.8em;
+        transition: all 0.25s ease;
+    }
+
+    .ila-toggle-group [aria-pressed]::before {
+        left: 0;
+        top: 0.2em;
+        width: 3em;
+        border: 0em solid var(--il-storm--il-storm-85, #929191);
+        background: var(--il-storm--il-storm-85, #929191);
+        border-radius: 1.1em;
+    }
+
+
+    .ila-toggle-group [aria-pressed]::after {
+        left: 0;
+        top: 0.25em;
+        background-color: #fff;
+        background-position: center center;
+        border-radius: 50%;
+        width: 1.2em;
+        height: 1.2em;
+        border: 0.25em solid var(--il-storm--il-storm-85, #929191);
+    }
+
+
+    .ila-toggle-group [aria-pressed]:hover::before {
+        outline: 3px solid var(--il-orange-il-orange, #FF5F05);
+    }
+
+
+    .ila-toggle-group [aria-pressed]:focus::before {
+        outline: 3px solid #13294b;
+        background: var(--il-arches--il-arches-90, #C7EDF8);
+    }
+
+
+    .ila-toggle-group [aria-pressed]:focus::after {
+        background-color: #13294b;
+        border: 0.25em solid var(--il-arches--il-arches-90, #C7EDF8);
+    }
+
+.ila-toggle-group [aria-pressed=true]::after {
+    left: 1.25em;
+    border-color: #13294b;
+}
+
+.ila-toggle-group [aria-pressed=true]::before {
+    background-color: #13294b;
+}
+
+.ila-toggle-group [aria-pressed=true]:hover::before {
+    background-color: var(--il-orange-il-orange, #FF5F05);
+    outline: none;
+}
+
+.ila-toggle-group [aria-pressed=true]:hover::after {
+    border-color: var(--il-orange-il-orange, #FF5F05);
+}
+
+.ila-toggle-group [aria-pressed=true]:focus::before {
+    background-color: var(--il-arches--il-arches-90, #C7EDF8);
+    outline: 3px solid #13294b;
+}
+
+.ila-toggle-group [aria-pressed=true]:focus::after {
+    border-color: var(--il-arches--il-arches-90, #C7EDF8);
+}
+
+.ila-toggle-group [aria-pressed][disabled]::before {
+    background-color: var(--il-storm--il-storm-60, #8E9090);
+    border-color: #ddd;
+}
+
+.ila-toggle-group [aria-pressed][disabled]::after {
+    border-color: var(--il-storm--il-storm-60, #8E9090);
+    left: 0
+}
+
+.ila-toggle-group [aria-pressed][disabled]:hover::before {
+    outline: 3px solid var(--il-orange, #FF5F05);
+}
+
+/* Windows High Contrast Mode Support */
+@media screen and (-ms-high-contrast: active) {
+    .ila-toggle-group [aria-pressed]:focus::before,
+    .ila-toggle-group [aria-pressed]:hover::before {
+        outline: 1px dotted windowText;
+        outline-offset: 0.25em;
+    }
+
+    .ila-toggle-group [aria-pressed]::after {
+        background-color: windowText;
+    }
+
+    .ila-toggle-group [aria-pressed][disabled]::after {
+        background-color: transparent;
+    }
+}
+
+/* Reduced motion */
+@media screen and (prefers-reduced-motion: reduce) {
+    .ila-toggle-group [aria-pressed]::before,
+    .ila-toggle-group [aria-pressed]::after {
+        transition: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .ila-toggle-group [aria-pressed]::before,
+    .ila-toggle-group [aria-pressed]::after,
+    .ila-toggle-group [aria-pressed][disabled] {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
+
+/* ========== FORM STUFF ========== */
+
+
+
+/*Toss on a span up top to get error feedback*/
+.ila-form-errors-on {
+    border: 2px solid red;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+    .ila-form-errors-on span {
+        color: #D8000C;
+        font-weight: bold;
+    }
+
+    .ila-form-errors-on ul {
+        padding-left: 40px;
+    }
+
+.ila-form-errors-off {
+   display:none;
+}
+
+.ila-validation-feedback-on {
+    border: 2px solid #CC0000;
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+.ila-validation-feedback-off {
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+.ila-error-message-on {
+    display: block;
+    background-color: #D8000C;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: none;
+}
+
+.ila-error-message-off {
+    display: none;
 }
