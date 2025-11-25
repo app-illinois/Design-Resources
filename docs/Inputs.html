@@ -27,8 +27,8 @@
 
     <link rel='stylesheet' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2' media='all' />
 
+    <!--<link rel="stylesheet" href="./css/ila-inputs.css">-->
     <link rel="stylesheet" href="./css/ila-inputs.css">
-    <!--<link rel="stylesheet" href="./ila-inputs_NEW.css">-->
 
 
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
@@ -69,6 +69,146 @@
                 max-width: 100% !important;
             }
         }
+
+
+        /* All THIS IS THE BUTTON LIBRARY, IM USING IT HERE FOR THE EXAMPLE,
+           DO NOT USE OR COPY THIS INTO YOUR PROJECT,
+           GET THE LATEST VERSION FROM THE BUTTON EXAMPLE */
+        :root {
+            --il-storm: #707372
+        }
+
+        .ila-button-group {
+            display: flex;
+            align-items: flex-start;
+            align-content: flex-start;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .ila-button {
+            display: inline-flex;
+            padding: 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 4px;
+            font-weight: 700;
+            line-height: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,transform .1s;
+            border-style: solid;
+            border-width: 2px
+        }
+
+            .ila-button span {
+                width: 22px;
+                height: 22px;
+                background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M18.1239 8.12391H11.8761V1.87609C11.8761 0.845397 11.0307 0 10 0C8.96931 0 8.12391 0.845397 8.12391 1.87609V8.12391H1.87609C0.845397 8.12391 0 8.96931 0 10C0 11.0307 0.845397 11.8761 1.87609 11.8761H8.12391V18.1239C8.12391 19.1546 8.96931 20 10 20C11.0307 20 11.8761 19.1546 11.8761 18.1239V11.8761H18.1239C19.1546 11.8761 20 11.0307 20 10C20 8.96931 19.1546 8.12391 18.1239 8.12391Z' fill='%2313294B'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain
+            }
+
+        .ila-tert-button-blue {
+            border-color: var(--white,#fff);
+            background-color: var(--il-blue,#13294b);
+            color: var(--white,#fff)
+        }
+
+        .ila-sec-button-orange {
+            border-color: var(--il-orange,#ff5f05);
+            background-color: var(--il-orange,#ff5f05);
+            color: var(--white,#fff)
+        }
+
+        .ila-sec-button-blue {
+            border-color: var(--il-blue,#13294b);
+            background-color: var(--il-blue,#13294b);
+            color: var(--white,#fff)
+        }
+
+        .ila-pri-button-orange, .ila-sec-button-orange:hover:not(:disabled) {
+            color: var(--il-orange,#ff5f05);
+            background-color: var(--white,#fff)
+        }
+
+        .ila-pri-button-orange {
+            border-color: var(--il-orange,#ff5f05)
+        }
+
+        .ila-pri-button-blue {
+            border-color: var(--il-blue,#13294b);
+            background-color: var(--white,#fff);
+            color: var(--il-blue,#13294b)
+        }
+
+        .ila-button:hover:not(:disabled) {
+            text-decoration-line: underline
+        }
+
+        .ila-sec-button-blue:hover:not(:disabled) {
+            background-color: var(--white,#fff);
+            color: var(--il-blue,#13294b)
+        }
+
+        .ila-pri-button-orange:hover:not(:disabled) {
+            background-color: var(--il-orange,#ff5f05);
+            color: var(--white,#fff)
+        }
+
+        .ila-pri-button-blue:hover:not(:disabled) {
+            background-color: var(--il-blue,#13294b);
+            color: var(--white,#fff)
+        }
+
+        .ila-button:focus:not(:disabled) {
+            outline: 0;
+            border-top: 2px solid var(--il-blue,#13294b);
+            border-right: 2px solid var(--il-blue,#13294b);
+            border-bottom: 4px solid var(--il-blue,#13294b);
+            border-left: 2px solid var(--il-blue,#13294b);
+            background-color: var(--il-arches,#c7edf8);
+            color: var(--il-blue,#13294b);
+            text-decoration-line: underline
+        }
+
+        .ila-button:active:not(:disabled) {
+            transform: translateY(1px)
+        }
+
+        .ila-pri-button-orange:active:not(:disabled), .ila-sec-button-orange:active:not(:disabled) {
+            border-width: 4px;
+            border-color: var(--il-orange,#ff5f05);
+            background-color: var(--il-blue,#13294b);
+            color: var(--white,#fff)
+        }
+
+        .ila-pri-button-blue:active:not(:disabled), .ila-sec-button-blue:active:not(:disabled) {
+            border-width: 4px;
+            border-color: var(--il-blue,#13294b);
+            background-color: var(--il-orange,#ff5f05);
+            color: var(--white,#fff)
+        }
+
+        .ila-button:disabled, .ila-button[disabled] {
+            border-width: 2px;
+            border-color: var(--il-storm,#707372);
+            background-color: var(--white,#fff);
+            color: var(--il-storm,#707372);
+            cursor: not-allowed;
+            pointer-events: none;
+            text-decoration-line: none !important;
+            box-shadow: none !important;
+            transform: none !important
+        }
+
+        .ila-pri-button-blue:disabled, .ila-pri-button-blue[disabled], .ila-pri-button-orange:disabled, .ila-pri-button-orange[disabled], .ila-sec-button-blue:disabled, .ila-sec-button-blue[disabled], .ila-sec-button-orange:disabled, .ila-sec-button-orange[disabled], .ila-tert-button-blue:disabled, .ila-tert-button-blue[disabled] {
+            background-color: var(--white,#fff) !important;
+            color: var(--il-storm,#707372) !important;
+            border-color: var(--il-storm,#707372) !important
+        }
     </style>
 </head>
 <body>
@@ -83,8 +223,6 @@
                         </il-unit-wordmark>
                     </div>
 
-                    <!-- ><il-search slot="search" action="#" method="get" searchname="s"></il-search> -->
-
                 </il-header>
 
             </div>
@@ -94,28 +232,30 @@
         <div class="page-wrapper" style="margin-bottom: 30px;">
 
             <div>
-                <h1>Input Styling</h1>
+                <h1>Input Styling and Form Validation Example</h1>
                 <p>These design standards are in place to ensure the inputs used in forms within your app are consistent with brand guidelines and accessibility standards</p>
+                <p>These inputs are demonstrated below in a form example with validation.</p>
             </div>
-            <br>
 
             <div>
                 <h2>Placement</h2>
-                <p>There are no hard rules for the placement of inputs; you will often use them to construct forms that need to be filled out and submitted</p>
+                <p>There are no hard rules for the placement of inputs; you will often use them to construct forms that need to be filled out and submitted.</p>
+                <p>
+                    The form will provide feedback for validation failure and required fields, but does not force a particular layout.
+                    <br> Bootstrap or similar flexible grid layout systems can be used to make responsive forms.
+                </p>
             </div>
-            <br>
 
             <div>
                 <h2>Behavior</h2>
-                <p>The behvaior of each input and its changes between states can be seen in the examples below.</p>
+                <p>The behavior of each input and its changes between states can be seen in the examples below.</p>
+                <p>The validation button when clicked will provide feedback on the state of the form, including providing error messages.</p>
             </div>
 
             <div>
-                <h2>Instructions</h2>
+                <h2>Input Instructions</h2>
                 <p>
-                    All form elements will need to be in a div with the "ila-input-group" class applied, and inputs will need classes assigned from the list below.<br />
-                    All the names should be self explanitory. This is needed to have enough specificity to override the default styles from the Illinois Framework.<br />
-                    Widths on all elements below are set on this page for demonstration purposes.
+                    All inputs will need the appropriate class assigned from the list below.<br />
                 </p>
                 <p>
                     Radio Buttons: ila-radio<br />
@@ -126,49 +266,101 @@
                     Dropdown: ila-select<br />
                     Text Area: ila-textarea<br />
                 </p>
+
+                <h2>Form Validation Feedback</h2>
+                <p>
+                    CSS is provided for the error states/feedback look and feel.
+                    You'll need the appropriate JavaScript or server side logic to apply the classes for your form/input validation.<br />
+                    You can press the button at the bottom to see an example.<br />
+                </p>
+                <p>
+                    <b>Relevant CSS Class:</b> <br />
+                    ila-form-errors-off:<br />
+                    ila-form-errors-on:<br />
+                    ila-validation-feedback-on:<br />
+                    ila-validation-feedback-off:<br />
+                    ila-error-message-on:<br />
+                    ila-error-message-off:<br />
+                </p>
+
+                <p>
+                    <b>At the top of your form provide a box to show a list of form errors</b> <br />
+                    &lt;div class=&quot;ila-form-errors-off&quot; id=&quot;div1&quot;&gt;<br />
+                    &emsp;&lt;span&gt;Please correct the following errors before submitting:&lt;/span&gt;<br />
+                    &emsp;&lt;ul&gt;<br />
+                    &emsp;&emsp;&lt;li&gt;Populate your feedback for validation in this unordered list&lt;/li&gt;<br />
+                    &emsp;&lt;/ul&gt;<br />
+                    &lt;/div&gt;<br />
+                </p>
+
+                <p>
+                    <b>Any element you wish to validate wrap in this manner</b><br />
+                    &lt;div class=&quot;ila-validation-feedback-off&quot; id=&quot;div2&quot;&gt;<br />
+                    &emsp;&lt;span class=&quot;ila-error-message-off&quot; id=&quot;msg1&quot;&gt;⚠ This field is (required/out of range/missing/etc).&lt;/span&gt;<br />
+                    &emsp;&lt;!--Your form control here --&gt;<br />
+                    &lt;/div&gt;<br />
+                </p>
             </div>
             <br>
 
             <div>
-                <h2> Example</h2>
+                <h2>Examples</h2>
+                <br />
+
+                <h3>Feedback area for the top of the form(press button at bottom to see this)</h3>             
+                <div class="ila-form-errors-off" id="div1">
+                    <span>Please correct the following errors before submitting:</span>
+                    <ul>
+                        <li>Select a favourite language</li>
+                    </ul>
+                </div>
 
                 <h3>Radio Buttons:</h3>
-                <div class="ila-input-group">
-                    <span>
-                        <input class="ila-radio" type="radio" id="html" name="fav_language" value="HTML">
-                        <label for="html">HTML</label>
-                    </span>
-                    <span>
-                        <input class="ila-radio" type="radio" id="css" name="fav_language" value="CSS">
-                        <label for="css">CSS</label>
-                    </span>
-                    <span>
-                        <input class="ila-radio" type="radio" id="javascript" name="fav_language" value="JavaScript">
-                        <label for="javascript">JavaScript</label>
-                    </span>
+                <div class="ila-validation-feedback-off" id="div2">
+                    <span class="ila-error-message-off" id="msg1">⚠ This field is required.</span>
+
+                    <div style="padding-left:10px;">
+                        <span>
+                            <input class="ila-radio" type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">HTML</label>
+                        </span>
+                        <br />
+                        <span>
+                            <input class="ila-radio" type="radio" id="css" name="fav_language" value="CSS">
+                            <label for="css">CSS</label>
+                        </span>
+                        <br />
+                        <span>
+                            <input class="ila-radio" type="radio" id="javascript" name="fav_language" value="JavaScript">
+                            <label for="javascript">JavaScript</label>
+                        </span>
+                    </div>
                 </div>
                 <br>
+
                 <h3>Checkboxes:</h3>
-                <div class="ila-input-group">
-                    <span>
-                        <input class="ila-checkbox" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label for="vehicle1"> I have a bike</label>
-                    </span>
-
-                    <span>
-                        <input class="ila-checkbox" type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                        <label for="vehicle2"> I have a car</label>
-                    </span>
-                    <span>
-                        <input class="ila-checkbox" type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                        <label for="vehicle3"> I have a boat</label>
-                    </span>
+                <div>
+                    <div style="padding-left:10px;">
+                        <span>
+                            <input class="ila-checkbox" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1"> I have a bike</label>
+                        </span>
+                        <br />
+                        <span>
+                            <input class="ila-checkbox" type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label>
+                        </span>
+                        <br />
+                        <span>
+                            <input class="ila-checkbox" type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label>
+                        </span>
+                    </div>
                 </div>
-
-                <br><br>
+                <br>
 
                 <h3>Inputs:</h3>
-                <div class="ila-input-group" style="width:300px;">
+                <div>
                     <label for="txt">Text:</label>
                     <input class="ila-input" type="text" id="txt" name="fname">
                     <label for="num">Number:</label>
@@ -179,21 +371,22 @@
                     <input class="ila-input" type="password" id="pass" name="fname">
                 </div>
 
-                <br>  <br>
+                <br>
                 <h3>Calendar Select:</h3>
-                <div class="ila-input-group" style="width:300px;">
+                <div>
+                    <span class="error-message">This field is required.</span>
                     <input class="ila-calendar" type="date" id="start" name="trip-start" value="2018-07-22" />
                 </div>
 
-                <br>  <br>
+                <br>
                 <h3>Search Select:</h3>
-                <div class="ila-input-group" style="width:300px;">
+                <div>
                     <input class="ila-search" type="search" name="fsrch" id="fsrch" placeholder="Search">
                 </div>
 
-                <br>  <br>
-                <h3>Select Dropdown:</h3> <br>
-                <div class="ila-input-group" style="width:300px;">
+                <br>
+                <h3>Select Dropdown:</h3>
+                <div>
                     <label for="cars">Choose a car:</label>
 
                     <select class="ila-select" name="cars" id="cars">
@@ -204,18 +397,17 @@
                     </select>
                 </div>
 
-                <br>  <br>
+                <br>
                 <h3>Text Area:</h3>
-                <div class="ila-input-group" style="width:300px;">
+                <div>
                     <label for="txtarea">Label for textarea:</label>
-
                     <textarea class="ila-textarea" id="txtarea" rows="4" cols="50"></textarea>
                 </div>
 
-                <br>  <br>
+                <br>
 
                 <h2>Standard File Upload</h2>
-                <div class="ila-file-upload-container" style="width:300px;">
+                <div class="ila-file-upload-container">
                     <input type="file" id="fileUpload1" aria-label="Upload file">
                     <label for="fileUpload1" class="ila-file-upload-label">Choose File</label>
                     <span class="ila-file-upload-placeholder" id="placeholder1">No file selected...</span>
@@ -224,7 +416,7 @@
                 <br>
 
                 <h2>Disabled File Upload</h2>
-                <div class="ila-file-upload-container disabled" style="width:300px;">
+                <div class="ila-file-upload-container">
                     <input type="file" id="fileUpload2" disabled aria-label="Upload file (disabled)">
                     <label for="fileUpload2" class="ila-file-upload-label">Choose File</label>
                     <span class="ila-file-upload-placeholder">Upload disabled</span>
@@ -233,13 +425,13 @@
                 <br>  <br>
                 <h3>Toggle Button</h3>
 
-                <div class="ila-input-group">
+                <div class="ila-toggle-group">
                     <button type="button" id="default" aria-pressed="false">
                         Default
                     </button>
                 </div>
 
-                <div class="ila-input-group">
+                <div class="ila-toggle-group">
                     <button type="button" id="disabled" aria-pressed="true" disabled>
                         Disabled
                     </button>
@@ -247,15 +439,9 @@
 
                 <br>  <br>
 
-                <!--<h3>Validation example:</h3>
-                <div class="ila-input-group">
-                    <label for="txt">Text:</label>
-                    <input class="ila-input" type="text" id="txt" name="fname">
-                </div>
 
+                <input type="button" class="ila-button ila-pri-button-blue" value="Show Sample Validation" onclick="showValidationexample()">
 
-                <br>  <br>-->
-                <!--<input type="range" class="ila-range-slider" min="0" max="100" value="50" list="markers" style="width:300px;">
 
                 <datalist id="markers">
                     <option value="0"></option>
@@ -270,7 +456,7 @@
                     <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-inputs">Follow this link to the design standard in the GitHub repository. </a></p>
                 </div>
 
-            </div><!-- closes page wrapper -->
+            </div>
         </div>
     </main>
 
@@ -297,4 +483,18 @@
 </html>
 
 
-<script src="./js/ila-inputs.js"></script> 
+<script src="./js/ila-inputs.js"></script>
+
+<script>
+    function showValidationexample() {
+        const div1Element = document.getElementById('div1');
+        const div2Element = document.getElementById('div2');
+        const msg1Element = document.getElementById('msg1');
+        div1Element.classList.remove('ila-form-errors-off');
+        div1Element.classList.add('ila-form-errors-on');
+        div2Element.classList.remove('ila-validation-feedback-off');
+        div2Element.classList.add('ila-validation-feedback-on'); 
+        msg1Element.classList.remove('ila-error-message-off');
+        msg1Element.classList.add('ila-error-message-on');        
+    }
+</script>
