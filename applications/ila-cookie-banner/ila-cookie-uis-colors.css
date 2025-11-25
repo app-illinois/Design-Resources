@@ -1,0 +1,12 @@
+:root {
+    /**** UIS Colors ****/
+    --ila-cookieb-main: #003366;
+    --ila-cookieb-accent: #c8b18b;
+    --ila-cookieb-hover-button-font: #003366;
+    --ila-cookieb-hover-text-font: var(--ila-cookieb-font-white);
+    --il-focused-link-color: #555555;
+    --ila-cookieb-line-color: #c8b18b;
+    --ila-cookieb-focused-link-color: #c8b18b;
+    --ila-cookieb-slideout-focused-link-color: #555555;
+    --ila-cookieb-link-color: #003366;
+}

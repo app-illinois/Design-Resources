@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\applications",
+    "\\applications\\ila-buttons",
+    "\\applications\\ila-inputs",
+    "\\docs"
   ],
-  "SelectedNode": "\\C:\\Users\\aobanion\\Documents\\Code\\TestProject",
+  "SelectedNode": "\\applications\\ila-buttons\\ila-button.css",
   "PreviewInSolutionExplorer": false
 }

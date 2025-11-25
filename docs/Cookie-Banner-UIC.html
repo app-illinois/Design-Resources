@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>UIC Cookie Banner</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
+    <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
+    <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+    <link rel='dns-prefetch' href='//kit.fontawesome.com' />
+    <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed"
+        href="https://webtheme.illinois.edu/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed"
+        href="https://webtheme.illinois.edu/comments/feed/" />
+
+    <link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2'
+        media='all' />
+
+    <link rel='stylesheet' id='main-css-css'
+        href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
+    <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6.2" id="toolkit-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+        id="jquery-migrate-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525"
+        id="main_js-js"></script>
+    <script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js"
+        id="skiptoconf-js"></script>
+    <script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
+
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+
+
+    <style>
+        body {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6666666667em;
+            font-family: var(--il-font-sans);
+            color: var(--il-text-color);
+        }
+
+        a {
+            transition: color 0.3s;
+            color: var(--ila-cookieb-link-color);
+            text-decoration: underline;
+        }
+
+        a:focus,
+        a:hover {
+            outline-style: none;
+            color: var(--il-focused-link-color);
+        }
+
+        .button-holder {
+            display: flex;
+            position: relative;
+            z-index: 10;
+        }
+
+        .button-holder button {
+            margin-right: 5px;
+        }
+
+        .page-wrapper {
+            margin: 30px auto 0 auto;
+            padding: 0 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="masthead" class="site-header">
+        <div class="masthead_inner d-flex justify-content-between align-items-stretch">
+            <div class="il-header-wrapper flex-grow-1">
+                <il-header>
+                    <div slot="wordmark">
+                        <il-unit-wordmark>
+                            <p class="il-primary-unit"><a href="https://appdev.illinois.edu/">Application Development
+                                    Standards</a></p>
+                            <h1 class="il-secondary-unit"><a
+                                    href="https://app-illinois.github.io/Design-Resources/">Application Development UX
+                                    Components</a></h1>
+                        </il-unit-wordmark>
+                    </div>
+                </il-header>
+            </div>
+        </div>
+    </header><!-- #masthead -->
+
+    <il-page id="primary">
+
+        <div class="page-wrapper" style="margin-bottom: 30px;">
+            <div>
+                <h1>UIC Cookie Banner</h1>
+                <p>
+                    Provides a Cookie Notification Banner that includes
+                    buttons to open a slideout where more information can
+                    be provided to the User
+                </p>
+            </div>
+
+            <div>
+                <h2>Placement</h2>
+                <p>
+                    Use with JavaScript onload functionality
+                </p>
+            </div>
+
+            <div>
+                <h2>Behavior</h2>
+                <p>
+                    Places a notification at the bottom of the screen
+                </p>
+            </div>
+
+            <div>
+                <h2>Accessibility Guidelines </h2>
+                <p>
+                    Colors and behavior of the button and banner styles have been chosen in-line with brand and
+                    accessibility guidelines
+                </p>
+            </div>
+
+            <div>
+                <h2>Example</h2>
+                <p>
+                    The Cookie Banner is presented after loading this page
+                </p>
+                <p><a href="Cookie-Banner.html">Illinois example here.</a></p>
+                <p><a href="Cookie-Banner-UIS.html">UIS example here.</a></p>
+                <p><a href="Cookie-Banner-CSP.html">Content Security Policy example here.</a></p>
+                <button type="button" id="ot-sdk-btn" class="ot-sdk-show-settings il-button">
+                    About Cookies
+                </button>
+                <p>
+                    When the cookie banner is dismissed, a cookie is set to prevent it from displaying again for six months on any site that allows the cookie.
+                </p>
+                <p>
+                    Press the button below to remove the cookie.
+                </p>
+                <button class="il-button" onClick="unsetCookieNoticeCookie()">
+                    Re-Show Cookie Notice
+                </button>
+            </div>
+
+            <div>
+                <h2>Link</h2>
+                <p>
+                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-cookie-banner"
+                        target="_blank">Link to this standard in GitHub</a>
+                </p>
+            </div>
+
+        </div><!-- closes page wrapper -->
+
+    </il-page>
+
+    <footer id="colophon" class="site-footer">
+        <il-footer>
+            <div slot="contact" class="il-footer-contact uofi_address">
+                <p><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>
+            </div>
+            <nav slot="links" class="il-footer-links" aria-label="Legal notices">
+                <ul>
+                    <li><a data-il="privacy"></a></li>
+                    <li><a data-il="copyright"></a></li>
+                    <li><a data-il="accessibility"></a></li>
+                </ul>
+            </nav>
+        </il-footer>
+    </footer><!-- #colophon -->
+
+    <script data-domain-script="uic" src="js/ila-cookie-banner.js"></script>
+    <!--
+    data-comain-script="c2f2262d-b694-4eba-8f4b-142c102b685a" also works
+    -->
+</body>
+
+</html>

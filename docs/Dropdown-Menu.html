@@ -67,13 +67,14 @@
   />
   <script>
     window._wpemojiSettings = {
-      baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
-      ext: ".png",
-      svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
-      svgExt: ".svg",
+      baseUrl:
+        'https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/',
+      ext: '.png',
+      svgUrl: 'https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/',
+      svgExt: '.svg',
       source: {
         concatemoji:
-          "https:\/\/webtheme.illinois.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6",
+          'https:\/\/webtheme.illinois.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6',
       },
     };
     /*! This file is auto-generated */
@@ -92,13 +93,23 @@
         e.clearRect(0, 0, e.canvas.width, e.canvas.height),
           e.fillText(t, 0, 0);
         var t = new Uint32Array(
-          e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+          e.getImageData(
+            0,
+            0,
+            e.canvas.width,
+            e.canvas.height
+          ).data
         ),
           r =
             (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
               e.fillText(n, 0, 0),
               new Uint32Array(
-                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+                e.getImageData(
+                  0,
+                  0,
+                  e.canvas.width,
+                  e.canvas.height
+                ).data
               ));
         return t.every(function (e, t) {
           return e === r[t];
@@ -106,40 +117,43 @@
       }
       function u(e, t, n) {
         switch (t) {
-          case "flag":
+          case 'flag':
             return n(
               e,
-              "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
-              "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
+              '\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f',
+              '\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f'
             )
               ? !1
               : !n(
                 e,
-                "\ud83c\uddfa\ud83c\uddf3",
-                "\ud83c\uddfa\u200b\ud83c\uddf3"
+                '\ud83c\uddfa\ud83c\uddf3',
+                '\ud83c\uddfa\u200b\ud83c\uddf3'
               ) &&
               !n(
                 e,
-                "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
-                "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
+                '\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f',
+                '\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f'
               );
-          case "emoji":
+          case 'emoji':
             return !n(
               e,
-              "\ud83d\udc26\u200d\u2b1b",
-              "\ud83d\udc26\u200b\u2b1b"
+              '\ud83d\udc26\u200d\u2b1b',
+              '\ud83d\udc26\u200b\u2b1b'
             );
         }
         return !1;
       }
       function f(e, t, n) {
         var r =
-          "undefined" != typeof WorkerGlobalScope &&
+          'undefined' != typeof WorkerGlobalScope &&
             self instanceof WorkerGlobalScope
             ? new OffscreenCanvas(300, 150)
-            : i.createElement("canvas"),
-          a = r.getContext("2d", { willReadFrequently: !0 }),
-          o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+            : i.createElement('canvas'),
+          a = r.getContext('2d', { willReadFrequently: !0 }),
+          o =
+            ((a.textBaseline = 'top'),
+              (a.font = '600 32px Arial'),
+              {});
         return (
           e.forEach(function (e) {
             o[e] = t(a, e, n);
@@ -148,25 +162,26 @@
         );
       }
       function t(e) {
-        var t = i.createElement("script");
+        var t = i.createElement('script');
         (t.src = e), (t.defer = !0), i.head.appendChild(t);
       }
-      "undefined" != typeof Promise &&
-        ((o = "wpEmojiSettingsSupports"),
-          (s = ["flag", "emoji"]),
+      'undefined' != typeof Promise &&
+        ((o = 'wpEmojiSettingsSupports'),
+          (s = ['flag', 'emoji']),
           (n.supports = { everything: !0, everythingExceptFlag: !0 }),
           (e = new Promise(function (e) {
-            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+            i.addEventListener('DOMContentLoaded', e, { once: !0 });
           })),
           new Promise(function (t) {
             var n = (function () {
               try {
                 var e = JSON.parse(sessionStorage.getItem(o));
                 if (
-                  "object" == typeof e &&
-                  "number" == typeof e.timestamp &&
-                  new Date().valueOf() < e.timestamp + 604800 &&
-                  "object" == typeof e.supportTests
+                  'object' == typeof e &&
+                  'number' == typeof e.timestamp &&
+                  new Date().valueOf() <
+                  e.timestamp + 604800 &&
+                  'object' == typeof e.supportTests
                 )
                   return e.supportTests;
               } catch (e) { }
@@ -174,26 +189,28 @@
             })();
             if (!n) {
               if (
-                "undefined" != typeof Worker &&
-                "undefined" != typeof OffscreenCanvas &&
-                "undefined" != typeof URL &&
+                'undefined' != typeof Worker &&
+                'undefined' != typeof OffscreenCanvas &&
+                'undefined' != typeof URL &&
                 URL.createObjectURL &&
-                "undefined" != typeof Blob
+                'undefined' != typeof Blob
               )
                 try {
                   var e =
-                    "postMessage(" +
+                    'postMessage(' +
                     f.toString() +
-                    "(" +
-                    [JSON.stringify(s), u.toString(), p.toString()].join(
-                      ","
-                    ) +
-                    "));",
+                    '(' +
+                    [
+                      JSON.stringify(s),
+                      u.toString(),
+                      p.toString(),
+                    ].join(',') +
+                    '));',
                     r = new Blob([e], {
-                      type: "text/javascript",
+                      type: 'text/javascript',
                     }),
                     a = new Worker(URL.createObjectURL(r), {
-                      name: "wpTestEmojiSupports",
+                      name: 'wpTestEmojiSupports',
                     });
                   return void (a.onmessage = function (e) {
                     c((n = e.data)), a.terminate(), t(n);
@@ -208,11 +225,13 @@
                 (n.supports[t] = e[t]),
                   (n.supports.everything =
                     n.supports.everything && n.supports[t]),
-                  "flag" !== t &&
+                  'flag' !== t &&
                   (n.supports.everythingExceptFlag =
-                    n.supports.everythingExceptFlag && n.supports[t]);
+                    n.supports.everythingExceptFlag &&
+                    n.supports[t]);
               (n.supports.everythingExceptFlag =
-                n.supports.everythingExceptFlag && !n.supports.flag),
+                n.supports.everythingExceptFlag &&
+                !n.supports.flag),
                 (n.DOMReady = !1),
                 (n.readyCallback = function () {
                   n.DOMReady = !0;
@@ -227,11 +246,12 @@
                 (n.readyCallback(),
                   (e = n.source || {}).concatemoji
                     ? t(e.concatemoji)
-                    : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+                    : e.wpemoji &&
+                    e.twemoji &&
+                    (t(e.twemoji), t(e.wpemoji)));
             }));
     })((window, document), window._wpemojiSettings);
   </script>
-
   <link
     rel="stylesheet"
     id="wp-block-library-css"
@@ -250,7 +270,6 @@
     href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6"
     media="all"
   />
-
   <link
     rel="stylesheet"
     id="bootstrapcss-css"
@@ -359,10 +378,6 @@
     rel="icon"
     href="https://cdn.brand.illinois.edu/favicon.ico"
   />
-  <link
-    rel="stylesheet"
-    href="/Design-Resources/css/ila-toast.css"
-  />
   <style>
     body .tile-list .tile.w66 {
       flex: 0 0 calc(40% - 1.2rem);
@@ -442,13 +457,15 @@
   </style>
   <link
     rel="stylesheet"
-    href="./css/ila-badge.css"
-  >
+    href="./css/ila-dropdown-menu.css"
+  />
+  <script src="./js/ila-dropdown-menu.js"></script>
   <!-- local imports for local testing docs page. -->
   <!-- <link
     rel="stylesheet"
-    href="../applications/ila-badges/ila-badge.css"
-  /> -->
+    href="../applications/ila-dropdown-menu/ila-dropdown-menu.css"
+  />
+  <script src="../applications/ila-dropdown-menu/ila-dropdown-menu.js"></script> -->
 </head>
 
 <body>
@@ -465,7 +482,8 @@
                 <a href="https://appdev.illinois.edu/">Application Development Standards</a>
               </p>
               <h1 class="il-secondary-unit">
-                <a href="https://app-illinois.github.io/Design-Resources/">Application Development UX Components</a>
+                <a href="https://app-illinois.github.io/Design-Resources/">Application Development UX
+                  Components</a>
               </h1>
             </il-unit-wordmark>
           </div>
@@ -474,216 +492,164 @@
         </il-header>
       </div>
     </div>
-    <style>
-      .x {
-        width: 60px;
-        background: var(--il-blue-lighter-4);
-        border: solid 1px var(--il-blue-lighter-4);
-      }
-
-      .x:hover {
-        background: var(--il-storm-lighter-4);
-      }
-
-      .x_2 {
-        height: 60px;
-      }
-
-      .x_2:hover {
-        content: url("https://cdn.brand.illinois.edu/icons/line/blue/x.svg");
-        height: 60px;
-      }
-
-      .x_3 {
-        background-image: url("https://cdn.brand.illinois.edu/icons/line/blue/x.svg");
-        height: 70px;
-        width: 70px;
-        background-repeat: no-repeat;
-      }
-
-      .x_3:hover {
-        background-image: url("https://cdn.brand.illinois.edu/icons/solid/blue/x.svg");
-      }
-
-      .x__4-5 {
-        background-image: url("https://cdn.brand.illinois.edu/icons/solid/orange/x.svg");
-        height: 70px;
-        width: 70px;
-        background-repeat: no-repeat;
-      }
-
-      .x__4-5:hover {
-        background-image: url("https://cdn.brand.illinois.edu/icons/solid/blue/x.svg");
-      }
-
-      .x_6 {
-        background-image: url("https://cdn.brand.illinois.edu/icons/solid/blue/x.svg");
-        height: 100px;
-        width: 100px;
-        background-repeat: no-repeat;
-      }
-
-      .x_6:hover {
-        background-image: url("https://cdn.brand.illinois.edu/icons/solid/orange/x.svg");
-      }
-
-      .badge-icon-holder {
-        display: flex;
-      }
-
-      .ila-badge__container {
-        margin: 10px 20px;
-      }
-    </style>
   </header>
   <!-- #masthead -->
   <main>
-    <div class="page-wrapper">
+    <div
+      class="page-wrapper"
+      style="margin-bottom: 30px"
+    >
       <div>
-        <h1>Badges</h1>
-        <p>
-          Shows the user notifications, counts, or status information on
-          navigation items and icons.
-        </p>
+        <h1>Dropdown Menu</h1>
+        <!-- <p>This CCS and JS can be applied to a table to allow the header and first column to freeze when scrolling, allowing for a better expereicne on smaller screens.</p> -->
       </div>
-      <br />
 
-      <div>
-        <h2>Placement</h2>
-        <p>
-          Placement will vary based on what the badge is being added to. In
-          the example, the badge is placed inside a div with a fixed height
-          which then has a link to the website and background-image of the
-          website's logo.
-        </p>
-      </div>
       <br />
 
       <div>
         <h2>Component Behavior</h2>
+
         <p>
-          Badges appear in the upper right hand corner of a navigation item or
-          icon.
+          This example is adapted from
+          <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/examples/menu-button-links/">W3C's Navigation
+            Menu Button documentation</a>.
+        </p>
+
+        <p>
+          The dropdown menu component allows a user to click to
+          expand the menu to access links, as in site navigation.
         </p>
       </div>
+
       <br />
 
       <div>
         <h2>Accessibility Guidelines</h2>
+
         <p>
-          Badges do not need any additional accessibility functionality if
-          their meaning can be inferred from context (ie, the badge is read by
-          the screen reader after or before the item it is badging).
+          The dropdown menu is made accessible to ensure that
+          users with disabilities can interact with it
+          effectively. See W3C link above for full guidelines. Key
+          accessibility guidelines include:
         </p>
-      </div>
-      <br />
-      <div>
-        <h2>Instructions</h2>
-        <p>
-          Place the image (or div with background image, etc) inside a div with the class ila-badge__container. Create a
-          span with
-          class ila-badge as a direct child of this container.
-          There are two css properties of ila-badge you may need to tweak depending on your image. The default values
-          are 'top: -5px' and 'left: 70%'. Customize these by either applying your own class or using the style property
-          on the span tag which has the ila-badge class.
-        </p>
+
+        <ul style="margin-bottom: 1rem">
+          <li>
+            <b>ARIA Attributes:</b> Should ideally be an
+            unordered list.
+          </li>
+          <li>
+            <b>Keyboard Navigation:</b>
+            <ul>
+              <li>
+                Menu button should get tab focus and be
+                activated with the down arrow, enter key, or
+                space key.
+              </li>
+              <li>
+                Menu should be navigated with arrow keys and
+                link items should be activated with the
+                space or enter key.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Focus Management:</b> Items in menu list should
+            receive focus styles when selected.
+          </li>
+          <li>
+            <b>Screen Reader Compatibility:</b> Use semantic
+            HTML and ARIA roles to ensure that assistive
+            technologies accurately interpret the dropdown menu.
+            <ul>
+              <li>List should have role="menu".</li>
+              <li>List items should have role="menuitem".</li>
+              <li>
+                List element should make use of
+                aria-haspopup, aria-expanded, and
+                aria-controls.
+              </li>
+              <li>
+                Aria property aria-activedescendant should
+                be used in order for the screenreader to
+                know which item is being selected.
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <br />
 
       <div>
         <h2>Component Example</h2>
-        <div class="badge-icon-holder">
-          <div class="ila-badge__container">
-            <a
-              role="img"
-              href="https://x.com/"
+
+        <div class="ila-dropdown-menu">
+          <button
+            class="il-button ila-dropdown-menu__button"
+            type="button"
+            id="ilaMenuButton"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="ilaDropdownMenu"
+          >
+            Menu
+            <svg
+              class="ila-dropdown-menu__button-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
             >
-              <img
-                class="x"
-                src="https://cdn.brand.illinois.edu/icons/line/blue/x.svg"
-                alt="X social media icon"
-              />
-            </a>
-            <span
-              class="ila-badge"
-              style="top: -5px;left: 70%;"
-            >1</span>
-          </div>
-
-          <div class="ila-badge__container">
-            <a href="https://x.com/">
-              <img
-                src="https://cdn.brand.illinois.edu/icons/line/orange/x.svg"
-                alt="x social media icon"
-                class="x_2"
-              />
-            </a>
-            <span
-              class="ila-badge"
-              style="top: -5px;left: 70%;"
-            >89</span>
-          </div>
-
-          <div class="ila-badge__container">
-            <a href="https://x.com/">
-              <div
-                class="x_3"
-                role="img"
-              ></div>
-            </a>
-            <span
-              class="ila-badge"
-              style="top: -5px;left: 70%;"
-            >302</span>
-          </div>
-
-          <div class="ila-badge__container">
-            <a href="https://x.com/">
-              <div
-                class="x__4-5"
-                role="img"
-              ></div>
-            </a>
-            <span
-              class="ila-badge"
-              style="top: -5px;left: 70%;"
-            >4</span>
-          </div>
-
-          <div class="ila-badge__container">
-            <a href="https://x.com/">
-              <div
-                class="x__4-5"
-                role="img"
-              ></div>
-            </a>
-            <span
-              class="ila-badge"
-              style="top: -5px;left: 70%;"
-            >55,000</span>
-          </div>
-
-          <div class="ila-badge__container">
-            <a href="https://x.com/">
-              <div
-                class="x_6"
-                role="img"
-              ></div>
-            </a>
-            <span
-              class="ila-badge"
-              style="top: 0px;left: 65%;"
-            >679,101</span>
-          </div>
+              <title>chevron-down</title>
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </button>
+          <ul
+            id="ilaDropdownMenu"
+            class="ila-dropdown-menu__menu"
+            role="menu"
+            tabindex="-1"
+            aria-labelledby="ilaMenuButton"
+            aria-activedescendant="ilaMenuItem1"
+          >
+            <li
+              id="ilaMenuItem1"
+              class="ila-dropdown-menu__menu-item"
+              role="menuitem"
+            >
+              Action 1
+            </li>
+            <li
+              id="ilaMenuItem2"
+              class="ila-dropdown-menu__menu-item"
+              role="menuitem"
+            >
+              Action 2
+            </li>
+            <li
+              id="ilaMenuItem3"
+              class="ila-dropdown-menu__menu-item"
+              role="menuitem"
+            >
+              Action 3
+            </li>
+            <li
+              id="ilaMenuItem4"
+              class="ila-dropdown-menu__menu-item"
+              role="menuitem"
+            >
+              Action 4
+            </li>
+          </ul>
         </div>
       </div>
+
       <br />
 
       <div>
         <h2>Link</h2>
         <p>
-          <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-badges">Follow this
-            link to the component in the GitHub repository.</a>
+          <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-dropdown-menu">
+            Link to this component on GitHub
+          </a>
         </p>
       </div>
     </div>
@@ -701,15 +667,6 @@
       >
         <p>
           <a href="https://appdev.illinois.edu/">Application Development Standards</a>
-        </p>
-      </div>
-
-      <div
-        slot="parent"
-        class="il-footer-parent"
-      >
-        <p>
-          <a href="https://webtheme.illinois.edu/application-development/">Web Implementation Guidelines Group</a>
         </p>
       </div>
 

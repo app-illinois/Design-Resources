@@ -1,77 +1,58 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>Application Development UX Standards</title>
-<meta name='robots' content='max-image-preview:large' />
-<link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
-<link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
-<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
-<link rel='dns-prefetch' href='//kit.fontawesome.com' />
-<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
-<link rel='dns-prefetch' href='//onetrust.techservices.illinois.edu' />
-<link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Feed" href="https://webtheme.illinois.edu/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Illinois Web Theme &raquo; Comments Feed" href="https://webtheme.illinois.edu/comments/feed/" />
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://drupal.webtheme.illinois.edu/" />
+<link rel="shortlink" href="https://drupal.webtheme.illinois.edu/" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/contrib/illinois_framework_theme/favicon.ico" type="image/vnd.microsoft.icon" />
 
-<link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.6.2' media='all' />
+<link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
+<link rel="dns-prefetch" href="//cdn.toolkit.illinois.edu">
+<link rel="dns-prefetch" href="//cdn.disability.illinois.edu">
+<link rel="dns-prefetch" href="//onetrust.techservices.illinois.edu">
+<link
+    rel="stylesheet"
+    id="bootstrapcss-css"
+    crossorigin="anonymous"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    media="all"
+  />
+<title>Home | Application Development Standards | Illinois</title>
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ZoIy_8Hsy4MjiFzS90Vq9Hk2ry-SQCxOG1Lya-sYfH0.css?delta=0&amp;language=en&amp;theme=illinois_framework_theme&amp;include=eJx1j8EKwzAMQ38oaQ5j31Oc1ktNnTjEzkr39SvboWPQi0DWQ1hRxNQa1HuIoOji6RNLBPZqO1NJv0lGVUiobpKGoUjLwPRCR3yQQjo-GmTcpK2jLZjxv-qSMxFeyfztGtkw-klylYLF1FVokI6nFg1z6xV4OC9DL7VHJl1wdrqrYf6OfBJuGj46ZJk74xtQ62ef" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_696igIQE54CQjP1TegHUYEZ5dYq3pIgKtjQtF80jj3w.css?delta=1&amp;language=en&amp;theme=illinois_framework_theme&amp;include=eJx1j8EKwzAMQ38oaQ5j31Oc1ktNnTjEzkr39SvboWPQi0DWQ1hRxNQa1HuIoOji6RNLBPZqO1NJv0lGVUiobpKGoUjLwPRCR3yQQjo-GmTcpK2jLZjxv-qSMxFeyfztGtkw-klylYLF1FVokI6nFg1z6xV4OC9DL7VHJl1wdrqrYf6OfBJuGj46ZJk74xtQ62ef" />
+<link rel="stylesheet" media="all" href="https://cdn.toolkit.illinois.edu/3/toolkit.css" />
+<link rel="stylesheet" media="all" href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css" />
+<script src="https://cdn.toolkit.illinois.edu/3/toolkit.js" type="module" blocking="render"></script>
+<script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
 
-<link rel='stylesheet' id='main-css-css' href='https://webtheme.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=240229-01525' media='all' />
-<script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.6.2" id="toolkit-js"></script>
-<script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script src="https://webtheme.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-<script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=240229-01525" id="main_js-js"></script>
-<script src="https://webtheme.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js" id="skiptoconf-js"></script>
-<script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
-
-
-	<link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-	
 <style>
+body {
+margin: 0;
+}
 
-		#primary {
-		max-width: 1140px !important;
-		margin: 0 auto;
-		}
-			
-		@media (max-width: 1200px) {
-			#primary {
-			padding: 0 30px;
-			}
-		}
-		
-		h1, h2 {
-		margin-bottom: 0;
-		}
-		
-		p {
-  		margin-bottom: 1rem;
-  		margin-top: 0;
-		}
+.page-wrapper {
+width: 100%;
+max-width: 1200px;
+margin: 30px auto 0 auto;
+}
+</style>
 
-		@media (max-width: 768px) {
-			#primary {
-			max-width: 100% !important;
-			}			
-		}			
-			
-	</style>
 </head>
-<body class="page-template-default page page-id-1106">
-	<header id="masthead" class="site-header">
-			<div class="masthead_inner d-flex justify-content-between align-items-stretch">
-				<div class="il-header-wrapper flex-grow-1">
-					<il-header>
-						<div slot="wordmark">
-                            <il-unit-wordmark>
-                                <h1 class="il-secondary-unit"><a href="https://appdev.illinois.edu/">Application Development UX Standards</a></h1>
-                            </il-unit-wordmark>
-						</div>
-					</il-header>
-				</div>
-			</div>
-	</header><!-- #masthead -->
+
+
+
+<body class="logged-out">
+	<div class="layout-container">
+   	 	<ilw-header>
+            <a slot="primary-unit" href="https://wigg.illinois.edu">Application Development Standards
+</a>
+        	<a slot="site-name" href="/">Application Development UX Components</a>
+		</ilw-header>
 
 	<main id="primary" class="site-main flex-grow-1">
         <div class="page-wrapper" style="margin-bottom: 30px;">
@@ -110,26 +91,15 @@
         </div><!-- closes page wrapper -->
     </main>
 
-    <footer id="colophon" class="site-footer">
-        <il-footer>
-
-            <div slot="contact" class="il-footer-contact uofi_address">
-                <p><a href="https://vigilant-fishstick-2k4pppq.pages.github.io/">Application Development UX Standards</a></p>
-            </div>
-
-            <nav slot="links" class="il-footer-links" aria-label="Legal notices">
-                <ul>
-                    <li><button data-il="cookies"></button></li>
-                    <li><a data-il="privacy"></a></li>
-                    <li><a data-il="copyright"></a></li>
-                    <li><a data-il="accessibility"></a></li>
-                </ul>
-            </nav>
-        </il-footer>
-    </footer><!-- #colophon -->
-
-<div id="gototop" class="hidden">
-	<a href="#"><i class="fa fa-chevron-up"></i><span class="sr-only">Go to top</span></a>
-</div>
+		<ilw-footer>
+            <a slot="primary-unit" href="https://wigg.illinois.edu">Web Implementation Guideline Group</a>
+        	<a slot="site-name" href="/">Application Development Standards</a>
+		</ilw-footer>
+    
+		<script src="/sites/default/files/js/js_v1WoaVg_UWd0GQlexCE-6duWXT6iFaUoq-h1WoeAkH8.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=illinois_framework_theme&amp;include=eJx1yjEKgDAQBMAPeViI7wmJnDF6yUpuQfy9VnZ2U0wC6OzxnMf0UXYXi1TnUMxKQ_Gw9lj1Qj8CN606ZkOKJs77Dfn_EbCjUKb_cmmSBfVE00Z_AJZDOfA"></script>
+		<script src="https://emergency.publicaffairs.illinois.edu/illinois.js" async></script>
+		<script src="https://enroll.illinois.edu/ping" async></script>
+		<script src="/sites/default/files/js/js_LmN6zZP7TQNXZBPn-VuxwKIkKJJf-5i4IinWFTXFrSY.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=illinois_framework_theme&amp;include=eJx1yjEKgDAQBMAPeViI7wmJnDF6yUpuQfy9VnZ2U0wC6OzxnMf0UXYXi1TnUMxKQ_Gw9lj1Qj8CN606ZkOKJs77Dfn_EbCjUKb_cmmSBfVE00Z_AJZDOfA"></script>
+	</div><!-- closes layout-container -->
 </body>
 </html>

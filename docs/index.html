@@ -509,10 +509,11 @@
             max-width: 870px !important;
         }
 
-        .page-wrapper {
-            widyh: 100%;
-            max-width: 1140px;
-            margin: 0 auto;
+.page-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto 0 auto;
+            padding: 0 30px;
         }
     </style>
 </head>
@@ -538,8 +539,9 @@
                 <il-header>
                     <div slot="wordmark">
                         <il-unit-wordmark>
-                            <h1 class="il-secondary-unit"><a href="https://appdev.illinois.edu/">Application Development UX Standards</a></h1>
-                        </il-unit-wordmark>
+                  <p class="il-primary-unit"><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>
+                       <h1 class="il-secondary-unit"><a href="https://app-illinois.github.io/Design-Resources/">Application Development UX Components</a></h1>
+                     </il-unit-wordmark>
                     </div>
                 </il-header>
             </div>
@@ -552,7 +554,7 @@
                 <p>
                     Here you can view and explore various standards.
                     The links below lead to each design standard.
-                    When adding a new standard, <a href="/item-template.html">please use the provided template available</a>.
+                    When adding a new standard, <a href="https://github.com/app-illinois/Design-Resources/blob/develop/docs/item-template.html">please use the provided template available</a>.
                 </p>
                 <p><a href="./css/app-toolkit.css">First release, minified CSS</a></p>
                 <p><a href="./js/app-toolkit.js">First release, minified JS</a></p>
@@ -671,6 +673,37 @@
                         </div>
                     </div>
 
+                    <div class="uofi-default-block il-formatted">
+                        <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
+                            <il-clickable-card href="/Design-Resources/Popovers.html">
+                                <img decoding="async" src="./images/popovers.png" alt="" slot="image">
+                                <h3 slot="header">Popovers</h3>
+                                <p></p>
+                            </il-clickable-card>
+                        </div>
+                    </div>
+
+                    <div class="uofi-default-block il-formatted">
+                        <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
+                            <il-clickable-card href="/Design-Resources/Cookie-Banner.html">
+                                <img decoding="async" src="./images/cookie-banner-about.png" alt="" slot="image">
+                                <h3 slot="header">Cookie Banner</h3>
+                                <p></p>
+                            </il-clickable-card>
+                        </div>
+                    </div>
+
+                    <div class="uofi-default-block il-formatted">
+                        <div class="uofi uofi-card " style="width: 500px; max-width: 100%;">
+                            <il-clickable-card href="/Design-Resources/Dropdown-Menu.html">
+                                <img decoding="async" src="./images/dropdown-menu.png" alt="" slot="image">
+                                <h3 slot="header">Dropdown Menu</h3>
+                                <p></p>
+                            </il-clickable-card>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <br>
@@ -681,8 +714,7 @@
         <il-footer>
 
             <div slot="contact" class="il-footer-contact uofi_address">
-                <p><a href="https://vigilant-fishstick-2k4pppq.pages.github.io/">Application Development UX Standards</a></p>
-            </div>
+<p><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>            </div>
 
 
             <nav slot="links" class="il-footer-links" aria-label="Legal notices">

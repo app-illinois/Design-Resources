@@ -27,21 +27,38 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
+
+      - name: Setup for GitHub Pages
         uses: actions/configure-pages@v5
-      - run: bash ./setuppages.sh
+      
+      - name: Copy files to their web-ready locations
+        run: bash ./setuppages.sh
+      
+      - name: Insall minify tool
+        run: sudo apt install minify
+
+      # Work around for Gulp CSS-Concat being unmaintained
+      # Relies on work done in setuppages.sh
+      - name: Copy minified CSS to /docs/css/app-toolkit.css
+        run: bash ./setup_bundles.sh
+
       - run: npm install
       - run: npm rebuild
-      - name: Run Gulp script to copy minified CSS to /docs/css/app-toolkit.css
+      - name: Run Gulp script to minify JS and copy images
         run: npm run-script build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:       
           path: './docs'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

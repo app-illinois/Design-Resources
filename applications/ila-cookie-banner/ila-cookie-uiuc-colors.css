@@ -1,0 +1,12 @@
+:root {
+    /**** UIUC Colors ****/
+    --ila-cookieb-main: #13294B;
+    --ila-cookieb-accent: #FF5F05;
+    --ila-cookieb-hover-button-font: #ffffff;
+    --ila-cookieb-hover-text-font: #ffffff;
+    --il-focused-link-color: #FF5F05;
+    --ila-cookieb-line-color: #FF5F05;
+    --ila-cookieb-focused-link-color: #FF5F05;
+    --ila-cookieb-slideout-focused-link-color: #c84113;
+    --ila-cookieb-link-color: #1D58A7;
+}

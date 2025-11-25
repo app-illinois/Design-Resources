@@ -5,8 +5,14 @@ var aria = aria || {};
 
 aria.Utils = aria.Utils || {};
 
-window.openSlideover = function (dialogId) {
-    new aria.Dialog(dialogId);
+window.openSlideover = function (dialogId, returnFocus) {
+    button_to_return_focus_to = returnFocus
+    if(returnFocus) {
+        if(!returnFocus.focus) {
+            button_to_return_focus_to = document.getElementById(returnFocus);
+        }
+    }
+    new aria.Dialog(dialogId, button_to_return_focus_to);
 };
 
 window.closeSlideover = function () {
@@ -34,6 +40,19 @@ aria.Utils.focusFirstDescendant = function (element) {
     return false;
 }; // end focusFirstDescendant
 
+aria.Utils.focusLastDescendant = function (element) {
+    for (var i = element.childNodes.length - 1; i >= 0; i--) {
+      var child = element.childNodes[i];
+      if (
+        aria.Utils.attemptFocus(child) ||
+        aria.Utils.focusLastDescendant(child)
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }; // end focusLastDescendant
+
 /**
  * @description Set Attempt to set focus on the current node.
  * @param element
@@ -43,6 +62,10 @@ aria.Utils.focusFirstDescendant = function (element) {
  */
 aria.Utils.attemptFocus = function (element) {
     if (!aria.Utils.isFocusable(element)) {
+        // console.debug(
+        //     'Attempted to focus on an element that is not focusable.',
+        //     element
+        // );
         return false;
     }
 
@@ -51,8 +74,10 @@ aria.Utils.attemptFocus = function (element) {
         element.focus();
     } catch (e) {
         // continue regardless of error
+        console.warn('Error focusing element:', e);
     }
     aria.Utils.IgnoreUtilFocusChanges = false;
+    // console.debug('Focused element:', element);
     return document.activeElement === element;
 }; // end attemptFocus
 
@@ -76,7 +101,7 @@ document.addEventListener('keyup', aria.handleEscape);
  * @param dialogId
  *          The ID of the element serving as the dialog container.
  */
-aria.Dialog = function (dialogId) {
+aria.Dialog = function (dialogId, returnFocus) {
     this.dialogNode = document.getElementById(dialogId);
     if (this.dialogNode === null) {
         throw new Error('No element found with id="' + dialogId + '".');
@@ -116,11 +141,18 @@ aria.Dialog = function (dialogId) {
     );
     this.postNode.tabIndex = 0;
 
+    // Set the initial focus for screen-readers
+    // (Preferred pattern because this is a modal alert)
+    let slide_div = document.getElementById(dialogId);
+    slide_div.setAttribute('tabindex', '-1'); // Focusable, but outside tab order
+    setTimeout(function(){    slide_div.focus();   },500);
+
     this.addListeners();
     aria.openedDialog = this;
     this.dialogNode.classList.add('ila-slideover--open'); // make visible
     this.dialogNode.classList.remove('ila-slideover--closed');
     this.lastFocus = document.activeElement;
+    this.returnFocus = returnFocus;
 }; // end Dialog constructor
 
 /**
@@ -138,6 +170,8 @@ aria.Dialog.prototype.close = function () {
     this.dialogNode.classList.remove('ila-slideover--open');
 
     document.body.classList.remove(aria.Utils.dialogOpenClass);
+    // return focus to the button that opened the dialog
+    this.returnFocus.focus();
 }; // end close
 
 aria.Dialog.prototype.addListeners = function () {
@@ -253,6 +287,9 @@ aria.Utils.isFocusable = function (element) {
         case 'TEXTAREA':
             return true;
         default:
+            if (element.tabIndex >= 0) {
+                return true;
+            }
             return false;
     }
 };

@@ -1,6 +1,13 @@
+.DS_Store
 .idea
 dist
 node_modules
-docs/css/app-toolkit.css
-docs/js/app-toolkit.js
+cookie-zip-stage/
+cookie-banner.zip
+docs/css
+docs/js
 docs/svg
+docs/partials
+
+# Created from partials:
+docs/Cookie-Banner-CSP.html
