@@ -1,0 +1,112 @@
+/* globals for testing */
+body {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--il-blue)
+}
+/* component styles */
+:root {
+  --ila-treeview-padding-x: 25px;
+  --ila-treeview-padding-y: 5px;
+}
+
+
+
+/* .ila-treeview__label {
+  margin: 0;
+  padding: .2em 0;
+}
+
+*/
+
+
+.ila-treeview ul,
+.ila-treeview li {
+  margin: 0;
+  padding: 0;
+}
+
+/* .ila-treeview li li span.label {
+  padding-left: 1em;
+}
+
+.ila-treeview li li li span.label {
+  padding-left: 2em;
+}
+
+*/
+.ila-treeview[role="tree"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ila-treeview[role="tree"] li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+.ila-treeview a[role="treeitem"] ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ila-treeview
+  a[role="treeitem"][aria-expanded="false"]
+  + [role="group"] {
+  display: none;
+}
+
+.ila-treeview a[role="treeitem"][aria-expanded="true"] + [role="group"] {
+  display: block;
+  margin-left: 30px;
+}
+
+.ila-treeview a[role="treeitem"] > span svg {
+  transform: rotate(270deg) translate(0, 0);
+}
+
+.ila-treeview a[role="treeitem"][aria-expanded="false"] > span svg {
+  transform: translate(0, 0);
+}
+
+.ila-treeview a[role="treeitem"] {
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 30px;
+    color: currentColor;
+    padding: 5px 10px;
+    margin: 2px 0;
+}
+.ila-treeview a[role="treeitem"][aria-current] {
+}
+
+.ila-treeview .ila-treeview-treeitem__icon {
+  margin-right: 10px;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+
+.ila-treeview a[role="treeitem"]:focus {
+  outline: 2px solid var(--il-blue);
+    outline-offset: -1px;
+    background-color: var(--il-arches-90);
+}
+
+.ila-treeview a[role="treeitem"][aria-current]:focus {
+}
+
+.ila-treeview a[role="treeitem"]:hover {
+}
+
+.ila-treeview a[role="treeitem"] span.icon:hover {
+}
+
+.ila-treeview a[role="treeitem"] span.icon svg polygon:hover {
+}
