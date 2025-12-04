@@ -1,0 +1,95 @@
+/* multiselect styles */
+#ila-multiselect-container {
+  font-weight: bold;
+}
+
+#ila-choicelist {
+  border: 1px solid #d6d6d6;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 2px;
+  display: none;
+}
+
+#ila-choicelist input:focus {
+
+}
+
+#ila-selected-item {
+  border: 2px solid var(--il-storm-60);
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 2px;
+  height: 2.5em;
+  background-color: #fff;
+  position: relative;
+  text-align: left;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2213%22%20height%3D%229%22%20viewBox%3D%220%200%2013%209%22%20fill%3D%22none%22%3E%3Cg%20clip-path%3D%22url(%23clip0_3163_8483)%22%3E%3Cpath%20d%3D%22M6.98785%208.77842C6.76884%209.07516%206.22752%209.07516%206.00851%208.77842L3.04157%204.7219L0.0787562%200.66864C-0.140252%200.371901%200.132475%200.000161171%200.56636%200.000161171H12.4341C12.868%200.000161171%2013.1407%200.371901%2012.9217%200.66864L9.95479%204.72516L6.98785%208.77842Z%22%20fill%3D%22%23FF5F05%22/%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_3163_8483%22%3E%3Crect%20width%3D%229%22%20height%3D%2213%22%20fill%3D%22white%22%20transform%3D%22matrix(0%20-1%201%200%200%209)%22/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  font-size: 14px;
+  padding: 10px 8px 27px 8px;
+  color: #333;
+}
+
+#ila-selected-item:hover {
+border-color: var(--il-orange);
+background-color: #F0F7FA;
+}
+
+#ila-selected-item:focus {
+border: 2px solid var(--il-blue);
+background-color: var(--il-blue-80);
+outline: none;
+}
+
+#ila-selected-item:active {
+border: 2px solid var(--il-orange);
+background-color: white;
+}
+            
+#ila-choicelist > div {
+  padding: 10px 0px 10px 5px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input[type="text"] {
+  margin: 0px 0px 20px 10px;
+}
+
+fieldset {
+  padding: 0;
+ border: 0;
+  margin-left: 0px;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+fieldset.expanded {
+  height: 200px;
+  padding: 0;
+  overflow-y: auto;
+  border-bottom: 2px solid var(--il-storm-60);
+  margin-bottom: 30px;
+}
+
+#ila-choicelist {
+  display: block !important; /* Override the jQuery display changes */
+  overflow-y: auto;
+ /*  height: calc(100% - 10px); /* Account for padding */
+ padding-top: 10px;
+}  
+
+legend#ila-multiselect-container {
+font-size: 1px;
+line-height: 1px;
+color: #fff;
+}			
+			
