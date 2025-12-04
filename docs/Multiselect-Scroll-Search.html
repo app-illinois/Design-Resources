@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css"
+        />
+        <script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+        <title>Multiselect Scroll Search Example</title>
+        <link
+            rel="stylesheet"
+            href="ila-multiselect-scroll-search.css"
+        />
+    </head>
+
+    <body>
+        <h1>Alert</h1>
+<div>
+<label for="ila-selected-item" style="font-weight: bold;">Car selection:</label><br />
+<button id="ila-selected-item" aria-expanded="false" style="margin-top: 10px;">
+    <span id="label-slot">Choose a car:</span>
+    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </button>
+<fieldset aria-labelledby="ila-multiselect-container">
+<legend id="ila-multiselect-container">list of cars</legend>
+
+  <div id="ila-choicelist">
+    <div style="padding: 5px; border-bottom: 1px solid #d6d6d6;">
+      <input type="text" id="search-box" placeholder="Search...">
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Volvo">
+      <label for="Volvo">Volvo</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Saab">
+      <label for="Saab">Saab</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Mercedes">
+      <label for="Mercedes">Mercedes</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Audi">
+      <label for="Audi">Audi</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Suburu">
+      <label for="Suburu">Suburu</label>
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Volkswagen">
+      <label for="Volkswagen">Volkswagen</label>
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Ford">
+      <label for="Ford">Ford</label>
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="ToyotaCorolla">
+      <label for="ToyotaCorolla">Toyota Corolla</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="HondaAccord">
+      <label for="HondaAccord">Honda Accord</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Jaguar">
+      <label for="Jaguar">Jaguar</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Porsche">
+      <label for="Porsche">Porsche</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Kia">
+      <label for="Kia">Kia</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Chrysler">
+      <label for="Chrysler">Chrysler</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Jeep">
+      <label for="Jeep">Jeep</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Rambler">
+      <label for="Rambler">Rambler</label>
+    </div>
+
+  </div>
+</fieldset>
+</div><!-- closes example -->
+        <script src="ila-multiselect-scroll-search.js"></script>
+    </body>
+</html>
