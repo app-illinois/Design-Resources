@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://drupal.webtheme.illinois.edu/">
+<link rel="shortlink" href="https://drupal.webtheme.illinois.edu/">
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/themes/contrib/illinois_framework_theme/favicon.ico" type="image/vnd.microsoft.icon">
+
+<link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
+<link rel="dns-prefetch" href="//cdn.toolkit.illinois.edu">
+<link rel="dns-prefetch" href="//cdn.disability.illinois.edu">
+<link rel="dns-prefetch" href="//onetrust.techservices.illinois.edu">
+<link
+    rel="stylesheet"
+    id="bootstrapcss-css"
+    crossorigin="anonymous"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    media="all"
+  />
+  
+  <link rel="stylesheet" href="inputs.css">
+<title>Home | Application Development Standards | Illinois</title>
+
+<link rel="stylesheet" media="all" href="https://cdn.toolkit.illinois.edu/3/toolkit.css" />
+<link rel="stylesheet" media="all" href="https://cdn.toolkit.illinois.edu/2.16/toolkit.css">
+<script src="https://cdn.toolkit.illinois.edu/3/toolkit.js" type="module" blocking="render"></script>
+<script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="inputs.css">
+
+
+<link rel='stylesheet' href="./css/ila-multiselect-scroll-search.css" /> -->
+
+<script src="./js/ila-multiselect-scroll-search.js"></script>
+
+<style>
+body {
+margin: 0;
+}
+
+.page-wrapper {
+width: 100%;
+max-width: 1200px;
+margin: 30px auto 0 auto;
+}
+
+@media(max-width: 1260px) {
+.page-wrapper {
+margin: 30px 0 30px 30px;
+width: calc(100% - 60px);
+}
+}
+
+
+</style>
+
+</head>
+
+<body class="logged-out">
+	<div class="layout-container">
+   	 	<ilw-header>
+            <a slot="primary-unit" href="https://wigg.illinois.edu">Application Development Standards
+</a>
+        	<a slot="site-name" href="/">Application Development UX Components</a>
+		</ilw-header>
+
+	<main id="primary" class="site-main flex-grow-1">
+        <div class="page-wrapper" style="margin-bottom: 30px;">
+            <div>
+                <h1>Multiselect Scroll Search</h1>
+                <p>Provides a dropdown scrollable selection list that allows users to choose one or more items. A search window sits at the top of the list that allows people to pull up and select a particular item.</p>
+            </div>
+            
+            <div>
+                <h2>Placement</h2>
+                <p>This component has 3 main elements: a label, a button, and a fieldset. Place them together in a div container.</p>
+            </div>
+
+            <div>
+                <h2>Behavior</h2>
+                <p>When you click the button, a panel expands down 200px. The panel contains a search box that will search the list, followed by a scrollable list of checkbox items. If you select only one item, it will show up in the button. If you select more than one item, the button will display a count of the number of items chosen. If you click the button again, the panel will collapse.</p>
+            </div>
+
+            <div>
+                <h2>Accessibility Guidelines </h2>
+                <p>Make sure that all items in the list are contained in a fieldset. Each input must have a unique label. The fieldset needs a legend, but since the button has a label (required), a legend that repeats the name of the list is visually annoying. So I gave it a font-size and line-height of 1px, with color = white, to make it invisible. Screen readers will know that the fieldset relates to the button.</p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2>Example</h2>
+                <p>
+                    Provide an example of the design standard on the page here, possibily using javascript to mock-up some basic interactions with it if needed.
+                    The intent is to allow people to see exactly what they are getting with the provided design standard.
+                </p>
+            </div>
+                				
+<div>
+<label for="ila-selected-item" style="font-weight: bold;">Car selection:</label><br />
+<button id="ila-selected-item" aria-expanded="false" style="margin-top: 10px;">
+    <span id="label-slot">Choose a car:</span>
+    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </button>
+<fieldset aria-labelledby="ila-multiselect-container">
+<legend id="ila-multiselect-container">list of cars</legend>
+
+  <div id="ila-choicelist">
+    <div style="padding: 5px; border-bottom: 1px solid #d6d6d6;">
+      <input type="text" id="search-box" placeholder="Search...">
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Volvo">
+      <label for="Volvo">Volvo</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Saab">
+      <label for="Saab">Saab</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Mercedes">
+      <label for="Mercedes">Mercedes</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Audi">
+      <label for="Audi">Audi</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Suburu">
+      <label for="Suburu">Suburu</label>
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Volkswagen">
+      <label for="Volkswagen">Volkswagen</label>
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Ford">
+      <label for="Ford">Ford</label>
+    </div>
+
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="ToyotaCorolla">
+      <label for="ToyotaCorolla">Toyota Corolla</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="HondaAccord">
+      <label for="HondaAccord">Honda Accord</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Jaguar">
+      <label for="Jaguar">Jaguar</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Porsche">
+      <label for="Porsche">Porsche</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Kia">
+      <label for="Kia">Kia</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Chrysler">
+      <label for="Chrysler">Chrysler</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Jeep">
+      <label for="Jeep">Jeep</label>
+    </div>
+    <div class="ila-checkbox-item">
+      <input tabindex="0" name="multiselect-item" type="checkbox" id="Rambler">
+      <label for="Rambler">Rambler</label>
+    </div>
+
+  </div>
+</fieldset>
+</div><!-- closes example -->
+
+<div>
+    <h2>Link</h2>
+       <p><a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-multiselect-scroll-search</p>
+    </div>
+
+        </div><!-- closes page wrapper -->
+    </main>
+
+		<ilw-footer>
+            <a slot="primary-unit" href="https://wigg.illinois.edu">Web Implementation Guideline Group</a>
+        	<a slot="site-name" href="/">Application Development Standards</a>
+		</ilw-footer>
+    
+		<script src="/sites/default/files/js/js_v1WoaVg_UWd0GQlexCE-6duWXT6iFaUoq-h1WoeAkH8.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=illinois_framework_theme&amp;include=eJx1yjEKgDAQBMAPeViI7wmJnDF6yUpuQfy9VnZ2U0wC6OzxnMf0UXYXi1TnUMxKQ_Gw9lj1Qj8CN606ZkOKJs77Dfn_EbCjUKb_cmmSBfVE00Z_AJZDOfA"></script>
+		<script src="https://emergency.publicaffairs.illinois.edu/illinois.js" async></script>
+		<script src="https://enroll.illinois.edu/ping" async></script>
+		<script src="/sites/default/files/js/js_LmN6zZP7TQNXZBPn-VuxwKIkKJJf-5i4IinWFTXFrSY.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=illinois_framework_theme&amp;include=eJx1yjEKgDAQBMAPeViI7wmJnDF6yUpuQfy9VnZ2U0wC6OzxnMf0UXYXi1TnUMxKQ_Gw9lj1Qj8CN606ZkOKJs77Dfn_EbCjUKb_cmmSBfVE00Z_AJZDOfA"></script>
+	</div><!-- closes layout-container -->
+</body>
+</html>
