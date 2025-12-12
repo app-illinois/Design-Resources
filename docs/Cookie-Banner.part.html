@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>UIC Cookie Banner</title>
+    <title>Illinois Cookie Banner</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
     <link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
@@ -42,7 +42,13 @@
             font-size: 18px;
             line-height: 1.6666666667em;
             font-family: var(--il-font-sans);
-            color: var(--il-text-color);
+        }
+
+        p, h2 {
+            /* Test for CSS bug that can break contrast. */
+            /* This CSS should lose to CSS in the Cookie Notice files. */
+            color: black;
+            font-family: "proxima-nova-alt", sans-serif;
         }
 
         a {
@@ -97,7 +103,7 @@
 
         <div class="page-wrapper" style="margin-bottom: 30px;">
             <div>
-                <h1>UIC Cookie Banner</h1>
+                <h1>Illinois Cookie Banner</h1>
                 <p>
                     Provides a Cookie Notification Banner that includes
                     buttons to open a slideout where more information can
@@ -132,9 +138,6 @@
                 <p>
                     The Cookie Banner is presented after loading this page
                 </p>
-                <p><a href="Cookie-Banner.html">Illinois example here.</a></p>
-                <p><a href="Cookie-Banner-UIS.html">UIS example here.</a></p>
-                <p><a href="Cookie-Banner-CSP.html">Content Security Policy example here.</a></p>
                 <button type="button" id="ot-sdk-btn" class="ot-sdk-show-settings il-button">
                     About Cookies
                 </button>
@@ -149,37 +152,6 @@
                 </button>
             </div>
 
-            <div>
-                <h2>Link</h2>
-                <p>
-                    <a href="https://github.com/app-illinois/Design-Resources/tree/develop/applications/ila-cookie-banner"
-                        target="_blank">Link to this standard in GitHub</a>
-                </p>
-            </div>
 
-        </div><!-- closes page wrapper -->
 
-    </il-page>
 
-    <footer id="colophon" class="site-footer">
-        <il-footer>
-            <div slot="contact" class="il-footer-contact uofi_address">
-                <p><a href="https://appdev.illinois.edu/">Application Development Standards</a></p>
-            </div>
-            <nav slot="links" class="il-footer-links" aria-label="Legal notices">
-                <ul>
-                    <li><a data-il="privacy"></a></li>
-                    <li><a data-il="copyright"></a></li>
-                    <li><a data-il="accessibility"></a></li>
-                </ul>
-            </nav>
-        </il-footer>
-    </footer><!-- #colophon -->
-
-    <script data-domain-script="uic" src="js/ila-cookie-banner.js"></script>
-    <!--
-    data-comain-script="c2f2262d-b694-4eba-8f4b-142c102b685a" also works
-    -->
-</body>
-
-</html>

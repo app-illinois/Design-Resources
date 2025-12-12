@@ -10,4 +10,7 @@ docs/svg
 docs/partials
 
 # Created from partials:
+docs/Cookie-Banner.html
+docs/Cookie-Banner-UIC.html
+docs/Cookie-Banner-UIS.html
 docs/Cookie-Banner-CSP.html
